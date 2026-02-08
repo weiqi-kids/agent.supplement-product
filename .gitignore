@@ -1,0 +1,27 @@
+# === 原始資料（可重新擷取）===
+docs/Extractor/*/raw/
+
+# === 萃取產出（可重新產生）===
+docs/Extractor/*/*.md
+docs/Extractor/*/**/*.md
+
+# === HTML 建置輸出（發佈時打包到 release）===
+docs/html/
+
+# === 快取與暫存 ===
+scripts/__pycache__/
+scripts/*.pkl
+scripts/ingredient_data.json
+.claude/
+
+# === 時間戳檔案 ===
+.last_*
+
+# === 環境與密鑰 ===
+.env
+
+# === 系統檔案 ===
+.DS_Store
+node_modules/
+*.tmp
+*.bak

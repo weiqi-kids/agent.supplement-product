@@ -1,0 +1,9 @@
+# 保健食品產品情報系統 — Python 依賴
+
+# HTML 報告建置 (scripts/build_html.py)
+markdown>=3.4
+jinja2>=3.0
+pyyaml>=6.0
+
+# 資料萃取腳本 (scripts/extract_*.py)
+# （根據各腳本需求添加）
