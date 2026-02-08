@@ -20,6 +20,9 @@ scripts/ingredient_data.json
 # === 環境與密鑰 ===
 .env
 
+# === 會話狀態（暫存）===
+SESSION_STATE.md
+
 # === 系統檔案 ===
 .DS_Store
 node_modules/
