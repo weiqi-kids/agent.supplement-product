@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+
+{% block head %}
+<meta property="og:title" content="報告比較 - 保健食品情報系統">
+<meta property="og:description" content="比較不同週期的報告，追蹤趨勢變化">
+<meta property="og:type" content="website">
+{% endblock %}
+
+{% block content %}
+<!-- Breadcrumb -->
+<nav class="breadcrumb">
+    <a href="{{ root_path }}/index.html">首頁</a>
+    <span class="breadcrumb-separator">/</span>
+    <span>報告比較</span>
+</nav>
+
+<h1>報告比較</h1>
+
+<!-- Report Selector -->
+<div class="card compare-selector" id="compare-selector">
+    <h3>選擇要比較的報告</h3>
+    <div class="compare-selector-grid">
+        <div class="compare-selector-panel">
+            <label>報告 A（較早期）</label>
+            <select id="select-left" class="compare-select">
+                <option value="">選擇報告...</option>
+                {% for mode in modes %}
+                <optgroup label="{{ mode.display_name }}">
+                    {% for report in mode.reports %}
+                    <option value="{{ report.path }}" data-mode="{{ mode.name }}">
+                        {{ report.period }} - {{ report.title }}
+                    </option>
+                    {% endfor %}
+                </optgroup>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="compare-selector-panel">
+            <label>報告 B（較新期）</label>
+            <select id="select-right" class="compare-select">
+                <option value="">選擇報告...</option>
+                {% for mode in modes %}
+                <optgroup label="{{ mode.display_name }}">
+                    {% for report in mode.reports %}
+                    <option value="{{ report.path }}" data-mode="{{ mode.name }}">
+                        {{ report.period }} - {{ report.title }}
+                    </option>
+                    {% endfor %}
+                </optgroup>
+                {% endfor %}
+            </select>
+        </div>
+    </div>
+    <div class="compare-selector-actions">
+        <button class="btn btn-primary" id="do-compare" disabled>
+            開始比較
+        </button>
+        <button class="btn btn-outline" id="swap-reports">
+            ↔ 交換
+        </button>
+    </div>
+</div>
+
+<style>
+.compare-selector-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+}
+
+.compare-selector-panel label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+}
+
+.compare-select {
+    width: 100%;
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: var(--font-size-base);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-card);
+}
+
+.compare-selector-actions {
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+@media (max-width: 768px) {
+    .compare-selector-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<!-- Compare Results -->
+<div id="compare-results" class="hidden">
+    <!-- Summary Card -->
+    <div class="compare-summary" id="compare-summary">
+        <h3>變化摘要</h3>
+        <ul class="compare-summary-list" id="summary-list">
+            <!-- Populated by JavaScript -->
+        </ul>
+    </div>
+
+    <!-- Side by Side View -->
+    <div class="compare-container">
+        <div class="compare-panel" id="panel-left">
+            <div class="compare-panel-header" id="header-left">
+                報告 A
+            </div>
+            <div class="compare-panel-content" id="content-left">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+        <div class="compare-panel" id="panel-right">
+            <div class="compare-panel-header" id="header-right">
+                報告 B
+            </div>
+            <div class="compare-panel-content" id="content-right">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Trend Charts -->
+    <div class="card" id="trend-charts">
+        <h3>趨勢變化</h3>
+        <div class="chart-container" id="trend-chart-container">
+            <!-- D3.js trend chart will be rendered here -->
+        </div>
+    </div>
+
+    <!-- Detailed Diff -->
+    <div class="card" id="detailed-diff">
+        <h3>詳細差異</h3>
+        <div id="diff-content">
+            <!-- Populated by JavaScript -->
+        </div>
+    </div>
+</div>
+
+<!-- Loading State -->
+<div id="compare-loading" class="loading hidden">
+    <div class="loading-spinner"></div>
+    <span>載入報告中...</span>
+</div>
+
+<!-- No Selection State -->
+<div id="compare-empty" class="card text-center">
+    <p class="text-muted">請選擇兩份報告進行比較</p>
+    <p class="text-muted">建議選擇同類型報告的不同週期版本</p>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ assets_path }}/compare.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        initializeCompare('{{ root_path }}');
+    });
+</script>
+{% endblock %}

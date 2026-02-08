@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+
+{% block head %}
+<meta property="og:title" content="保健食品產品情報系統">
+<meta property="og:description" content="全球保健食品市場數據分析報告">
+<meta property="og:type" content="website">
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <h1 class="hero-title">保健食品產品情報系統</h1>
+    <p class="hero-subtitle">
+        彙整美國、加拿大、日本、韓國等市場的保健食品數據，提供市場洞察與成分分析
+    </p>
+
+    <!-- Search -->
+    <div class="search-container">
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        </svg>
+        <input type="text"
+               class="search-input"
+               id="search-input"
+               placeholder="搜尋報告內容..."
+               autocomplete="off">
+        <button class="search-clear" id="search-clear" aria-label="清除搜尋">×</button>
+        <div class="search-results" id="search-results"></div>
+    </div>
+</section>
+
+<!-- Stats Overview -->
+{% if stats %}
+<section class="stat-grid">
+    <div class="stat-card">
+        <div class="stat-value">{{ stats.total_reports }}</div>
+        <div class="stat-label">報告總數</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-value">{{ stats.modes_count }}</div>
+        <div class="stat-label">報告類型</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-value">{{ stats.latest_date }}</div>
+        <div class="stat-label">最新更新</div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-value">{{ stats.markets_count }}</div>
+        <div class="stat-label">市場覆蓋</div>
+    </div>
+</section>
+{% endif %}
+
+<!-- Latest Reports -->
+<section class="mb-4">
+    <div class="section-header">
+        <h2 class="section-title">最新報告</h2>
+    </div>
+    <div class="report-grid">
+        {% for report in latest_reports %}
+        <div class="report-card">
+            <div class="report-card-header">
+                <span class="report-card-icon">{{ report.icon }}</span>
+                <span class="report-card-date">{{ report.date }}</span>
+            </div>
+            <h3 class="report-card-title">
+                <a href="{{ report.url }}">{{ report.title }}</a>
+            </h3>
+            <p class="report-card-desc">{{ report.description }}</p>
+            <div class="report-card-meta">
+                <span>{{ report.mode_display }}</span>
+                {% if report.data_sources %}
+                <span>{{ report.data_sources | length }} 個資料來源</span>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- Reports by Mode -->
+{% for mode in modes %}
+<section class="mb-4" id="{{ mode.name }}">
+    <div class="section-header">
+        <h2 class="section-title">
+            {{ mode.icon }} {{ mode.display_name }}
+            {% if mode.frequency %}
+            <span class="text-muted" style="font-size: 0.7em; font-weight: normal;">({{ mode.frequency }})</span>
+            {% endif %}
+        </h2>
+        <a href="#" class="section-link" data-compare-mode="{{ mode.name }}">選擇比較 →</a>
+    </div>
+
+    {% if mode.reports %}
+    <div class="card">
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th style="width: 50px;">
+                        <input type="checkbox" class="compare-select-all" data-mode="{{ mode.name }}" disabled title="選擇報告以進行比較">
+                    </th>
+                    <th>週期</th>
+                    <th>標題</th>
+                    <th>更新日期</th>
+                    <th>摘要</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for report in mode.reports %}
+                <tr>
+                    <td>
+                        <input type="checkbox"
+                               class="compare-checkbox"
+                               data-mode="{{ mode.name }}"
+                               data-path="{{ report.path }}"
+                               data-title="{{ report.title }}">
+                    </td>
+                    <td><strong>{{ report.period }}</strong></td>
+                    <td><a href="{{ report.url }}">{{ report.title }}</a></td>
+                    <td class="text-muted">{{ report.date }}</td>
+                    <td class="text-muted">{{ report.summary | truncate(50) }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <div class="card">
+        <p class="text-muted text-center">尚無報告</p>
+    </div>
+    {% endif %}
+</section>
+{% endfor %}
+
+<!-- Compare Button (floating) -->
+<div id="compare-bar" class="compare-bar hidden">
+    <div class="container">
+        <span id="compare-count">已選擇 0 份報告</span>
+        <button class="btn btn-primary" id="compare-btn" disabled>
+            比較報告
+        </button>
+        <button class="btn btn-outline" id="compare-clear">
+            清除選擇
+        </button>
+    </div>
+</div>
+
+<style>
+.compare-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-bg-card);
+    border-top: 1px solid var(--color-border);
+    padding: var(--spacing-md) 0;
+    box-shadow: var(--shadow-lg);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.compare-bar .container {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.compare-bar.hidden {
+    display: none;
+}
+
+#compare-count {
+    flex: 1;
+    font-weight: 500;
+}
+</style>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Initialize search
+    document.addEventListener('DOMContentLoaded', function() {
+        initializeSearch('{{ root_path }}/search-index.json', '{{ root_path }}');
+        initializeCompareSelection('{{ root_path }}');
+    });
+</script>
+{% endblock %}

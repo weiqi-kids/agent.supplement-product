@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block head %}
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description | default('保健食品產品情報系統報告') }}">
+<meta property="og:type" content="article">
+{% endblock %}
+
+{% block content %}
+<!-- Breadcrumb -->
+<nav class="breadcrumb">
+    <a href="{{ root_path }}/index.html">首頁</a>
+    <span class="breadcrumb-separator">/</span>
+    <a href="{{ root_path }}/index.html#{{ mode }}">{{ mode_display_name }}</a>
+    <span class="breadcrumb-separator">/</span>
+    <span>{{ report_period }}</span>
+</nav>
+
+<!-- Report Actions -->
+<div class="report-actions">
+    <button class="btn btn-outline export-pdf" onclick="window.print()">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+            <path d="M4.603 14.087a.81.81 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.68 7.68 0 0 1 1.482-.645 19.697 19.697 0 0 0 1.062-2.227 7.269 7.269 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.188-.012.396-.047.614-.084.51-.27 1.134-.52 1.794a10.954 10.954 0 0 0 .98 1.686 5.753 5.753 0 0 1 1.334.05c.364.066.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.856.856 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.712 5.712 0 0 1-.911-.95 11.651 11.651 0 0 0-1.997.406 11.307 11.307 0 0 1-1.02 1.51c-.292.35-.609.656-.927.787a.793.793 0 0 1-.58.029z"/>
+        </svg>
+        匯出 PDF
+    </button>
+    {% if prev_report %}
+    <a href="{{ root_path }}/compare.html?left={{ prev_report.path }}&right={{ current_report_path }}" class="btn btn-outline">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+            <path d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"/>
+        </svg>
+        與上期比較
+    </a>
+    {% endif %}
+</div>
+
+<!-- Report Metadata -->
+<div class="report-meta">
+    <div class="report-meta-item">
+        <span class="report-meta-label">報告類型</span>
+        <span class="report-meta-value">{{ mode_display_name }}</span>
+    </div>
+    <div class="report-meta-item">
+        <span class="report-meta-label">報告週期</span>
+        <span class="report-meta-value">{{ report_period }}</span>
+    </div>
+    <div class="report-meta-item">
+        <span class="report-meta-label">生成日期</span>
+        <span class="report-meta-value">{{ generation_date }}</span>
+    </div>
+    {% if data_sources %}
+    <div class="report-meta-item">
+        <span class="report-meta-label">資料來源</span>
+        <span class="report-meta-value">
+            {% for source in data_sources %}
+            <span class="market-badge {{ source.code | lower }}">{{ source.flag }} {{ source.name }}</span>
+            {% endfor %}
+        </span>
+    </div>
+    {% endif %}
+</div>
+
+<!-- Report Content -->
+<article class="card">
+    <div class="md-content">
+        {{ content | safe }}
+    </div>
+</article>
+
+<!-- Navigation to Other Reports -->
+<div class="card">
+    <h3>相關報告</h3>
+    <div class="report-navigation">
+        {% if prev_report %}
+        <a href="{{ prev_report.url }}" class="btn btn-outline">
+            ← {{ prev_report.title }}
+        </a>
+        {% endif %}
+        {% if next_report %}
+        <a href="{{ next_report.url }}" class="btn btn-outline">
+            {{ next_report.title }} →
+        </a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+    // Initialize charts for this report
+    document.addEventListener('DOMContentLoaded', function() {
+        // Find all tables with data-chart attribute and render charts
+        initializeCharts();
+    });
+</script>
+{% endblock %}

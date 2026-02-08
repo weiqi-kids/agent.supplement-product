@@ -1,0 +1,367 @@
+/* =========================================
+   保健食品產品情報系統 — PDF 匯出專用樣式
+   ========================================= */
+
+@media print {
+  /* --- 1. 隱藏互動元素 --- */
+  .navbar,
+  .search-container,
+  .search-results,
+  .report-actions,
+  .btn,
+  .chart-toggle,
+  .footer,
+  .compare-selector,
+  .breadcrumb,
+  .no-print {
+    display: none !important;
+  }
+
+  /* --- 2. 頁面設定 --- */
+  @page {
+    size: A4;
+    margin: 2cm 1.5cm;
+  }
+
+  @page :first {
+    margin-top: 1.5cm;
+  }
+
+  html, body {
+    font-size: 11pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+  }
+
+  /* --- 3. 容器重設 --- */
+  .container,
+  .container-wide {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* --- 4. 標題分頁控制 --- */
+  h1 {
+    font-size: 18pt;
+    page-break-after: avoid;
+  }
+
+  h2 {
+    font-size: 14pt;
+    page-break-before: always;
+    page-break-after: avoid;
+    border-bottom: 1pt solid #333;
+  }
+
+  /* 第一個 h2 不分頁 */
+  h2:first-of-type,
+  .md-content > h2:first-child {
+    page-break-before: avoid;
+  }
+
+  h3 {
+    font-size: 12pt;
+    page-break-after: avoid;
+  }
+
+  h4, h5, h6 {
+    page-break-after: avoid;
+  }
+
+  /* --- 5. 段落與內容 --- */
+  p {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* --- 6. 表格 --- */
+  table {
+    page-break-inside: auto;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 9pt;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr {
+    page-break-inside: avoid;
+  }
+
+  th, td {
+    border: 0.5pt solid #999;
+    padding: 4pt 6pt;
+  }
+
+  th {
+    background-color: #f0f0f0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* --- 7. 統計卡片 --- */
+  .stat-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10pt;
+    page-break-inside: avoid;
+  }
+
+  .stat-card {
+    flex: 1 1 22%;
+    border: 0.5pt solid #ccc;
+    padding: 8pt;
+    text-align: center;
+    background: #f9f9f9 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .stat-value {
+    font-size: 18pt;
+    font-weight: bold;
+    color: #0d6efd;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .stat-label {
+    font-size: 8pt;
+    color: #666;
+  }
+
+  /* --- 8. 圖表處理 --- */
+  .chart-container {
+    page-break-inside: avoid;
+    width: 100% !important;
+    max-height: 400pt;
+  }
+
+  .chart-container svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* 強制顯示圖表（即使有 toggle） */
+  .chart-view {
+    display: block !important;
+  }
+
+  .table-view {
+    display: block !important;
+  }
+
+  /* --- 9. 高亮框 --- */
+  .highlight-box {
+    border: 0.5pt solid #ccc;
+    border-left: 3pt solid #0d6efd;
+    padding: 8pt 12pt;
+    margin: 10pt 0;
+    page-break-inside: avoid;
+    background-color: #f8f9fa !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .highlight-box.success {
+    border-left-color: #198754;
+  }
+
+  .highlight-box.warning {
+    border-left-color: #ffc107;
+  }
+
+  .highlight-box.danger {
+    border-left-color: #dc3545;
+  }
+
+  /* --- 10. 連結處理 --- */
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  /* 顯示外部連結 URL */
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 8pt;
+    color: #666;
+    word-break: break-all;
+  }
+
+  /* 內部連結不顯示 URL */
+  a[href^="#"]:after,
+  a[href^="/"]:after,
+  a[href^="./"]:after {
+    content: none;
+  }
+
+  /* --- 11. 報告元資料 --- */
+  .report-meta {
+    border: 0.5pt solid #ccc;
+    padding: 10pt;
+    margin-bottom: 15pt;
+    page-break-inside: avoid;
+    background-color: #f8f9fa !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .report-meta-item {
+    display: inline-block;
+    margin-right: 20pt;
+  }
+
+  .report-meta-label {
+    font-size: 8pt;
+    color: #666;
+  }
+
+  .report-meta-value {
+    font-weight: bold;
+  }
+
+  /* --- 12. 市場標籤 --- */
+  .market-badge {
+    border: 0.5pt solid currentColor;
+    padding: 1pt 4pt;
+    font-size: 8pt;
+  }
+
+  /* --- 13. 趨勢指示器 --- */
+  .trend-indicator.up {
+    color: #198754 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .trend-indicator.down {
+    color: #dc3545 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* --- 14. 比較視圖 --- */
+  .compare-container {
+    display: block;
+  }
+
+  .compare-panel {
+    page-break-inside: avoid;
+    margin-bottom: 15pt;
+    border: 0.5pt solid #ccc;
+  }
+
+  .compare-summary {
+    background-color: #0d6efd !important;
+    color: #fff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    padding: 10pt;
+    page-break-inside: avoid;
+  }
+
+  .diff-added {
+    background-color: #d4edda !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .diff-removed {
+    background-color: #f8d7da !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .diff-changed {
+    background-color: #fff3cd !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* --- 15. 程式碼區塊 --- */
+  pre, code {
+    font-size: 9pt;
+    border: 0.5pt solid #ccc;
+    background-color: #f8f9fa !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  pre {
+    padding: 8pt;
+    page-break-inside: avoid;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  /* --- 16. 圖片 --- */
+  img {
+    max-width: 100%;
+    page-break-inside: avoid;
+  }
+
+  /* --- 17. 列表 --- */
+  ul, ol {
+    page-break-inside: avoid;
+  }
+
+  li {
+    page-break-inside: avoid;
+  }
+
+  /* --- 18. 卡片樣式 --- */
+  .card {
+    border: 0.5pt solid #ccc;
+    padding: 10pt;
+    margin-bottom: 10pt;
+    page-break-inside: avoid;
+  }
+
+  /* --- 19. 頁首頁尾 --- */
+  .print-header {
+    display: block !important;
+    text-align: center;
+    font-size: 9pt;
+    color: #666;
+    margin-bottom: 15pt;
+    padding-bottom: 10pt;
+    border-bottom: 0.5pt solid #ccc;
+  }
+
+  .print-footer {
+    display: block !important;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 8pt;
+    color: #999;
+  }
+
+  /* --- 20. 強制顯示/隱藏 --- */
+  .print-only {
+    display: block !important;
+  }
+
+  .screen-only {
+    display: none !important;
+  }
+}
+
+/* 預設隱藏列印專用元素 */
+.print-only,
+.print-header,
+.print-footer {
+  display: none;
+}
