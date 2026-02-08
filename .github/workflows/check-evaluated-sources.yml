@@ -1,0 +1,19 @@
+name: Check evaluated sources
+
+on:
+  schedule:
+    # 每日 UTC 06:00 執行（台灣時間 14:00）
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+jobs:
+  check-sources:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check evaluated sources connectivity
+        run: bash scripts/check-evaluated-sources.sh

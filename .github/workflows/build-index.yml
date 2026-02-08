@@ -1,0 +1,135 @@
+name: Build index.json
+
+on:
+  push:
+    paths:
+      - 'docs/Extractor/**/*.md'
+      - 'docs/Narrator/**/*.md'
+  workflow_dispatch:
+
+jobs:
+  build-index:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Extractor index.json
+        run: |
+          for layer_dir in docs/Extractor/*/; do
+            [ -d "$layer_dir" ] || continue
+            layer_name="$(basename "$layer_dir")"
+            index_file="${layer_dir}index.json"
+            echo "📋 Building index: $layer_name"
+
+            items="[]"
+
+            while IFS= read -r md_file; do
+              [ -z "$md_file" ] && continue
+
+              rel_path="${md_file#${layer_dir}}"
+
+              # 從 YAML frontmatter 提取欄位
+              title="$(sed -n '/^title:/{s/^title: *//;s/^"//;s/"$//;p;}' "$md_file" | head -1)"
+              date_val="$(sed -n 's/^date: *//p' "$md_file" | head -1)"
+              source_url="$(sed -n 's/^source_url: *//p' "$md_file" | head -1)"
+              category="$(sed -n 's/^category: *//p' "$md_file" | head -1)"
+              confidence="$(sed -n 's/^confidence: *//p' "$md_file" | head -1)"
+
+              # fallback: category 從目錄名取
+              if [ -z "$category" ]; then
+                category="$(dirname "$rel_path")"
+                [ "$category" = "." ] && category="uncategorized"
+              fi
+
+              # 檢查 REVIEW_NEEDED
+              review_needed="false"
+              if head -1 "$md_file" | grep -q '\[REVIEW_NEEDED\]'; then
+                review_needed="true"
+              fi
+
+              items="$(echo "$items" | jq \
+                --arg title "$title" \
+                --arg date "$date_val" \
+                --arg file "$rel_path" \
+                --arg category "$category" \
+                --arg source_url "$source_url" \
+                --arg confidence "$confidence" \
+                --arg layer "$layer_name" \
+                --argjson review_needed "$review_needed" \
+                '. + [{
+                  id: ($file | gsub("[/.]"; "-")),
+                  title: $title,
+                  category: $category,
+                  date: $date,
+                  file: $file,
+                  source_url: $source_url,
+                  confidence: $confidence,
+                  source_layer: $layer,
+                  review_needed: $review_needed
+                }]'
+              )"
+            done < <(find "$layer_dir" -name "*.md" -type f -not -path "*/raw/*" 2>/dev/null | sort -r)
+
+            echo "$items" | jq '.' > "$index_file"
+            echo "✅ $layer_name: $(echo "$items" | jq 'length') 筆"
+          done
+
+      - name: Build Narrator index.json
+        run: |
+          for mode_dir in docs/Narrator/*/; do
+            [ -d "$mode_dir" ] || continue
+            mode_name="$(basename "$mode_dir")"
+            index_file="${mode_dir}index.json"
+            echo "📋 Building index: $mode_name"
+
+            items="[]"
+
+            while IFS= read -r md_file; do
+              [ -z "$md_file" ] && continue
+
+              rel_path="${md_file#${mode_dir}}"
+
+              # title 從第一個 # heading 取
+              title="$(grep -m1 '^# ' "$md_file" 2>/dev/null | sed 's/^# //' || echo "")"
+
+              # date 從檔名取 YYYY-WNN
+              date_val="$(echo "$rel_path" | grep -oE '[0-9]{4}-W[0-9]{2}' || echo "")"
+
+              # 從報告內容取資料來源筆數
+              item_count="$(grep -oE '總變動數 \| [0-9]+' "$md_file" 2>/dev/null | grep -oE '[0-9]+' || echo "")"
+
+              items="$(echo "$items" | jq \
+                --arg title "$title" \
+                --arg date "$date_val" \
+                --arg file "$rel_path" \
+                --arg item_count "$item_count" \
+                --arg mode "$mode_name" \
+                '. + [{
+                  id: ($file | gsub("[/.]"; "-")),
+                  title: $title,
+                  date: $date,
+                  file: $file,
+                  item_count: $item_count,
+                  source_mode: $mode
+                }]'
+              )"
+            done < <(find "$mode_dir" -name "*.md" -type f 2>/dev/null | sort -r)
+
+            echo "$items" | jq '.' > "$index_file"
+            echo "✅ $mode_name: $(echo "$items" | jq 'length') 筆"
+          done
+
+      - name: Commit index.json
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/*/*/index.json
+          if git diff --cached --quiet; then
+            echo "No changes to index.json"
+          else
+            git commit -m "chore: auto-update index.json"
+            git push
+          fi
