@@ -1,7 +1,7 @@
 title: "保健食品產品情報系統"
 description: "跨國保健食品市場監測與成分趨勢分析"
-baseurl: ""
-url: ""
+baseurl: "/agent.supplement-product"
+url: "https://weiqi-kids.github.io"
 
 remote_theme: just-the-docs/just-the-docs@v0.10.0
 
