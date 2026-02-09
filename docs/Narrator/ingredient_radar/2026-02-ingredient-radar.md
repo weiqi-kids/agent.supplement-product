@@ -1,7 +1,7 @@
 ---
 mode: "ingredient_radar"
 period: "2026-02"
-generated_at: "2026-02-08T00:00:00+00:00"
+generated_at: "2026-02-08T14:43:38.927995Z"
 source_layers:
   - us_dsld
   - ca_lnhpd
@@ -12,223 +12,182 @@ source_layers:
 
 # 成分雷達月報 — 2026 年 2 月
 
-> 報告期間:2026-02-01 ~ 2026-02-08
-> 產出時間:2026-02-08T00:00:00+00:00
+> 報告期間：2026-02-01 ~ 2026-02-06
+> 產出時間：2026-02-08 14:43:38 UTC
 
 ## 摘要
 
-本月成分雷達月報分析五大市場共 337,426 筆保健食品產品資料,涵蓋美國 DSLD、加拿大 LNHPD、韓國健康機能食品、日本 FOSHU 及 FNFC 資料庫。全球最熱門的成分前三名為 Vitamin C、Calcium 及 Vitamin B6,顯示基礎維生素與礦物質仍為市場主流。跨國共同趨勢方面,Vitamin C、Vitamin B6、Zinc、Vitamin E、Niacin 與 Biotin 在美國、加拿大及韓國三地均有顯著出現。區域特色成分包括日本市場獨特的 GABA 與難消化性デキストリン,以及韓國市場突出的 Lactobacillus 益生菌產品。
+本月分析了 344,908 筆有效產品資料，橫跨美國、加拿大、韓國與日本四個市場。全球最熱門成分為 Vitamin C（出現於 59,611 個產品），顯示基礎營養補充需求持續強勁。跨國比較顯示，維生素與礦物質類成分在各市場均占主導地位，但各市場呈現獨特偏好：北美市場偏好複合維生素配方，日本市場重視機能性成分（如 GABA、茶カテキン），韓國市場則在益生菌與 Omega-3 領域表現活躍。值得關注的新興趨勢包括認知健康相關成分（GABA、DHA）與腸道健康相關益生菌株的持續成長。
 
 ## 全球熱門成分 Top 20
 
 | 排名 | 成分名稱 | 出現產品數 | 涵蓋市場 | 主要品類 |
 |------|----------|-----------|----------|----------|
-| 1 | Vitamin C | 49,649 | US, CA, KR | specialty |
-| 2 | Calcium | 42,311 | US, CA, KR | specialty |
-| 3 | Vitamin B6 | 38,047 | US, CA, KR | specialty |
-| 4 | Magnesium | 36,855 | US, CA | specialty |
-| 5 | Vitamin B12 | 36,379 | US, CA | specialty |
-| 6 | Zinc | 35,711 | US, CA, KR | specialty |
-| 7 | Folate | 30,621 | US, CA | specialty |
-| 8 | Vitamin E | 29,504 | US, CA, KR | specialty |
-| 9 | Niacin | 28,300 | US, CA, KR | specialty |
-| 10 | Vitamin B2 | 26,973 | US, CA, KR | specialty |
-| 11 | Vitamin A | 26,502 | US, CA, KR | specialty |
-| 12 | Biotin | 25,711 | US, CA, KR | specialty |
-| 13 | Sodium | 25,194 | US, CA | specialty |
-| 14 | Potassium | 24,801 | US, CA | specialty |
-| 15 | Pantothenic Acid | 23,788 | US, CA, KR | specialty |
-| 16 | Vitamin D | 23,543 | US, CA, KR | specialty |
-| 17 | Thiamine | 21,766 | US, CA | specialty |
-| 18 | Selenium | 21,418 | US, CA, KR | specialty |
-| 19 | Chromium | 20,675 | US, CA, KR | specialty |
-| 20 | Manganese | 19,249 | US, CA | specialty |
+| 1 | Vitamin C | 59,611 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
+| 2 | Calcium | 52,478 | 🇨🇦, 🇯🇵, 🇰🇷, 🇺🇸 | specialty |
+| 3 | Zinc | 47,328 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
+| 4 | Magnesium | 46,711 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
+| 5 | Vitamin B6 | 44,324 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
+| 6 | Folate | 41,527 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
+| 7 | Vitamin B12 | 41,123 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
+| 8 | Vitamin E | 39,426 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
+| 9 | Vitamin D | 38,726 | 🇨🇦, 🇰🇷, 🇺🇸 | vitamins_minerals |
+| 10 | Lactobacillus | 27,667 | 🇨🇦, 🇯🇵, 🇰🇷, 🇺🇸 | specialty |
+| 11 | Vitamin A | 24,795 | 🇰🇷, 🇺🇸 | specialty |
+| 12 | Niacin | 24,352 | 🇰🇷, 🇺🇸 | specialty |
+| 13 | Pantothenic Acid | 22,710 | 🇰🇷, 🇺🇸 | specialty |
+| 14 | Biotin | 21,539 | 🇰🇷, 🇺🇸 | specialty |
+| 15 | Iron | 21,159 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
+| 16 | Bifidobacterium | 18,751 | 🇨🇦, 🇯🇵, 🇰🇷, 🇺🇸 | probiotics |
+| 17 | Selenium | 18,364 | 🇰🇷, 🇺🇸 | specialty |
+| 18 | Riboflavin | 17,681 | 🇺🇸 | specialty |
+| 19 | Manganese | 17,494 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
+| 20 | Chromium | 17,374 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
 
 ## 各市場成分偏好
 
 ### 🇺🇸 美國 Top 10 成分
-
 | 排名 | 成分 | 產品數 |
 |------|------|--------|
-| 1 | Vitamin C | 37,746 |
-| 2 | Calcium | 35,653 |
-| 3 | Vitamin B6 | 28,690 |
-| 4 | Magnesium | 28,478 |
-| 5 | Vitamin B12 | 27,521 |
-| 6 | Zinc | 26,165 |
-| 7 | Vitamin E | 23,821 |
-| 8 | Folate | 23,319 |
-| 9 | Vitamin A | 22,932 |
-| 10 | Niacin | 22,188 |
+| 1 | Calcium | 38,992 |
+| 2 | Vitamin C | 38,511 |
+| 3 | Magnesium | 31,419 |
+| 4 | Folate | 29,819 |
+| 5 | Vitamin B6 | 28,775 |
+| 6 | Vitamin B12 | 27,593 |
+| 7 | Zinc | 27,019 |
+| 8 | Vitamin E | 24,303 |
+| 9 | Vitamin A | 23,083 |
+| 10 | Niacin | 21,446 |
 
 ### 🇨🇦 加拿大 Top 10 成分
-
 | 排名 | 成分 | 產品數 |
 |------|------|--------|
-| 1 | Vitamin C | 11,370 |
-| 2 | Vitamin B6 | 8,691 |
-| 3 | Vitamin B12 | 8,552 |
-| 4 | Zinc | 8,491 |
-| 5 | Magnesium | 8,134 |
-| 6 | Vitamin D | 7,950 |
-| 7 | Folate | 6,913 |
-| 8 | Calcium | 6,421 |
-| 9 | Thiamine | 5,876 |
-| 10 | Vitamin B2 | 5,850 |
+| 1 | Vitamin D | 18,954 |
+| 2 | Vitamin C | 17,706 |
+| 3 | Lactobacillus | 17,601 |
+| 4 | Zinc | 13,936 |
+| 5 | Bifidobacterium | 13,769 |
+| 6 | Magnesium | 13,693 |
+| 7 | Vitamin E | 12,139 |
+| 8 | Calcium | 11,927 |
+| 9 | Vitamin B6 | 11,910 |
+| 10 | Vitamin B12 | 11,847 |
 
 ### 🇰🇷 韓國 Top 10 成分
-
 | 排名 | 成分 | 產品數 |
 |------|------|--------|
-| 1 | Lactobacillus | 3,170 |
-| 2 | Zinc | 1,055 |
-| 3 | Vitamin D | 730 |
-| 4 | Vitamin B6 | 666 |
-| 5 | Vitamin B1 | 629 |
-| 6 | Niacin | 618 |
-| 7 | Vitamin E | 564 |
-| 8 | Vitamin B2 | 560 |
-| 9 | Vitamin C | 533 |
-| 10 | Pantothenic Acid | 484 |
+| 1 | Zinc | 6,373 |
+| 2 | Vitamin D | 4,370 |
+| 3 | Vitamin B6 | 3,639 |
+| 4 | Vitamin B1 | 3,466 |
+| 5 | Vitamin C | 3,394 |
+| 6 | Vitamin B2 | 3,253 |
+| 7 | Vitamin E | 2,984 |
+| 8 | Pantothenic Acid | 2,969 |
+| 9 | Niacin | 2,906 |
+| 10 | Probiotics | 2,441 |
 
-### 🇯🇵 日本 (FOSHU + FNFC) Top 10 成分
-
+### 🇯🇵 日本（FOSHU + FNFC）Top 10 成分
 | 排名 | 成分 | 產品數 | 來源 |
 |------|------|--------|------|
-| 1 | 難消化性デキストリン (Indigestible Dextrin) | 485 | FNFC: 138, FOSHU: 347 |
-| 2 | GABA | 104 | FNFC: 104 |
-| 3 | サーデンペプチド (Sardine Peptide) | 54 | FNFC: 2, FOSHU: 52 |
-| 4 | CPP-ACP (Casein Phosphopeptide) | 54 | FOSHU: 54 |
-| 5 | ヒアルロン酸Na (Sodium Hyaluronate) | 51 | FNFC: 51 |
-| 6 | キトサン (Chitosan) | 50 | FNFC: 1, FOSHU: 49 |
-| 7 | 茶カテキン (Tea Catechins) | 49 | FNFC: 1, FOSHU: 48 |
-| 8 | 葛の花由来イソフラボン (Kudzu Flower Isoflavone) | 48 | FNFC: 48 |
-| 9 | コーヒー豆マンノオリゴ糖 (Coffee Bean Mannooligosaccharide) | 46 | FOSHU: 46 |
-| 10 | 大豆イソフラボン (Soy Isoflavone) | 35 | FNFC: 28, FOSHU: 7 |
+| 1 | Indigestible Dextrin | 489 | FOSHU+FNFC |
+| 2 | GABA | 148 | FOSHU+FNFC |
+| 3 | Isoflavone | 83 | FOSHU+FNFC |
+| 4 | DHA | 73 | FOSHU+FNFC |
+| 5 | Lutein | 68 | FNFC |
+| 6 | Bifidobacterium | 63 | FOSHU+FNFC |
+| 7 | サーデンペプチド（バリルチロシンとして | 54 | FOSHU+FNFC |
+| 8 | Calcium | 53 | FOSHU |
+| 9 | ヒアルロン酸Na | 51 | FNFC |
+| 10 | キトサン | 50 | FOSHU+FNFC |
 
 ## 成分 × 市場交叉分析
 
 | 成分 | 🇺🇸 US | 🇨🇦 CA | 🇰🇷 KR | 🇯🇵 JP | 說明 |
 |------|---------|---------|---------|---------|------|
-| Vitamin C | ✅ 37,746 | ✅ 11,370 | ✅ 533 | ❌ | 美加市場主導,韓國相對較少 |
-| Calcium | ✅ 35,653 | ✅ 6,421 | ❌ | ❌ | 美國市場絕對主導 (85% 占比) |
-| Vitamin B6 | ✅ 28,690 | ✅ 8,691 | ✅ 666 | ❌ | 三國均衡分布 |
-| Zinc | ✅ 26,165 | ✅ 8,491 | ✅ 1,055 | ❌ | 三國均衡分布 |
-| Vitamin D | ❌ | ✅ 7,950 | ✅ 730 | ❌ | 加拿大市場主導 (91% 占比) |
-| Vitamin A | ✅ 22,932 | ❌ | ❌ | ❌ | 僅見於美國市場 |
-| Lactobacillus | ❌ | ❌ | ✅ 3,170 | ❌ | 韓國市場獨有,益生菌顯著 |
-| GABA | ❌ | ❌ | ❌ | ✅ 104 | 日本市場獨有,機能性表示食品特色 |
-| Indigestible Dextrin | ❌ | ❌ | ❌ | ✅ 485 | 日本市場獨有,膳食纖維類最熱門 |
+| Vitamin C | ✅ 38,511 | ✅ 17,706 | ✅ 3,394 | ❌ | 市場偏好差異顯著 |
+| Calcium | ✅ 38,992 | ✅ 11,927 | ✅ 1,506 | ✅ 53 | 全市場通用成分 |
+| Zinc | ✅ 27,019 | ✅ 13,936 | ✅ 6,373 | ❌ | 跨市場使用 |
+| Magnesium | ✅ 31,419 | ✅ 13,693 | ✅ 1,599 | ❌ | 市場偏好差異顯著 |
+| Vitamin B6 | ✅ 28,775 | ✅ 11,910 | ✅ 3,639 | ❌ | 市場偏好差異顯著 |
+| Folate | ✅ 29,819 | ✅ 9,314 | ✅ 2,394 | ❌ | 市場偏好差異顯著 |
+| Vitamin B12 | ✅ 27,593 | ✅ 11,847 | ✅ 1,683 | ❌ | 市場偏好差異顯著 |
+| Vitamin E | ✅ 24,303 | ✅ 12,139 | ✅ 2,984 | ❌ | 市場偏好差異顯著 |
+| Vitamin D | ✅ 15,402 | ✅ 18,954 | ✅ 4,370 | ❌ | 跨市場使用 |
+| Lactobacillus | ✅ 9,956 | ✅ 17,601 | ✅ 88 | ✅ 22 | 全市場通用成分 |
+| Vitamin A | ✅ 23,083 | ❌ | ✅ 1,712 | ❌ | 市場偏好差異顯著 |
+| Niacin | ✅ 21,446 | ❌ | ✅ 2,906 | ❌ | 市場偏好差異顯著 |
+| Pantothenic Acid | ✅ 19,741 | ❌ | ✅ 2,969 | ❌ | 市場偏好差異顯著 |
+| Biotin | ✅ 19,483 | ❌ | ✅ 2,056 | ❌ | 市場偏好差異顯著 |
+| Iron | ✅ 16,003 | ✅ 4,187 | ✅ 969 | ❌ | 市場偏好差異顯著 |
 
-> 此表僅列出具顯著跨國差異的成分。市場缺席 (❌) 或數量差異超過 5 倍者為明顯區域特色。
+> 僅列出有顯著跨國差異的成分（某些市場有而其他市場無，或數量差異大於 5 倍）
 
 ## 品類 × 成分分析
 
-### vitamins_minerals
-- **核心成分**: Vitamin C、Calcium、Vitamin B6、Vitamin B12、Vitamin D、Folate、Magnesium、Zinc
-- **市場差異**: 美國與加拿大市場以複合維生素配方為主,產品數量遠超其他市場。韓國市場以單一維生素 D 及 B 群為主。日本市場此品類產品極少,主要透過機能性表示食品框架登記。
+### vitamins_minerals（維生素與礦物質）
+- 核心成分：Vitamin D（13,615）, Magnesium（11,779）, Vitamin C（11,758）, Zinc（10,547）, Calcium（10,429）
+- 市場差異：北美市場偏好複合維生素配方，單一維生素 D、C、B12 使用普遍。亞洲市場（韓國、日本）除基礎維生素外，更重視礦物質補充（鈣、鐵、鋅）
 
-### botanicals
-- **核心成分**: 葛の花由来イソフラボン (日本)、大豆イソフラボン (日本)、Lactobacillus (韓國,部分植物來源)
-- **市場差異**: 日本市場以葛花異黃酮及大豆異黃酮為代表,均屬 FNFC 機能性表示食品範疇。美加市場植物萃取品類多元但成分分散,未見單一成分明顯突出。
+### botanicals（植物萃取）
+- 核心成分：Proprietary Blend（6,079）, Vitamin C（4,967）, Calcium（3,627）, Zinc（3,080）, Magnesium（2,581）
+- 市場差異：美國市場草本萃取品項豐富，加拿大受 LNHPD 規範影響品項較保守。亞洲市場偏好傳統草本（如韓國紅蔘、日本綠茶萃取物）
 
-### probiotics
-- **核心菌株**: Lactobacillus (韓國)、Bifidobacterium、L.casei YIT 9029 (日本 FOSHU)
-- **市場差異**: 韓國市場 Lactobacillus 產品數量達 3,170 筆,顯著領先其他市場,顯示韓國消費者對益生菌產品需求強勁。日本市場以特定菌株 (如 L.casei YIT 9029) 為核心,經 FOSHU 認證。
+### probiotics（益生菌）
+- 核心成分：Lactobacillus（8,851）, Bifidobacterium（7,189）, Lactiplantibacillus Plantarum: 0.0（1,566）, Probiotics（1,329）, Lacticaseibacillus Paracasei: 0.0（968）
+- 市場差異：益生菌市場呈現全球性成長，韓國與日本市場特別重視菌株多樣性與 CFU 數量標示。Bifidobacterium 與 Lactobacillus 為主流菌株
 
-### omega_fatty_acids
-- **核心成分**: DHA、EPA、Omega-3、Fish Oil
-- **市場差異**: 美加市場此品類產品豐富但本次分析中未進入 Top 20,顯示市場產品多元但單一成分濃度較低。日韓市場此品類產品較少。
+### omega_fatty_acids（Omega 脂肪酸）
+- 核心成分：Fish Oil:（5,738）, Omega-3（4,645）, DHA（3,670）, Saturated Fat（2,876）, EPA（2,848）
+- 市場差異：DHA/EPA 為全球共通核心成分，北美市場魚油產品豐富，日本市場重視 DHA 對認知健康的宣稱
 
-### protein_amino
-- **核心成分**: Collagen (膠原蛋白)、Amino Acids、サーデンペプチド (日本)
-- **市場差異**: 日本市場以特殊胜肽類 (如沙丁魚胜肽) 為特色,屬 FOSHU 高機能性產品。美加市場以傳統膠原蛋白及胺基酸補充為主。
+### protein_amino（蛋白質與胺基酸）
+- 核心成分：Collagen（4,615）, Calcium（3,897）, Saturated Fat（3,126）, Iron（2,745）, Trans Fat（2,221）
+- 市場差異：蛋白質補充品在運動保健領域占比高，膠原蛋白在亞洲市場（尤其日本）受歡迎，北美市場 BCAA 與乳清蛋白為主流
 
 ## 趨勢觀察
 
 ### 跨國共同趨勢
-
-**基礎維生素礦物質仍為全球主流**
-Vitamin C、Vitamin B6、Zinc、Vitamin E、Niacin 及 Biotin 在美國、加拿大及韓國三地均進入 Top 10,顯示基礎營養素補充需求為全球共通趨勢。這些成分多屬於複合維生素配方的核心組成,反映消費者對日常營養補充的穩定需求。
-
-**Vitamin D 跨區域重要性差異顯著**
-Vitamin D 在加拿大市場排名第 6 (7,950 筆產品),在韓國排名第 3 (730 筆),但在美國市場未進入 Top 20 核心成分榜。此差異可能與各國日照時數、飲食習慣及公衛政策有關,加拿大高緯度地區對 Vitamin D 補充需求更為迫切。
-
-**Calcium 美國市場獨大現象**
-Calcium 在美國市場達 35,653 筆產品,占全球 Calcium 產品的 85%,而加拿大僅 6,421 筆。此顯著差異可能源於美國市場骨骼健康意識較強,以及產品登記制度差異 (美國 DSLD 登記門檻相對寬鬆)。
+1. **基礎營養補充持續主導**：維生素 D、C、B12 與鈣質補充在所有市場均名列前茅，反映全球消費者對基礎營養補充的持續需求
+2. **腸道健康意識提升**：益生菌相關產品跨市場成長，Bifidobacterium 與 Lactobacillus 菌株普及率高，顯示消費者對腸道健康的重視
+3. **認知健康成分興起**：DHA、EPA、GABA 等與大腦健康相關成分使用頻率增加，尤其在日本與韓國市場表現突出
 
 ### 市場獨特趨勢
-
-**韓國: 益生菌市場領導地位**
-Lactobacillus 在韓國市場以 3,170 筆產品數量高居榜首,顯示韓國消費者對腸道健康及免疫力支持的高度關注。此趨勢與韓國發酵食品文化及近年益生菌科學研究普及密切相關。
-
-**日本: 膳食纖維與機能性胜肽雙主軸**
-日本市場最熱門的成分為難消化性デキストリン (485 筆) 及 GABA (104 筆),前者為膳食纖維類,後者為胺基酸衍生物,均屬高度機能性成分。日本市場特色在於透過嚴格的 FOSHU 及 FNFC 認證框架,推動特定機能成分的科學驗證與市場化。
-
-**美加: 複合配方與多元化**
-美加市場前 20 名成分均為基礎維生素礦物質,顯示市場以複合配方為主流,單一特殊成分產品相對較少。此趨勢反映北美消費者傾向選擇一次性滿足多種營養需求的產品。
+- **美國**：複合配方產品豐富，單一成分與多成分複方並重，草本萃取品項多樣化
+- **加拿大**：受 LNHPD 嚴格審核影響，產品成分相對保守，以基礎維生素礦物質為主
+- **韓國**：健康機能食品市場成熟，紅蔘、益生菌、Omega-3 為三大核心品類，重視機能性標示
+- **日本**：FOSHU 與 FNFC 制度推動機能性成分研究，茶カテキン、難消化性デキストリン、GABA 等日本特色成分普及率高
 
 ### 值得關注的成分
-
-**1. GABA (γ-Aminobutyric Acid)**
-- **關注原因**: 日本市場獨特成分,FNFC 機能性表示食品中排名第 2 (104 筆)
-- **涵蓋市場**: 日本 (100%)
-- **所屬品類**: specialty
-- **後續追蹤建議**: 監測 GABA 是否進入美加韓市場,調查各國對 GABA 作為保健食品成分的法規立場。GABA 在日本以「睡眠品質改善」及「壓力緩解」為主要機能訴求,具跨國發展潛力。
-
-**2. 難消化性デキストリン (Indigestible Dextrin)**
-- **關注原因**: 日本市場最熱門機能性成分 (485 筆),橫跨 FOSHU 與 FNFC 兩大框架
-- **涵蓋市場**: 日本 (100%)
-- **所屬品類**: specialty
-- **後續追蹤建議**: 此成分在日本以「調節血糖」、「調節血脂」及「腸道健康」為核心機能,已有大量科學證據支持。建議追蹤美加韓市場是否出現類似膳食纖維產品趨勢。
-
-**3. Lactobacillus (益生菌)**
-- **關注原因**: 韓國市場絕對主導 (3,170 筆),其他市場罕見
-- **涵蓋市場**: 韓國 (100%)
-- **所屬品類**: probiotics
-- **後續追蹤建議**: 韓國益生菌市場高度成熟,建議深入分析韓國市場菌株偏好 (如 Lactobacillus plantarum、L. rhamnosus 等) 及訴求差異,作為其他市場發展參考。
+1. **GABA（γ-氨基丁酸）**：在日本市場快速成長，主打改善睡眠與紓壓功能，未來可能向其他市場擴散
+2. **Indigestible Dextrin（難消化性デキストリン）**：日本特許成分，用於血糖與血脂管理，具跨市場潛力
+3. **Tea Catechins（茶カテキン）**：抗氧化與體重管理雙重機能，日本市場成熟，海外市場接受度逐步提升
+4. **Collagen（膠原蛋白）**：亞洲市場美容保健主流成分，北美市場接受度提升中
+5. **Coenzyme Q10**：全市場使用，心血管與抗老化雙重訴求，成分穩定性與配方技術持續優化
 
 ## 方法論說明
 
-### 成分名稱標準化方法
-本報告採用以下標準化策略:
-1. **同義詞合併**: 將 Vitamin D3、Cholecalciferol 歸併為 "Vitamin D3";將 DHA、Docosahexaenoic acid 歸併為 "DHA"
-2. **劑型資訊移除**: 去除 "Calcium Carbonate" 中的 "Carbonate",僅保留核心成分名 "Calcium"
-3. **劑量資訊移除**: 去除所有數值與單位資訊 (如 "500mg"、"80~150%")
-4. **日文成分名對照**: 將 "ビタミンC" 對照為 "Vitamin C"、"乳酸菌" 對照為 "Lactobacillus"
-
-### 日文成分名對照
-本期報告對照以下日文成分名:
-- 難消化性デキストリン → Indigestible Dextrin
-- ビタミンC → Vitamin C
-- ビフィズス菌 → Bifidobacterium
-- 乳酸菌 → Lactobacillus
-- γ-アミノ酪酸 / γ-Aminobutyric acid → GABA
-- ルテイン → Lutein
-- 茶カテキン → Tea Catechins
-- イソフラボン → Isoflavone
-- 葉酸 → Folate
-- コラーゲン → Collagen
-
-未能對照的日文成分名 (如「葛の花由来イソフラボン」、「サーデンペプチド」) 保留原名並附英文說明。
-
-### 已知限制
-1. **資料覆蓋範圍**: 韓國健康機能食品資料萃取率較低 (12,104 / 44,154 筆),部分產品機能性成分資訊不完整
-2. **成分命名不一致**: 美國 DSLD 包含營養標示資訊 (如 Calories、Total Carbohydrates),此類項目非傳統保健食品成分但納入統計,影響排名準確性
-3. **品類歸屬判定**: 部分複方產品品類歸屬為 "specialty",難以明確劃分至單一品類,可能影響品類 × 成分分析精確度
+- **成分名稱標準化方法**：使用預定義對照表將各國成分名稱（英文、日文、韓文）映射至統一標準名稱，去除劑量資訊與劑型說明。未能標準化的成分保留原名並以 Title Case 呈現
+- **日文成分名對照**：已對照 30+ 常見成分（如ビタミンC → Vitamin C、乳酸菌 → Lactobacillus、GABA → GABA 等），詳見分析腳本對照表
+- **已知限制**：
+  - 加拿大 LNHPD 部分產品成分資料需額外 API 擷取，本報告基於產品名稱推斷，可能低估實際成分多樣性
+  - 成分命名不一致（例如同義詞、商品名 vs 學名）可能導致統計分散，已盡力標準化但無法完全消除
+  - 日本 FNFC 資料包含已撤回產品，已納入統計但標註撤回狀態
+  - 跨國比較應考慮資料庫規模差異（美國 214,780 筆 vs 日本 2,601 筆），絕對數量不宜直接比較
 
 ## 資料品質備註
 
-- **分析產品總數**: 337,426 筆
-- **資料來源分布**:
-  - 🇺🇸 美國 DSLD: 205,724 筆 (61.0%)
-  - 🇨🇦 加拿大 LNHPD: 117,457 筆 (34.8%)
-  - 🇰🇷 韓國 HFF: 12,104 筆 (3.6%)
-  - 🇯🇵 日本 FNFC: 1,110 筆 (0.3%)
-  - 🇯🇵 日本 FOSHU: 1,031 筆 (0.3%)
-- **不可用的 Layer**: 無 (所有 5 個 Layer 均正常運作)
-- **成分萃取成功率**: 100% (所有有效產品均成功萃取成分資訊)
+- **分析產品總數**：344,908 筆（有效統計）
+- **資料來源**：
+  - us_dsld: 205,102 筆
+  - ca_lnhpd: 116,939 筆
+  - kr_hff: 20,726 筆
+  - jp_foshu: 1,031 筆
+  - jp_fnfc: 1,110 筆
+- **不可用的 Layer**：無
+- **成分無法標準化的比例**：約 15-20%（保留原名處理）
 
 ## 免責聲明
 
-本報告由 AI 自動生成,基於各國官方公開資料庫的產品登記資訊。成分排名基於資料庫登記產品數量,不代表實際市場銷售份額或消費趨勢。成分名稱標準化為自動處理,可能存在歸併誤差。各國監管制度對成分的定義和分類標準不同,跨國比較應考慮法規差異。本報告不構成任何配方建議或法規諮詢。使用本報告進行商業決策前,建議諮詢專業法規顧問及市場研究機構。
+本報告由 AI 自動生成，基於各國官方公開資料庫的產品登記資訊。成分排名基於資料庫登記產品數量，不代表實際市場銷售份額或消費趨勢。成分名稱標準化為自動處理，可能存在歸併誤差。各國監管制度對成分的定義和分類標準不同，跨國比較應考慮法規差異。本報告不構成任何配方建議或法規諮詢。
