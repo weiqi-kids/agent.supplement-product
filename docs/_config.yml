@@ -55,13 +55,3 @@ defaults:
       path: ""
     values:
       layout: default
-  - scope:
-      path: "reports/market-snapshot"
-    values:
-      parent: "市場快照"
-      grand_parent: "報告總覽"
-  - scope:
-      path: "reports/ingredient-radar"
-    values:
-      parent: "成分雷達"
-      grand_parent: "報告總覽"
