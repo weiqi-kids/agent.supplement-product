@@ -1,0 +1,139 @@
+name: Deploy Documentation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/Narrator/**/*.md'
+      - 'docs/_config.yml'
+      - 'docs/index.md'
+      - 'docs/reports/**/*.md'
+      - 'docs/data-sources/**/*.md'
+      - 'docs/about/**/*.md'
+  workflow_dispatch:
+
+# 設定 GITHUB_TOKEN 權限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 同時只允許一個部署
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # 步驟 1: 轉換報告格式
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: pip install pyyaml
+
+      - name: Convert reports to Jekyll format
+        run: python scripts/convert_to_jekyll.py
+
+      - name: Upload converted docs
+        uses: actions/upload-artifact@v4
+        with:
+          name: converted-docs
+          path: docs/
+          retention-days: 1
+
+  # 步驟 2: 建置 Jekyll 網站
+  build:
+    needs: convert
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download converted docs
+        uses: actions/download-artifact@v4
+        with:
+          name: converted-docs
+          path: docs/
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+          bundler-cache: true
+          working-directory: docs
+
+      - name: Build Jekyll site
+        working-directory: docs
+        run: bundle exec jekyll build --destination ../_site
+        env:
+          JEKYLL_ENV: production
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  # 步驟 3: 連結檢查
+  link-check:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download Pages artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: github-pages
+          path: _site_archive
+
+      - name: Extract site
+        run: |
+          mkdir -p _site
+          tar -xf _site_archive/artifact.tar -C _site
+
+      - name: Run lychee link checker
+        uses: lycheeverse/lychee-action@v1
+        with:
+          args: --verbose --no-progress "_site/**/*.html"
+          output: lychee-report.md
+          fail: false
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Attempt auto-fix
+        run: python scripts/fix_broken_links.py lychee-report.md
+        continue-on-error: true
+
+      - name: Upload link check report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: link-check-report
+          path: |
+            lychee-report.md
+            lychee-report.json
+          retention-days: 30
+
+  # 步驟 4: 部署到 GitHub Pages
+  deploy:
+    needs: [build, link-check]
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

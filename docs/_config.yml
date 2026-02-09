@@ -1,0 +1,63 @@
+title: "保健食品產品情報系統"
+description: "跨國保健食品市場監測與成分趨勢分析"
+baseurl: ""
+url: ""
+
+remote_theme: just-the-docs/just-the-docs@v0.10.0
+
+# 搜尋功能
+search_enabled: true
+search:
+  heading_level: 2
+  previews: 3
+  preview_words_before: 5
+  preview_words_after: 10
+  tokenizer_separator: /[\s/]+/
+  rel_url: true
+  button: false
+
+# 導航排序（最新報告在上）
+nav_sort: case_sensitive
+nav_order: 1
+
+# 頁尾
+footer_content: "Copyright &copy; 2026 保健食品產品情報系統"
+
+# 外觀
+color_scheme: light
+
+# 語言
+lang: zh-TW
+
+# 排除不需要處理的檔案
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - Extractor
+  - html
+  - explored.md
+  - LESSONS_LEARNED.md
+  - .DS_Store
+
+# 保留的目錄
+include:
+  - _pages
+
+# 預設值
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: "reports/market-snapshot"
+    values:
+      parent: "市場快照"
+      grand_parent: "報告總覽"
+  - scope:
+      path: "reports/ingredient-radar"
+    values:
+      parent: "成分雷達"
+      grand_parent: "報告總覽"
