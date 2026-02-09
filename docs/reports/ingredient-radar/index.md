@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 成分雷達
-nav_order: 2
+nav_order: 4
 parent: 報告總覽
 has_children: true
 ---

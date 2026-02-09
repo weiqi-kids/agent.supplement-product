@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 市場快照
-nav_order: 1
+nav_order: 3
 parent: 報告總覽
 has_children: true
 ---
