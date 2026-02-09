@@ -12,8 +12,8 @@ nav_order: 1
 
 | 報告類型 | 說明 | 更新頻率 |
 |----------|------|----------|
-| [市場快照](/reports/market-snapshot/) | 各國市場產品統計與品類分佈 | 每週 |
-| [成分雷達](/reports/ingredient-radar/) | 跨國成分趨勢與新興成分追蹤 | 每月 |
+| [市場快照]({{ site.baseurl }}/reports/market-snapshot/) | 各國市場產品統計與品類分佈 | 每週 |
+| [成分雷達]({{ site.baseurl }}/reports/ingredient-radar/) | 跨國成分趨勢與新興成分追蹤 | 每月 |
 
 ## 資料涵蓋範圍
 
