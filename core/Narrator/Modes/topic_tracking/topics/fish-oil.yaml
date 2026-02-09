@@ -1,0 +1,51 @@
+# 魚油主題追蹤定義
+# 魚油富含 Omega-3 脂肪酸（EPA、DHA），是全球最熱門的保健食品之一
+
+topic_id: fish-oil
+
+name:
+  zh: 魚油
+  en: Fish Oil
+  ja: フィッシュオイル
+  ko: 피쉬오일
+
+keywords:
+  # 精確匹配（成分名稱）
+  exact:
+    - fish oil
+    - omega-3
+    - omega 3
+    - EPA
+    - DHA
+    - eicosapentaenoic acid
+    - docosahexaenoic acid
+    - オメガ3
+    - オメガ-3
+    - 오메가3
+    - 오메가-3
+    - 魚油
+    - 鱼油
+    - フィッシュオイル
+  # 模糊匹配（產品名稱、描述）
+  fuzzy:
+    - krill oil
+    - krill
+    - 磷蝦油
+    - クリルオイル
+    - 크릴오일
+    - algae oil
+    - algal oil
+    - 藻油
+    - cod liver oil
+    - 鱈魚肝油
+    - salmon oil
+    - 鮭魚油
+
+category_filter:
+  - omega_fatty_acids
+  - specialty
+
+output:
+  index: docs/reports/fish-oil/index.md
+  guide: docs/reports/fish-oil/guide.md
+  reports: docs/reports/fish-oil/reports/

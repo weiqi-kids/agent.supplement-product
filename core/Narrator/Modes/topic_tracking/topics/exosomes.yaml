@@ -1,0 +1,48 @@
+# 外泌體主題追蹤定義
+# 外泌體是細胞分泌的奈米級囊泡，近年在美容保健領域受到關注
+
+topic_id: exosomes
+
+name:
+  zh: 外泌體
+  en: Exosomes
+  ja: エクソソーム
+  ko: 외소좀
+
+keywords:
+  # 精確匹配（成分名稱）
+  exact:
+    - exosome
+    - exosomes
+    - エクソソーム
+    - 외소좀
+    - 外泌体
+    - extracellular vesicle
+    - extracellular vesicles
+    - EV
+    - EVs
+  # 模糊匹配（產品名稱、描述）
+  fuzzy:
+    - stem cell
+    - stem cells
+    - 幹細胞
+    - 干细胞
+    - placenta extract
+    - placenta
+    - 胎盤素
+    - 胎盤エキス
+    - 태반
+    - umbilical cord
+    - 臍帶
+    - mesenchymal
+    - MSC
+
+category_filter:
+  - specialty
+  - other
+  - botanicals
+
+output:
+  index: docs/reports/exosomes/index.md
+  guide: docs/reports/exosomes/guide.md
+  reports: docs/reports/exosomes/reports/
