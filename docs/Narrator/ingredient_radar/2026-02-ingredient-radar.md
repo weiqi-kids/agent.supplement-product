@@ -1,7 +1,7 @@
 ---
 mode: "ingredient_radar"
 period: "2026-02"
-generated_at: "2026-02-08T14:43:38.927995Z"
+generated_at: "2026-02-10T00:02:37.586628Z"
 source_layers:
   - us_dsld
   - ca_lnhpd
@@ -13,36 +13,36 @@ source_layers:
 # 成分雷達月報 — 2026 年 2 月
 
 > 報告期間：2026-02-01 ~ 2026-02-06
-> 產出時間：2026-02-08 14:43:38 UTC
+> 產出時間：2026-02-10 00:02:37 UTC
 
 ## 摘要
 
-本月分析了 344,908 筆有效產品資料，橫跨美國、加拿大、韓國與日本四個市場。全球最熱門成分為 Vitamin C（出現於 59,611 個產品），顯示基礎營養補充需求持續強勁。跨國比較顯示，維生素與礦物質類成分在各市場均占主導地位，但各市場呈現獨特偏好：北美市場偏好複合維生素配方，日本市場重視機能性成分（如 GABA、茶カテキン），韓國市場則在益生菌與 Omega-3 領域表現活躍。值得關注的新興趨勢包括認知健康相關成分（GABA、DHA）與腸道健康相關益生菌株的持續成長。
+本月分析了 344,992 筆有效產品資料，橫跨美國、加拿大、韓國與日本四個市場。全球最熱門成分為 Vitamin C（出現於 59,624 個產品），顯示基礎營養補充需求持續強勁。跨國比較顯示，維生素與礦物質類成分在各市場均占主導地位，但各市場呈現獨特偏好：北美市場偏好複合維生素配方，日本市場重視機能性成分（如 GABA、茶カテキン），韓國市場則在益生菌與 Omega-3 領域表現活躍。值得關注的新興趨勢包括認知健康相關成分（GABA、DHA）與腸道健康相關益生菌株的持續成長。
 
 ## 全球熱門成分 Top 20
 
 | 排名 | 成分名稱 | 出現產品數 | 涵蓋市場 | 主要品類 |
 |------|----------|-----------|----------|----------|
-| 1 | Vitamin C | 59,611 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
-| 2 | Calcium | 52,478 | 🇨🇦, 🇯🇵, 🇰🇷, 🇺🇸 | specialty |
-| 3 | Zinc | 47,328 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
-| 4 | Magnesium | 46,711 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
-| 5 | Vitamin B6 | 44,324 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
-| 6 | Folate | 41,527 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
-| 7 | Vitamin B12 | 41,123 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
-| 8 | Vitamin E | 39,426 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
-| 9 | Vitamin D | 38,726 | 🇨🇦, 🇰🇷, 🇺🇸 | vitamins_minerals |
-| 10 | Lactobacillus | 27,667 | 🇨🇦, 🇯🇵, 🇰🇷, 🇺🇸 | specialty |
-| 11 | Vitamin A | 24,795 | 🇰🇷, 🇺🇸 | specialty |
-| 12 | Niacin | 24,352 | 🇰🇷, 🇺🇸 | specialty |
-| 13 | Pantothenic Acid | 22,710 | 🇰🇷, 🇺🇸 | specialty |
-| 14 | Biotin | 21,539 | 🇰🇷, 🇺🇸 | specialty |
-| 15 | Iron | 21,159 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
-| 16 | Bifidobacterium | 18,751 | 🇨🇦, 🇯🇵, 🇰🇷, 🇺🇸 | probiotics |
-| 17 | Selenium | 18,364 | 🇰🇷, 🇺🇸 | specialty |
+| 1 | Vitamin C | 59,624 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
+| 2 | Calcium | 52,480 | 🇨🇦, 🇯🇵, 🇰🇷, 🇺🇸 | specialty |
+| 3 | Zinc | 47,351 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
+| 4 | Magnesium | 46,718 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
+| 5 | Vitamin B6 | 44,335 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
+| 6 | Folate | 41,540 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
+| 7 | Vitamin B12 | 41,130 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
+| 8 | Vitamin E | 39,435 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
+| 9 | Vitamin D | 38,741 | 🇨🇦, 🇰🇷, 🇺🇸 | vitamins_minerals |
+| 10 | Lactobacillus | 27,668 | 🇨🇦, 🇯🇵, 🇰🇷, 🇺🇸 | specialty |
+| 11 | Vitamin A | 24,797 | 🇰🇷, 🇺🇸 | specialty |
+| 12 | Niacin | 24,363 | 🇰🇷, 🇺🇸 | specialty |
+| 13 | Pantothenic Acid | 22,721 | 🇰🇷, 🇺🇸 | specialty |
+| 14 | Biotin | 21,550 | 🇰🇷, 🇺🇸 | specialty |
+| 15 | Iron | 21,161 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
+| 16 | Bifidobacterium | 18,752 | 🇨🇦, 🇯🇵, 🇰🇷, 🇺🇸 | probiotics |
+| 17 | Selenium | 18,369 | 🇰🇷, 🇺🇸 | specialty |
 | 18 | Riboflavin | 17,681 | 🇺🇸 | specialty |
-| 19 | Manganese | 17,494 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
-| 20 | Chromium | 17,374 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
+| 19 | Manganese | 17,498 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
+| 20 | Chromium | 17,381 | 🇨🇦, 🇰🇷, 🇺🇸 | specialty |
 
 ## 各市場成分偏好
 
@@ -63,7 +63,7 @@ source_layers:
 ### 🇨🇦 加拿大 Top 10 成分
 | 排名 | 成分 | 產品數 |
 |------|------|--------|
-| 1 | Vitamin D | 18,954 |
+| 1 | Vitamin D | 18,956 |
 | 2 | Vitamin C | 17,706 |
 | 3 | Lactobacillus | 17,601 |
 | 4 | Zinc | 13,936 |
@@ -77,16 +77,16 @@ source_layers:
 ### 🇰🇷 韓國 Top 10 成分
 | 排名 | 成分 | 產品數 |
 |------|------|--------|
-| 1 | Zinc | 6,373 |
-| 2 | Vitamin D | 4,370 |
-| 3 | Vitamin B6 | 3,639 |
-| 4 | Vitamin B1 | 3,466 |
-| 5 | Vitamin C | 3,394 |
-| 6 | Vitamin B2 | 3,253 |
-| 7 | Vitamin E | 2,984 |
-| 8 | Pantothenic Acid | 2,969 |
-| 9 | Niacin | 2,906 |
-| 10 | Probiotics | 2,441 |
+| 1 | Zinc | 6,396 |
+| 2 | Vitamin D | 4,383 |
+| 3 | Vitamin B6 | 3,650 |
+| 4 | Vitamin B1 | 3,475 |
+| 5 | Vitamin C | 3,407 |
+| 6 | Vitamin B2 | 3,263 |
+| 7 | Vitamin E | 2,993 |
+| 8 | Pantothenic Acid | 2,980 |
+| 9 | Niacin | 2,917 |
+| 10 | Probiotics | 2,448 |
 
 ### 🇯🇵 日本（FOSHU + FNFC）Top 10 成分
 | 排名 | 成分 | 產品數 | 來源 |
@@ -106,28 +106,28 @@ source_layers:
 
 | 成分 | 🇺🇸 US | 🇨🇦 CA | 🇰🇷 KR | 🇯🇵 JP | 說明 |
 |------|---------|---------|---------|---------|------|
-| Vitamin C | ✅ 38,511 | ✅ 17,706 | ✅ 3,394 | ❌ | 市場偏好差異顯著 |
-| Calcium | ✅ 38,992 | ✅ 11,927 | ✅ 1,506 | ✅ 53 | 全市場通用成分 |
-| Zinc | ✅ 27,019 | ✅ 13,936 | ✅ 6,373 | ❌ | 跨市場使用 |
-| Magnesium | ✅ 31,419 | ✅ 13,693 | ✅ 1,599 | ❌ | 市場偏好差異顯著 |
-| Vitamin B6 | ✅ 28,775 | ✅ 11,910 | ✅ 3,639 | ❌ | 市場偏好差異顯著 |
-| Folate | ✅ 29,819 | ✅ 9,314 | ✅ 2,394 | ❌ | 市場偏好差異顯著 |
-| Vitamin B12 | ✅ 27,593 | ✅ 11,847 | ✅ 1,683 | ❌ | 市場偏好差異顯著 |
-| Vitamin E | ✅ 24,303 | ✅ 12,139 | ✅ 2,984 | ❌ | 市場偏好差異顯著 |
-| Vitamin D | ✅ 15,402 | ✅ 18,954 | ✅ 4,370 | ❌ | 跨市場使用 |
-| Lactobacillus | ✅ 9,956 | ✅ 17,601 | ✅ 88 | ✅ 22 | 全市場通用成分 |
-| Vitamin A | ✅ 23,083 | ❌ | ✅ 1,712 | ❌ | 市場偏好差異顯著 |
-| Niacin | ✅ 21,446 | ❌ | ✅ 2,906 | ❌ | 市場偏好差異顯著 |
-| Pantothenic Acid | ✅ 19,741 | ❌ | ✅ 2,969 | ❌ | 市場偏好差異顯著 |
-| Biotin | ✅ 19,483 | ❌ | ✅ 2,056 | ❌ | 市場偏好差異顯著 |
-| Iron | ✅ 16,003 | ✅ 4,187 | ✅ 969 | ❌ | 市場偏好差異顯著 |
+| Vitamin C | ✅ 38,511 | ✅ 17,706 | ✅ 3,407 | ❌ | 市場偏好差異顯著 |
+| Calcium | ✅ 38,992 | ✅ 11,927 | ✅ 1,508 | ✅ 53 | 全市場通用成分 |
+| Zinc | ✅ 27,019 | ✅ 13,936 | ✅ 6,396 | ❌ | 跨市場使用 |
+| Magnesium | ✅ 31,419 | ✅ 13,693 | ✅ 1,606 | ❌ | 市場偏好差異顯著 |
+| Vitamin B6 | ✅ 28,775 | ✅ 11,910 | ✅ 3,650 | ❌ | 市場偏好差異顯著 |
+| Folate | ✅ 29,819 | ✅ 9,314 | ✅ 2,407 | ❌ | 市場偏好差異顯著 |
+| Vitamin B12 | ✅ 27,593 | ✅ 11,847 | ✅ 1,690 | ❌ | 市場偏好差異顯著 |
+| Vitamin E | ✅ 24,303 | ✅ 12,139 | ✅ 2,993 | ❌ | 市場偏好差異顯著 |
+| Vitamin D | ✅ 15,402 | ✅ 18,956 | ✅ 4,383 | ❌ | 跨市場使用 |
+| Lactobacillus | ✅ 9,956 | ✅ 17,601 | ✅ 89 | ✅ 22 | 全市場通用成分 |
+| Vitamin A | ✅ 23,083 | ❌ | ✅ 1,714 | ❌ | 市場偏好差異顯著 |
+| Niacin | ✅ 21,446 | ❌ | ✅ 2,917 | ❌ | 市場偏好差異顯著 |
+| Pantothenic Acid | ✅ 19,741 | ❌ | ✅ 2,980 | ❌ | 市場偏好差異顯著 |
+| Biotin | ✅ 19,483 | ❌ | ✅ 2,067 | ❌ | 市場偏好差異顯著 |
+| Iron | ✅ 16,003 | ✅ 4,187 | ✅ 971 | ❌ | 市場偏好差異顯著 |
 
 > 僅列出有顯著跨國差異的成分（某些市場有而其他市場無，或數量差異大於 5 倍）
 
 ## 品類 × 成分分析
 
 ### vitamins_minerals（維生素與礦物質）
-- 核心成分：Vitamin D（13,615）, Magnesium（11,779）, Vitamin C（11,758）, Zinc（10,547）, Calcium（10,429）
+- 核心成分：Vitamin D（13,624）, Magnesium（11,782）, Vitamin C（11,764）, Zinc（10,556）, Calcium（10,431）
 - 市場差異：北美市場偏好複合維生素配方，單一維生素 D、C、B12 使用普遍。亞洲市場（韓國、日本）除基礎維生素外，更重視礦物質補充（鈣、鐵、鋅）
 
 ### botanicals（植物萃取）
@@ -135,11 +135,11 @@ source_layers:
 - 市場差異：美國市場草本萃取品項豐富，加拿大受 LNHPD 規範影響品項較保守。亞洲市場偏好傳統草本（如韓國紅蔘、日本綠茶萃取物）
 
 ### probiotics（益生菌）
-- 核心成分：Lactobacillus（8,851）, Bifidobacterium（7,189）, Lactiplantibacillus Plantarum: 0.0（1,566）, Probiotics（1,329）, Lacticaseibacillus Paracasei: 0.0（968）
+- 核心成分：Lactobacillus（8,852）, Bifidobacterium（7,189）, Lactiplantibacillus Plantarum: 0.0（1,566）, Probiotics（1,332）, Lacticaseibacillus Paracasei: 0.0（968）
 - 市場差異：益生菌市場呈現全球性成長，韓國與日本市場特別重視菌株多樣性與 CFU 數量標示。Bifidobacterium 與 Lactobacillus 為主流菌株
 
 ### omega_fatty_acids（Omega 脂肪酸）
-- 核心成分：Fish Oil:（5,738）, Omega-3（4,645）, DHA（3,670）, Saturated Fat（2,876）, EPA（2,848）
+- 核心成分：Fish Oil:（5,738）, Omega-3（4,645）, DHA（3,672）, Saturated Fat（2,876）, EPA（2,848）
 - 市場差異：DHA/EPA 為全球共通核心成分，北美市場魚油產品豐富，日本市場重視 DHA 對認知健康的宣稱
 
 ### protein_amino（蛋白質與胺基酸）
@@ -178,11 +178,11 @@ source_layers:
 
 ## 資料品質備註
 
-- **分析產品總數**：344,908 筆（有效統計）
+- **分析產品總數**：344,992 筆（有效統計）
 - **資料來源**：
   - us_dsld: 205,102 筆
-  - ca_lnhpd: 116,939 筆
-  - kr_hff: 20,726 筆
+  - ca_lnhpd: 116,940 筆
+  - kr_hff: 20,809 筆
   - jp_foshu: 1,031 筆
   - jp_fnfc: 1,110 筆
 - **不可用的 Layer**：無
