@@ -527,6 +527,76 @@ MFDS_API_KEY=...
 
 ---
 
+## 階段六：部署與驗證（必做！）
+
+⚠️ **重要**：完成階段五後，必須執行以下步驟確保網站正確更新。
+
+### 6.1 Git 提交與推送
+
+```bash
+# 1. 檢查所有變更
+git status
+
+# 2. 加入所有變更（包含報告和靜態頁面）
+git add docs/
+
+# 3. 提交
+git commit -m "feat: update reports for YYYY-MM"
+
+# 4. 推送
+git push origin main
+```
+
+### 6.2 等待 GitHub Actions 完成
+
+```bash
+# 監看建置狀態
+gh run list --repo weiqi-kids/agent.supplement-product --limit 1
+
+# 等待完成
+gh run watch <run-id> --repo weiqi-kids/agent.supplement-product --exit-status
+```
+
+### 6.3 網站內容驗證（WebFetch）
+
+**必須使用 WebFetch 驗證以下頁面**（加 `?v=YYYYMMDD` 避免快取）：
+
+| 頁面 | 檢查項目 |
+|------|----------|
+| 首頁 | 主題追蹤區塊、產品數量、最新報告連結 |
+| 外泌體首頁 | 無「待補充」、市場分析數據正確 |
+| 外泌體選購指南 | 決策樹、選購要點、FAQ 完整 |
+| 外泌體市場報告 | 產品數、品牌排名、劑型分布 |
+| 魚油首頁 | 無「待補充」、市場分析數據正確 |
+| 魚油選購指南 | 決策樹、選購要點、FAQ 完整 |
+| 魚油市場報告 | 產品數、品牌排名、劑型分布 |
+| 市場快照 | 最新週報內容 |
+| 成分雷達 | 最新月報內容 |
+
+### 6.4 常見問題排查
+
+| 問題 | 原因 | 解決方法 |
+|------|------|----------|
+| 頁面顯示舊內容 | CDN 快取 | URL 加 `?v=timestamp` 或強制重新整理 |
+| 頁面 404 | 缺少父頁面 index.md | 檢查 `docs/reports/{topic}/reports/index.md` |
+| 內容是「待補充」 | 靜態頁面未更新 | 更新 `docs/reports/{topic}/index.md` 和 `guide.md` |
+| Jekyll 導航錯誤 | frontmatter parent/grand_parent 不符 | 檢查頁面層級關係 |
+
+### 6.5 需要手動更新的靜態頁面
+
+以下頁面**不會**被 `convert_to_jekyll.py` 自動更新，需手動維護：
+
+```
+docs/reports/{topic}/index.md      # 主題首頁（市場分析、作用機轉）
+docs/reports/{topic}/guide.md      # 選購指南（決策樹、FAQ）
+docs/reports/{topic}/reports/index.md  # 市場報告索引
+docs/index.md                      # 網站首頁
+```
+
+當新增主題或資料有重大更新時，需同步更新這些頁面。
+
+---
+
 ## 維護操作
 
 Layer/Mode 的新增、修改、刪除，參見 `core/CLAUDE.md`。
