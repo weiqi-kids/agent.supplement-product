@@ -10,13 +10,6 @@ nav_order: 1
 
 ## 快速導覽
 
-### 定期報告
-
-| 報告類型 | 說明 | 更新頻率 |
-|----------|------|----------|
-| [市場快照]({{ site.baseurl }}/reports/market-snapshot/) | 各國市場產品統計與品類分佈 | 每週 |
-| [成分雷達]({{ site.baseurl }}/reports/ingredient-radar/) | 跨國成分趨勢與新興成分追蹤 | 每月 |
-
 ### 主題追蹤
 
 深入追蹤特定成分/產品類型的市場動態：
@@ -25,6 +18,13 @@ nav_order: 1
 |------|------|--------|
 | [外泌體]({{ site.baseurl }}/reports/exosomes/) | 細胞修復、抗老化相關產品 | 9,675 |
 | [魚油]({{ site.baseurl }}/reports/fish-oil/) | Omega-3、EPA/DHA 相關產品 | 15,444 |
+
+### 定期報告
+
+| 報告類型 | 說明 | 更新頻率 |
+|----------|------|----------|
+| [市場快照]({{ site.baseurl }}/reports/market-snapshot/) | 各國市場產品統計與品類分佈 | 每週 |
+| [成分雷達]({{ site.baseurl }}/reports/ingredient-radar/) | 跨國成分趨勢與新興成分追蹤 | 每月 |
 
 ## 資料涵蓋範圍
 
