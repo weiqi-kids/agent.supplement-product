@@ -266,21 +266,45 @@ total_articles: {stats['total']}
 
     # 成分-功效交叉分析（取主要成分的功效分布）
     if stats['ingredient_category']:
-        report += """
+        # 取文獻數最多的前 8 個成分
+        top_ingredients = sorted(stats['by_ingredient'].items(), key=lambda x: -x[1])[:8]
+        top_ingredients = [(ing, cnt) for ing, cnt in top_ingredients if cnt >= 5]
+
+        if top_ingredients:
+            # 找出所有相關的功效分類（取最常見的 6 個）
+            all_categories = set()
+            for ing, _ in top_ingredients:
+                all_categories.update(stats['ingredient_category'].get(ing, {}).keys())
+
+            # 統計每個分類的總出現次數，取前 6 個
+            category_totals = defaultdict(int)
+            for ing, _ in top_ingredients:
+                for cat, cnt in stats['ingredient_category'].get(ing, {}).items():
+                    category_totals[cat] += cnt
+            top_categories = sorted(category_totals.items(), key=lambda x: -x[1])[:6]
+            top_cat_keys = [c[0] for c in top_categories]
+
+            report += """
 ## 成分功效分析
 
-以下列出主要成分的研究功效分布：
+以下列出主要成分在各功效領域的研究文獻數：
 
-"""
-        # 取文獻數最多的前 5 個成分
-        top_ingredients = sorted(stats['by_ingredient'].items(), key=lambda x: -x[1])[:5]
-        for ing, total_count in top_ingredients:
-            if total_count >= 3:  # 只分析有 3 篇以上文獻的成分
+| 成分 | 總文獻 |"""
+            for cat in top_cat_keys:
+                cat_name = CLAIM_CATEGORY_NAMES.get(cat, cat)
+                report += f" {cat_name} |"
+            report += "\n|------|--------|"
+            for _ in top_cat_keys:
+                report += "--------|"
+            report += "\n"
+
+            for ing, total_count in top_ingredients:
                 cat_stats = stats['ingredient_category'].get(ing, {})
-                if cat_stats:
-                    sorted_cats = sorted(cat_stats.items(), key=lambda x: -x[1])[:5]
-                    cat_list = ", ".join([f"{CLAIM_CATEGORY_NAMES.get(c, c)}({n}篇)" for c, n in sorted_cats])
-                    report += f"**{ing}**（{total_count} 篇）：{cat_list}\n\n"
+                report += f"| {ing} | {total_count} |"
+                for cat in top_cat_keys:
+                    cnt = cat_stats.get(cat, 0)
+                    report += f" {cnt if cnt > 0 else '-'} |"
+                report += "\n"
 
     report += """
 ## 研究類型分布
