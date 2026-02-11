@@ -61,6 +61,11 @@ COMMON_INGREDIENTS = [
     "saw palmetto", "maca", "tribulus",
     "garlic", "turmeric", "ginger",
     "exosome", "exosomes", "stem cell",
+    # SPM (Specialized Pro-resolving Mediators)
+    "SPM", "resolvin", "resolvins", "protectin", "protectins",
+    "maresin", "maresins", "pro-resolving",
+    # NMN / NAD+
+    "NMN", "nicotinamide mononucleotide", "NAD+", "NAD precursor",
 ]
 
 

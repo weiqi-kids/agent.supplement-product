@@ -1,0 +1,53 @@
+# 膠原蛋白主題追蹤定義
+# 膠原蛋白是人體重要結構蛋白，用於皮膚美容和關節保健
+
+topic_id: collagen
+
+name:
+  zh: 膠原蛋白
+  en: Collagen
+  ja: コラーゲン
+  ko: 콜라겐
+
+keywords:
+  # 精確匹配（成分名稱）
+  exact:
+    - collagen
+    - collagen peptide
+    - collagen peptides
+    - hydrolyzed collagen
+    - 膠原蛋白
+    - 胶原蛋白
+    - コラーゲン
+    - コラーゲンペプチド
+    - 콜라겐
+  # 模糊匹配（產品名稱、描述）
+  fuzzy:
+    - marine collagen
+    - fish collagen
+    - bovine collagen
+    - type I collagen
+    - type II collagen
+    - skin elasticity
+    - joint health
+    - 魚膠原
+    - 美肌
+
+category_filter:
+  - protein_amino
+  - specialty
+  - other
+
+output:
+  index: docs/reports/collagen/index.md
+  guide: docs/reports/collagen/guide.md
+  reports: docs/reports/collagen/reports/
+
+# PubMed 查詢設定
+pubmed:
+  query: '(collagen[Title/Abstract] OR "collagen peptide"[Title/Abstract] OR "hydrolyzed collagen"[Title/Abstract]) AND (supplement*[Title/Abstract] OR skin[Title/Abstract] OR joint[Title/Abstract] OR oral[Title/Abstract])'
+  filters:
+    - humans[MH]
+    - English[Language]
+  date_range: 5
+  max_results: 100000

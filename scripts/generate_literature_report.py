@@ -41,6 +41,23 @@ STUDY_TYPE_NAMES = {
     "other": "Other",
 }
 
+# 進階研究方向定義（主題專屬）
+ADVANCED_RESEARCH_TOPICS = {
+    "fish-oil": {
+        "SPM": {
+            "name": "SPM (Specialized Pro-resolving Mediators)",
+            "description": "EPA/DHA 的內源性代謝產物，負責主動消炎解析",
+            "keywords": ["spm", "resolvin", "resolvins", "protectin", "protectins",
+                        "maresin", "maresins", "pro-resolving", "specialized pro-resolving"],
+            "subtypes": {
+                "Resolvins": ["resolvin", "rvd", "rve"],
+                "Protectins": ["protectin", "npd1", "neuroprotectin"],
+                "Maresins": ["maresin", "mar1"],
+            }
+        }
+    }
+}
+
 
 def load_topic_config(topic_id: str) -> dict:
     """載入主題設定檔"""
@@ -117,7 +134,7 @@ def load_articles(topic_id: str) -> list:
     return articles
 
 
-def calculate_statistics(articles: list) -> dict:
+def calculate_statistics(articles: list, topic_id: str = None) -> dict:
     """計算文獻統計資料"""
     stats = {
         "total": len(articles),
@@ -129,6 +146,7 @@ def calculate_statistics(articles: list) -> dict:
         "ingredient_category": defaultdict(lambda: defaultdict(int)),  # 成分-功效交叉
         "level_1_articles": [],
         "level_2_articles": [],
+        "advanced_topics": defaultdict(lambda: {"count": 0, "articles": [], "subtypes": defaultdict(int)}),
     }
 
     for article in articles:
@@ -176,6 +194,27 @@ def calculate_statistics(articles: list) -> dict:
         elif level == 2:
             stats["level_2_articles"].append(article)
 
+        # 進階研究方向統計
+        if topic_id and topic_id in ADVANCED_RESEARCH_TOPICS:
+            title_abstract = f"{article.get('title', '')} {article.get('abstract_text', '')}".lower()
+            for adv_key, adv_config in ADVANCED_RESEARCH_TOPICS[topic_id].items():
+                # 檢查是否匹配進階主題關鍵詞
+                matched = False
+                for kw in adv_config.get("keywords", []):
+                    if kw.lower() in title_abstract:
+                        matched = True
+                        break
+                if matched:
+                    stats["advanced_topics"][adv_key]["count"] += 1
+                    if len(stats["advanced_topics"][adv_key]["articles"]) < 10:
+                        stats["advanced_topics"][adv_key]["articles"].append(article)
+                    # 統計子類型
+                    for subtype, subkws in adv_config.get("subtypes", {}).items():
+                        for skw in subkws:
+                            if skw.lower() in title_abstract:
+                                stats["advanced_topics"][adv_key]["subtypes"][subtype] += 1
+                                break
+
     return stats
 
 
@@ -191,7 +230,7 @@ def generate_report(topic_id: str, period: str) -> str:
         return ""
 
     # 計算統計
-    stats = calculate_statistics(articles)
+    stats = calculate_statistics(articles, topic_id)
     now = datetime.now(timezone.utc).isoformat()
 
     # 解析期間
@@ -305,6 +344,47 @@ total_articles: {stats['total']}
                     cnt = cat_stats.get(cat, 0)
                     report += f" {cnt if cnt > 0 else '-'} |"
                 report += "\n"
+
+    # 進階研究方向區塊
+    if topic_id in ADVANCED_RESEARCH_TOPICS and stats['advanced_topics']:
+        report += """
+## 進階研究方向
+
+"""
+        for adv_key, adv_data in stats['advanced_topics'].items():
+            if adv_data['count'] > 0:
+                adv_config = ADVANCED_RESEARCH_TOPICS[topic_id].get(adv_key, {})
+                adv_name = adv_config.get('name', adv_key)
+                adv_desc = adv_config.get('description', '')
+
+                report += f"### {adv_name}\n\n"
+                report += f"{adv_desc}\n\n"
+                report += f"**相關文獻數：{adv_data['count']} 篇**\n\n"
+
+                # 子類型統計
+                if adv_data['subtypes']:
+                    report += "| 類型 | 文獻數 | 說明 |\n"
+                    report += "|------|--------|------|\n"
+                    subtype_info = {
+                        "Resolvins": "E-series (EPA 來源), D-series (DHA 來源)",
+                        "Protectins": "神經保護，如 NPD1",
+                        "Maresins": "巨噬細胞調節，促進組織修復",
+                    }
+                    for subtype, cnt in sorted(adv_data['subtypes'].items(), key=lambda x: -x[1]):
+                        info = subtype_info.get(subtype, "")
+                        report += f"| {subtype} | {cnt} | {info} |\n"
+                    report += "\n"
+
+                # 列出代表性文獻
+                if adv_data['articles']:
+                    report += "**代表性文獻：**\n\n"
+                    for i, article in enumerate(adv_data['articles'][:5], 1):
+                        title = article.get('title', 'Unknown')
+                        url = article.get('source_url', '')
+                        journal = article.get('journal', '')
+                        pub_date = article.get('pub_date', '')
+                        report += f"{i}. [{title}]({url}) — {journal}, {pub_date}\n"
+                    report += "\n"
 
     report += """
 ## 研究類型分布

@@ -1,0 +1,51 @@
+# 葉黃素主題追蹤定義
+# 葉黃素是類胡蘿蔔素，主要用於眼睛保健，預防黃斑部病變
+
+topic_id: lutein
+
+name:
+  zh: 葉黃素
+  en: Lutein
+  ja: ルテイン
+  ko: 루테인
+
+keywords:
+  # 精確匹配（成分名稱）
+  exact:
+    - lutein
+    - zeaxanthin
+    - 葉黃素
+    - 叶黄素
+    - ルテイン
+    - ゼアキサンチン
+    - 루테인
+    - 제아잔틴
+  # 模糊匹配（產品名稱、描述）
+  fuzzy:
+    - macular
+    - marigold
+    - eye health
+    - vision
+    - carotenoid
+    - 金盞花
+    - 護眼
+    - 黃斑部
+
+category_filter:
+  - specialty
+  - botanicals
+  - other
+
+output:
+  index: docs/reports/lutein/index.md
+  guide: docs/reports/lutein/guide.md
+  reports: docs/reports/lutein/reports/
+
+# PubMed 查詢設定
+pubmed:
+  query: '(lutein[Title/Abstract] OR zeaxanthin[Title/Abstract] OR "macular pigment"[Title/Abstract]) AND (supplement*[Title/Abstract] OR "eye health"[Title/Abstract] OR vision[Title/Abstract] OR clinical[Title/Abstract])'
+  filters:
+    - humans[MH]
+    - English[Language]
+  date_range: 5
+  max_results: 100000

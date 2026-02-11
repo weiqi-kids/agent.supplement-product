@@ -40,6 +40,15 @@ keywords:
     - 鱈魚肝油
     - salmon oil
     - 鮭魚油
+    # SPM (Specialized Pro-resolving Mediators)
+    - SPM
+    - resolvin
+    - resolvins
+    - protectin
+    - protectins
+    - maresin
+    - maresins
+    - pro-resolving mediator
 
 category_filter:
   - omega_fatty_acids
@@ -52,10 +61,10 @@ output:
 
 # PubMed 查詢設定
 pubmed:
-  # 寬鬆查詢：擷取所有 Omega-3 相關研究（含臨床、觀察性研究）
-  query: '(omega-3[Title/Abstract] OR "fish oil"[Title/Abstract] OR EPA[Title/Abstract] OR DHA[Title/Abstract] OR "eicosapentaenoic acid"[Title/Abstract] OR "docosahexaenoic acid"[Title/Abstract] OR "n-3 fatty acid"[Title/Abstract] OR "polyunsaturated fatty acid"[Title/Abstract])'
+  # 寬鬆查詢：擷取所有 Omega-3 相關研究（含 SPM）
+  query: '(omega-3[Title/Abstract] OR "fish oil"[Title/Abstract] OR EPA[Title/Abstract] OR DHA[Title/Abstract] OR "eicosapentaenoic acid"[Title/Abstract] OR "docosahexaenoic acid"[Title/Abstract] OR "n-3 fatty acid"[Title/Abstract] OR "polyunsaturated fatty acid"[Title/Abstract] OR resolvin*[Title/Abstract] OR protectin*[Title/Abstract] OR maresin*[Title/Abstract] OR "pro-resolving mediator"[Title/Abstract])'
   filters:
     - humans[MH]
     - English[Language]
   date_range: 5
-  max_results: 2000
+  max_results: 100000

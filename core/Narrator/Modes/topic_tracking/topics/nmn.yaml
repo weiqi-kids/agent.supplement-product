@@ -1,0 +1,48 @@
+# NMN 主題追蹤定義
+# NMN (β-煙醯胺單核苷酸) 是 NAD+ 前驅物，近年因抗衰老研究備受關注
+
+topic_id: nmn
+
+name:
+  zh: NMN
+  en: NMN (Nicotinamide Mononucleotide)
+  ja: NMN
+  ko: NMN
+
+keywords:
+  # 精確匹配（成分名稱）
+  exact:
+    - NMN
+    - nicotinamide mononucleotide
+    - β-NMN
+    - beta-NMN
+    - β-烟酰胺单核苷酸
+    - β-煙醯胺單核苷酸
+    - ニコチンアミドモノヌクレオチド
+  # 模糊匹配（產品名稱、描述）
+  fuzzy:
+    - NAD+
+    - NAD precursor
+    - anti-aging
+    - longevity
+    - sirtuins
+    - 抗衰老
+    - 長壽
+
+category_filter:
+  - specialty
+  - other
+
+output:
+  index: docs/reports/nmn/index.md
+  guide: docs/reports/nmn/guide.md
+  reports: docs/reports/nmn/reports/
+
+# PubMed 查詢設定
+pubmed:
+  query: '(NMN[Title/Abstract] OR "nicotinamide mononucleotide"[Title/Abstract] OR "NAD+ precursor"[Title/Abstract]) AND (supplement*[Title/Abstract] OR aging[Title/Abstract] OR longevity[Title/Abstract] OR clinical[Title/Abstract])'
+  filters:
+    - humans[MH]
+    - English[Language]
+  date_range: 5
+  max_results: 100000

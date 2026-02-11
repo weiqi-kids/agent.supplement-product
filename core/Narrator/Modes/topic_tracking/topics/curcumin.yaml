@@ -1,0 +1,52 @@
+# 薑黃素主題追蹤定義
+# 薑黃素是薑黃的主要活性成分，具有抗發炎和抗氧化作用
+
+topic_id: curcumin
+
+name:
+  zh: 薑黃素
+  en: Curcumin
+  ja: クルクミン
+  ko: 커큐민
+
+keywords:
+  # 精確匹配（成分名稱）
+  exact:
+    - curcumin
+    - curcuminoids
+    - turmeric
+    - 薑黃素
+    - 姜黄素
+    - 薑黃
+    - 姜黄
+    - クルクミン
+    - ウコン
+    - 커큐민
+    - 강황
+  # 模糊匹配（產品名稱、描述）
+  fuzzy:
+    - Curcuma longa
+    - bioavailability
+    - anti-inflammatory
+    - antioxidant
+    - 抗發炎
+    - 抗氧化
+
+category_filter:
+  - botanicals
+  - specialty
+  - other
+
+output:
+  index: docs/reports/curcumin/index.md
+  guide: docs/reports/curcumin/guide.md
+  reports: docs/reports/curcumin/reports/
+
+# PubMed 查詢設定
+pubmed:
+  query: '(curcumin[Title/Abstract] OR curcuminoid*[Title/Abstract] OR turmeric[Title/Abstract]) AND (supplement*[Title/Abstract] OR clinical[Title/Abstract] OR bioavailability[Title/Abstract] OR inflammation[Title/Abstract])'
+  filters:
+    - humans[MH]
+    - English[Language]
+  date_range: 5
+  max_results: 100000

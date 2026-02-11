@@ -55,4 +55,4 @@ pubmed:
     - humans[MH]
     - English[Language]
   date_range: 5
-  max_results: 2000
+  max_results: 100000
