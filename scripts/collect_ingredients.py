@@ -13,6 +13,7 @@ INGREDIENT_SECTIONS = {
     "kr_hff": "## 主要功能",
     "jp_foshu": "## 機能性成分",
     "jp_fnfc": "## 機能性成分",
+    "tw_hf": "## 保健功效成分",
 }
 
 # Synonym mapping for standardization (from ingredient_radar CLAUDE.md)
@@ -47,6 +48,13 @@ SYNONYMS = {
     "홍삼": "Red Ginseng", "인삼": "Ginseng",
     "omega-3": "Omega-3", "오메가": "Omega-3",
     "fish oil": "Fish Oil",
+    # Taiwan Chinese
+    "雷特氏b菌": "Bifidobacterium", "乳酸桿菌": "Lactobacillus",
+    "紅麴": "Red Yeast Rice", "monacolin k": "Monacolin K",
+    "納豆激酶": "Nattokinase", "葉黃素": "Lutein",
+    "牛磺酸": "Taurine", "輔酵素q10": "Coenzyme Q10",
+    "膠原蛋白": "Collagen", "玻尿酸": "Hyaluronic Acid",
+    "益生菌": "Probiotics", "魚油": "Fish Oil",
 }
 
 def standardize(name):
@@ -112,6 +120,40 @@ def extract_ingredients_kr(section_text):
                 ingredients.append(std)
     return ingredients if ingredients else []
 
+def extract_ingredients_tw(section_text):
+    """Parse Taiwan health food functional ingredients text."""
+    ingredients = []
+    text = section_text.strip()
+    if not text or text == "（無資料）":
+        return []
+    # Taiwan ingredient keywords mapping
+    tw_keywords = {
+        "紅麴": "Red Yeast Rice", "monacolin": "Monacolin K",
+        "魚油": "Fish Oil", "DHA": "DHA", "EPA": "EPA",
+        "葉黃素": "Lutein", "玉米黃素": "Zeaxanthin",
+        "益生菌": "Probiotics", "乳酸菌": "Lactobacillus",
+        "雙歧桿菌": "Bifidobacterium", "比菲德氏菌": "Bifidobacterium",
+        "膳食纖維": "Dietary Fiber", "難消化性麥芽糊精": "Indigestible Dextrin",
+        "茶多酚": "Tea Polyphenols", "兒茶素": "Catechins",
+        "鈣": "Calcium", "鐵": "Iron", "鋅": "Zinc",
+        "維生素": "Vitamins (General)", "維他命": "Vitamins (General)",
+        "葡萄糖胺": "Glucosamine", "膠原蛋白": "Collagen",
+        "大豆異黃酮": "Isoflavone", "輔酵素Q10": "Coenzyme Q10", "輔酶Q10": "Coenzyme Q10",
+        "牛磺酸": "Taurine", "精胺酸": "Arginine",
+        "綠茶萃取": "Green Tea Extract", "薑黃": "Turmeric",
+        "人參": "Ginseng", "靈芝": "Reishi",
+        "納豆激酶": "Nattokinase", "卵磷脂": "Lecithin",
+    }
+    for kw, std in tw_keywords.items():
+        if kw.lower() in text.lower():
+            if std not in ingredients:
+                ingredients.append(std)
+    # Also look for CFU counts (probiotics indicators)
+    if re.search(r'\d+\s*(\*|×|x)\s*10\s*\^\s*\d+\s*CFU', text, re.I):
+        if "Probiotics" not in ingredients:
+            ingredients.append("Probiotics")
+    return ingredients if ingredients else []
+
 def extract_section(content, section_header):
     """Extract content of a markdown section."""
     lines = content.split("\n")
@@ -151,7 +193,7 @@ def process():
             continue
 
         market = {"us_dsld": "US", "ca_lnhpd": "CA", "kr_hff": "KR",
-                  "jp_foshu": "JP", "jp_fnfc": "JP"}.get(layer, "??")
+                  "jp_foshu": "JP", "jp_fnfc": "JP", "tw_hf": "TW"}.get(layer, "??")
 
         for root, dirs, files in os.walk(layer_dir):
             if "raw" in root:
@@ -181,6 +223,8 @@ def process():
                     ingredients = extract_ingredients_jp(section)
                 elif layer == "kr_hff":
                     ingredients = extract_ingredients_kr(section)
+                elif layer == "tw_hf":
+                    ingredients = extract_ingredients_tw(section)
                 else:
                     ingredients = []
 
@@ -198,12 +242,12 @@ def process():
     print("=" * 60)
     for rank, (ing, count) in enumerate(global_counter.most_common(30), 1):
         markets = []
-        for mkt in ["US", "CA", "KR", "JP"]:
+        for mkt in ["US", "CA", "KR", "JP", "TW"]:
             if market_counters[mkt][ing] > 0:
                 markets.append(f"{mkt}({market_counters[mkt][ing]})")
         print(f"{rank:2d}. {ing}: {count} [{', '.join(markets)}]")
 
-    for market in ["US", "CA", "KR", "JP"]:
+    for market in ["US", "CA", "KR", "JP", "TW"]:
         print(f"\n{'=' * 60}")
         print(f"{market} TOP 15 INGREDIENTS")
         print(f"{'=' * 60}")
@@ -224,7 +268,7 @@ def process():
     print("CROSS-MARKET ANALYSIS (ingredients with significant market differences)")
     print(f"{'=' * 60}")
     for ing, total in global_counter.most_common(50):
-        present = {mkt: market_counters[mkt][ing] for mkt in ["US", "CA", "KR", "JP"]}
+        present = {mkt: market_counters[mkt][ing] for mkt in ["US", "CA", "KR", "JP", "TW"]}
         markets_with = [m for m, c in present.items() if c > 0]
         markets_without = [m for m, c in present.items() if c == 0]
         if markets_without and total >= 10:
@@ -233,13 +277,13 @@ def process():
     print(f"\n{'=' * 60}")
     print("PRODUCT & REVIEW COUNTS")
     print(f"{'=' * 60}")
-    for layer in ["us_dsld", "ca_lnhpd", "kr_hff", "jp_foshu", "jp_fnfc"]:
+    for layer in ["us_dsld", "ca_lnhpd", "kr_hff", "jp_foshu", "jp_fnfc", "tw_hf"]:
         print(f"  {layer}: total={total_products.get(layer,0)}, review_needed={review_needed.get(layer,0)}")
 
     # Also output as JSON for programmatic use
     result = {
         "global_top30": global_counter.most_common(30),
-        "market_top15": {m: market_counters[m].most_common(15) for m in ["US", "CA", "KR", "JP"]},
+        "market_top15": {m: market_counters[m].most_common(15) for m in ["US", "CA", "KR", "JP", "TW"]},
         "category_top5": {c: category_ingredients[c].most_common(5) for c in
                           ["vitamins_minerals", "botanicals", "protein_amino", "probiotics",
                            "omega_fatty_acids", "specialty", "sports_fitness", "other"]},
@@ -248,7 +292,7 @@ def process():
         "cross_market": {}
     }
     for ing, total in global_counter.most_common(50):
-        present = {mkt: market_counters[mkt][ing] for mkt in ["US", "CA", "KR", "JP"]}
+        present = {mkt: market_counters[mkt][ing] for mkt in ["US", "CA", "KR", "JP", "TW"]}
         result["cross_market"][ing] = present
 
     with open(os.path.join(BASE_DIR, "scripts", "ingredient_data.json"), "w", encoding="utf-8") as f:

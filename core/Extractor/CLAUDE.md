@@ -24,6 +24,8 @@ Extractor 負責從外部資料源擷取（fetch）原始資料，並萃取（ex
 | jp_foshu | `scripts/extract_jp_foshu.py` | — |
 | kr_hff | `scripts/extract_kr_hff.py` | — |
 | us_dsld | `scripts/extract_us_dsld.py` | — |
+| tw_hf | `scripts/extract_tw_hf.py` | — |
+| pubmed | `scripts/extract_pubmed.py` | `--topic` 指定主題 |
 
 ### 去重機制
 

@@ -76,11 +76,20 @@ has_children: true
 - 膠囊與粉末為主流劑型
 - MegaFood、NOW 等大品牌積極布局
 
+## 學術研究
+
+最新文獻分析請參閱 [文獻薈萃報告](literature/)，收錄 PubMed 近期外泌體（exosomes）與細胞外囊泡（extracellular vesicles）相關研究統計。
+
+- 本月收錄 474 篇文獻
+- Level 1 證據（Meta-Analysis/Systematic Review）11 篇
+- RCT 5 篇
+
 ## 參考文獻
 
 本頁面資料來源：
 - 美國膳食補充劑標示資料庫 (DSLD)
 - 加拿大天然健康產品資料庫 (LNHPD)
 - 韓國健康機能食品資料庫
+- PubMed 學術文獻資料庫
 
 *最後更新：2026 年 2 月*

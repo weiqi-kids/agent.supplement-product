@@ -16,6 +16,7 @@ def format_market_flag(market):
         'ca': '🇨🇦',
         'kr': '🇰🇷',
         'jp': '🇯🇵',
+        'tw': '🇹🇼',
     }
     return flags.get(market, market.upper())
 
@@ -49,7 +50,7 @@ def generate_report():
         # Check if there's significant variation
         market_counts = {}
         for layer_name, result in layer_results.items():
-            market = {'us_dsld': 'us', 'ca_lnhpd': 'ca', 'kr_hff': 'kr', 'jp_foshu': 'jp', 'jp_fnfc': 'jp'}[layer_name]
+            market = {'us_dsld': 'us', 'ca_lnhpd': 'ca', 'kr_hff': 'kr', 'jp_foshu': 'jp', 'jp_fnfc': 'jp', 'tw_hf': 'tw'}[layer_name]
             if market in markets:
                 market_counts[market] = market_counts.get(market, 0) + result['ingredients'].get(ing_name, 0)
 
@@ -81,16 +82,17 @@ source_layers:
   - kr_hff
   - jp_foshu
   - jp_fnfc
+  - tw_hf
 ---
 
 # 成分雷達月報 — {report_month}
 
-> 報告期間：2026-02-01 ~ 2026-02-06
+> 報告期間：2026-02-01 ~ 2026-02-11
 > 產出時間：{now.strftime('%Y-%m-%d %H:%M:%S')} UTC
 
 ## 摘要
 
-本月分析了 {total_valid_products:,} 筆有效產品資料，橫跨美國、加拿大、韓國與日本四個市場。全球最熱門成分為 {global_top_20[0][0]}（出現於 {global_top_20[0][1]:,} 個產品），顯示基礎營養補充需求持續強勁。跨國比較顯示，維生素與礦物質類成分在各市場均占主導地位，但各市場呈現獨特偏好：北美市場偏好複合維生素配方，日本市場重視機能性成分（如 GABA、茶カテキン），韓國市場則在益生菌與 Omega-3 領域表現活躍。值得關注的新興趨勢包括認知健康相關成分（GABA、DHA）與腸道健康相關益生菌株的持續成長。
+本月分析了 {total_valid_products:,} 筆有效產品資料，橫跨美國、加拿大、韓國、日本與台灣五個市場。全球最熱門成分為 {global_top_20[0][0]}（出現於 {global_top_20[0][1]:,} 個產品），顯示基礎營養補充需求持續強勁。跨國比較顯示，維生素與礦物質類成分在各市場均占主導地位，但各市場呈現獨特偏好：北美市場偏好複合維生素配方，日本市場重視機能性成分（如 GABA、茶カテキン），韓國市場則在益生菌與 Omega-3 領域表現活躍，台灣市場以紅麴、益生菌與魚油為主流。值得關注的新興趨勢包括認知健康相關成分（GABA、DHA）與腸道健康相關益生菌株的持續成長。
 
 ## 全球熱門成分 Top 20
 
@@ -160,28 +162,38 @@ source_layers:
             source_str = "FNFC"
         report += f"| {i} | {ing} | {count:,} | {source_str} |\n"
 
+    # TW top 10
+    report += "\n### 🇹🇼 台灣 Top 10 成分\n"
+    report += "| 排名 | 成分 | 產品數 |\n"
+    report += "|------|------|--------|\n"
+    tw_top = layer_top_10.get('tw_hf', [])
+    for i, (ing, count) in enumerate(tw_top, 1):
+        report += f"| {i} | {ing} | {count:,} |\n"
+
     # Cross-market analysis
     report += "\n## 成分 × 市場交叉分析\n\n"
-    report += "| 成分 | 🇺🇸 US | 🇨🇦 CA | 🇰🇷 KR | 🇯🇵 JP | 說明 |\n"
-    report += "|------|---------|---------|---------|---------|------|\n"
+    report += "| 成分 | 🇺🇸 US | 🇨🇦 CA | 🇰🇷 KR | 🇯🇵 JP | 🇹🇼 TW | 說明 |\n"
+    report += "|------|---------|---------|---------|---------|---------|------|\n"
 
     for ing, market_counts in cross_market_ingredients[:15]:
         us_count = market_counts.get('us', 0)
         ca_count = market_counts.get('ca', 0)
         kr_count = market_counts.get('kr', 0)
         jp_count = market_counts.get('jp', 0)
+        tw_count = market_counts.get('tw', 0)
 
         us_str = f"✅ {us_count:,}" if us_count > 0 else "❌"
         ca_str = f"✅ {ca_count:,}" if ca_count > 0 else "❌"
         kr_str = f"✅ {kr_count:,}" if kr_count > 0 else "❌"
         jp_str = f"✅ {jp_count:,}" if jp_count > 0 else "❌"
+        tw_str = f"✅ {tw_count:,}" if tw_count > 0 else "❌"
 
         # Analyze differences
-        present = [m for m in ['us', 'ca', 'kr', 'jp'] if market_counts.get(m, 0) > 0]
-        if len(present) == 4:
+        present = [m for m in ['us', 'ca', 'kr', 'jp', 'tw'] if market_counts.get(m, 0) > 0]
+        if len(present) == 5:
             desc = "全市場通用成分"
         elif len(present) == 1:
-            market_names = {'us': '美國', 'ca': '加拿大', 'kr': '韓國', 'jp': '日本'}
+            market_names = {'us': '美國', 'ca': '加拿大', 'kr': '韓國', 'jp': '日本', 'tw': '台灣'}
             desc = f"{market_names[present[0]]}獨有"
         else:
             counts = [market_counts.get(m, 0) for m in present]
@@ -190,7 +202,7 @@ source_layers:
             else:
                 desc = "跨市場使用"
 
-        report += f"| {ing} | {us_str} | {ca_str} | {kr_str} | {jp_str} | {desc} |\n"
+        report += f"| {ing} | {us_str} | {ca_str} | {kr_str} | {jp_str} | {tw_str} | {desc} |\n"
 
     report += "\n> 僅列出有顯著跨國差異的成分（某些市場有而其他市場無，或數量差異大於 5 倍）\n"
 
@@ -238,7 +250,8 @@ source_layers:
     report += "- **美國**：複合配方產品豐富，單一成分與多成分複方並重，草本萃取品項多樣化\n"
     report += "- **加拿大**：受 LNHPD 嚴格審核影響，產品成分相對保守，以基礎維生素礦物質為主\n"
     report += "- **韓國**：健康機能食品市場成熟，紅蔘、益生菌、Omega-3 為三大核心品類，重視機能性標示\n"
-    report += "- **日本**：FOSHU 與 FNFC 制度推動機能性成分研究，茶カテキン、難消化性デキストリン、GABA 等日本特色成分普及率高\n\n"
+    report += "- **日本**：FOSHU 與 FNFC 制度推動機能性成分研究，茶カテキン、難消化性デキストリン、GABA 等日本特色成分普及率高\n"
+    report += "- **台灣**：健康食品認證制度成熟，紅麴（調節血脂）、益生菌（胃腸保健）、魚油（調節血脂）為三大核心品類，重視功效宣稱的科學實證\n\n"
 
     report += "### 值得關注的成分\n"
     report += "1. **GABA（γ-氨基丁酸）**：在日本市場快速成長，主打改善睡眠與紓壓功能，未來可能向其他市場擴散\n"
@@ -264,7 +277,7 @@ source_layers:
 
     report += f"- **分析產品總數**：{total_valid_products:,} 筆（有效統計）\n"
     report += f"- **資料來源**：\n"
-    for layer_name in ['us_dsld', 'ca_lnhpd', 'kr_hff', 'jp_foshu', 'jp_fnfc']:
+    for layer_name in ['us_dsld', 'ca_lnhpd', 'kr_hff', 'jp_foshu', 'jp_fnfc', 'tw_hf']:
         if layer_name in layer_results:
             r = layer_results[layer_name]
             report += f"  - {layer_name}: {r['valid_files']:,} 筆\n"

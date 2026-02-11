@@ -102,6 +102,40 @@ INGREDIENT_MAPPING = {
     "요오드": "Iodine",
     "구리": "Copper",
     "크롬": "Chromium",
+
+    # Taiwan Chinese ingredients
+    "紅麴": "Red Yeast Rice",
+    "monacolin k": "Monacolin K",
+    "魚油": "Fish Oil",
+    "葉黃素": "Lutein",
+    "玉米黃素": "Zeaxanthin",
+    "益生菌": "Probiotics",
+    "乳酸菌": "Lactobacillus",
+    "雙歧桿菌": "Bifidobacterium",
+    "比菲德氏菌": "Bifidobacterium",
+    "雷特氏b菌": "Bifidobacterium",
+    "膳食纖維": "Dietary Fiber",
+    "難消化性麥芽糊精": "Indigestible Dextrin",
+    "茶多酚": "Tea Polyphenols",
+    "兒茶素": "Catechins",
+    "鈣": "Calcium",
+    "鐵": "Iron",
+    "鋅": "Zinc",
+    "維生素": "Vitamins (General)",
+    "維他命": "Vitamins (General)",
+    "葡萄糖胺": "Glucosamine",
+    "膠原蛋白": "Collagen",
+    "大豆異黃酮": "Isoflavone",
+    "輔酵素q10": "Coenzyme Q10",
+    "輔酶q10": "Coenzyme Q10",
+    "牛磺酸": "Taurine",
+    "精胺酸": "Arginine",
+    "綠茶萃取": "Green Tea Extract",
+    "薑黃": "Turmeric",
+    "人參": "Ginseng",
+    "靈芝": "Reishi",
+    "納豆激酶": "Nattokinase",
+    "卵磷脂": "Lecithin",
 }
 
 def normalize_ingredient(ingredient_raw):
@@ -220,6 +254,41 @@ def extract_ingredients_from_file(filepath):
                         if ing not in ingredients:  # Avoid duplicates
                             ingredients.append(ing)
 
+        # For tw_hf: look for "## 保健功效成分"
+        if market == 'tw' and '## 保健功效成分' in content:
+            section_match = re.search(r'## 保健功效成分\n(.*?)(?=\n##|\Z)', content, re.DOTALL)
+            if section_match:
+                section = section_match.group(1).strip()
+                if section and section != '（無資料）':
+                    # Taiwan health food ingredient format is usually plain text
+                    # Look for common keywords and extract them
+                    tw_keywords = {
+                        "紅麴": "Red Yeast Rice", "monacolin": "Monacolin K",
+                        "魚油": "Fish Oil", "DHA": "DHA", "EPA": "EPA",
+                        "葉黃素": "Lutein", "玉米黃素": "Zeaxanthin",
+                        "益生菌": "Probiotics", "乳酸菌": "Lactobacillus",
+                        "雙歧桿菌": "Bifidobacterium", "比菲德氏菌": "Bifidobacterium",
+                        "雷特氏B菌": "Bifidobacterium",
+                        "膳食纖維": "Dietary Fiber", "難消化性麥芽糊精": "Indigestible Dextrin",
+                        "茶多酚": "Tea Polyphenols", "兒茶素": "Catechins",
+                        "鈣": "Calcium", "鐵": "Iron", "鋅": "Zinc",
+                        "維生素": "Vitamins (General)", "維他命": "Vitamins (General)",
+                        "葡萄糖胺": "Glucosamine", "膠原蛋白": "Collagen",
+                        "大豆異黃酮": "Isoflavone", "輔酵素Q10": "Coenzyme Q10",
+                        "牛磺酸": "Taurine", "精胺酸": "Arginine",
+                        "綠茶萃取": "Green Tea Extract", "薑黃": "Turmeric",
+                        "人參": "Ginseng", "靈芝": "Reishi",
+                        "納豆激酶": "Nattokinase", "卵磷脂": "Lecithin",
+                    }
+                    for kw, std in tw_keywords.items():
+                        if kw.lower() in section.lower():
+                            if std not in ingredients:
+                                ingredients.append(std)
+                    # Also check for CFU counts (probiotics)
+                    if re.search(r'\d+\s*(\*|×|x)\s*10\s*\^\s*\d+\s*CFU', section, re.I):
+                        if "Probiotics" not in ingredients:
+                            ingredients.append("Probiotics")
+
         return ingredients, category, market
 
     except Exception as e:
@@ -277,7 +346,7 @@ def analyze_layer(layer_path, layer_name):
 
 def main():
     base_path = Path('/Users/lightman/weiqi.kids/agent.supplement-product/docs/Extractor')
-    layers = ['us_dsld', 'ca_lnhpd', 'kr_hff', 'jp_foshu', 'jp_fnfc']
+    layers = ['us_dsld', 'ca_lnhpd', 'kr_hff', 'jp_foshu', 'jp_fnfc', 'tw_hf']
 
     print("Starting ingredient analysis...")
     print("=" * 80)

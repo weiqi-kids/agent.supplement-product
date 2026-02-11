@@ -189,6 +189,51 @@ def convert_topic_report(source_path: Path, topic_id: str, dest_dir: Path):
     print(f"✅ {source_path.name} → {dest_file.relative_to(PROJECT_ROOT)}")
 
 
+def convert_literature_review(source_path: Path, topic_id: str, dest_dir: Path):
+    """轉換文獻薈萃報告"""
+    content = source_path.read_text(encoding="utf-8")
+    frontmatter, body = parse_frontmatter(content)
+
+    period = frontmatter.get("period", "")
+
+    # 從檔名取得期間
+    if not period:
+        match = re.search(r"(\d{4}-\d{2})", source_path.name)
+        if match:
+            period = match.group(1)
+
+    topic_name = get_topic_name(topic_id)
+
+    # 建立新的 frontmatter
+    new_frontmatter = {
+        "layout": "default",
+        "title": f"{topic_name}文獻薈萃 {period}",
+        "parent": "文獻薈萃",
+        "grand_parent": topic_name,
+        "nav_order": get_nav_order_from_period(period),
+    }
+
+    # 保留原始的 metadata
+    if "generated_at" in frontmatter:
+        new_frontmatter["generated_at"] = frontmatter["generated_at"]
+    if "topic" in frontmatter:
+        new_frontmatter["topic"] = frontmatter["topic"]
+    if "total_articles" in frontmatter:
+        new_frontmatter["total_articles"] = frontmatter["total_articles"]
+
+    # 輸出檔案
+    dest_file = dest_dir / f"{period}.md"
+    dest_file.parent.mkdir(parents=True, exist_ok=True)
+
+    output = "---\n"
+    output += yaml.dump(new_frontmatter, allow_unicode=True, default_flow_style=False)
+    output += "---\n\n"
+    output += body
+
+    dest_file.write_text(output, encoding="utf-8")
+    print(f"✅ {source_path.name} → {dest_file.relative_to(PROJECT_ROOT)}")
+
+
 def main():
     print("=" * 50)
     print("Jekyll 報告轉換")
@@ -234,6 +279,24 @@ def main():
                 if f.name.startswith("."):
                     continue
                 convert_topic_report(f, topic_id, dest_reports_dir)
+                converted += 1
+
+    # 轉換文獻薈萃報告
+    literature_review_dir = NARRATOR_DIR / "literature_review"
+    if literature_review_dir.exists():
+        for topic_dir in literature_review_dir.iterdir():
+            if not topic_dir.is_dir():
+                continue
+            topic_id = topic_dir.name
+
+            # 確保目標目錄存在
+            dest_lit_dir = REPORTS_DIR / topic_id / "literature"
+            dest_lit_dir.mkdir(parents=True, exist_ok=True)
+
+            for f in topic_dir.glob("*.md"):
+                if f.name.startswith("."):
+                    continue
+                convert_literature_review(f, topic_id, dest_lit_dir)
                 converted += 1
 
     print("=" * 50)

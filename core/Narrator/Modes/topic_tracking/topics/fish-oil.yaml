@@ -49,3 +49,12 @@ output:
   index: docs/reports/fish-oil/index.md
   guide: docs/reports/fish-oil/guide.md
   reports: docs/reports/fish-oil/reports/
+
+# PubMed 查詢設定
+pubmed:
+  query: '(omega-3[Title/Abstract] OR "fish oil"[Title/Abstract] OR EPA[Title/Abstract] OR DHA[Title/Abstract] OR "eicosapentaenoic acid"[Title/Abstract] OR "docosahexaenoic acid"[Title/Abstract]) AND (supplement*[Title/Abstract] OR nutraceutical*[Title/Abstract])'
+  filters:
+    - humans[MH]
+    - English[Language]
+  date_range: 5
+  max_results: 500

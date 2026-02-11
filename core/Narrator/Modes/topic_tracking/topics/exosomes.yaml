@@ -46,3 +46,12 @@ output:
   index: docs/reports/exosomes/index.md
   guide: docs/reports/exosomes/guide.md
   reports: docs/reports/exosomes/reports/
+
+# PubMed 查詢設定
+pubmed:
+  query: '(exosome*[Title/Abstract] OR "extracellular vesicle*"[Title/Abstract]) AND (supplement*[Title/Abstract] OR nutraceutical*[Title/Abstract] OR cosmetic*[Title/Abstract] OR "skin health"[Title/Abstract])'
+  filters:
+    - humans[MH]
+    - English[Language]
+  date_range: 5
+  max_results: 500

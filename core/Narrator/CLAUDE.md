@@ -30,15 +30,29 @@ Narrator Mode 讀取：
 ## 已建立的 Modes
 
 ### Mode 1: `market_snapshot`（市場快照）
-- 來源：所有 Layer（us_dsld, ca_lnhpd, kr_hff, jp_foshu, jp_fnfc）
+- 來源：所有產品 Layer（us_dsld, ca_lnhpd, kr_hff, jp_foshu, jp_fnfc, tw_hf）
 - 週期：週報
 - 內容：新產品數、熱門成分、品類分布變化、跨國比較
 - 定義：`core/Narrator/Modes/market_snapshot/CLAUDE.md`
 - 輸出：`docs/Narrator/market_snapshot/{YYYY}-W{WW}-market-snapshot.md`
 
 ### Mode 2: `ingredient_radar`（成分雷達）
-- 來源：所有 Layer（us_dsld, ca_lnhpd, kr_hff, jp_foshu, jp_fnfc）
+- 來源：所有產品 Layer（us_dsld, ca_lnhpd, kr_hff, jp_foshu, jp_fnfc, tw_hf）
 - 週期：月報
 - 內容：成分趨勢排名、新興成分、各國成分偏好差異
 - 定義：`core/Narrator/Modes/ingredient_radar/CLAUDE.md`
 - 輸出：`docs/Narrator/ingredient_radar/{YYYY}-{MM}-ingredient-radar.md`
+
+### Mode 3: `topic_tracking`（主題追蹤）
+- 來源：所有產品 Layer（依主題關鍵詞篩選）
+- 週期：月報
+- 內容：特定主題產品統計、品牌分析、趨勢觀察
+- 定義：`core/Narrator/Modes/topic_tracking/CLAUDE.md`
+- 輸出：`docs/Narrator/topic_tracking/{topic}/{YYYY}-{MM}.md`
+
+### Mode 4: `literature_review`（文獻薈萃）
+- 來源：pubmed Layer
+- 週期：月報
+- 內容：學術文獻統計、證據等級分布、功效分類分析
+- 定義：`core/Narrator/Modes/literature_review/CLAUDE.md`
+- 輸出：`docs/Narrator/literature_review/{topic}/{YYYY}-{MM}.md`

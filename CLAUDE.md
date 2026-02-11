@@ -19,9 +19,12 @@
 │  ├── [Layer] kr_hff    → fetch → extract → update              │
 │  ├── [Layer] jp_fnfc   → fetch → extract → update              │
 │  ├── [Layer] jp_foshu  → fetch → extract → update              │
+│  ├── [Layer] tw_hf     → fetch → extract → update              │
+│  ├── [Layer] pubmed    → fetch → extract → update              │
 │  ├── [Mode]  market_snapshot    → 報告產出                      │
 │  ├── [Mode]  ingredient_radar   → 報告產出                      │
-│  └── [Mode]  topic_tracking     → 主題追蹤報告                  │
+│  ├── [Mode]  topic_tracking     → 主題追蹤報告                  │
+│  └── [Mode]  literature_review  → 文獻薈萃報告                  │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -86,6 +89,8 @@ Task(
 | `kr_hff` | 韓國健康機能食品資料庫 | 2-5 分鐘 | ✅ 啟用 |
 | `jp_fnfc` | 日本機能性表示食品資料庫 | 1-2 分鐘 | ✅ 啟用 |
 | `jp_foshu` | 日本特定保健用食品資料庫 | 1-2 分鐘 | ✅ 啟用 |
+| `tw_hf` | 台灣衛福部健康食品資料庫 | 1 分鐘 | ✅ 啟用 |
+| `pubmed` | PubMed 學術文獻資料庫 | 2-5 分鐘 | ✅ 啟用 |
 | `th_fda` | 泰國 FDA 健康食品資料庫 | — | ❌ 已禁用 |
 
 > 禁用的 Layer 帶有 `.disabled` 標記，執行流程會自動跳過。
@@ -110,6 +115,7 @@ Task(
 | `market_snapshot` | `docs/Narrator/market_snapshot/` | 週報 |
 | `ingredient_radar` | `docs/Narrator/ingredient_radar/` | 月報 |
 | `topic_tracking` | `docs/Narrator/topic_tracking/{topic}/` | 月報 |
+| `literature_review` | `docs/Narrator/literature_review/{topic}/` | 月報 |
 
 **追蹤主題清單**（定義於 `core/Narrator/Modes/topic_tracking/topics/`）：
 
@@ -228,6 +234,35 @@ python3 scripts/generate_topic_report.py
 - 是否有錯誤
 ```
 
+### 文獻薈萃子代理
+
+```markdown
+你是 literature_review 報告產出子代理。
+
+## 任務
+執行文獻薈萃報告產出。
+
+## 執行指令
+python3 scripts/generate_literature_report.py --all
+
+## 規格來源
+1. core/Narrator/Modes/literature_review/CLAUDE.md
+2. core/Narrator/Modes/topic_tracking/topics/*.yaml（主題定義）
+
+## 資料來源
+從 docs/Extractor/pubmed/{topic}/*.md 讀取文獻資料
+
+## 輸出
+- docs/Narrator/literature_review/{topic_id}/{period}.md
+
+## 回報格式
+完成後回報：
+- 處理的主題數
+- 各主題文獻數
+- 證據等級分布
+- 是否有錯誤
+```
+
 ---
 
 ## 主執行緒職責
@@ -257,17 +292,22 @@ python3 scripts/generate_topic_report.py
 📊 執行進度
 ═══════════════════════════════════════
 
-Layer 處理（3/5 完成）
+Layer 處理（5/7 完成）
 ├── ✅ us_dsld    214,780 筆 | 0 REVIEW
 ├── ✅ ca_lnhpd   160,545 筆 | 5,164 REVIEW
-├── ⏳ kr_hff     執行中...
-├── ⏳ jp_fnfc    等待中
-└── ⏳ jp_foshu   等待中
+├── ✅ kr_hff     44,095 筆 | 30 REVIEW
+├── ⏳ jp_fnfc    執行中...
+├── ⏳ jp_foshu   等待中
+├── ⏳ tw_hf      等待中
+└── ⏳ pubmed     等待中
 
 Mode 報告（等待 Layer 完成）
 ├── ⏸️ market_snapshot
 ├── ⏸️ ingredient_radar
-└── ⏸️ topic_tracking
+├── ⏸️ topic_tracking
+│   ├── exosomes
+│   └── fish-oil
+└── ⏸️ literature_review
     ├── exosomes
     └── fish-oil
 
@@ -285,10 +325,12 @@ Jekyll 轉換（等待推薦完成）
 | Layer | fetch 輸出 | 萃取指令 |
 |-------|-----------|---------|
 | ca_lnhpd | `raw/products-*.jsonl` | 見下方詳細說明 |
-| jp_fnfc | `raw/fnfc-*.jsonl` | `python3 scripts/extract_jp_fnfc.py <jsonl>` |
-| jp_foshu | `raw/foshu-*.jsonl` | `python3 scripts/extract_jp_foshu.py <jsonl>` |
-| kr_hff | `raw/hff-*.jsonl` | `python3 scripts/extract_kr_hff.py <jsonl>` |
-| us_dsld | `raw/dsld-*.jsonl` | `python3 scripts/extract_us_dsld.py <jsonl>` |
+| jp_fnfc | `raw/fnfc-*.jsonl` | `python3 scripts/extract_jp_fnfc.py` |
+| jp_foshu | `raw/foshu-*.jsonl` | `python3 scripts/extract_jp_foshu.py` |
+| kr_hff | `raw/hff-*.jsonl` | `python3 scripts/extract_kr_hff.py` |
+| us_dsld | `raw/dsld-*.jsonl` | `python3 scripts/extract_us_dsld.py` |
+| tw_hf | `raw/tw_hf-*.jsonl` | `python3 scripts/extract_tw_hf.py` |
+| pubmed | `raw/{topic}-*.jsonl` | `python3 scripts/extract_pubmed.py [--topic {topic}]` |
 
 ### ca_lnhpd 萃取指令詳細說明
 
@@ -362,10 +404,16 @@ MFDS_API_KEY=...
 # 日本 jp_fnfc CSV 下載 URL（可選）
 # Salesforce Document ID 可能變更，若自動下載失敗，請更新此 URL
 # JP_FNFC_DOWNLOAD_URL=https://www.fld.caa.go.jp/caaks/sfc/servlet.shepherd/document/download/{新ID}?operationContext=S1
+
+# PubMed API（可選，提高速率）
+# 無 Key: 3 req/s；有 Key: 10 req/s
+NCBI_API_KEY=...
+NCBI_EMAIL=your-email@example.com
 ```
 
 > 未設定 Qdrant/OpenAI 時，update.sh 會跳過，萃取流程仍正常。
 > jp_fnfc 的 Salesforce Document ID 可能變更。若自動下載失敗，請至 https://www.fld.caa.go.jp/caaks/cssc01/ 手動下載 CSV。
+> PubMed 查詢無需 API Key，但設定後可提高速率限制。
 
 ---
 
@@ -389,6 +437,8 @@ MFDS_API_KEY=...
 | kr_hff | 必填欄位缺失、機能性成分空白 |
 | jp_fnfc | 必填欄位缺失、**已撤回產品** |
 | jp_foshu | 必填欄位缺失、機能性成分空白 |
+| tw_hf | 必填欄位缺失（許可證字號、品名、保健功效） |
+| pubmed | PMID 為空、標題為空、摘要為空 |
 
 > 各 Layer 的詳細觸發規則定義於 `core/Extractor/Layers/{layer}/CLAUDE.md`
 
@@ -453,6 +503,8 @@ MFDS_API_KEY=...
 | kr_hff | 44,095 | 44,095 | 30 | ✅ |
 | jp_fnfc | 1,569 | 1,569 | 459 | ✅ |
 | jp_foshu | 1,032 | 1,032 | 1 | ✅ |
+| tw_hf | 600 | 600 | 0 | ✅ |
+| pubmed | 1,000 | 1,000 | 10 | ✅ |
 
 ### Mode 報告結果
 | Mode | 檔案 | 狀態 |
@@ -466,16 +518,23 @@ MFDS_API_KEY=...
 | exosomes | 2026-02.md | 45 | ✅ |
 | fish-oil | 2026-02.md | 1,234 | ✅ |
 
+### 文獻薈萃報告
+| 主題 | 檔案 | 文獻數 | 狀態 |
+|------|------|--------|------|
+| exosomes | 2026-02.md | 50 | ✅ |
+| fish-oil | 2026-02.md | 500 | ✅ |
+
 ### 主題推薦
 | 排名 | 成分 | 推薦原因 | 涵蓋市場 |
 |------|------|----------|----------|
 | 1 | NMN | 成長趨勢 (+12位) | 🇺🇸🇯🇵🇰🇷 |
-| 2 | 葉黃素 | 跨國熱門 | 🇺🇸🇨🇦🇯🇵🇰🇷 |
+| 2 | 葉黃素 | 跨國熱門 | 🇺🇸🇨🇦🇯🇵🇰🇷🇹🇼 |
 
 ### Jekyll 轉換
 - 市場快照: docs/reports/market-snapshot/
 - 成分雷達: docs/reports/ingredient-radar/
 - 主題報告: docs/reports/{topic}/reports/
+- 文獻報告: docs/reports/{topic}/literature/
 
 ### 需要關注
 - （如有錯誤或異常列於此）
@@ -504,17 +563,22 @@ MFDS_API_KEY=...
 階段二（背景平行）：資料處理
     ├── us_dsld ──────┐
     ├── ca_lnhpd ─────┤
-    ├── kr_hff ───────┼──▶ 等待全部完成
-    ├── jp_fnfc ──────┤
-    └── jp_foshu ─────┘
+    ├── kr_hff ───────┤
+    ├── jp_fnfc ──────┼──▶ 等待全部完成
+    ├── jp_foshu ─────┤
+    ├── tw_hf ────────┤
+    └── pubmed ───────┘
                       │
                       ▼
 階段三（背景平行）：報告產出
     ├── market_snapshot ────┐
     ├── ingredient_radar ───┤
-    └── topic_tracking ─────┼──▶ 等待全部完成
-        ├── exosomes        │
-        └── fish-oil        │
+    ├── topic_tracking ─────┼──▶ 等待全部完成
+    │   ├── exosomes        │
+    │   └── fish-oil        │
+    └── literature_review ──┘
+        ├── exosomes
+        └── fish-oil
                             │
                             ▼
 階段四（前景）：主題推薦
