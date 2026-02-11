@@ -56,14 +56,18 @@ def build_pubmed_query(topic_config: dict) -> str:
         print("主題無關鍵詞定義", file=sys.stderr)
         sys.exit(1)
 
-    # 建構查詢：關鍵詞 OR 組合 + 補充類型篩選
+    # 建構查詢：關鍵詞 OR 組合（不加過度限制的 filter）
     term_parts = [f'"{term}"[Title/Abstract]' for term in all_terms[:10]]  # 限制最多 10 個
     base_query = " OR ".join(term_parts)
 
-    # 加上補充品相關篩選
-    supplement_filter = '(supplement*[Title/Abstract] OR nutraceutical*[Title/Abstract] OR "dietary supplement"[Title/Abstract])'
+    return f"({base_query})"
 
-    return f"({base_query}) AND {supplement_filter}"
+
+def get_topic_max_results(topic_config: dict, default: int = 500) -> int:
+    """從主題設定取得 max_results"""
+    if "pubmed" in topic_config and "max_results" in topic_config["pubmed"]:
+        return topic_config["pubmed"]["max_results"]
+    return default
 
 
 def esearch(query: str, max_results: int = 500, date_range_years: int = 5) -> list:
@@ -307,10 +311,13 @@ def main():
             continue
 
         query = build_pubmed_query(config)
+        # 從主題設定取得 max_results，若命令列有指定則使用命令列的值
+        topic_max = get_topic_max_results(config, args.limit)
         print(f"  查詢: {query[:80]}...")
+        print(f"  上限: {topic_max} 篇")
 
         # ESearch
-        pmids = esearch(query, max_results=args.limit, date_range_years=args.years)
+        pmids = esearch(query, max_results=topic_max, date_range_years=args.years)
         if not pmids:
             print("  無結果")
             continue

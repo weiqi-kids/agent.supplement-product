@@ -125,6 +125,8 @@ def calculate_statistics(articles: list) -> dict:
         "by_study_type": defaultdict(int),
         "by_claim_category": defaultdict(int),
         "by_ingredient": defaultdict(int),
+        "ingredient_pairs": defaultdict(int),  # 成分搭配統計
+        "ingredient_category": defaultdict(lambda: defaultdict(int)),  # 成分-功效交叉
         "level_1_articles": [],
         "level_2_articles": [],
     }
@@ -155,6 +157,18 @@ def calculate_statistics(articles: list) -> dict:
             ingredients = [ingredients]
         for ing in ingredients:
             stats["by_ingredient"][ing] += 1
+
+        # 成分搭配統計（兩兩組合）
+        sorted_ings = sorted(set(ingredients))
+        for i in range(len(sorted_ings)):
+            for j in range(i + 1, len(sorted_ings)):
+                pair = f"{sorted_ings[i]} + {sorted_ings[j]}"
+                stats["ingredient_pairs"][pair] += 1
+
+        # 成分-功效交叉統計
+        for ing in ingredients:
+            for cat in categories:
+                stats["ingredient_category"][ing][cat] += 1
 
         # 收集高證據等級文獻
         if level == 1:
@@ -234,6 +248,39 @@ total_articles: {stats['total']}
     sorted_ingredients = sorted(stats['by_ingredient'].items(), key=lambda x: -x[1])[:10]
     for ing, count in sorted_ingredients:
         report += f"| {ing} | {count} |\n"
+
+    # 成分組合統計（取前 10）
+    if stats['ingredient_pairs']:
+        report += """
+## 成分組合分析
+
+以下列出最常被共同研究的成分組合：
+
+| 成分組合 | 共同出現文獻數 |
+|----------|---------------|
+"""
+        sorted_pairs = sorted(stats['ingredient_pairs'].items(), key=lambda x: -x[1])[:10]
+        for pair, count in sorted_pairs:
+            if count >= 2:  # 只顯示出現 2 次以上的組合
+                report += f"| {pair} | {count} |\n"
+
+    # 成分-功效交叉分析（取主要成分的功效分布）
+    if stats['ingredient_category']:
+        report += """
+## 成分功效分析
+
+以下列出主要成分的研究功效分布：
+
+"""
+        # 取文獻數最多的前 5 個成分
+        top_ingredients = sorted(stats['by_ingredient'].items(), key=lambda x: -x[1])[:5]
+        for ing, total_count in top_ingredients:
+            if total_count >= 3:  # 只分析有 3 篇以上文獻的成分
+                cat_stats = stats['ingredient_category'].get(ing, {})
+                if cat_stats:
+                    sorted_cats = sorted(cat_stats.items(), key=lambda x: -x[1])[:5]
+                    cat_list = ", ".join([f"{CLAIM_CATEGORY_NAMES.get(c, c)}({n}篇)" for c, n in sorted_cats])
+                    report += f"**{ing}**（{total_count} 篇）：{cat_list}\n\n"
 
     report += """
 ## 研究類型分布

@@ -78,11 +78,21 @@ has_children: true
 
 ## 學術研究
 
-最新文獻分析請參閱 [文獻薈萃報告](literature/)，收錄 PubMed 近期外泌體（exosomes）與細胞外囊泡（extracellular vesicles）相關研究統計。
+最新文獻分析請參閱 [文獻薈萃報告](literature/)，收錄 PubMed 近期外泌體（exosomes）、幹細胞（stem cell）與細胞外囊泡（extracellular vesicles）相關研究統計。
 
-- 本月收錄 474 篇文獻
-- Level 1 證據（Meta-Analysis/Systematic Review）11 篇
-- RCT 5 篇
+- 本月收錄 2,357 篇文獻
+- Level 1 證據（Meta-Analysis/Systematic Review）62 篇
+- RCT 10 篇
+
+**主要成分研究方向**：
+- 幹細胞（1,033 篇）：免疫調節 410 篇、肌肉骨骼 273 篇、抗衰老 154 篇
+- 外泌體（501 篇）：免疫調節 248 篇、皮膚 86 篇、心血管 87 篇
+- EPA（489 篇）：免疫調節 256 篇、肌肉骨骼 156 篇
+
+**熱門成分組合**：
+- EPA + 幹細胞：289 篇
+- 鐵 + 幹細胞：176 篇
+- 外泌體 + 幹細胞：159 篇
 
 ## 參考文獻
 

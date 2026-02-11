@@ -89,9 +89,19 @@ Omega-3 脂肪酸的生物活性機制：
 
 最新文獻分析請參閱 [文獻薈萃報告](literature/)，收錄 PubMed 近期 Omega-3 / Fish Oil 相關研究統計。
 
-- 本月收錄 457 篇文獻
-- Level 1 證據（Meta-Analysis/Systematic Review）63 篇
-- RCT 21 篇
+- 本月收錄 1,845 篇文獻
+- Level 1 證據（Meta-Analysis/Systematic Review）104 篇
+- RCT 37 篇
+
+**主要成分研究方向**：
+- EPA（635 篇）：心血管 212 篇、免疫調節 142 篇、代謝 140 篇
+- Omega-3（590 篇）：免疫調節 256 篇、心血管 210 篇、代謝 169 篇
+- DHA（451 篇）：心血管 197 篇、免疫調節 150 篇、認知功能 83 篇
+
+**熱門成分組合**：
+- DHA + EPA：204 篇
+- Omega-3 + 益生菌：49 篇
+- Omega-3 + 維生素D：48 篇
 
 ## 參考文獻
 

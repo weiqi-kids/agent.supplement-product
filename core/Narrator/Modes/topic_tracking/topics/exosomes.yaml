@@ -49,9 +49,10 @@ output:
 
 # PubMed 查詢設定
 pubmed:
-  query: '(exosome*[Title/Abstract] OR "extracellular vesicle*"[Title/Abstract]) AND (supplement*[Title/Abstract] OR nutraceutical*[Title/Abstract] OR cosmetic*[Title/Abstract] OR "skin health"[Title/Abstract])'
+  # 寬鬆查詢：擷取所有幹細胞/外泌體相關文獻（不限保健食品）
+  query: '(exosome*[Title/Abstract] OR "extracellular vesicle*"[Title/Abstract] OR "stem cell"[Title/Abstract] OR mesenchymal[Title/Abstract]) AND (therapeutic*[Title/Abstract] OR treatment[Title/Abstract] OR clinical[Title/Abstract] OR regenerat*[Title/Abstract])'
   filters:
     - humans[MH]
     - English[Language]
   date_range: 5
-  max_results: 500
+  max_results: 2000
