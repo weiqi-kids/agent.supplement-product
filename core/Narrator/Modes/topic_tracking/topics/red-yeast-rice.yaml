@@ -1,0 +1,50 @@
+# 紅麴主題追蹤定義
+# 紅麴含 Monacolin K，具有降膽固醇功效，常見於台鹽納豆紅鞠等產品
+
+topic_id: red-yeast-rice
+
+name:
+  zh: 紅麴
+  en: Red Yeast Rice
+  ja: 紅麹
+  ko: 홍국
+
+keywords:
+  # 精確匹配（成分名稱）
+  exact:
+    - red yeast rice
+    - monacolin K
+    - monacolin
+    - 紅麴
+    - 紅曲
+    - 紅麹
+    - 홍국
+    - 베니코지
+  # 模糊匹配（產品名稱、描述）
+  fuzzy:
+    - lovastatin
+    - cholesterol
+    - 降血脂
+    - 膽固醇
+    - コレステロール
+    - lipid
+    - monascus
+    - 紅糟
+
+category_filter:
+  - botanicals
+  - specialty
+
+output:
+  index: docs/reports/red-yeast-rice/index.md
+  guide: docs/reports/red-yeast-rice/guide.md
+  reports: docs/reports/red-yeast-rice/reports/
+
+# PubMed 查詢設定
+pubmed:
+  query: '("red yeast rice"[Title/Abstract] OR monacolin[Title/Abstract] OR monascus[Title/Abstract]) AND (cholesterol[Title/Abstract] OR cardiovascular[Title/Abstract] OR lipid[Title/Abstract] OR statin[Title/Abstract])'
+  filters:
+    - humans[MH]
+    - English[Language]
+  date_range: 5
+  max_results: 100000

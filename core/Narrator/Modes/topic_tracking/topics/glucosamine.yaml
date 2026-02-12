@@ -1,0 +1,54 @@
+# 葡萄糖胺主題追蹤定義
+# 葡萄糖胺是關節保健的核心成分，常見於痛寶精、台鹽關鍵錠等產品
+
+topic_id: glucosamine
+
+name:
+  zh: 葡萄糖胺
+  en: Glucosamine
+  ja: グルコサミン
+  ko: 글루코사민
+
+keywords:
+  # 精確匹配（成分名稱）
+  exact:
+    - glucosamine
+    - glucosamine sulfate
+    - glucosamine hydrochloride
+    - glucosamine hcl
+    - 葡萄糖胺
+    - 氨基葡萄糖
+    - グルコサミン
+    - 글루코사민
+  # 模糊匹配（產品名稱、描述）
+  fuzzy:
+    - chondroitin
+    - chondroitin sulfate
+    - 軟骨素
+    - コンドロイチン
+    - joint health
+    - joint support
+    - joint care
+    - 關節
+    - 膝蓋
+    - 行動力
+    - msm
+    - methylsulfonylmethane
+
+category_filter:
+  - specialty
+  - other
+
+output:
+  index: docs/reports/glucosamine/index.md
+  guide: docs/reports/glucosamine/guide.md
+  reports: docs/reports/glucosamine/reports/
+
+# PubMed 查詢設定
+pubmed:
+  query: '(glucosamine[Title/Abstract] OR chondroitin[Title/Abstract]) AND (joint[Title/Abstract] OR arthritis[Title/Abstract] OR cartilage[Title/Abstract] OR osteoarthritis[Title/Abstract])'
+  filters:
+    - humans[MH]
+    - English[Language]
+  date_range: 5
+  max_results: 100000

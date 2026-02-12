@@ -1,0 +1,50 @@
+# 納豆激酶主題追蹤定義
+# 納豆激酶具有溶解血栓、促進血液循環功效，常見於台鹽納豆紅鞠等產品
+
+topic_id: nattokinase
+
+name:
+  zh: 納豆激酶
+  en: Nattokinase
+  ja: ナットウキナーゼ
+  ko: 낫토키나제
+
+keywords:
+  # 精確匹配（成分名稱）
+  exact:
+    - nattokinase
+    - natto
+    - 納豆激酶
+    - 納豆
+    - ナットウキナーゼ
+    - ナットウ
+    - 낫토키나제
+    - 낫토
+  # 模糊匹配（產品名稱、描述）
+  fuzzy:
+    - fibrinolytic
+    - blood clot
+    - circulation
+    - 血栓
+    - 血液循環
+    - thrombosis
+    - fibrin
+    - bacillus subtilis
+
+category_filter:
+  - specialty
+  - botanicals
+
+output:
+  index: docs/reports/nattokinase/index.md
+  guide: docs/reports/nattokinase/guide.md
+  reports: docs/reports/nattokinase/reports/
+
+# PubMed 查詢設定
+pubmed:
+  query: '(nattokinase[Title/Abstract] OR "natto"[Title/Abstract]) AND (fibrinolytic[Title/Abstract] OR cardiovascular[Title/Abstract] OR thrombosis[Title/Abstract] OR fibrin[Title/Abstract] OR "blood pressure"[Title/Abstract])'
+  filters:
+    - humans[MH]
+    - English[Language]
+  date_range: 5
+  max_results: 100000

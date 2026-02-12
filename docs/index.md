@@ -4,70 +4,108 @@ title: 首頁
 nav_order: 1
 ---
 
-# 保健食品產品情報系統
+# 保健食品產品情報
 
-跨國保健食品市場監測與成分趨勢分析平台。
-
-## 快速導覽
-
-### 主題追蹤
-
-深入追蹤特定成分/產品類型的市場動態：
-
-| 主題 | 說明 | 產品數 |
-|------|------|--------|
-| [外泌體]({{ site.baseurl }}/reports/exosomes/) | 細胞修復、抗老化相關產品 | 9,675 |
-| [魚油]({{ site.baseurl }}/reports/fish-oil/) | Omega-3、EPA/DHA 相關產品 | 15,444 |
-
-### 定期報告
-
-| 報告類型 | 說明 | 更新頻率 |
-|----------|------|----------|
-| [市場快照]({{ site.baseurl }}/reports/market-snapshot/) | 各國市場產品統計與品類分佈 | 每週 |
-| [成分雷達]({{ site.baseurl }}/reports/ingredient-radar/) | 跨國成分趨勢與新興成分追蹤 | 每月 |
-
-## 資料涵蓋範圍
-
-本系統整合五大市場的官方保健食品資料庫，共計超過 **41 萬筆**產品資料：
-
-| 國家 | 資料來源 | 產品數量 |
-|------|----------|----------|
-| 🇺🇸 美國 | DSLD (Dietary Supplement Label Database) | 214,780 |
-| 🇨🇦 加拿大 | LNHPD (Licensed Natural Health Products Database) | 149,243 |
-| 🇰🇷 韓國 | HFF (Health Functional Food) | 44,246 |
-| 🇯🇵 日本 | FNFC (Foods with Function Claims) | 1,110 |
-| 🇯🇵 日本 | FOSHU (Foods for Specified Health Uses) | 1,031 |
-
-## 最新更新
-
-{% assign market_reports = site.pages | where_exp: "page", "page.path contains 'market-snapshot'" | sort: "nav_order" | reverse %}
-{% assign ingredient_reports = site.pages | where_exp: "page", "page.path contains 'ingredient-radar'" | sort: "nav_order" | reverse %}
-
-### 市場快照
-{% for report in market_reports limit: 3 %}
-{% unless report.title == "市場快照" %}
-- [{{ report.title }}]({{ report.url | relative_url }})
-{% endunless %}
-{% endfor %}
-
-### 成分雷達
-{% for report in ingredient_reports limit: 3 %}
-{% unless report.title == "成分雷達" %}
-- [{{ report.title }}]({{ report.url | relative_url }})
-{% endunless %}
-{% endfor %}
-
-### 主題追蹤
-- [外泌體 2026-02]({{ site.baseurl }}/reports/exosomes/reports/2026-02.html) — 9,675 筆產品分析
-- [魚油 2026-02]({{ site.baseurl }}/reports/fish-oil/reports/2026-02.html) — 15,444 筆產品分析
-
-## 系統特色
-
-- **自動化更新**：每日自動同步各國官方資料庫
-- **跨國比較**：統一格式呈現不同國家的產品資訊
-- **成分標準化**：自動對照英文、日文、韓文成分名稱
-- **趨勢分析**：追蹤成分排名變化與市場動態
+從您的健康需求出發，找到適合的保健成分。
 
 ---
 
-*最後更新：2026 年 2 月*
+## 🔍 我想改善...
+
+### 🦴 關節保養
+
+> 關節痠痛、膝蓋不適、行動力下降
+
+**常見產品**：痛寶精、台鹽關鍵錠、Move Free、維骨力
+
+| 相關成分 | 產品數 | 說明 |
+|----------|--------|------|
+| [葡萄糖胺]({{ site.baseurl }}/reports/glucosamine/) | 10,627 | 軟骨合成關鍵原料 |
+| [膠原蛋白]({{ site.baseurl }}/reports/collagen/) | 5,977 | 關節軟骨主要成分 |
+| [薑黃素]({{ site.baseurl }}/reports/curcumin/) | 14,452 | 天然抗發炎成分 |
+
+---
+
+### ❤️ 心血管健康
+
+> 血脂調節、血液循環、心臟保健
+
+**常見產品**：台鹽納豆紅鞠、魚油膠囊、紅麴膠囊
+
+| 相關成分 | 產品數 | 說明 |
+|----------|--------|------|
+| [魚油]({{ site.baseurl }}/reports/fish-oil/) | 15,444 | Omega-3 脂肪酸 |
+| [紅麴]({{ site.baseurl }}/reports/red-yeast-rice/) | 9,131 | Monacolin K 降膽固醇 |
+| [納豆激酶]({{ site.baseurl }}/reports/nattokinase/) | 1,563 | 促進血液循環 |
+
+---
+
+### 👁️ 眼睛保養
+
+> 藍光防護、黃斑部保養、視力維護
+
+**常見產品**：葉黃素膠囊、金盞花萃取、視力保健複方
+
+| 相關成分 | 產品數 | 說明 |
+|----------|--------|------|
+| [葉黃素]({{ site.baseurl }}/reports/lutein/) | 10,995 | 黃斑部色素 |
+
+---
+
+### ✨ 皮膚美容
+
+> 皮膚彈性、抗皺、保濕
+
+**常見產品**：膠原蛋白飲、膠原蛋白粉、美顏錠
+
+| 相關成分 | 產品數 | 說明 |
+|----------|--------|------|
+| [膠原蛋白]({{ site.baseurl }}/reports/collagen/) | 5,977 | 皮膚主要結構蛋白 |
+| [外泌體]({{ site.baseurl }}/reports/exosomes/) | 9,675 | 細胞修復因子 |
+
+---
+
+### 🧬 抗衰老
+
+> 細胞修復、延緩老化、活力提升
+
+**常見產品**：NMN 膠囊、外泌體精華、NAD+ 前驅物
+
+| 相關成分 | 產品數 | 說明 |
+|----------|--------|------|
+| [NMN]({{ site.baseurl }}/reports/nmn/) | 1,051 | NAD+ 前驅物 |
+| [外泌體]({{ site.baseurl }}/reports/exosomes/) | 9,675 | 細胞間訊號傳遞 |
+
+---
+
+### 🔥 抗發炎
+
+> 慢性發炎、代謝調節
+
+**常見產品**：薑黃素膠囊、薑黃粉、魚油
+
+| 相關成分 | 產品數 | 說明 |
+|----------|--------|------|
+| [薑黃素]({{ site.baseurl }}/reports/curcumin/) | 14,452 | NF-κB 抑制劑 |
+| [魚油]({{ site.baseurl }}/reports/fish-oil/) | 15,444 | 抗發炎脂肪酸 |
+
+---
+
+## 📊 定期報告
+
+| 報告 | 說明 | 更新頻率 |
+|------|------|----------|
+| [📊 市場快照]({{ site.baseurl }}/reports/market-snapshot/) | 各國市場統計與品類分布 | 每週 |
+| [📈 成分雷達]({{ site.baseurl }}/reports/ingredient-radar/) | 跨國成分趨勢追蹤 | 每月 |
+
+---
+
+## 📖 關於本系統
+
+本系統整合五大市場（美國、加拿大、日本、韓國、台灣）的官方保健食品資料庫，提供跨國市場監測與成分趨勢分析。
+
+[瞭解更多 →]({{ site.baseurl }}/about.html)
+
+---
+
+*資料來源：DSLD、LNHPD、FNFC、FOSHU、韓國健康機能食品資料庫*
