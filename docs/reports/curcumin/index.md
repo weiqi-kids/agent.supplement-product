@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 薑黃素
-nav_order: 9
+nav_order: 6
 parent: 報告總覽
 has_children: true
 ---

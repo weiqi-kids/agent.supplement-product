@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 葉黃素
-nav_order: 7
+nav_order: 4
 parent: 報告總覽
 has_children: true
 ---

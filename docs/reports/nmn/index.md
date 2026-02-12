@@ -1,7 +1,7 @@
 ---
 layout: default
 title: NMN
-nav_order: 6
+nav_order: 3
 parent: 報告總覽
 has_children: true
 ---

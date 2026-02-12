@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 膠原蛋白
-nav_order: 8
+nav_order: 5
 parent: 報告總覽
 has_children: true
 ---
