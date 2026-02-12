@@ -10,10 +10,21 @@ from datetime import datetime, timedelta
 from urllib.request import urlopen, Request
 from urllib.parse import urlencode
 from urllib.error import HTTPError, URLError
+from http.client import IncompleteRead
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOPICS_DIR = os.path.join(BASE_DIR, "core/Narrator/Modes/topic_tracking/topics")
 RAW_DIR = os.path.join(BASE_DIR, "docs/Extractor/pubmed/raw")
+
+# 載入 .env 檔案
+ENV_FILE = os.path.join(BASE_DIR, ".env")
+if os.path.exists(ENV_FILE):
+    with open(ENV_FILE, "r") as f:
+        for line in f:
+            line = line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                key, value = line.split("=", 1)
+                os.environ.setdefault(key.strip(), value.strip())
 
 # NCBI API endpoints
 ESEARCH_URL = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi"
@@ -110,8 +121,8 @@ def esearch(query: str, max_results: int = 500, date_range_years: int = 5) -> li
     return pmids
 
 
-def efetch_batch(pmids: list, batch_size: int = 100) -> list:
-    """批次執行 EFetch 取得文獻詳細資料"""
+def efetch_batch(pmids: list, batch_size: int = 100, max_retries: int = 3) -> list:
+    """批次執行 EFetch 取得文獻詳細資料（含重試邏輯）"""
     all_articles = []
 
     for i in range(0, len(pmids), batch_size):
@@ -132,16 +143,23 @@ def efetch_batch(pmids: list, batch_size: int = 100) -> list:
 
         url = f"{EFETCH_URL}?{urlencode(params)}"
 
-        try:
-            req = Request(url, headers={"User-Agent": "SupplementProductAgent/1.0"})
-            with urlopen(req, timeout=60) as response:
-                xml_content = response.read()
+        # 重試邏輯
+        for retry in range(max_retries):
+            try:
+                req = Request(url, headers={"User-Agent": "SupplementProductAgent/1.0"})
+                with urlopen(req, timeout=60) as response:
+                    xml_content = response.read()
 
-            articles = parse_pubmed_xml(xml_content)
-            all_articles.extend(articles)
+                articles = parse_pubmed_xml(xml_content)
+                all_articles.extend(articles)
+                break  # 成功，跳出重試迴圈
 
-        except (HTTPError, URLError, ET.ParseError) as e:
-            print(f"  EFetch 批次失敗: {e}", file=sys.stderr)
+            except (HTTPError, URLError, ET.ParseError, IncompleteRead) as e:
+                if retry < max_retries - 1:
+                    print(f"  批次失敗 (重試 {retry+1}/{max_retries}): {e}", file=sys.stderr)
+                    time.sleep(2 * (retry + 1))  # 指數退避
+                else:
+                    print(f"  EFetch 批次失敗（已重試 {max_retries} 次）: {e}", file=sys.stderr)
 
         # 速率限制
         time.sleep(RATE_LIMIT)
