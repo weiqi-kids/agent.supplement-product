@@ -1,5 +1,21 @@
 [
   {
+    "id": "nmn-2026-02-md",
+    "title": "NMN文獻薈萃報告 — 2026 年 2 月",
+    "date": "",
+    "file": "nmn/2026-02.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
+    "id": "lutein-2026-02-md",
+    "title": "葉黃素文獻薈萃報告 — 2026 年 2 月",
+    "date": "",
+    "file": "lutein/2026-02.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
     "id": "fish-oil-2026-02-md",
     "title": "魚油文獻薈萃報告 — 2026 年 2 月",
     "date": "",
@@ -12,6 +28,22 @@
     "title": "外泌體文獻薈萃報告 — 2026 年 2 月",
     "date": "",
     "file": "exosomes/2026-02.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
+    "id": "curcumin-2026-02-md",
+    "title": "薑黃素文獻薈萃報告 — 2026 年 2 月",
+    "date": "",
+    "file": "curcumin/2026-02.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
+    "id": "collagen-2026-02-md",
+    "title": "膠原蛋白文獻薈萃報告 — 2026 年 2 月",
+    "date": "",
+    "file": "collagen/2026-02.md",
     "item_count": "",
     "source_mode": "literature_review"
   }
