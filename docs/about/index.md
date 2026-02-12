@@ -5,25 +5,81 @@ nav_order: 4
 has_children: true
 ---
 
-# 關於系統
+# 關於保健食品產品情報系統
 
-保健食品產品情報系統是一個跨國保健食品市場監測與成分趨勢分析平台。
+跨國保健食品市場監測與成分趨勢分析平台。
 
-## 系統目標
+## 資料涵蓋範圍
 
-- 整合多國保健食品官方資料庫
-- 自動化資料擷取與分析
-- 提供定期市場報告與成分趨勢
+本系統整合五大市場的官方保健食品資料庫，共計超過 **41 萬筆**產品資料：
 
-## 資料處理流程
+| 國家 | 資料來源 | 產品數量 | 說明 |
+|------|----------|----------|------|
+| 🇺🇸 美國 | DSLD (Dietary Supplement Label Database) | 214,780 | FDA 膳食補充劑標示資料庫 |
+| 🇨🇦 加拿大 | LNHPD (Licensed Natural Health Products Database) | 149,243 | 加拿大衛生部核准產品 |
+| 🇰🇷 韓國 | HFF (Health Functional Food) | 44,246 | 韓國食藥處健康機能食品 |
+| 🇯🇵 日本 | FNFC (Foods with Function Claims) | 1,110 | 機能性表示食品 |
+| 🇯🇵 日本 | FOSHU (Foods for Specified Health Uses) | 1,031 | 特定保健用食品 |
 
-1. **擷取（Fetch）**：從各國官方資料庫下載原始資料
-2. **萃取（Extract）**：解析原始資料，標準化產品資訊
-3. **分析（Analyze）**：跨國比較、趨勢分析
-4. **報告（Report）**：產出市場快照與成分雷達報告
+## 系統特色
 
-## 更新頻率
+### 自動化更新
+每日自動同步各國官方資料庫，確保資料即時性。
 
-- 資料擷取：每日
-- 市場快照：每週
-- 成分雷達：每月
+### 跨國比較
+統一格式呈現不同國家的產品資訊，便於跨國市場分析。
+
+### 成分標準化
+自動對照英文、日文、韓文成分名稱，建立統一的成分資料庫。
+
+### 趨勢分析
+追蹤成分排名變化與市場動態，提供成分雷達與市場快照報告。
+
+### 主題追蹤
+深入追蹤特定成分（如魚油、葉黃素、NMN 等）的全球市場動態。
+
+### 學術文獻整合
+整合 PubMed 學術文獻，提供實證支持與研究趨勢分析。
+
+## 定期報告
+
+| 報告類型 | 說明 | 更新頻率 |
+|----------|------|----------|
+| [📊 市場快照]({{ site.baseurl }}/reports/market-snapshot/) | 各國市場產品統計與品類分佈 | 每週 |
+| [📈 成分雷達]({{ site.baseurl }}/reports/ingredient-radar/) | 跨國成分趨勢與新興成分追蹤 | 每月 |
+| 主題追蹤報告 | 特定成分的深入市場分析 | 每月 |
+| 文獻薈萃報告 | 學術研究統計與趨勢 | 每月 |
+
+## 資料更新紀錄
+
+{% assign market_reports = site.pages | where_exp: "page", "page.path contains 'market-snapshot'" | sort: "nav_order" | reverse %}
+
+### 最新市場快照
+{% for report in market_reports limit: 3 %}
+{% unless report.title == "📊 市場快照" %}
+- [{{ report.title }}]({{ report.url | relative_url }})
+{% endunless %}
+{% endfor %}
+
+{% assign ingredient_reports = site.pages | where_exp: "page", "page.path contains 'ingredient-radar'" | sort: "nav_order" | reverse %}
+
+### 最新成分雷達
+{% for report in ingredient_reports limit: 3 %}
+{% unless report.title == "📈 成分雷達" %}
+- [{{ report.title }}]({{ report.url | relative_url }})
+{% endunless %}
+{% endfor %}
+
+## 免責聲明
+
+- 本系統資料僅供參考，不構成醫療建議
+- 產品資訊來自各國官方資料庫，本系統不對資料正確性負責
+- 選購保健食品前，請諮詢醫療專業人員
+
+## 聯絡我們
+
+如有任何問題或建議，歡迎透過 GitHub Issues 聯繫。
+
+---
+
+*最後更新：2026 年 2 月*
