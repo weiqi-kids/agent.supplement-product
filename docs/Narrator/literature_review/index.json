@@ -1,9 +1,25 @@
 [
   {
+    "id": "red-yeast-rice-2026-02-md",
+    "title": "紅麴文獻薈萃報告 — 2026 年 2 月",
+    "date": "",
+    "file": "red-yeast-rice/2026-02.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
     "id": "nmn-2026-02-md",
     "title": "NMN文獻薈萃報告 — 2026 年 2 月",
     "date": "",
     "file": "nmn/2026-02.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
+    "id": "nattokinase-2026-02-md",
+    "title": "納豆激酶文獻薈萃報告 — 2026 年 2 月",
+    "date": "",
+    "file": "nattokinase/2026-02.md",
     "item_count": "",
     "source_mode": "literature_review"
   },
