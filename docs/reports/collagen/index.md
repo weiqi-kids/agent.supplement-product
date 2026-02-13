@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 膠原蛋白 (02-13)
+title: 膠原蛋白 (2026-02-13)
 nav_order: 5
 parent: 報告總覽
 has_children: true

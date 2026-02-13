@@ -2,7 +2,7 @@
 layout: default
 title: 選購指南
 nav_order: 1
-parent: 紅麴 (02-13)
+parent: 紅麴 (2026-02-13)
 grand_parent: 報告總覽
 ---
 

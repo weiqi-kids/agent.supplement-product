@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 納豆激酶 (02-13)
+title: 納豆激酶 (2026-02-13)
 nav_order: 9
 parent: 報告總覽
 has_children: true

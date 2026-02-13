@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 葡萄糖胺 (02-13)
+title: 葡萄糖胺 (2026-02-13)
 nav_order: 7
 parent: 報告總覽
 has_children: true
