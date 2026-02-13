@@ -1,26 +1,26 @@
 <!-- Custom styles for navigation dates -->
 <style>
 /* Navigation item with date - use flexbox for right-alignment */
-.nav-list-item .nav-list-link {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+/* Use !important to override Just the Docs theme styles */
+.site-nav .nav-list-item > .nav-list-link {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  width: 100% !important;
 }
 
 .nav-date {
-  font-size: 0.75em;
-  color: #666;
-  margin-left: auto;
-  padding-left: 0.5em;
-  white-space: nowrap;
+  font-size: 0.75em !important;
+  color: #959396 !important;
+  margin-left: auto !important;
+  padding-left: 1em !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
 }
 
-/* Prevent date from wrapping */
-.nav-list-item .nav-list-link .nav-title {
-  flex-shrink: 1;
-  overflow: hidden;
-  text-overflow: ellipsis;
+/* Prevent title from taking full width */
+.nav-title {
+  flex-grow: 1 !important;
 }
 </style>
 
