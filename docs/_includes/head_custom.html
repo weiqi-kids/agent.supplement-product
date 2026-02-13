@@ -26,11 +26,13 @@
 
 <script>
 // Parse navigation titles and separate dates to right-align them
-document.addEventListener('DOMContentLoaded', function() {
-  // Match pattern: "標題 YYYY-MM-DD"
+function formatNavDates() {
   const datePattern = /^(.+?)\s+(\d{4}-\d{2}-\d{2})$/;
 
   document.querySelectorAll('.nav-list-link').forEach(function(link) {
+    // Skip if already processed
+    if (link.querySelector('.nav-date')) return;
+
     const text = link.textContent.trim();
     const match = text.match(datePattern);
 
@@ -54,5 +56,25 @@ document.addEventListener('DOMContentLoaded', function() {
       link.appendChild(dateSpan);
     }
   });
-});
+}
+
+// Run on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', formatNavDates);
+
+// Also run after a short delay in case nav is loaded dynamically
+setTimeout(formatNavDates, 100);
+setTimeout(formatNavDates, 500);
+
+// Use MutationObserver to catch dynamic nav changes
+if (typeof MutationObserver !== 'undefined') {
+  const observer = new MutationObserver(function(mutations) {
+    formatNavDates();
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    const nav = document.querySelector('.site-nav');
+    if (nav) {
+      observer.observe(nav, { childList: true, subtree: true });
+    }
+  });
+}
 </script>
