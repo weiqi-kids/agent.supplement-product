@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 市場報告
-parent: NMN
+parent: NMN (02-13)
 nav_order: 3
 has_children: true
 ---

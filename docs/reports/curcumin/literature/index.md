@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 文獻報告
-parent: 薑黃素
+parent: 薑黃素 (02-13)
 nav_order: 4
 has_children: true
 ---

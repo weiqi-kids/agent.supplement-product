@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 文獻薈萃
-parent: 納豆激酶
+parent: 納豆激酶 (02-13)
 nav_order: 4
 has_children: true
 ---

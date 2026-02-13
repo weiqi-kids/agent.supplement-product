@@ -2,7 +2,7 @@
 layout: default
 title: 市場報告
 nav_order: 2
-parent: 紅麴
+parent: 紅麴 (02-13)
 grand_parent: 報告總覽
 has_children: true
 ---
