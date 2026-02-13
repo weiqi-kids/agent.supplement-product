@@ -1,0 +1,58 @@
+<!-- Custom styles for navigation dates -->
+<style>
+/* Navigation item with date - use flexbox for right-alignment */
+.nav-list-item .nav-list-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-date {
+  font-size: 0.75em;
+  color: #666;
+  margin-left: auto;
+  padding-left: 0.5em;
+  white-space: nowrap;
+}
+
+/* Prevent date from wrapping */
+.nav-list-item .nav-list-link .nav-title {
+  flex-shrink: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+</style>
+
+<script>
+// Parse navigation titles and separate dates to right-align them
+document.addEventListener('DOMContentLoaded', function() {
+  // Match pattern: "標題 YYYY-MM-DD"
+  const datePattern = /^(.+?)\s+(\d{4}-\d{2}-\d{2})$/;
+
+  document.querySelectorAll('.nav-list-link').forEach(function(link) {
+    const text = link.textContent.trim();
+    const match = text.match(datePattern);
+
+    if (match) {
+      const title = match[1];
+      const date = match[2];
+
+      // Clear existing content
+      link.textContent = '';
+
+      // Add title span
+      const titleSpan = document.createElement('span');
+      titleSpan.className = 'nav-title';
+      titleSpan.textContent = title;
+      link.appendChild(titleSpan);
+
+      // Add date span
+      const dateSpan = document.createElement('span');
+      dateSpan.className = 'nav-date';
+      dateSpan.textContent = date;
+      link.appendChild(dateSpan);
+    }
+  });
+});
+</script>

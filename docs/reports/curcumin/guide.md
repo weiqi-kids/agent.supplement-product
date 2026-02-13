@@ -2,7 +2,7 @@
 layout: default
 title: 選購指南
 nav_order: 2
-parent: 薑黃素 (2026-02-13)
+parent: 薑黃素 2026-02-13
 grand_parent: 報告總覽
 ---
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 紅麴 (2026-02-13)
+title: 紅麴 2026-02-13
 nav_order: 8
 parent: 報告總覽
 has_children: true

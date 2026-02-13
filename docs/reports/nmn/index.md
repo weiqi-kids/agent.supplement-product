@@ -1,6 +1,6 @@
 ---
 layout: default
-title: NMN (2026-02-13)
+title: NMN 2026-02-13
 nav_order: 3
 parent: 報告總覽
 has_children: true

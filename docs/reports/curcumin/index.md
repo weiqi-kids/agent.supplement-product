@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 薑黃素 (2026-02-13)
+title: 薑黃素 2026-02-13
 nav_order: 6
 parent: 報告總覽
 has_children: true
