@@ -1,0 +1,79 @@
+{
+  "name": "您的主要需求是什麼？",
+  "type": "question",
+  "children": [
+    {
+      "name": "皮膚保養（抗皺、彈性）",
+      "type": "question",
+      "children": [
+        {
+          "name": "第一型 + 第三型膠原蛋白",
+          "type": "question",
+          "children": [
+            {
+              "name": "牛來源（研究最多）",
+              "type": "answer",
+              "recommended": true
+            },
+            {
+              "name": "海洋魚來源（分子較小）",
+              "type": "answer"
+            }
+          ]
+        },
+        {
+          "name": "建議搭配維生素 C",
+          "type": "answer"
+        }
+      ]
+    },
+    {
+      "name": "關節保養",
+      "type": "question",
+      "children": [
+        {
+          "name": "第二型膠原蛋白（UC-II®）",
+          "type": "question",
+          "children": [
+            {
+              "name": "雞軟骨來源 40mg/日",
+              "type": "answer",
+              "recommended": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "骨骼健康",
+      "type": "question",
+      "children": [
+        {
+          "name": "第一型膠原蛋白 + 鈣 + 維生素 D",
+          "type": "answer",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "name": "頭髮指甲",
+      "type": "question",
+      "children": [
+        {
+          "name": "第一型膠原蛋白 + 生物素",
+          "type": "answer"
+        }
+      ]
+    },
+    {
+      "name": "素食者",
+      "type": "question",
+      "children": [
+        {
+          "name": "膠原蛋白增強建造器（維生素 C + 胺基酸 + 矽）",
+          "type": "answer"
+        }
+      ]
+    }
+  ]
+}

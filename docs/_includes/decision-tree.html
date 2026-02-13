@@ -1,0 +1,25 @@
+{% comment %}
+  Interactive Decision Tree Component
+  Usage: {% include decision-tree.html topic="glucosamine" %}
+{% endcomment %}
+
+<link rel="stylesheet" href="{{ '/assets/css/decision-tree.css' | relative_url }}">
+
+<div class="decision-tree-controls">
+  <button onclick="decisionTree_{{ include.topic | replace: '-', '_' }}.expandAll()">展開全部</button>
+  <button onclick="decisionTree_{{ include.topic | replace: '-', '_' }}.collapseAll()">收合全部</button>
+</div>
+
+<div id="decision-tree-{{ include.topic }}" class="decision-tree-container"></div>
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="{{ '/assets/js/decision-tree.js' | relative_url }}"></script>
+<script>
+  {% assign tree_data = site.data.decision-trees[include.topic] %}
+  const treeData_{{ include.topic | replace: '-', '_' }} = {{ tree_data | jsonify }};
+  const decisionTree_{{ include.topic | replace: '-', '_' }} = new DecisionTree(
+    'decision-tree-{{ include.topic }}',
+    treeData_{{ include.topic | replace: '-', '_' }},
+    { width: 900, height: 450 }
+  );
+</script>

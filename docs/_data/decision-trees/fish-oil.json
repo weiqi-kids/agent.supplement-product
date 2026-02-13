@@ -1,0 +1,93 @@
+{
+  "name": "您的主要需求是什麼？",
+  "type": "question",
+  "children": [
+    {
+      "name": "心血管保健",
+      "type": "question",
+      "children": [
+        {
+          "name": "三酸甘油酯偏高",
+          "type": "question",
+          "children": [
+            {
+              "name": "高濃度魚油 EPA 1000mg+",
+              "type": "answer",
+              "recommended": true
+            }
+          ]
+        },
+        {
+          "name": "一般心血管保養",
+          "type": "question",
+          "children": [
+            {
+              "name": "EPA+DHA 1000mg/日",
+              "type": "answer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "腦部/認知",
+      "type": "question",
+      "children": [
+        {
+          "name": "兒童發育",
+          "type": "question",
+          "children": [
+            {
+              "name": "高 DHA 配方（DHA > EPA）",
+              "type": "answer",
+              "recommended": true
+            }
+          ]
+        },
+        {
+          "name": "成人認知保養",
+          "type": "question",
+          "children": [
+            {
+              "name": "DHA 500mg+ 配方",
+              "type": "answer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "眼睛保健",
+      "type": "question",
+      "children": [
+        {
+          "name": "魚油 + 葉黃素複方",
+          "type": "answer",
+          "link": "../lutein/",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "name": "孕期營養",
+      "type": "question",
+      "children": [
+        {
+          "name": "孕婦專用 DHA（藻油來源）",
+          "type": "answer",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "name": "素食者",
+      "type": "question",
+      "children": [
+        {
+          "name": "藻油 DHA/EPA",
+          "type": "answer"
+        }
+      ]
+    }
+  ]
+}

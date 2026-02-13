@@ -1,0 +1,70 @@
+{
+  "name": "您的主要需求是什麼？",
+  "type": "question",
+  "children": [
+    {
+      "name": "預防黃斑部病變",
+      "type": "question",
+      "children": [
+        {
+          "name": "高風險族群",
+          "type": "question",
+          "children": [
+            {
+              "name": "AREDS2 配方：葉黃素 10mg + 玉米黃質 2mg + 維生素 C/E/鋅",
+              "type": "answer",
+              "recommended": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "藍光防護（3C 重度使用）",
+      "type": "question",
+      "children": [
+        {
+          "name": "葉黃素 6-10mg + 玉米黃質",
+          "type": "answer",
+          "recommended": true
+        },
+        {
+          "name": "可搭配花青素（藍莓萃取）",
+          "type": "answer"
+        }
+      ]
+    },
+    {
+      "name": "一般眼睛保養",
+      "type": "question",
+      "children": [
+        {
+          "name": "葉黃素 6mg + 玉米黃質",
+          "type": "answer"
+        }
+      ]
+    },
+    {
+      "name": "乾眼症狀",
+      "type": "question",
+      "children": [
+        {
+          "name": "葉黃素 + 魚油 DHA 複方",
+          "type": "answer",
+          "link": "../fish-oil/",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "name": "兒童/青少年護眼",
+      "type": "question",
+      "children": [
+        {
+          "name": "低劑量葉黃素 5-6mg（軟糖或咀嚼錠）",
+          "type": "answer"
+        }
+      ]
+    }
+  ]
+}

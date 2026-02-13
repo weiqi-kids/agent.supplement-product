@@ -1,0 +1,60 @@
+{
+  "name": "我想調節血脂",
+  "type": "question",
+  "children": [
+    {
+      "name": "輕度偏高（邊緣值）",
+      "type": "question",
+      "children": [
+        {
+          "name": "低劑量紅麴 + 生活調整",
+          "type": "answer",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "name": "中度偏高",
+      "type": "question",
+      "children": [
+        {
+          "name": "紅麴 + CoQ10 複方",
+          "type": "question",
+          "children": [
+            {
+              "name": "Monacolin K 3-10mg/日",
+              "type": "answer",
+              "recommended": true
+            },
+            {
+              "name": "定期追蹤血脂",
+              "type": "answer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "同時想改善循環",
+      "type": "question",
+      "children": [
+        {
+          "name": "紅麴 + 納豆激酶複方",
+          "type": "answer",
+          "link": "../nattokinase/",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "name": "明顯偏高/已服藥",
+      "type": "question",
+      "children": [
+        {
+          "name": "請諮詢醫師（勿自行停藥或併用）",
+          "type": "answer"
+        }
+      ]
+    }
+  ]
+}

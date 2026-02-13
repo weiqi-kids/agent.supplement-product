@@ -1,0 +1,69 @@
+{
+  "name": "您的主要需求是什麼？",
+  "type": "question",
+  "children": [
+    {
+      "name": "關節保養（發炎不適）",
+      "type": "question",
+      "children": [
+        {
+          "name": "高生物利用度配方",
+          "type": "question",
+          "children": [
+            {
+              "name": "Meriva® 500-1000mg（關節研究多）",
+              "type": "answer",
+              "recommended": true
+            },
+            {
+              "name": "BCM-95® 或 Theracurmin®",
+              "type": "answer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "一般抗發炎保養",
+      "type": "question",
+      "children": [
+        {
+          "name": "標準薑黃素 500mg + BioPerine®",
+          "type": "answer",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "name": "腦部/認知健康",
+      "type": "question",
+      "children": [
+        {
+          "name": "Theracurmin® 或 Longvida®（可通過血腦屏障）",
+          "type": "answer",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "name": "消化/肝臟健康",
+      "type": "question",
+      "children": [
+        {
+          "name": "薑黃素 + 生薑複方",
+          "type": "answer"
+        }
+      ]
+    },
+    {
+      "name": "入門嘗試",
+      "type": "question",
+      "children": [
+        {
+          "name": "標準薑黃素 500mg + BioPerine®（性價比最高）",
+          "type": "answer"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "name": "我想改善血液循環",
+  "type": "question",
+  "children": [
+    {
+      "name": "一般保養",
+      "type": "question",
+      "children": [
+        {
+          "name": "納豆激酶 2000 FU/日",
+          "type": "answer",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "name": "加強循環",
+      "type": "question",
+      "children": [
+        {
+          "name": "納豆激酶 + 魚油複方",
+          "type": "answer",
+          "link": "../fish-oil/",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "name": "同時調節血脂",
+      "type": "question",
+      "children": [
+        {
+          "name": "納豆激酶 + 紅麴複方（如台鹽納豆紅鞠）",
+          "type": "answer",
+          "link": "../red-yeast-rice/",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "name": "腦部循環保養",
+      "type": "question",
+      "children": [
+        {
+          "name": "納豆激酶 + 銀杏複方",
+          "type": "answer"
+        }
+      ]
+    },
+    {
+      "name": "長途旅行/久坐族",
+      "type": "question",
+      "children": [
+        {
+          "name": "納豆激酶 2000-4000 FU/日",
+          "type": "answer"
+        }
+      ]
+    }
+  ]
+}

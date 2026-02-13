@@ -1,0 +1,77 @@
+{
+  "name": "您的主要需求是什麼？",
+  "type": "question",
+  "children": [
+    {
+      "name": "抗衰老保養",
+      "type": "question",
+      "children": [
+        {
+          "name": "高純度 NMN（≥99%）",
+          "type": "question",
+          "children": [
+            {
+              "name": "250-500mg/天",
+              "type": "answer",
+              "recommended": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "提升體力/能量",
+      "type": "question",
+      "children": [
+        {
+          "name": "NMN + 輔酶 Q10 複方",
+          "type": "question",
+          "children": [
+            {
+              "name": "可搭配 PQQ 增強粒線體功能",
+              "type": "answer",
+              "recommended": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "認知功能維護",
+      "type": "question",
+      "children": [
+        {
+          "name": "NMN + 白藜蘆醇複方（支持 SIRT1 活化）",
+          "type": "answer",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "name": "代謝健康",
+      "type": "question",
+      "children": [
+        {
+          "name": "單方高劑量 NMN（500mg+）",
+          "type": "question",
+          "children": [
+            {
+              "name": "配合運動效果更佳",
+              "type": "answer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "入門嘗試",
+      "type": "question",
+      "children": [
+        {
+          "name": "低劑量 125-250mg（觀察身體反應後再調整）",
+          "type": "answer"
+        }
+      ]
+    }
+  ]
+}

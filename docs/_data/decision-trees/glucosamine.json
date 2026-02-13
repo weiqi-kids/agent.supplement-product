@@ -1,0 +1,82 @@
+{
+  "name": "您的主要需求是什麼？",
+  "type": "question",
+  "children": [
+    {
+      "name": "已有關節不適",
+      "type": "question",
+      "children": [
+        {
+          "name": "膝蓋/大關節",
+          "type": "question",
+          "children": [
+            {
+              "name": "葡萄糖胺 1500mg + 軟骨素 1200mg",
+              "type": "answer",
+              "recommended": true
+            }
+          ]
+        },
+        {
+          "name": "手指/小關節",
+          "type": "question",
+          "children": [
+            {
+              "name": "葡萄糖胺 + 薑黃素複方",
+              "type": "answer",
+              "link": "../curcumin/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "預防保養",
+      "type": "question",
+      "children": [
+        {
+          "name": "運動員/高強度",
+          "type": "question",
+          "children": [
+            {
+              "name": "葡萄糖胺 1500mg + MSM",
+              "type": "answer",
+              "recommended": true
+            }
+          ]
+        },
+        {
+          "name": "一般保養",
+          "type": "question",
+          "children": [
+            {
+              "name": "葡萄糖胺 500-1000mg",
+              "type": "answer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "素食者",
+      "type": "question",
+      "children": [
+        {
+          "name": "植物發酵葡萄糖胺",
+          "type": "answer",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "name": "海鮮過敏",
+      "type": "question",
+      "children": [
+        {
+          "name": "植物來源葡萄糖胺（非甲殼類）",
+          "type": "answer"
+        }
+      ]
+    }
+  ]
+}

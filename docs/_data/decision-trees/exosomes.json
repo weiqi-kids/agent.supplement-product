@@ -1,0 +1,71 @@
+{
+  "name": "您的主要需求是什麼？",
+  "type": "question",
+  "children": [
+    {
+      "name": "抗老化/肌膚保養",
+      "type": "question",
+      "children": [
+        {
+          "name": "口服補充",
+          "type": "question",
+          "children": [
+            {
+              "name": "胎盤萃取物或幹細胞萃取物膠囊",
+              "type": "answer",
+              "recommended": true
+            }
+          ]
+        },
+        {
+          "name": "局部使用",
+          "type": "question",
+          "children": [
+            {
+              "name": "外泌體精華液或安瓶",
+              "type": "answer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "細胞修復/組織再生",
+      "type": "question",
+      "children": [
+        {
+          "name": "高濃度外泌體濃縮物膠囊",
+          "type": "answer",
+          "recommended": true
+        }
+      ]
+    },
+    {
+      "name": "免疫調節",
+      "type": "question",
+      "children": [
+        {
+          "name": "複方產品（外泌體 + 維生素 D + 鋅）",
+          "type": "answer"
+        }
+      ]
+    },
+    {
+      "name": "認知健康",
+      "type": "question",
+      "children": [
+        {
+          "name": "含神經保護成分配方",
+          "type": "question",
+          "children": [
+            {
+              "name": "可搭配 DHA、磷脂醯絲胺酸",
+              "type": "answer",
+              "link": "../fish-oil/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
