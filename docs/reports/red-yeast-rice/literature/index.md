@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 文獻薈萃
-parent: 紅麴 2026-02-13
+parent: 紅麴 2026-02-14
 nav_order: 4
 has_children: true
 ---
