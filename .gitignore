@@ -15,10 +15,6 @@ docs/.jekyll-cache/
 docs/.jekyll-metadata
 docs/Gemfile.lock
 
-# === Jekyll 轉換產出（由 CI 產生）===
-docs/reports/market-snapshot/202*.md
-docs/reports/ingredient-radar/202*.md
-
 # === 快取與暫存 ===
 scripts/__pycache__/
 scripts/*.pkl
