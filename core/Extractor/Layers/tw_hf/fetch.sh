@@ -25,7 +25,7 @@ RAW_DIR="$PROJECT_ROOT/docs/Extractor/$LAYER_NAME/raw"
 LAST_FETCH_FILE="$RAW_DIR/.last_fetch"
 
 # 衛福部食藥署健康食品資料集 API (JSON 格式)
-API_URL="http://data.fda.gov.tw/data/opendata/export/19/json"
+API_URL="https://data.fda.gov.tw/data/opendata/export/19/json"
 
 mkdir -p "$RAW_DIR"
 
