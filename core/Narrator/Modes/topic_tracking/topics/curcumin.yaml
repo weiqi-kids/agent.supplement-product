@@ -36,6 +36,7 @@ category_filter:
   - botanicals
   - specialty
   - other
+  - omega_fatty_acids
 
 output:
   index: docs/reports/curcumin/index.md

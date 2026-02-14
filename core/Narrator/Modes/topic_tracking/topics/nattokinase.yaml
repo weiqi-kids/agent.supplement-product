@@ -34,6 +34,7 @@ keywords:
 category_filter:
   - specialty
   - botanicals
+  - omega_fatty_acids
 
 output:
   index: docs/reports/nattokinase/index.md

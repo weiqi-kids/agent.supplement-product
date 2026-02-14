@@ -38,6 +38,8 @@ keywords:
 category_filter:
   - specialty
   - other
+  - vitamins_minerals
+  - probiotics
 
 output:
   index: docs/reports/glucosamine/index.md

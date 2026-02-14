@@ -37,6 +37,7 @@ category_filter:
   - protein_amino
   - specialty
   - other
+  - vitamins_minerals
 
 output:
   index: docs/reports/collagen/index.md

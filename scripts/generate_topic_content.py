@@ -54,6 +54,7 @@ LAYER_MARKET = {
     "kr_hff": {"name": "韓國", "flag": "🇰🇷", "code": "KR"},
     "jp_fnfc": {"name": "日本 FNFC", "flag": "🇯🇵", "code": "JP"},
     "jp_foshu": {"name": "日本 FOSHU", "flag": "🇯🇵", "code": "JP"},
+    "tw_hf": {"name": "台灣", "flag": "🇹🇼", "code": "TW"},
 }
 
 # 網路搜尋查詢模板
