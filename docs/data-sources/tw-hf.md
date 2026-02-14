@@ -13,6 +13,8 @@ parent: 資料來源
 
 - 官方網站：[衛福部健康食品資料查詢](https://consumer.fda.gov.tw/Food/InfoHealthFood.aspx?nodeID=162)
 - 主管機關：衛生福利部食品藥物管理署（TFDA）
+- 政府開放資料：[data.gov.tw](https://data.gov.tw/dataset/6951)
+- API 端點：[JSON 格式](https://data.fda.gov.tw/data/opendata/export/19/json)
 
 ## 資料特性
 
