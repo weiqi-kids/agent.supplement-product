@@ -503,7 +503,7 @@ NCBI_EMAIL=your-email@example.com
 | kr_hff | 44,095 | 44,095 | 30 | ✅ |
 | jp_fnfc | 1,569 | 1,569 | 459 | ✅ |
 | jp_foshu | 1,032 | 1,032 | 1 | ✅ |
-| tw_hf | 600 | 600 | 0 | ✅ |
+| tw_hf | 555 | 555 | 0 | ✅ |
 | pubmed | 1,000 | 1,000 | 10 | ✅ |
 
 ### Mode 報告結果

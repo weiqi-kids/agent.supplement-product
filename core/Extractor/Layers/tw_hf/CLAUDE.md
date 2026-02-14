@@ -8,7 +8,7 @@
 | **Engineering function** | 從衛福部食藥署「健康食品資料集」API 下載 JSON，轉換為結構化資料 |
 | **Collectable data** | 許可證字號、產品名稱、申請商、保健功效、保健功效宣稱 |
 | **Automation level** | 100% — 公開 API，無需認證 |
-| **Output value** | 台灣官方認證健康食品完整資料庫（~600 筆），支援六國比較 |
+| **Output value** | 台灣官方認證健康食品完整資料庫（555 筆），支援六國比較 |
 | **Risk type** | API 結構變更、中文欄位處理 |
 | **Reviewer persona** | 資料可信度審核員、領域保守審核員 |
 | **WebFetch 策略** | **不使用** — API 已包含完整結構化資料 |
@@ -19,7 +19,7 @@
 - **資料集名稱**: 健康食品資料集
 - **data.gov.tw ID**: 6951
 - **API 端點**: `https://data.fda.gov.tw/opendata/exportDataList.do?method=ExportData&InfoId=19&logType=2`
-- **產品數**: ~600 筆（截至 2026 年）
+- **產品數**: 555 筆（截至 2026-02-14）
 - **認證**: 免 API Key，公開存取
 - **更新頻率**: 每月更新
 
