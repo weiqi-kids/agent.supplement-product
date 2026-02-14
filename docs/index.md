@@ -108,4 +108,4 @@ nav_order: 1
 
 ---
 
-*資料來源：DSLD、LNHPD、FNFC、FOSHU、韓國健康機能食品資料庫*
+*資料來源：美國 DSLD、加拿大 LNHPD、日本 FNFC、日本 FOSHU、韓國健康機能食品、台灣健康食品資料庫*
