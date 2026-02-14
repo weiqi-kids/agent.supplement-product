@@ -7,7 +7,7 @@ has_children: true
 
 # 資料來源
 
-本系統整合五大市場的官方保健食品資料庫。
+本系統整合六大市場的官方保健食品資料庫。
 
 ## 涵蓋範圍
 
@@ -18,6 +18,7 @@ has_children: true
 | [韓國](kr-hff) | HFF | Health Functional Food Database |
 | [日本](jp-foshu) | FOSHU | Foods for Specified Health Uses |
 | [日本](jp-fnfc) | FNFC | Foods with Function Claims |
+| [台灣](tw-hf) | 健康食品 | 衛福部健康食品資料庫 |
 
 ## 資料特性
 
@@ -26,3 +27,4 @@ has_children: true
 - **韓國 HFF**：包含機能性成分與健康聲明
 - **日本 FOSHU**：經過嚴格審查的特定保健用食品
 - **日本 FNFC**：企業自行申報的機能性表示食品
+- **台灣健康食品**：衛福部審核通過，具明確保健功效認證
