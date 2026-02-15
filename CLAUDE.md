@@ -140,15 +140,46 @@ python3 scripts/recommend_topics.py
 - 新興成分：首次進入全球 Top 50
 - 排除已追蹤主題
 
-### 階段五：Jekyll 轉換 + 部署（前景）
+### 階段五：Jekyll 轉換 + SEO 注入（前景）
 
-所有報告完成後，轉換為 Jekyll 格式：
+所有報告完成後，轉換為 Jekyll 格式並注入 SEO Schema：
 
 ```bash
 python3 scripts/convert_to_jekyll.py
 ```
 
-輸出至 `docs/reports/`，供 GitHub Pages 發布。
+此腳本會自動：
+- 讀取 `seo/config.yaml` 全域設定
+- 為每個頁面產生 JSON-LD Schema（WebPage、Article、BreadcrumbList 等）
+- 加入 YMYL 免責聲明
+- 輸出至 `docs/reports/`
+
+### 階段五.5：SEO 驗證（前景）
+
+部署前執行 SEO 檢查：
+
+```bash
+python3 scripts/validate_seo.py
+```
+
+檢查項目：
+- JSON-LD Schema 完整性（必填 Schema 存在）
+- Meta 標籤長度（title ≤60 字、description ≤155 字）
+- YMYL 免責聲明存在
+- URL 結構正確（英文小寫 + 連字號）
+
+**通過標準**：
+- ✅ 通過：無錯誤
+- ⚠️ 警告：有警告但可部署（建議修正）
+- ❌ 失敗：有錯誤，阻斷部署
+
+```bash
+# 詳細輸出（含警告）
+python3 scripts/validate_seo.py --verbose
+
+# 驗證單一檔案
+python3 scripts/validate_seo.py --file docs/reports/exosomes/reports/2026-02.md
+```
 
 ---
 
@@ -585,8 +616,14 @@ NCBI_EMAIL=your-email@example.com
     └── recommend_topics.py
                             │
                             ▼
-階段五（前景）：Jekyll 轉換
+階段五（前景）：Jekyll 轉換 + SEO 注入
     └── convert_to_jekyll.py
+                            │
+                            ▼
+階段五.5（前景）：SEO 驗證
+    └── validate_seo.py
+        ├── 通過 → 繼續部署
+        └── 失敗 → 阻斷部署
 ```
 
 ---

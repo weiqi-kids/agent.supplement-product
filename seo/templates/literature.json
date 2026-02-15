@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "literature",
+  "description": "文獻薈萃模板 - Article + ItemList + BreadcrumbList",
+  "extends": "base",
+  "additional_schemas": [
+    {
+      "@type": "Article",
+      "@id": "{{canonical_url}}#article",
+      "mainEntityOfPage": {
+        "@id": "{{canonical_url}}#webpage",
+        "significantLink": "{{significant_links}}"
+      },
+      "headline": "{{title}}",
+      "description": "{{description}}",
+      "image": {
+        "@type": "ImageObject",
+        "url": "{{og_image}}",
+        "width": 1200,
+        "height": 630
+      },
+      "author": {
+        "@type": "Person",
+        "@id": "{{site_url}}/about#person",
+        "name": "保健食品情報 AI",
+        "url": "{{site_url}}/about",
+        "knowsAbout": [
+          "學術文獻分析",
+          "系統性文獻回顧",
+          "證據等級評估"
+        ],
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "name": "AI 文獻分析系統",
+            "credentialCategory": "AI System"
+          }
+        ]
+      },
+      "publisher": { "@id": "{{site_url}}#organization" },
+      "datePublished": "{{date_published}}",
+      "dateModified": "{{date_modified}}",
+      "articleSection": "文獻薈萃",
+      "keywords": "{{keywords}}",
+      "wordCount": "{{word_count}}",
+      "inLanguage": "zh-TW",
+      "isAccessibleForFree": true,
+      "citation": "{{citations}}"
+    },
+    {
+      "@type": "ItemList",
+      "@id": "{{canonical_url}}#itemlist",
+      "name": "{{topic_name}}文獻清單",
+      "description": "{{topic_name}}相關學術文獻彙整",
+      "numberOfItems": "{{item_count}}",
+      "itemListElement": "{{literature_items}}"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首頁",
+          "item": "{{site_url}}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "{{topic_name}}",
+          "item": "{{topic_url}}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "文獻薈萃",
+          "item": "{{literature_index_url}}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "{{period}}",
+          "item": "{{canonical_url}}"
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "significant_links": "相關文章連結陣列",
+    "keywords": "關鍵字（逗號分隔）",
+    "word_count": "文章字數",
+    "citations": "引用文獻陣列",
+    "topic_name": "主題名稱",
+    "topic_url": "主題頁面 URL",
+    "literature_index_url": "文獻索引頁 URL",
+    "item_count": "文獻數量",
+    "literature_items": "文獻清單項目",
+    "period": "報告期間（如：2026 年 2 月）"
+  },
+  "literature_item_template": {
+    "@type": "ListItem",
+    "position": "{{position}}",
+    "item": {
+      "@type": "ScholarlyArticle",
+      "name": "{{article_title}}",
+      "author": "{{article_authors}}",
+      "datePublished": "{{article_date}}",
+      "url": "{{article_url}}"
+    }
+  }
+}

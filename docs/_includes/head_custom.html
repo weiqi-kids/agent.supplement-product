@@ -1,3 +1,27 @@
+<!-- JSON-LD Schema for SEO -->
+{% if page.json_ld %}
+<script type="application/ld+json">
+{{ page.json_ld | jsonify }}
+</script>
+{% endif %}
+
+<!-- Meta description -->
+{% if page.description %}
+<meta name="description" content="{{ page.description | truncate: 155 }}">
+<meta property="og:description" content="{{ page.description | truncate: 155 }}">
+<meta name="twitter:description" content="{{ page.description | truncate: 155 }}">
+{% endif %}
+
+<!-- Open Graph tags -->
+<meta property="og:title" content="{{ page.title | default: site.title }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:site_name" content="{{ site.title }}">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title | default: site.title }}">
+
 <!-- Custom styles for navigation dates -->
 <style>
 /* Navigation item with date - use flexbox for right-alignment */
@@ -21,6 +45,76 @@
 /* Prevent title from taking full width */
 .nav-title {
   flex-grow: 1 !important;
+}
+
+/* SEO/SGE marker styles */
+.key-answer {
+  background-color: #f8f9fa;
+  border-left: 4px solid #2563eb;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.key-answer strong {
+  color: #1e40af;
+}
+
+.key-takeaway {
+  background-color: #fef3c7;
+  border-radius: 8px;
+  padding: 1em;
+  margin: 1em 0;
+}
+
+.expert-quote {
+  border-left: 4px solid #6b7280;
+  padding-left: 1em;
+  font-style: italic;
+  color: #4b5563;
+}
+
+.expert-quote cite {
+  display: block;
+  margin-top: 0.5em;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.actionable-steps {
+  background-color: #ecfdf5;
+  border-radius: 8px;
+  padding: 1em 1em 1em 2em;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comparison-table th,
+.comparison-table td {
+  border: 1px solid #e5e7eb;
+  padding: 0.5em;
+}
+
+.comparison-table th {
+  background-color: #f3f4f6;
+}
+
+/* Disclaimer styles */
+.disclaimer {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 1em;
+  margin-top: 2em;
+  font-size: 0.9em;
+  color: #991b1b;
+}
+
+.disclaimer strong {
+  display: block;
+  margin-bottom: 0.5em;
 }
 </style>
 

@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "topic_index",
+  "description": "主題首頁模板 - WebPage + Article + ItemList + BreadcrumbList",
+  "extends": "base",
+  "additional_schemas": [
+    {
+      "@type": "Article",
+      "@id": "{{canonical_url}}#article",
+      "mainEntityOfPage": { "@id": "{{canonical_url}}#webpage" },
+      "headline": "{{title}}",
+      "description": "{{description}}",
+      "image": {
+        "@type": "ImageObject",
+        "url": "{{og_image}}",
+        "width": 1200,
+        "height": 630
+      },
+      "author": {
+        "@type": "Person",
+        "@id": "{{site_url}}/about#person",
+        "name": "保健食品情報 AI",
+        "url": "{{site_url}}/about",
+        "knowsAbout": [
+          "{{topic_name}}市場分析",
+          "{{topic_name}}產品研究",
+          "{{topic_name}}成分趨勢"
+        ]
+      },
+      "publisher": { "@id": "{{site_url}}#organization" },
+      "datePublished": "{{date_published}}",
+      "dateModified": "{{date_modified}}",
+      "articleSection": "主題專區",
+      "keywords": "{{keywords}}",
+      "inLanguage": "zh-TW",
+      "isAccessibleForFree": true
+    },
+    {
+      "@type": "ItemList",
+      "@id": "{{canonical_url}}#itemlist",
+      "name": "{{topic_name}}內容導覽",
+      "description": "{{topic_name}}相關內容索引",
+      "numberOfItems": "{{section_count}}",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "市場報告",
+          "url": "{{reports_url}}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "選購指南",
+          "url": "{{guide_url}}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "文獻薈萃",
+          "url": "{{literature_url}}"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首頁",
+          "item": "{{site_url}}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "{{topic_name}}",
+          "item": "{{canonical_url}}"
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "topic_name": "主題名稱",
+    "keywords": "關鍵字（逗號分隔）",
+    "section_count": "子分類數量",
+    "reports_url": "市場報告索引 URL",
+    "guide_url": "選購指南 URL",
+    "literature_url": "文獻薈萃索引 URL"
+  }
+}

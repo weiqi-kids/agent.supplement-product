@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "guide",
+  "description": "選購指南模板 - HowTo + FAQPage + BreadcrumbList",
+  "extends": "base",
+  "additional_schemas": [
+    {
+      "@type": "HowTo",
+      "@id": "{{canonical_url}}#howto",
+      "name": "{{howto_name}}",
+      "description": "{{howto_description}}",
+      "totalTime": "PT{{total_minutes}}M",
+      "step": "{{howto_steps}}"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": "{{faq_items}}"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "首頁",
+          "item": "{{site_url}}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "{{topic_name}}",
+          "item": "{{topic_url}}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "選購指南",
+          "item": "{{canonical_url}}"
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": "{{canonical_url}}#article",
+      "mainEntityOfPage": { "@id": "{{canonical_url}}#webpage" },
+      "headline": "{{title}}",
+      "description": "{{description}}",
+      "image": {
+        "@type": "ImageObject",
+        "url": "{{og_image}}",
+        "width": 1200,
+        "height": 630
+      },
+      "author": {
+        "@type": "Person",
+        "@id": "{{site_url}}/about#person",
+        "name": "保健食品情報 AI"
+      },
+      "publisher": { "@id": "{{site_url}}#organization" },
+      "datePublished": "{{date_published}}",
+      "dateModified": "{{date_modified}}",
+      "articleSection": "選購指南",
+      "inLanguage": "zh-TW",
+      "isAccessibleForFree": true
+    }
+  ],
+  "variables": {
+    "howto_name": "選購指南標題",
+    "howto_description": "選購指南描述",
+    "total_minutes": "預估閱讀時間（分鐘）",
+    "howto_steps": "步驟陣列（HowToStep）",
+    "faq_items": "FAQ 陣列（Question）",
+    "topic_name": "主題名稱",
+    "topic_url": "主題頁面 URL"
+  },
+  "howto_step_template": {
+    "@type": "HowToStep",
+    "position": "{{position}}",
+    "name": "{{step_name}}",
+    "text": "{{step_text}}"
+  },
+  "faq_item_template": {
+    "@type": "Question",
+    "name": "{{question}}",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "{{answer}}"
+    }
+  }
+}

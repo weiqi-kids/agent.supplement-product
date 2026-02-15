@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "base",
+  "description": "基礎模板 - WebPage + Organization，所有頁面共用",
+  "template": {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "{{canonical_url}}#webpage",
+        "url": "{{canonical_url}}",
+        "name": "{{title}}",
+        "description": "{{description}}",
+        "inLanguage": "zh-TW",
+        "isPartOf": { "@id": "{{site_url}}#website" },
+        "primaryImageOfPage": {
+          "@type": "ImageObject",
+          "url": "{{og_image}}"
+        },
+        "datePublished": "{{date_published}}",
+        "dateModified": "{{date_modified}}",
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [
+            ".article-summary",
+            ".speakable-content",
+            ".key-takeaway",
+            ".key-answer",
+            ".expert-quote",
+            ".actionable-steps li",
+            ".faq-answer-content"
+          ]
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "{{site_url}}#organization",
+        "name": "保健食品情報系統",
+        "alternateName": "Supplement Intelligence",
+        "url": "{{site_url}}",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{site_url}}/assets/images/logo.png",
+          "width": 600,
+          "height": 60
+        },
+        "sameAs": [
+          "https://github.com/weiqi-kids/agent.supplement-product"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "customer service",
+          "email": "info@weiqi.kids"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "{{site_url}}#website",
+        "name": "保健食品情報系統",
+        "url": "{{site_url}}",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "{{site_url}}/search?q={search_term}",
+          "query-input": "required name=search_term"
+        }
+      }
+    ]
+  },
+  "variables": {
+    "canonical_url": "頁面完整 URL",
+    "site_url": "網站根 URL（https://supplement.weiqi.kids）",
+    "title": "頁面標題",
+    "description": "頁面描述（≤155 字）",
+    "og_image": "OG 圖片 URL",
+    "date_published": "發布日期（ISO 8601）",
+    "date_modified": "修改日期（ISO 8601）"
+  }
+}
