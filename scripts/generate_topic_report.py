@@ -423,12 +423,6 @@ source_layers:
         pct = count / total * 100 if total > 0 else 0
         report += f"| {form} | {count} | {pct:.1f}% |\n"
 
-    # 藥物交互章節
-    interactions = load_interaction_data(topic_id)
-    if interactions:
-        interaction_section = format_interaction_section(topic_name, interactions)
-        report += interaction_section
-
     # 趨勢觀察
     report += f"""
 ## 趨勢觀察
