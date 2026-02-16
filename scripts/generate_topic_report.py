@@ -27,6 +27,20 @@ PROJECT_ROOT = Path(__file__).parent.parent
 TOPICS_DIR = PROJECT_ROOT / "core" / "Narrator" / "Modes" / "topic_tracking" / "topics"
 EXTRACTOR_DIR = PROJECT_ROOT / "docs" / "Extractor"
 OUTPUT_DIR = PROJECT_ROOT / "docs" / "Narrator" / "topic_tracking"
+DHI_DIR = EXTRACTOR_DIR / "dhi"
+
+# 主題與 DHI 類別對照
+TOPIC_DHI_CATEGORIES = {
+    "fish-oil": ["omega_fatty_acid"],
+    "curcumin": ["botanical"],
+    "nattokinase": ["enzyme"],
+    "glucosamine": ["amino_acid"],
+    "collagen": ["protein"],
+    "lutein": ["vitamin"],
+    "nmn": ["other"],
+    "red-yeast-rice": ["botanical"],
+    "exosomes": ["other"],
+}
 
 # Layer 對應市場
 LAYER_MARKET = {
@@ -139,6 +153,145 @@ def match_product(product: dict, topic: dict) -> bool:
             return True
 
     return False
+
+
+def load_interaction_data(topic_id: str) -> list[dict]:
+    """
+    從 docs/Extractor/dhi/{category}/*.md 讀取交互資料
+    根據主題 ID 篩選相關類別
+    """
+    interactions = []
+    categories = TOPIC_DHI_CATEGORIES.get(topic_id, [])
+
+    if not categories:
+        return interactions
+
+    for category in categories:
+        category_dir = DHI_DIR / category
+        if not category_dir.exists():
+            continue
+
+        for md_file in category_dir.glob("*.md"):
+            content = md_file.read_text(encoding="utf-8")
+
+            # 跳過 REVIEW_NEEDED（但仍解析以獲取資訊）
+            is_review_needed = "[REVIEW_NEEDED]" in content
+
+            # 解析 frontmatter
+            interaction = {
+                "file_path": str(md_file),
+                "pmid": md_file.stem,
+                "is_review_needed": is_review_needed,
+            }
+
+            if content.startswith("---") or content.startswith("[REVIEW_NEEDED]\n\n---"):
+                # 處理 [REVIEW_NEEDED] 標記後的 frontmatter
+                clean_content = content.replace("[REVIEW_NEEDED]\n\n", "")
+                parts = clean_content.split("---", 2)
+                if len(parts) >= 3:
+                    try:
+                        fm = yaml.safe_load(parts[1])
+                        if fm:
+                            interaction["title"] = fm.get("title", "")
+                            interaction["severity"] = fm.get("severity", "unknown")
+                            interaction["evidence_level"] = fm.get("evidence_level", 5)
+                            interaction["study_type"] = fm.get("study_type", "other")
+                            interaction["source_url"] = fm.get("source_url", "")
+                            interaction["journal"] = fm.get("journal", "")
+                            interaction["pub_date"] = fm.get("pub_date", "")
+                    except yaml.YAMLError:
+                        pass
+
+            # 提取摘要（用於推斷風險描述）
+            abstract_match = re.search(r"## 摘要\s*\n([\s\S]*?)(?=\n---|\Z)", content)
+            if abstract_match:
+                interaction["abstract"] = abstract_match.group(1).strip()
+            else:
+                interaction["abstract"] = ""
+
+            interactions.append(interaction)
+
+    return interactions
+
+
+def infer_risk_description(interaction: dict) -> str:
+    """從摘要推斷風險描述"""
+    abstract = interaction.get("abstract", "").lower()
+    title = interaction.get("title", "").lower()
+    text = f"{title} {abstract}"
+
+    # 常見風險關鍵詞
+    if any(kw in text for kw in ["bleeding", "hemorrhag", "coagulopathy"]):
+        return "增加出血風險"
+    if any(kw in text for kw in ["hypoglycemia", "blood glucose", "blood sugar"]):
+        return "影響血糖控制"
+    if any(kw in text for kw in ["hypotension", "blood pressure"]):
+        return "影響血壓"
+    if any(kw in text for kw in ["hepatotoxic", "liver"]):
+        return "肝臟代謝影響"
+    if any(kw in text for kw in ["no effect", "no significant", "did not affect"]):
+        return "無顯著交互"
+    return "交互機轉待釐清"
+
+
+def format_interaction_section(topic_name: str, interactions: list[dict]) -> str:
+    """產生交互作用章節 Markdown"""
+    if not interactions:
+        return ""
+
+    # 按嚴重程度分組
+    by_severity = defaultdict(list)
+    for interaction in interactions:
+        severity = interaction.get("severity", "unknown")
+        by_severity[severity].append(interaction)
+
+    section = f"""
+## ⚠️ 藥物交互提醒
+
+本章節整理{topic_name}相關的藥物交互文獻，供參考。
+
+"""
+
+    severity_order = ["major", "moderate", "minor", "unknown"]
+    severity_labels = {
+        "major": "高風險交互 (Major)",
+        "moderate": "中等風險交互 (Moderate)",
+        "minor": "低風險/無交互 (Minor)",
+        "unknown": "待評估 (Unknown)",
+    }
+
+    has_content = False
+    for severity in severity_order:
+        items = by_severity.get(severity, [])
+        if not items:
+            continue
+
+        has_content = True
+        section += f"### {severity_labels[severity]}\n\n"
+        section += "| 文獻標題 | 風險描述 | 證據等級 | 來源 |\n"
+        section += "|----------|----------|----------|------|\n"
+
+        for item in items:
+            title = item.get("title", "")[:50]
+            if len(item.get("title", "")) > 50:
+                title += "..."
+            risk_desc = infer_risk_description(item)
+            level = item.get("evidence_level", 5)
+            pmid = item.get("pmid", "")
+            url = item.get("source_url", f"https://pubmed.ncbi.nlm.nih.gov/{pmid}/")
+            section += f"| {title} | {risk_desc} | Level {level} | [PMID:{pmid}]({url}) |\n"
+
+        section += "\n"
+
+    if not has_content:
+        return ""
+
+    section += """> ⚠️ **免責聲明**：本資訊僅供教育和研究目的，不構成醫療建議。
+> 任何用藥或補充劑變更應諮詢專業醫療人員。
+
+"""
+
+    return section
 
 
 def scan_products(topic: dict, dry_run: bool = False) -> list[dict]:
@@ -269,6 +422,12 @@ source_layers:
     for form, count in sorted(by_form.items(), key=lambda x: -x[1]):
         pct = count / total * 100 if total > 0 else 0
         report += f"| {form} | {count} | {pct:.1f}% |\n"
+
+    # 藥物交互章節
+    interactions = load_interaction_data(topic_id)
+    if interactions:
+        interaction_section = format_interaction_section(topic_name, interactions)
+        report += interaction_section
 
     # 趨勢觀察
     report += f"""
