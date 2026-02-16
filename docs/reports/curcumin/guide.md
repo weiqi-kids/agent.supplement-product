@@ -141,6 +141,35 @@ grand_parent: 報告總覽
 
 ---
 
+
+## ⚠️ 藥物交互提醒
+
+本章節整理薑黃素相關的藥物交互文獻，供參考。
+
+### 相關交互文獻
+
+| 文獻標題 | 風險類型 | 證據等級 | 來源 |
+|----------|----------|----------|------|
+| Beneficial herb-drug interaction of rhein in ... | 交互待評估 | Level 5 | [PMID:37023835](https://pubmed.ncbi.nlm.nih.gov/37023835/) |
+| Perspectives, Experiences, and Practices of H... | 交互待評估 | Level 1 | [PMID:39537428](https://pubmed.ncbi.nlm.nih.gov/39537428/) |
+| Cytochrome P450 Enzyme Inhibition and Herb-Dr... | 血糖影響 | Level 5 | [PMID:33844145](https://pubmed.ncbi.nlm.nih.gov/33844145/) |
+| Impact of Ginkgo biloba drug interactions on ... | 出血風險 | Level 4 | [PMID:40198642](https://pubmed.ncbi.nlm.nih.gov/40198642/) |
+| Identification of the perpetrator imperatorin... | 代謝影響 | Level 5 | [PMID:37364866](https://pubmed.ncbi.nlm.nih.gov/37364866/) |
+| Evaluation of herb-drug interaction of ambris... | 代謝影響 | Level 5 | [PMID:34410882](https://pubmed.ncbi.nlm.nih.gov/34410882/) |
+| A Comprehensive In Vivo and In Vitro Assessme... | 代謝影響 | Level 5 | [PMID:30078466](https://pubmed.ncbi.nlm.nih.gov/30078466/) |
+| Navigating complementary and alternative medi... | 無顯著交互 | Level 5 | [PMID:41347947](https://pubmed.ncbi.nlm.nih.gov/41347947/) |
+
+### 安全建議
+
+1. **諮詢醫師**：服用處方藥物者，補充保健食品前應諮詢醫師
+2. **注意劑量**：遵循建議劑量，避免過量補充
+3. **觀察反應**：開始補充時注意身體反應，如有不適應停用並就醫
+4. **術前告知**：手術前應告知醫師所有正在服用的保健食品
+
+> ⚠️ **免責聲明**：本資訊僅供教育和研究目的，不構成醫療建議。任何用藥或補充劑變更應諮詢專業醫療人員。
+
+---
+
 *本指南基於市場產品分析與學術研究，僅供參考，不構成醫療建議。購買前請評估個人需求並諮詢專業人員。*
 
 *最後更新：2026 年 2 月*

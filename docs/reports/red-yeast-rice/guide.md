@@ -114,3 +114,29 @@ grand_parent: 報告總覽
 ---
 
 *最後更新：2026 年 2 月*
+
+## ⚠️ 藥物交互提醒
+
+本章節整理紅麴相關的藥物交互文獻，供參考。
+
+### 相關交互文獻
+
+| 文獻標題 | 風險類型 | 證據等級 | 來源 |
+|----------|----------|----------|------|
+| Effects of Grapefruit and Pomegranate Juices ... | 代謝影響 | Level 2 | [PMID:27294349](https://pubmed.ncbi.nlm.nih.gov/27294349/) |
+| Effects of food and grapefruit juice on singl... | 代謝影響 | Level 5 | [PMID:28975417](https://pubmed.ncbi.nlm.nih.gov/28975417/) |
+| Safety and Efficacy of Grapefruit Juice Combi... | 無顯著交互 | Level 5 | [PMID:40517075](https://pubmed.ncbi.nlm.nih.gov/40517075/) |
+| Severe rhabdomyolysis induced by possible dru... | 交互待評估 | Level 5 | [PMID:32727321](https://pubmed.ncbi.nlm.nih.gov/32727321/) |
+| Mechanistic In Vitro Studies Indicate that th... | 代謝影響 | Level 5 | [PMID:30348903](https://pubmed.ncbi.nlm.nih.gov/30348903/) |
+| Results of a Doravirine-Atorvastatin Drug-Dru... | 交互待評估 | Level 3 | [PMID:27872071](https://pubmed.ncbi.nlm.nih.gov/27872071/) |
+| Statin use in transthyretin amyloid cardiomyo... | 交互待評估 | Level 5 | [PMID:40973549](https://pubmed.ncbi.nlm.nih.gov/40973549/) |
+| Clinical Implementation of Pharmacogenomics a... | 代謝影響 | Level 5 | [PMID:41074844](https://pubmed.ncbi.nlm.nih.gov/41074844/) |
+
+### 安全建議
+
+1. **諮詢醫師**：服用處方藥物者，補充保健食品前應諮詢醫師
+2. **注意劑量**：遵循建議劑量，避免過量補充
+3. **觀察反應**：開始補充時注意身體反應，如有不適應停用並就醫
+4. **術前告知**：手術前應告知醫師所有正在服用的保健食品
+
+> ⚠️ **免責聲明**：本資訊僅供教育和研究目的，不構成醫療建議。任何用藥或補充劑變更應諮詢專業醫療人員。

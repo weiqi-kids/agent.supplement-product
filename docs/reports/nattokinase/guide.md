@@ -117,3 +117,31 @@ grand_parent: 報告總覽
 ---
 
 *最後更新：2026 年 2 月*
+
+## ⚠️ 藥物交互提醒
+
+本章節整理納豆激酶相關的藥物交互文獻，供參考。
+
+### 相關交互文獻
+
+| 文獻標題 | 風險類型 | 證據等級 | 來源 |
+|----------|----------|----------|------|
+| Warfarin Versus Non-Vitamin K Inhibitors Medi... | 出血風險 | Level 5 | [PMID:39737787](https://pubmed.ncbi.nlm.nih.gov/39737787/) |
+| Correction of Warfarin Coagulopathy for Non-b... | 出血風險 | Level 3 | [PMID:38847262](https://pubmed.ncbi.nlm.nih.gov/38847262/) |
+| Research Progress in Bleeding Risk Assessment... | 出血風險 | Level 5 | [PMID:40704479](https://pubmed.ncbi.nlm.nih.gov/40704479/) |
+| Non-Vitamin K Antagonist Versus Vitamin K Ant... | 出血風險 | Level 5 | [PMID:38355269](https://pubmed.ncbi.nlm.nih.gov/38355269/) |
+| Warfarin Treatment is Associated With Lower P... | 交互待評估 | Level 5 | [PMID:40339909](https://pubmed.ncbi.nlm.nih.gov/40339909/) |
+| Dicloxacillin-warfarin drug-drug interaction-... | 代謝影響 | Level 5 | [PMID:37021780](https://pubmed.ncbi.nlm.nih.gov/37021780/) |
+| Prolonged Prothrombin Time due to Drug-Drug I... | 代謝影響 | Level 5 | [PMID:39993785](https://pubmed.ncbi.nlm.nih.gov/39993785/) |
+| A physiologically based pharmacokinetic/pharm... | 出血風險 | Level 5 | [PMID:34242938](https://pubmed.ncbi.nlm.nih.gov/34242938/) |
+| Potential drug-drug interaction between warfa... | 出血風險 | Level 5 | [PMID:36264703](https://pubmed.ncbi.nlm.nih.gov/36264703/) |
+| Importance of Therapeutic Drug Monitoring to ... | 交互待評估 | Level 5 | [PMID:32407286](https://pubmed.ncbi.nlm.nih.gov/32407286/) |
+
+### 安全建議
+
+1. **諮詢醫師**：服用處方藥物者，補充保健食品前應諮詢醫師
+2. **注意劑量**：遵循建議劑量，避免過量補充
+3. **觀察反應**：開始補充時注意身體反應，如有不適應停用並就醫
+4. **術前告知**：手術前應告知醫師所有正在服用的保健食品
+
+> ⚠️ **免責聲明**：本資訊僅供教育和研究目的，不構成醫療建議。任何用藥或補充劑變更應諮詢專業醫療人員。

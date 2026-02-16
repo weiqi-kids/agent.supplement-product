@@ -140,31 +140,29 @@ grand_parent: 報告總覽
 
 本章節整理魚油相關的藥物交互文獻，供參考。
 
-### 重要交互風險
+### 相關交互文獻
 
-| 併用藥物 | 風險描述 | 證據等級 | 文獻來源 |
-|----------|----------|----------|----------|
-| **Warfarin（華法林）** | 增加出血風險 | Level 5 | [PMID:28033135](https://pubmed.ncbi.nlm.nih.gov/28033135/) |
-| **Aspirin（阿斯匹靈）** | 無顯著交互 | Level 3 | [PMID:28197979](https://pubmed.ncbi.nlm.nih.gov/28197979/) |
-
-### 機轉說明
-
-魚油中的 Omega-3 脂肪酸（EPA、DHA）具有抑制血小板凝集的作用。當與抗凝血藥物併用時，可能加強抗凝效果，增加出血風險。
-
-**高風險族群**：
-- 正在服用 Warfarin（華法林）、Heparin（肝素）等抗凝血藥物者
-- 正在服用 Aspirin、Clopidogrel 等抗血小板藥物者
-- 即將接受手術者（建議術前 1-2 週停用）
+| 文獻標題 | 風險類型 | 證據等級 | 來源 |
+|----------|----------|----------|------|
+| Ginkgo biloba for tinnitus. | 交互待評估 | Level 1 | [PMID:36383762](https://pubmed.ncbi.nlm.nih.gov/36383762/) |
+| Comparison of Sweated and Non-Sweated Ethanol... | 交互待評估 | Level 5 | [PMID:35585828](https://pubmed.ncbi.nlm.nih.gov/35585828/) |
+| Dicloxacillin-warfarin drug-drug interaction-... | 代謝影響 | Level 5 | [PMID:37021780](https://pubmed.ncbi.nlm.nih.gov/37021780/) |
+| Prolonged Prothrombin Time due to Drug-Drug I... | 代謝影響 | Level 5 | [PMID:39993785](https://pubmed.ncbi.nlm.nih.gov/39993785/) |
+| A physiologically based pharmacokinetic/pharm... | 出血風險 | Level 5 | [PMID:34242938](https://pubmed.ncbi.nlm.nih.gov/34242938/) |
+| Potential drug-drug interaction between warfa... | 出血風險 | Level 5 | [PMID:36264703](https://pubmed.ncbi.nlm.nih.gov/36264703/) |
+| Importance of Therapeutic Drug Monitoring to ... | 交互待評估 | Level 5 | [PMID:32407286](https://pubmed.ncbi.nlm.nih.gov/32407286/) |
+| Potential Drug Interaction Between Favipiravi... | 交互待評估 | Level 4 | [PMID:36161279](https://pubmed.ncbi.nlm.nih.gov/36161279/) |
+| Drug-drug interaction between warfarin and st... | 交互待評估 | Level 4 | [PMID:32533893](https://pubmed.ncbi.nlm.nih.gov/32533893/) |
+| Clinical Importance of Drug-Drug Interaction ... | 出血風險 | Level 5 | [PMID:30568065](https://pubmed.ncbi.nlm.nih.gov/30568065/) |
 
 ### 安全建議
 
-1. **諮詢醫師**：服用抗凝血藥物者，補充魚油前應諮詢醫師
-2. **監測 INR**：服用 Warfarin 者應定期監測凝血功能
-3. **注意劑量**：低劑量（每日 < 3g EPA+DHA）通常風險較低
-4. **術前停用**：手術前 1-2 週應告知醫師並考慮停用
+1. **諮詢醫師**：服用處方藥物者，補充保健食品前應諮詢醫師
+2. **注意劑量**：遵循建議劑量，避免過量補充
+3. **觀察反應**：開始補充時注意身體反應，如有不適應停用並就醫
+4. **術前告知**：手術前應告知醫師所有正在服用的保健食品
 
 > ⚠️ **免責聲明**：本資訊僅供教育和研究目的，不構成醫療建議。任何用藥或補充劑變更應諮詢專業醫療人員。
-
 ---
 
 *本指南基於市場產品分析與一般營養學知識，僅供參考，不構成醫療建議。購買前請評估個人需求並諮詢專業人員。*
