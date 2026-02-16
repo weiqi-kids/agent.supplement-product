@@ -86,3 +86,42 @@
 ```
 
 去重 key：`{source_layer}-{source_id}` → 透過 `_qdrant_id_to_uuid` 轉為 UUID
+
+## Layer 清單
+
+### 產品資料 Layer
+
+| Layer | 資料來源 | 市場 | 狀態 |
+|-------|----------|------|------|
+| `us_dsld` | 美國膳食補充劑標示資料庫 | 🇺🇸 US | ✅ 啟用 |
+| `ca_lnhpd` | 加拿大天然健康產品資料庫 | 🇨🇦 CA | ✅ 啟用 |
+| `kr_hff` | 韓國健康機能食品資料庫 | 🇰🇷 KR | ✅ 啟用 |
+| `jp_fnfc` | 日本機能性表示食品資料庫 | 🇯🇵 JP | ✅ 啟用 |
+| `jp_foshu` | 日本特定保健用食品資料庫 | 🇯🇵 JP | ✅ 啟用 |
+| `tw_hf` | 台灣衛福部健康食品資料庫 | 🇹🇼 TW | ✅ 啟用 |
+| `th_fda` | 泰國 FDA 健康食品資料庫 | 🇹🇭 TH | ❌ 已禁用 |
+
+### 學術文獻 Layer
+
+| Layer | 資料來源 | 說明 | 狀態 |
+|-------|----------|------|------|
+| `pubmed` | PubMed 學術文獻資料庫 | 主題相關研究文獻 | ✅ 啟用 |
+
+### 交互作用 Layer
+
+| Layer | 資料來源 | 說明 | 狀態 |
+|-------|----------|------|------|
+| `ingredient_map` | RxNorm API | 成分標準化對照表 | 🆕 開發中 |
+| `ddi` | PubMed + DDInter | Drug-Drug Interactions | 🆕 開發中 |
+| `dfi` | PubMed + DDInter | Drug-Food Interactions | 🆕 開發中 |
+| `dhi` | PubMed | Drug-Herb/Supplement Interactions | 🆕 開發中 |
+
+## Mode 清單
+
+| Mode | 輸出位置 | 報告週期 | 狀態 |
+|------|----------|----------|------|
+| `market_snapshot` | `docs/Narrator/market_snapshot/` | 週報 | ✅ 啟用 |
+| `ingredient_radar` | `docs/Narrator/ingredient_radar/` | 月報 | ✅ 啟用 |
+| `topic_tracking` | `docs/Narrator/topic_tracking/{topic}/` | 月報 | ✅ 啟用 |
+| `literature_review` | `docs/Narrator/literature_review/{topic}/` | 月報 | ✅ 啟用 |
+| `interaction_report` | `docs/Narrator/interaction_report/` | 月報 + 主題 | 🆕 開發中 |

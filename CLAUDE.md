@@ -14,17 +14,22 @@
 │  └── 彙整結果並回報                                             │
 ├─────────────────────────────────────────────────────────────────┤
 │  背景子代理 (Sonnet × N，平行執行)                              │
-│  ├── [Layer] us_dsld   → fetch → extract → update              │
-│  ├── [Layer] ca_lnhpd  → fetch → extract → update              │
-│  ├── [Layer] kr_hff    → fetch → extract → update              │
-│  ├── [Layer] jp_fnfc   → fetch → extract → update              │
-│  ├── [Layer] jp_foshu  → fetch → extract → update              │
-│  ├── [Layer] tw_hf     → fetch → extract → update              │
-│  ├── [Layer] pubmed    → fetch → extract → update              │
-│  ├── [Mode]  market_snapshot    → 報告產出                      │
-│  ├── [Mode]  ingredient_radar   → 報告產出                      │
-│  ├── [Mode]  topic_tracking     → 主題追蹤報告                  │
-│  └── [Mode]  literature_review  → 文獻薈萃報告                  │
+│  ├── [Layer] us_dsld        → fetch → extract → update         │
+│  ├── [Layer] ca_lnhpd       → fetch → extract → update         │
+│  ├── [Layer] kr_hff         → fetch → extract → update         │
+│  ├── [Layer] jp_fnfc        → fetch → extract → update         │
+│  ├── [Layer] jp_foshu       → fetch → extract → update         │
+│  ├── [Layer] tw_hf          → fetch → extract → update         │
+│  ├── [Layer] pubmed         → fetch → extract → update         │
+│  ├── [Layer] ingredient_map → fetch → extract (🆕 開發中)      │
+│  ├── [Layer] ddi            → fetch → extract (🆕 開發中)      │
+│  ├── [Layer] dfi            → fetch → extract (🆕 開發中)      │
+│  ├── [Layer] dhi            → fetch → extract (🆕 開發中)      │
+│  ├── [Mode]  market_snapshot     → 報告產出                     │
+│  ├── [Mode]  ingredient_radar    → 報告產出                     │
+│  ├── [Mode]  topic_tracking      → 主題追蹤報告                 │
+│  ├── [Mode]  literature_review   → 文獻薈萃報告                 │
+│  └── [Mode]  interaction_report  → 交互作用報告 (🆕 開發中)     │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -92,8 +97,13 @@ Task(
 | `tw_hf` | 台灣衛福部健康食品資料庫 | 1 分鐘 | ✅ 啟用 |
 | `pubmed` | PubMed 學術文獻資料庫 | 2-5 分鐘 | ✅ 啟用 |
 | `th_fda` | 泰國 FDA 健康食品資料庫 | — | ❌ 已禁用 |
+| `ingredient_map` | RxNorm API 成分標準化 | — | 🆕 開發中 |
+| `ddi` | PubMed DDI 文獻 | — | 🆕 開發中 |
+| `dfi` | PubMed DFI 文獻 | — | 🆕 開發中 |
+| `dhi` | PubMed DHI 文獻 | — | 🆕 開發中 |
 
 > 禁用的 Layer 帶有 `.disabled` 標記，執行流程會自動跳過。
+> 開發中的 Layer 需先完成 fetch.sh 和萃取腳本才能啟用。
 
 ### 階段三：報告產出（背景，平行）
 
