@@ -37,8 +37,10 @@
 
 | 指令 | 行為 |
 |------|------|
-| `執行完整流程` | 背景平行執行所有 Layer + Mode + 主題追蹤 + 推薦 + Jekyll |
+| `執行完整流程` | 背景平行執行所有 Layer + Mode + 主題追蹤 + 推薦 + Jekyll + **品質關卡檢查** |
 | `更新資料` | 同上 |
+
+> ⚠️ **注意**：`執行完整流程` 必須通過「階段七：任務完成品質關卡」的所有檢查項目才視為成功完成。
 | `執行 {layer}` | 背景執行單一 Layer（如 `執行 us_dsld`） |
 | `執行 {mode}` | 背景執行單一 Mode（如 `執行 market_snapshot`） |
 | `只跑 fetch` | 背景平行執行所有 Layer 的 fetch.sh |
@@ -653,6 +655,22 @@ NCBI_EMAIL=your-email@example.com
     └── validate_seo.py
         ├── 通過 → 繼續部署
         └── 失敗 → 阻斷部署
+                            │
+                            ▼
+階段六（前景）：部署與驗證
+    ├── git push origin main
+    ├── gh run watch（等待 Actions 完成）
+    └── WebFetch 驗證網站內容
+                            │
+                            ▼
+階段七（前景）：任務完成品質關卡
+    ├── 連結檢查
+    ├── SEO/AEO 標籤檢查
+    ├── 內容更新確認
+    ├── Git 狀態檢查
+    └── SOP 完成度檢查
+        ├── 全部通過 → 回報完成
+        └── 未通過 → 修正後重新檢查
 ```
 
 ---
@@ -733,6 +751,154 @@ docs/index.md                      # 網站首頁
 ```
 
 當新增主題或資料有重大更新時，需同步更新這些頁面。
+
+---
+
+## 階段七：任務完成品質關卡（必做！）
+
+⚠️ **重要**：每當要回報「完成」時，必須先執行以下檢查，**全部通過才能回報完成**。
+
+### 7.1 連結檢查
+
+- [ ] 所有新增/修改的內部連結正常，無 404
+- [ ] 所有新增/修改的外部連結正常
+- [ ] 無死連結或斷裂連結
+
+### 7.2 SEO + AEO 標籤檢查
+
+#### Meta 標籤
+
+- [ ] `<title>` 存在且 ≤ 60 字，含核心關鍵字
+- [ ] `<meta name="description">` 存在且 ≤ 155 字
+- [ ] `og:title`, `og:description`, `og:image`, `og:url` 存在
+- [ ] `og:type` = "article"
+- [ ] `article:published_time`, `article:modified_time` 存在（ISO 8601 格式）
+- [ ] `twitter:card` = "summary_large_image"
+
+#### JSON-LD Schema（7 種必填）
+
+| Schema | 必填欄位 |
+|--------|----------|
+| WebPage | speakable（至少 7 個 cssSelector） |
+| Article | isAccessibleForFree, isPartOf（含 SearchAction）, significantLink |
+| Person | knowsAbout（≥2）, hasCredential（≥1）, sameAs（≥1） |
+| Organization | contactPoint, logo（含 width/height） |
+| BreadcrumbList | position 從 1 開始連續編號 |
+| FAQPage | 3-5 個 Question + Answer |
+| ImageObject | license, creditText |
+
+#### 條件式 Schema（依內容判斷）
+
+| Schema | 觸發條件 | 必填欄位 |
+|--------|----------|----------|
+| HowTo | 有步驟教學 | step, totalTime |
+| Recipe | 有食譜 | recipeIngredient, recipeInstructions |
+| VideoObject | 有嵌入影片 | duration, thumbnailUrl |
+| ItemList | 有排序清單（「N 大」「TOP」） | itemListElement |
+| Review | 有評測內容 | itemReviewed, reviewRating |
+| AggregateRating | 有多則評論 | ratingValue, ratingCount |
+| Product | 有商品頁 | offers, brand |
+| Event | 有活動資訊 | startDate, location |
+| Course | 有課程內容 | provider, offers |
+| LocalBusiness | 有店家資訊 | address, openingHoursSpecification |
+
+#### SGE/AEO 標記（AI 引擎優化）
+
+| 標記 | 要求 |
+|------|------|
+| `.key-answer` | 每個 H2 必須有，含 `data-question` 屬性 |
+| `.key-takeaway` | 文章重點摘要（2-3 個） |
+| `.expert-quote` | 專家引言（至少 1 個） |
+| `.actionable-steps` | 行動步驟清單 |
+| `.comparison-table` | 比較表格（若有） |
+
+#### E-E-A-T 信號
+
+- [ ] Person Schema 有專業認證（hasCredential）
+- [ ] 至少 2 個高權威外部連結（.gov、學術期刊、專業協會）
+
+#### YMYL 檢查（健康/財務/法律內容適用）
+
+- [ ] `lastReviewed` 欄位（最後審核日期）
+- [ ] `reviewedBy` 欄位（審核者資訊）
+- [ ] 免責聲明（醫療/財務/法律）
+
+### 7.3 內容更新確認
+
+- [ ] 列出本次預計修改的所有檔案
+- [ ] 逐一確認每個檔案都已正確更新
+- [ ] 修改內容與任務要求一致
+- [ ] 無遺漏項目
+
+### 7.4 Git 狀態檢查
+
+- [ ] 所有變更已 commit
+- [ ] commit message 清楚描述本次變更
+- [ ] 已 push 到 Github（除非另有指示）
+- [ ] 遠端分支已更新
+
+### 7.5 SOP 完成度檢查
+
+- [ ] 回顧原始任務需求
+- [ ] 原訂 SOP 每個步驟都已執行
+- [ ] 無遺漏的待辦項目
+- [ ] 無「之後再處理」的項目
+
+### 7.6 完成檢查報告格式
+
+完成檢查後，輸出以下格式：
+
+```
+## 完成檢查報告
+
+| 類別 | 狀態 | 問題（如有） |
+|------|------|-------------|
+| 連結檢查 | ✅/❌ | |
+| Meta 標籤 | ✅/❌ | |
+| Schema（必填） | ✅/❌ | |
+| Schema（條件式） | ✅/❌/N/A | |
+| SGE/AEO 標記 | ✅/❌ | |
+| E-E-A-T 信號 | ✅/❌ | |
+| YMYL | ✅/❌/N/A | |
+| 內容更新 | ✅/❌ | |
+| Git 狀態 | ✅/❌ | |
+| SOP 完成度 | ✅/❌ | |
+
+**總結**：X/Y 項通過，狀態：通過/未通過
+```
+
+### 7.7 檢查未通過時
+
+1. **不回報完成**
+2. 列出所有未通過項目
+3. 立即修正問題
+4. 重新執行檢查
+5. 全部通過才能說「完成」
+
+### 7.8 任務開始時
+
+接到新任務時，先建立本次檢查清單：
+
+```
+## 本次任務檢查清單
+
+- 任務目標：[描述]
+- 預計修改檔案：
+  - [ ] 檔案1
+  - [ ] 檔案2
+- 預計新增內容：
+  - [ ] 內容1
+  - [ ] 內容2
+- 適用的條件式 Schema：[列出]
+- 是否為 YMYL 內容：是/否
+```
+
+### 7.9 SEO/AEO 參考文件
+
+完整 SEO/AEO 規則請參照：
+- `/Users/lightman/weiqi.kids/agent.idea/seo/CLAUDE.md` - SEO + AEO 規則庫
+- `/Users/lightman/weiqi.kids/agent.idea/seo/writer/CLAUDE.md` - Writer 執行流程
+- `/Users/lightman/weiqi.kids/agent.idea/seo/review/CLAUDE.md` - Reviewer 檢查清單
 
 ---
 
