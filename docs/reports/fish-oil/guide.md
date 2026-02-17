@@ -144,16 +144,16 @@ grand_parent: 報告總覽
 
 | 文獻標題 | 風險類型 | 證據等級 | 來源 |
 |----------|----------|----------|------|
+| Fatal combination of mitragynine and quetiapi... | 交互待評估 | Level 5 | [PMID:30498933](https://pubmed.ncbi.nlm.nih.gov/30498933/) |
+| Exosome-mediated macrophage regulation in abd... | 肝臟影響 | Level 5 | [PMID:41260386](https://pubmed.ncbi.nlm.nih.gov/41260386/) |
+| Structural requirements of Holothuria florida... | 出血風險 | Level 5 | [PMID:37167245](https://pubmed.ncbi.nlm.nih.gov/37167245/) |
+| Synthesis of Fucosylated Chondroitin Sulfate ... | 出血風險 | Level 5 | [PMID:29131431](https://pubmed.ncbi.nlm.nih.gov/29131431/) |
+| Extracellular Vesicle-Derived microRNAs: Nove... | 交互待評估 | Level 5 | [PMID:41515889](https://pubmed.ncbi.nlm.nih.gov/41515889/) |
 | Ginkgo biloba for tinnitus. | 交互待評估 | Level 1 | [PMID:36383762](https://pubmed.ncbi.nlm.nih.gov/36383762/) |
-| Comparison of Sweated and Non-Sweated Ethanol... | 交互待評估 | Level 5 | [PMID:35585828](https://pubmed.ncbi.nlm.nih.gov/35585828/) |
-| Dicloxacillin-warfarin drug-drug interaction-... | 代謝影響 | Level 5 | [PMID:37021780](https://pubmed.ncbi.nlm.nih.gov/37021780/) |
-| Prolonged Prothrombin Time due to Drug-Drug I... | 代謝影響 | Level 5 | [PMID:39993785](https://pubmed.ncbi.nlm.nih.gov/39993785/) |
-| A physiologically based pharmacokinetic/pharm... | 出血風險 | Level 5 | [PMID:34242938](https://pubmed.ncbi.nlm.nih.gov/34242938/) |
-| Potential drug-drug interaction between warfa... | 出血風險 | Level 5 | [PMID:36264703](https://pubmed.ncbi.nlm.nih.gov/36264703/) |
-| Importance of Therapeutic Drug Monitoring to ... | 交互待評估 | Level 5 | [PMID:32407286](https://pubmed.ncbi.nlm.nih.gov/32407286/) |
-| Potential Drug Interaction Between Favipiravi... | 交互待評估 | Level 4 | [PMID:36161279](https://pubmed.ncbi.nlm.nih.gov/36161279/) |
-| Drug-drug interaction between warfarin and st... | 交互待評估 | Level 4 | [PMID:32533893](https://pubmed.ncbi.nlm.nih.gov/32533893/) |
-| Clinical Importance of Drug-Drug Interaction ... | 出血風險 | Level 5 | [PMID:30568065](https://pubmed.ncbi.nlm.nih.gov/30568065/) |
+| Bortezomib-releasing silica-collagen xerogels... | 交互待評估 | Level 5 | [PMID:39695697](https://pubmed.ncbi.nlm.nih.gov/39695697/) |
+| Therapeutic potential of nicotinamide adenine... | 代謝影響 | Level 5 | [PMID:32360833](https://pubmed.ncbi.nlm.nih.gov/32360833/) |
+| Potential of connexin 32 as a predictive mark... | 肝臟影響 | Level 5 | [PMID:40024757](https://pubmed.ncbi.nlm.nih.gov/40024757/) |
+| Recent advances in modern extracellular vesic... | 交互待評估 | Level 5 | [PMID:41365276](https://pubmed.ncbi.nlm.nih.gov/41365276/) |
 
 ### 安全建議
 

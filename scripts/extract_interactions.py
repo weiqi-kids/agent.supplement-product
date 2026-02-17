@@ -139,13 +139,13 @@ def check_review_needed(article: dict) -> list:
 
 def generate_markdown(article: dict, interaction_type: str, category: str) -> str:
     """生成 Markdown 內容"""
-    pmid = article.get("pmid", "")
-    title = article.get("title", "")
-    abstract = article.get("abstract", "")
-    journal = article.get("journal", "")
-    pub_date = article.get("pub_date", "")
-    authors = article.get("authors", [])
-    publication_types = article.get("publication_types", [])
+    pmid = article.get("pmid") or ""
+    title = article.get("title") or ""
+    abstract = article.get("abstract") or ""
+    journal = article.get("journal") or ""
+    pub_date = article.get("pub_date") or ""
+    authors = article.get("authors") or []
+    publication_types = article.get("publication_types") or []
 
     # 推斷研究類型和證據等級
     study_type, evidence_level = infer_study_type(publication_types, title, abstract)

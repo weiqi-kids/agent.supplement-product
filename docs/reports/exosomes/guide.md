@@ -110,6 +110,36 @@ grand_parent: 報告總覽
 
 ---
 
+
+## ⚠️ 藥物交互提醒
+
+本章節整理外泌體相關的藥物交互文獻，供參考。
+
+### 相關交互文獻
+
+| 文獻標題 | 風險類型 | 證據等級 | 來源 |
+|----------|----------|----------|------|
+| Extracellular Vesicle-Based Therapeutic Cargo... | 肝臟影響 | Level 3 | [PMID:41179975](https://pubmed.ncbi.nlm.nih.gov/41179975/) |
+| Exosome-camouflaged inhalable (PDSA-HSA) nano... | 肝臟影響 | Level 5 | [PMID:41232243](https://pubmed.ncbi.nlm.nih.gov/41232243/) |
+| Oncolytic virus OH2 induces PD-L1 upregulatio... | 肝臟影響 | Level 5 | [PMID:41629133](https://pubmed.ncbi.nlm.nih.gov/41629133/) |
+| How Laboratory Guidelines Promote the Validit... | 交互待評估 | Level 5 | [PMID:41465539](https://pubmed.ncbi.nlm.nih.gov/41465539/) |
+| Extracellular vesicle-based biosensors for Al... | 交互待評估 | Level 5 | [PMID:41061769](https://pubmed.ncbi.nlm.nih.gov/41061769/) |
+| Standardizing Bacterial Extracellular Vesicle... | 交互待評估 | Level 5 | [PMID:41016819](https://pubmed.ncbi.nlm.nih.gov/41016819/) |
+| Advanced Technologies in Extracellular Vesicl... | 交互待評估 | Level 5 | [PMID:41599276](https://pubmed.ncbi.nlm.nih.gov/41599276/) |
+| Direct Profiling of Extracellular Vesicle Sur... | 交互待評估 | Level 5 | [PMID:41420477](https://pubmed.ncbi.nlm.nih.gov/41420477/) |
+| Extracellular vesicle bioactivity and potenti... | 交互待評估 | Level 3 | [PMID:41102742](https://pubmed.ncbi.nlm.nih.gov/41102742/) |
+| Human amniotic mesenchymal stem cell-derived ... | 出血風險 | Level 5 | [PMID:40972687](https://pubmed.ncbi.nlm.nih.gov/40972687/) |
+
+### 安全建議
+
+1. **諮詢醫師**：服用處方藥物者，補充保健食品前應諮詢醫師
+2. **注意劑量**：遵循建議劑量，避免過量補充
+3. **觀察反應**：開始補充時注意身體反應，如有不適應停用並就醫
+4. **術前告知**：手術前應告知醫師所有正在服用的保健食品
+
+> ⚠️ **免責聲明**：本資訊僅供教育和研究目的，不構成醫療建議。任何用藥或補充劑變更應諮詢專業醫療人員。
+---
+
 *本指南基於市場產品分析，僅供參考，不構成醫療建議。購買前請評估個人需求並諮詢專業人員。*
 
 *最後更新：2026 年 2 月*

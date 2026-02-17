@@ -127,15 +127,15 @@ grand_parent: 報告總覽
 | 文獻標題 | 風險類型 | 證據等級 | 來源 |
 |----------|----------|----------|------|
 | Warfarin Versus Non-Vitamin K Inhibitors Medi... | 出血風險 | Level 5 | [PMID:39737787](https://pubmed.ncbi.nlm.nih.gov/39737787/) |
+| Medico-economic comparison of two anticoagula... | 出血風險 | Level 4 | [PMID:37014881](https://pubmed.ncbi.nlm.nih.gov/37014881/) |
+| Non-Vitamin K Antagonist Oral Anticoagulants ... | 出血風險 | Level 1 | [PMID:31422735](https://pubmed.ncbi.nlm.nih.gov/31422735/) |
+| Non-vitamin K oral anticoagulants versus warf... | 出血風險 | Level 5 | [PMID:38327164](https://pubmed.ncbi.nlm.nih.gov/38327164/) |
+| Non-Vitamin K Antagonist Oral Anticoagulants ... | 出血風險 | Level 1 | [PMID:32173695](https://pubmed.ncbi.nlm.nih.gov/32173695/) |
+| All-Cause Mortality and Cardiovascular Outcom... | 出血風險 | Level 5 | [PMID:31145139](https://pubmed.ncbi.nlm.nih.gov/31145139/) |
+| Cardiovascular risks and bleeding with non-vi... | 出血風險 | Level 4 | [PMID:33038936](https://pubmed.ncbi.nlm.nih.gov/33038936/) |
+| Efficacy and safety of non-vitamin K anticoag... | 出血風險 | Level 1 | [PMID:32861151](https://pubmed.ncbi.nlm.nih.gov/32861151/) |
+| Non-vitamin K Antagonist Oral Anticoagulants ... | 出血風險 | Level 1 | [PMID:31485852](https://pubmed.ncbi.nlm.nih.gov/31485852/) |
 | Correction of Warfarin Coagulopathy for Non-b... | 出血風險 | Level 3 | [PMID:38847262](https://pubmed.ncbi.nlm.nih.gov/38847262/) |
-| Research Progress in Bleeding Risk Assessment... | 出血風險 | Level 5 | [PMID:40704479](https://pubmed.ncbi.nlm.nih.gov/40704479/) |
-| Non-Vitamin K Antagonist Versus Vitamin K Ant... | 出血風險 | Level 5 | [PMID:38355269](https://pubmed.ncbi.nlm.nih.gov/38355269/) |
-| Warfarin Treatment is Associated With Lower P... | 交互待評估 | Level 5 | [PMID:40339909](https://pubmed.ncbi.nlm.nih.gov/40339909/) |
-| Dicloxacillin-warfarin drug-drug interaction-... | 代謝影響 | Level 5 | [PMID:37021780](https://pubmed.ncbi.nlm.nih.gov/37021780/) |
-| Prolonged Prothrombin Time due to Drug-Drug I... | 代謝影響 | Level 5 | [PMID:39993785](https://pubmed.ncbi.nlm.nih.gov/39993785/) |
-| A physiologically based pharmacokinetic/pharm... | 出血風險 | Level 5 | [PMID:34242938](https://pubmed.ncbi.nlm.nih.gov/34242938/) |
-| Potential drug-drug interaction between warfa... | 出血風險 | Level 5 | [PMID:36264703](https://pubmed.ncbi.nlm.nih.gov/36264703/) |
-| Importance of Therapeutic Drug Monitoring to ... | 交互待評估 | Level 5 | [PMID:32407286](https://pubmed.ncbi.nlm.nih.gov/32407286/) |
 
 ### 安全建議
 

@@ -118,6 +118,26 @@ INTERACTION_QUERIES = {
             {
                 "name": "vitamin_e",
                 "query": '(vitamin E[Title]) AND (drug interaction[Title] OR anticoagulant[Title])'
+            },
+            {
+                "name": "glucosamine",
+                "query": '(glucosamine[Title] OR chondroitin[Title]) AND (drug interaction[Title] OR warfarin[Title] OR anticoagulant[Title])'
+            },
+            {
+                "name": "collagen",
+                "query": '(collagen[Title] OR collagen peptide[Title]) AND (drug[Title/Abstract] OR interaction[Title/Abstract] OR supplement[Title])'
+            },
+            {
+                "name": "lutein",
+                "query": '(lutein[Title] OR zeaxanthin[Title]) AND (drug[Title/Abstract] OR interaction[Title/Abstract] OR supplement[Title])'
+            },
+            {
+                "name": "nmn",
+                "query": '(NMN[Title] OR nicotinamide mononucleotide[Title] OR NAD+[Title]) AND (drug[Title/Abstract] OR interaction[Title/Abstract] OR supplement[Title])'
+            },
+            {
+                "name": "exosome",
+                "query": '(exosome[Title] OR extracellular vesicle[Title]) AND (drug[Title/Abstract] OR therapeutic[Title/Abstract] OR safety[Title/Abstract])'
             }
         ]
     }

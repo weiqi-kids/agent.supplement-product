@@ -130,6 +130,36 @@ grand_parent: 報告總覽
 
 ---
 
+
+## ⚠️ 藥物交互提醒
+
+本章節整理NMN相關的藥物交互文獻，供參考。
+
+### 相關交互文獻
+
+| 文獻標題 | 風險類型 | 證據等級 | 來源 |
+|----------|----------|----------|------|
+| Fluorescence Lifetime Imaging of NAD(P)H in P... | 交互待評估 | Level 5 | [PMID:39851525](https://pubmed.ncbi.nlm.nih.gov/39851525/) |
+| Sex-divergent effects on the NAD+-dependent d... | 交互待評估 | Level 5 | [PMID:36755296](https://pubmed.ncbi.nlm.nih.gov/36755296/) |
+| Tumor-associated NADH oxidase (tNOX)-NAD+-sir... | 交互待評估 | Level 5 | [PMID:28122359](https://pubmed.ncbi.nlm.nih.gov/28122359/) |
+| The metabolic interaction of cancer cells and... | 代謝影響 | Level 5 | [PMID:26986068](https://pubmed.ncbi.nlm.nih.gov/26986068/) |
+| The amplex red/horseradish peroxidase assay r... | 交互待評估 | Level 5 | [PMID:32912004](https://pubmed.ncbi.nlm.nih.gov/32912004/) |
+| Fluorescent Probe for Simultaneous Monitoring... | 交互待評估 | Level 5 | [PMID:41556516](https://pubmed.ncbi.nlm.nih.gov/41556516/) |
+| A Method to Monitor the NAD | 交互待評估 | Level 5 | [PMID:34638936](https://pubmed.ncbi.nlm.nih.gov/34638936/) |
+| 2-Methoxy-6-acetyl-7-methyljuglone (MAM) indu... | 交互待評估 | Level 5 | [PMID:32234332](https://pubmed.ncbi.nlm.nih.gov/32234332/) |
+| The NAD | 無顯著交互 | Level 5 | [PMID:38385069](https://pubmed.ncbi.nlm.nih.gov/38385069/) |
+| Targeting NAD | 交互待評估 | Level 5 | [PMID:37204655](https://pubmed.ncbi.nlm.nih.gov/37204655/) |
+
+### 安全建議
+
+1. **諮詢醫師**：服用處方藥物者，補充保健食品前應諮詢醫師
+2. **注意劑量**：遵循建議劑量，避免過量補充
+3. **觀察反應**：開始補充時注意身體反應，如有不適應停用並就醫
+4. **術前告知**：手術前應告知醫師所有正在服用的保健食品
+
+> ⚠️ **免責聲明**：本資訊僅供教育和研究目的，不構成醫療建議。任何用藥或補充劑變更應諮詢專業醫療人員。
+---
+
 *本指南基於市場產品分析與學術研究，僅供參考，不構成醫療建議。購買前請評估個人需求並諮詢專業人員。*
 
 *最後更新：2026 年 2 月*

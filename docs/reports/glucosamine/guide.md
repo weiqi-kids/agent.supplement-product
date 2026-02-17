@@ -116,3 +116,31 @@ grand_parent: 報告總覽
 ---
 
 *最後更新：2026 年 2 月*
+
+## ⚠️ 藥物交互提醒
+
+本章節整理葡萄糖胺相關的藥物交互文獻，供參考。
+
+### 相關交互文獻
+
+| 文獻標題 | 風險類型 | 證據等級 | 來源 |
+|----------|----------|----------|------|
+| Intermediate molecular weight-fucosylated cho... | 出血風險 | Level 5 | [PMID:38692541](https://pubmed.ncbi.nlm.nih.gov/38692541/) |
+| Dicloxacillin-warfarin drug-drug interaction-... | 代謝影響 | Level 5 | [PMID:37021780](https://pubmed.ncbi.nlm.nih.gov/37021780/) |
+| Prolonged Prothrombin Time due to Drug-Drug I... | 代謝影響 | Level 5 | [PMID:39993785](https://pubmed.ncbi.nlm.nih.gov/39993785/) |
+| A physiologically based pharmacokinetic/pharm... | 出血風險 | Level 5 | [PMID:34242938](https://pubmed.ncbi.nlm.nih.gov/34242938/) |
+| Review of potential drug interaction between ... | 出血風險 | Level 5 | [PMID:28438444](https://pubmed.ncbi.nlm.nih.gov/28438444/) |
+| Potential drug-drug interaction between warfa... | 出血風險 | Level 5 | [PMID:36264703](https://pubmed.ncbi.nlm.nih.gov/36264703/) |
+| The Hypoxia-inducible Factor Prolyl-Hydroxyla... | 出血風險 | Level 3 | [PMID:26947173](https://pubmed.ncbi.nlm.nih.gov/26947173/) |
+| Drug interaction as a predictor of direct ora... | 出血風險 | Level 5 | [PMID:30196343](https://pubmed.ncbi.nlm.nih.gov/30196343/) |
+| Importance of Therapeutic Drug Monitoring to ... | 交互待評估 | Level 5 | [PMID:32407286](https://pubmed.ncbi.nlm.nih.gov/32407286/) |
+| Development and verification of a physiologic... | 代謝影響 | Level 5 | [PMID:36683488](https://pubmed.ncbi.nlm.nih.gov/36683488/) |
+
+### 安全建議
+
+1. **諮詢醫師**：服用處方藥物者，補充保健食品前應諮詢醫師
+2. **注意劑量**：遵循建議劑量，避免過量補充
+3. **觀察反應**：開始補充時注意身體反應，如有不適應停用並就醫
+4. **術前告知**：手術前應告知醫師所有正在服用的保健食品
+
+> ⚠️ **免責聲明**：本資訊僅供教育和研究目的，不構成醫療建議。任何用藥或補充劑變更應諮詢專業醫療人員。

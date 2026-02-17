@@ -138,6 +138,32 @@ grand_parent: 報告總覽
 
 ---
 
+
+## ⚠️ 藥物交互提醒
+
+本章節整理葉黃素相關的藥物交互文獻，供參考。
+
+### 相關交互文獻
+
+| 文獻標題 | 風險類型 | 證據等級 | 來源 |
+|----------|----------|----------|------|
+| Fabrication of chitosan nanoparticles with ph... | 肝臟影響 | Level 5 | [PMID:32918957](https://pubmed.ncbi.nlm.nih.gov/32918957/) |
+| Potential health benefits of carotenoid lutei... | 交互待評估 | Level 5 | [PMID:34111488](https://pubmed.ncbi.nlm.nih.gov/34111488/) |
+| Protective Effects of a Lutein Ester Prodrug,... | 交互待評估 | Level 5 | [PMID:33946898](https://pubmed.ncbi.nlm.nih.gov/33946898/) |
+| Therapeutic effect of lutein supplement on no... | 交互待評估 | Level 2 | [PMID:31335666](https://pubmed.ncbi.nlm.nih.gov/31335666/) |
+| Randomized, Placebo-Controlled, Single-Blind ... | 交互待評估 | Level 2 | [PMID:37364683](https://pubmed.ncbi.nlm.nih.gov/37364683/) |
+| Cumulin and FSH Cooperate to Regulate Inhibin... | 交互待評估 | Level 5 | [PMID:30753406](https://pubmed.ncbi.nlm.nih.gov/30753406/) |
+
+### 安全建議
+
+1. **諮詢醫師**：服用處方藥物者，補充保健食品前應諮詢醫師
+2. **注意劑量**：遵循建議劑量，避免過量補充
+3. **觀察反應**：開始補充時注意身體反應，如有不適應停用並就醫
+4. **術前告知**：手術前應告知醫師所有正在服用的保健食品
+
+> ⚠️ **免責聲明**：本資訊僅供教育和研究目的，不構成醫療建議。任何用藥或補充劑變更應諮詢專業醫療人員。
+---
+
 *本指南基於市場產品分析與學術研究，僅供參考，不構成醫療建議。購買前請評估個人需求並諮詢專業人員。*
 
 *最後更新：2026 年 2 月*
