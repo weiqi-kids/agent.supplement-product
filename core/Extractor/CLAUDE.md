@@ -26,6 +26,23 @@ Extractor 負責從外部資料源擷取（fetch）原始資料，並萃取（ex
 | us_dsld | `scripts/extract_us_dsld.py` | — |
 | tw_hf | `scripts/extract_tw_hf.py` | — |
 | pubmed | `scripts/extract_pubmed.py` | `--topic` 指定主題 |
+| dhi/dfi/ddi | `scripts/extract_interactions.py` | `--type {dhi\|dfi\|ddi}` |
+
+### 交互作用 Layer 萃取
+
+交互作用 Layer 使用統一腳本 `scripts/fetch_interactions.py` 和 `scripts/extract_interactions.py`：
+
+```bash
+# 擷取交互作用文獻
+python3 scripts/fetch_interactions.py --type dhi --categories general,botanical
+python3 scripts/fetch_interactions.py --type dfi --categories grapefruit,vitamin_k
+python3 scripts/fetch_interactions.py --type ddi --categories anticoagulant,statin
+
+# 萃取為 Markdown
+python3 scripts/extract_interactions.py --type dhi
+python3 scripts/extract_interactions.py --type dfi
+python3 scripts/extract_interactions.py --type ddi
+```
 
 ### 去重機制
 
@@ -83,6 +100,37 @@ fetched_at: "{擷取時間 ISO8601}"
 ```
 
 > frontmatter 用於 Qdrant payload 結構化欄位。正文用於 embedding 和人工閱讀。
+
+### 交互作用 Layer 輸出格式
+
+交互作用 Layer (dhi/dfi/ddi) 萃取後的 .md 檔使用統一結構：
+
+```markdown
+---
+pmid: "{PubMed ID}"
+source_layer: "{dhi|dfi|ddi}"
+interaction_type: "{DHI|DFI|DDI}"
+category: "{交互類別}"
+title: "{文獻標題}"
+severity: "{major|moderate|minor|unknown}"
+evidence_level: {1-5}
+source_url: "{PubMed 連結}"
+fetched_at: "{擷取時間 ISO8601}"
+---
+
+# {文獻標題}
+
+## 摘要
+{文獻摘要}
+
+## 關鍵詞
+{MeSH 詞彙}
+```
+
+**交互類別對照**：
+- DHI: `general`, `botanical`, `omega_fatty_acid`, `ginkgo`
+- DFI: `general`, `grapefruit`, `citrus`, `vitamin_k`, `dairy`, `alcohol`
+- DDI: `general`, `anticoagulant`, `statin`, `antihypertensive`
 
 ## 統一 Category Enum
 

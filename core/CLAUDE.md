@@ -111,10 +111,10 @@
 
 | Layer | 資料來源 | 說明 | 狀態 |
 |-------|----------|------|------|
-| `ingredient_map` | RxNorm API | 成分標準化對照表 | 🆕 開發中 |
-| `ddi` | PubMed + DDInter | Drug-Drug Interactions | 🆕 開發中 |
-| `dfi` | PubMed + DDInter | Drug-Food Interactions | 🆕 開發中 |
-| `dhi` | PubMed | Drug-Herb/Supplement Interactions | 🆕 開發中 |
+| `dhi` | PubMed | Drug-Herb/Supplement Interactions | ✅ 啟用 |
+| `dfi` | PubMed | Drug-Food Interactions | ✅ 啟用 |
+| `ddi` | PubMed | Drug-Drug Interactions | ✅ 啟用 |
+| `ingredient_map` | RxNorm API | 成分標準化對照表 | ⏸️ 暫停 |
 
 ## Mode 清單
 
@@ -124,4 +124,5 @@
 | `ingredient_radar` | `docs/Narrator/ingredient_radar/` | 月報 | ✅ 啟用 |
 | `topic_tracking` | `docs/Narrator/topic_tracking/{topic}/` | 月報 | ✅ 啟用 |
 | `literature_review` | `docs/Narrator/literature_review/{topic}/` | 月報 | ✅ 啟用 |
-| `interaction_report` | `docs/Narrator/interaction_report/` | 月報 + 主題 | 🆕 開發中 |
+
+> 交互作用資料已整合至選購指南，由 `scripts/update_guide_interactions.py` 自動更新。

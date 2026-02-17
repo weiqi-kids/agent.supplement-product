@@ -56,3 +56,46 @@ Narrator Mode 讀取：
 - 內容：學術文獻統計、證據等級分布、功效分類分析
 - 定義：`core/Narrator/Modes/literature_review/CLAUDE.md`
 - 輸出：`docs/Narrator/literature_review/{topic}/{YYYY}-{MM}.md`
+
+---
+
+## 選購指南交互作用整合
+
+交互作用章節由 `scripts/update_guide_interactions.py` 自動更新至選購指南（guide.md）。
+
+### 執行方式
+
+```bash
+# 更新所有主題
+python3 scripts/update_guide_interactions.py
+
+# 更新特定主題
+python3 scripts/update_guide_interactions.py --topic fish-oil
+
+# 僅顯示，不寫入
+python3 scripts/update_guide_interactions.py --dry-run
+```
+
+### 主題與交互類別對照
+
+定義於腳本內 `TOPIC_INTERACTION_MAP`：
+
+| 主題 | DHI 類別 | DFI 類別 | DDI 類別 |
+|------|----------|----------|----------|
+| fish-oil | omega_fatty_acid, general | — | anticoagulant |
+| curcumin | botanical, general | — | — |
+| nattokinase | general | vitamin_k | anticoagulant |
+| red-yeast-rice | general | grapefruit, citrus | statin |
+
+### 輸出位置
+
+- `docs/reports/{topic}/guide.md` — 選購指南（含交互作用章節）
+
+### 重要規則
+
+**所有主題的選購指南都必須包含藥物交互章節**。若新增主題：
+1. 在 `fetch_interactions.py` 新增對應的 PubMed 查詢
+2. 執行 `python3 scripts/fetch_interactions.py --type dhi --category {new_category}`
+3. 執行 `python3 scripts/extract_interactions.py --type dhi`
+4. 在 `update_guide_interactions.py` 的 `TOPIC_INTERACTION_MAP` 新增映射
+5. 執行 `python3 scripts/update_guide_interactions.py --topic {topic_id}`
