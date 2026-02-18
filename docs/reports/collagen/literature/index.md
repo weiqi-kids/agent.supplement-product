@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 文獻報告
-parent: 膠原蛋白 2026-02-13
+parent: 膠原蛋白 2026-02-18
 nav_order: 4
 has_children: true
 ---

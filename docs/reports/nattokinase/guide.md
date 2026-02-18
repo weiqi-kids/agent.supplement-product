@@ -2,7 +2,7 @@
 layout: default
 title: 選購指南
 nav_order: 1
-parent: 納豆激酶 2026-02-13
+parent: 納豆激酶 2026-02-18
 grand_parent: 報告總覽
 ---
 
