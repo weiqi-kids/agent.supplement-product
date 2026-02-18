@@ -2,7 +2,7 @@
 layout: default
 title: 選購指南
 nav_order: 2
-parent: 維生素C
+parent: 維生素C 2026-02-18
 grand_parent: 報告總覽
 ---
 

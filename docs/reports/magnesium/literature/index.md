@@ -1,7 +1,7 @@
 ---
 layout: default
 title: 文獻薈萃
-parent: 鎂
+parent: 鎂 2026-02-18
 nav_order: 4
 has_children: true
 ---

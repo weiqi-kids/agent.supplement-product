@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 鎂
+title: 鎂 2026-02-18
 nav_order: 13
 parent: 報告總覽
 has_children: true
