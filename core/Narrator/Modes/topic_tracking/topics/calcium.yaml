@@ -1,0 +1,26 @@
+# Calcium 主題追蹤定義
+# 建立時間: 2026-02-18T09:33:19.813206
+# 可手動編輯 keywords 和 category_filter 以調整篩選範圍
+
+topic_id: calcium
+name:
+  zh: 鈣
+  en: Calcium
+  ja: カルシウム
+  ko: 칼슘
+keywords:
+  exact:
+    - Calcium
+    - calcium
+    - Calcium Carbonate
+    - Calcium Citrate
+    - カルシウム
+    - 칼슘
+    - 鈣
+    - 钙
+  fuzzy: []
+category_filter: []
+output:
+  index: docs/reports/calcium/index.md
+  guide: docs/reports/calcium/guide.md
+  reports: docs/reports/calcium/reports/

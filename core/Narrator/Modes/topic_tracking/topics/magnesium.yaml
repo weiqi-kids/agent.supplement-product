@@ -1,0 +1,27 @@
+# Magnesium 主題追蹤定義
+# 建立時間: 2026-02-18T09:37:27.601110
+# 可手動編輯 keywords 和 category_filter 以調整篩選範圍
+
+topic_id: magnesium
+name:
+  zh: 鎂
+  en: Magnesium
+  ja: マグネシウム
+  ko: 마그네슘
+keywords:
+  exact:
+    - Magnesium
+    - magnesium
+    - Magnesium Citrate
+    - Magnesium Oxide
+    - Magnesium Glycinate
+    - マグネシウム
+    - 마그네슘
+    - 鎂
+    - 镁
+  fuzzy: []
+category_filter: []
+output:
+  index: docs/reports/magnesium/index.md
+  guide: docs/reports/magnesium/guide.md
+  reports: docs/reports/magnesium/reports/

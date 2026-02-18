@@ -1,0 +1,27 @@
+# Vitamin B6 主題追蹤定義
+# 建立時間: 2026-02-18T09:39:30.450927
+# 可手動編輯 keywords 和 category_filter 以調整篩選範圍
+
+topic_id: vitamin-b6
+name:
+  zh: 維生素B6
+  en: Vitamin B6
+  ja: ビタミンB6
+  ko: 비타민B6
+keywords:
+  exact:
+    - Vitamin B6
+    - vitamin b6
+    - Pyridoxine
+    - pyridoxine
+    - Pyridoxal
+    - ビタミンB6
+    - 비타민B6
+    - 維生素B6
+    - 维生素B6
+  fuzzy: []
+category_filter: []
+output:
+  index: docs/reports/vitamin-b6/index.md
+  guide: docs/reports/vitamin-b6/guide.md
+  reports: docs/reports/vitamin-b6/reports/

@@ -1,0 +1,27 @@
+# Vitamin C 主題追蹤定義
+# 建立時間: 2026-02-18T09:31:16.447349
+# 可手動編輯 keywords 和 category_filter 以調整篩選範圍
+
+topic_id: vitamin-c
+name:
+  zh: 維生素C
+  en: Vitamin C
+  ja: ビタミンC
+  ko: 비타민C
+keywords:
+  exact:
+    - Vitamin C
+    - vitamin c
+    - ascorbic acid
+    - Ascorbic Acid
+    - L-Ascorbic Acid
+    - ビタミンC
+    - 비타민C
+    - 維生素C
+    - 维生素C
+  fuzzy: []
+category_filter: []
+output:
+  index: docs/reports/vitamin-c/index.md
+  guide: docs/reports/vitamin-c/guide.md
+  reports: docs/reports/vitamin-c/reports/

@@ -1,0 +1,27 @@
+# Zinc 主題追蹤定義
+# 建立時間: 2026-02-18T09:35:21.844751
+# 可手動編輯 keywords 和 category_filter 以調整篩選範圍
+
+topic_id: zinc
+name:
+  zh: 鋅
+  en: Zinc
+  ja: 亜鉛
+  ko: 아연
+keywords:
+  exact:
+    - Zinc
+    - zinc
+    - Zinc Gluconate
+    - Zinc Picolinate
+    - Zinc Oxide
+    - 亜鉛
+    - 아연
+    - 鋅
+    - 锌
+  fuzzy: []
+category_filter: []
+output:
+  index: docs/reports/zinc/index.md
+  guide: docs/reports/zinc/guide.md
+  reports: docs/reports/zinc/reports/
