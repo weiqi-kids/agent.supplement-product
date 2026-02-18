@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Magnesium
+title: 鎂
 nav_order: 13
 parent: 報告總覽
 has_children: true

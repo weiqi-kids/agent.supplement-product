@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Zinc
+title: 鋅
 nav_order: 12
 parent: 報告總覽
 has_children: true

@@ -2,7 +2,7 @@
 layout: default
 title: 選購指南
 nav_order: 2
-parent: Zinc
+parent: 鋅
 grand_parent: 報告總覽
 ---
 

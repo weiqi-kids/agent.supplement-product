@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Vitamin C
+title: 維生素C
 nav_order: 11
 parent: 報告總覽
 has_children: true

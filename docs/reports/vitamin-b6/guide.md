@@ -2,7 +2,7 @@
 layout: default
 title: 選購指南
 nav_order: 2
-parent: Vitamin B6
+parent: 維生素B6
 grand_parent: 報告總覽
 ---
 

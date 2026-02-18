@@ -2,7 +2,7 @@
 layout: default
 title: 市場報告
 nav_order: 3
-parent: vitamin-c
+parent: 維生素C
 grand_parent: 報告總覽
 has_children: true
 ---
