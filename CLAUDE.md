@@ -873,7 +873,7 @@ docs/index.md                      # 網站首頁
 
 執行技術健檢：
 ```bash
-./revamp/tools/site-audit.sh https://weiqi.kids --output report.json
+./revamp/tools/site-audit.sh https://supplement.weiqi.kids --output report.json
 ```
 
 | 指標 | 標準 | 驗證方式 |
@@ -889,16 +889,16 @@ docs/index.md                      # 網站首頁
 
 ```bash
 # PageSpeed Insights
-curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://weiqi.kids&strategy=mobile" | jq '{
+curl -s "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=https://supplement.weiqi.kids&strategy=mobile" | jq '{
   score: .lighthouseResult.categories.performance.score,
   lcp: .lighthouseResult.audits["largest-contentful-paint"].displayValue
 }'
 
 # SSL 評級
-curl -s "https://api.ssllabs.com/api/v3/analyze?host=weiqi.kids&fromCache=on" | jq '.endpoints[0].grade'
+curl -s "https://api.ssllabs.com/api/v3/analyze?host=supplement.weiqi.kids&fromCache=on" | jq '.endpoints[0].grade'
 
 # HTML 驗證
-curl -s "https://validator.w3.org/nu/?doc=https://weiqi.kids&out=json" | jq '[.messages[] | select(.type=="error")] | length'
+curl -s "https://validator.w3.org/nu/?doc=https://supplement.weiqi.kids&out=json" | jq '[.messages[] | select(.type=="error")] | length'
 ```
 
 ### 7.1 連結檢查
