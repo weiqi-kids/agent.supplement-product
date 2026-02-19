@@ -1,0 +1,106 @@
+{
+  "week": "2026-W08",
+  "timestamp": "2026-02-18T07:46:51Z",
+  "layers": {
+    "us_dsld": {
+      "total": 205738,
+      "categories": {
+        "protein_amino": 9363,
+        "omega_fatty_acids": 8544,
+        "other": 19981,
+        "vitamins_minerals": 23913,
+        "specialty": 76491,
+        "botanicals": 67446
+      },
+      "samples": [
+        "Casein Protein",
+        "L-Arginine Base 1000 mg",
+        "Blue Ice Fermented Cod Liver Oil Unflavored"
+      ]
+    },
+    "ca_lnhpd": {
+      "total": 144568,
+      "categories": {
+        "protein_amino": 3377,
+        "omega_fatty_acids": 4613,
+        "probiotics": 1697,
+        "other": 111827,
+        "vitamins_minerals": 16122,
+        "sports_fitness": 1179,
+        "specialty": 1217,
+        "botanicals": 4536
+      },
+      "samples": [
+        "Inner Beauty Collagen",
+        "Nova BCAA+",
+        "WRIGHT Flaxseed Oil"
+      ]
+    },
+    "kr_hff": {
+      "total": 44338,
+      "categories": {
+        "protein_amino": 1627,
+        "omega_fatty_acids": 440,
+        "probiotics": 5057,
+        "other": 14132,
+        "vitamins_minerals": 9485,
+        "sports_fitness": 171,
+        "specialty": 11863,
+        "botanicals": 1563
+      },
+      "samples": [
+        "시그니처 파워 간 골드",
+        "팜스슈퍼살리드로",
+        "에프에이씨 관절케어"
+      ]
+    },
+    "jp_foshu": {
+      "total": 1031,
+      "categories": {
+        "protein_amino": 85,
+        "omega_fatty_acids": 15,
+        "probiotics": 49,
+        "other": 358,
+        "vitamins_minerals": 54,
+        "specialty": 4,
+        "botanicals": 466
+      },
+      "samples": [
+        "ペプサン",
+        "まめちから　大豆ペプチドしょうゆ",
+        "イマークＳ"
+      ]
+    },
+    "jp_fnfc": {
+      "total": 1110,
+      "categories": {
+        "protein_amino": 28,
+        "omega_fatty_acids": 64,
+        "probiotics": 64,
+        "other": 423,
+        "botanicals": 531
+      },
+      "samples": [
+        "飲んでサポートひざ関節サプリ",
+        "楽ひざ",
+        "マグマＥＰＡ（イーピーエー）＆（アンド）ＤＨＡ（ディーエイチエー）"
+      ]
+    },
+    "tw_hf": {
+      "total": 547,
+      "categories": {
+        "omega_fatty_acids": 188,
+        "probiotics": 79,
+        "other": 17,
+        "vitamins_minerals": 41,
+        "specialty": 150,
+        "botanicals": 72
+      },
+      "samples": [
+        "芷靖錠",
+        "桐核麥養生液",
+        "保衛佳®膠囊"
+      ]
+    }
+  }
+}
