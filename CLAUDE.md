@@ -365,8 +365,58 @@ DONE|literature_review|{topic1}:{數量},{topic2}:{數量}|OK
 
 ### 啟動階段
 1. 發現所有有效 Layer 和 Mode
-2. 平行啟動所有 Layer 子代理（`run_in_background: true`）
-3. 告知使用者「已啟動 N 個背景任務」（一句話即可）
+2. **⚠️ Session 恢復去重檢查**（見下方）
+3. 平行啟動所有 Layer 子代理（`run_in_background: true`）
+4. 告知使用者「已啟動 N 個背景任務」（一句話即可）
+
+### ⚠️ Session 恢復去重檢查（必做！）
+
+**問題**：Session 從之前的對話恢復時，可能帶入已完成的背景任務狀態，導致重複執行相同的報告產出，浪費 API tokens。
+
+**解決方案**：啟動任務前，先檢查報告是否已在當前週期內產出。
+
+```bash
+# 檢查 topic_tracking 報告是否已存在且為今日產出
+PERIOD="2026-02"
+for topic in $(ls core/Narrator/Modes/topic_tracking/topics/*.yaml | xargs -n1 basename | sed 's/.yaml//'); do
+  REPORT="docs/Narrator/topic_tracking/$topic/$PERIOD.md"
+  if [ -f "$REPORT" ]; then
+    GENERATED=$(grep 'generated_at' "$REPORT" | head -1 | cut -d'"' -f2 | cut -dT -f1)
+    TODAY=$(date +%Y-%m-%d)
+    if [ "$GENERATED" = "$TODAY" ]; then
+      echo "SKIP|$topic|already generated today"
+    fi
+  fi
+done
+```
+
+**去重規則**：
+
+| 報告類型 | 週期 | 去重條件 |
+|----------|------|----------|
+| market_snapshot | 週報 | 本週報告已存在且 `generated_at` 在今日 |
+| ingredient_radar | 月報 | 本月報告已存在且 `generated_at` 在今日 |
+| topic_tracking | 月報 | 本月報告已存在且 `generated_at` 在今日 |
+| literature_review | 月報 | 本月報告已存在且 `generated_at` 在今日 |
+| Layer 資料處理 | 每次 | 不去重（永遠執行，因為資料可能更新） |
+
+**執行流程**：
+
+```
+Session 恢復 / 執行完整流程
+    │
+    ├── 檢查現有報告
+    │   ├── 報告存在且今日產出 → SKIP（不啟動子代理）
+    │   └── 報告不存在或非今日 → 啟動子代理
+    │
+    └── 回報跳過的任務數量
+        例：「跳過 14 個已完成的 topic_tracking 報告」
+```
+
+**禁止行為**：
+- ❌ 不檢查就啟動所有子代理
+- ❌ 重複產出同一天已產出的報告
+- ❌ 浪費 tokens 在不必要的重複工作上
 
 ### 監控階段（低 Context 消耗）
 
