@@ -5,21 +5,73 @@
 
 <link rel="stylesheet" href="{{ '/assets/css/decision-tree.css' | relative_url }}">
 
-<div class="decision-tree-controls">
+<div class="decision-tree-controls" id="tree-controls-{{ include.topic }}" style="display:none;">
   <button onclick="decisionTree_{{ include.topic | replace: '-', '_' }}.expandAll()">展開全部</button>
   <button onclick="decisionTree_{{ include.topic | replace: '-', '_' }}.collapseAll()">收合全部</button>
 </div>
 
 <div id="decision-tree-{{ include.topic }}" class="decision-tree-container"></div>
 
-<script src="https://d3js.org/d3.v7.min.js"></script>
-<script src="{{ '/assets/js/decision-tree.js' | relative_url }}"></script>
+<!-- noscript fallback for accessibility -->
+<noscript>
+  <div class="decision-tree-fallback">
+    <p><strong>互動式決策樹需要 JavaScript 支援。</strong></p>
+    <p>請參考上方「選購要點」章節，根據您的需求選擇適合的產品：</p>
+    <ul>
+      <li><strong>一般保養</strong>：選擇基礎劑量產品</li>
+      <li><strong>特定需求</strong>：參考劑量建議表選擇適合劑量</li>
+      <li><strong>品質考量</strong>：優先選擇有第三方認證的產品</li>
+    </ul>
+  </div>
+</noscript>
+
 <script>
-  {% assign tree_data = site.data.decision-trees[include.topic] %}
-  const treeData_{{ include.topic | replace: '-', '_' }} = {{ tree_data | jsonify }};
-  const decisionTree_{{ include.topic | replace: '-', '_' }} = new DecisionTree(
-    'decision-tree-{{ include.topic }}',
-    treeData_{{ include.topic | replace: '-', '_' }},
-    { width: 900, height: 450 }
-  );
+(function() {
+  // Lazy load D3.js to improve TBT
+  function loadDecisionTree() {
+    if (typeof d3 !== 'undefined') {
+      initTree();
+      return;
+    }
+
+    var script = document.createElement('script');
+    script.src = 'https://d3js.org/d3.v7.min.js';
+    script.async = true;
+    script.onload = function() {
+      // Load decision-tree.js after D3
+      var treeScript = document.createElement('script');
+      treeScript.src = '{{ '/assets/js/decision-tree.js' | relative_url }}';
+      treeScript.onload = initTree;
+      document.head.appendChild(treeScript);
+    };
+    document.head.appendChild(script);
+  }
+
+  function initTree() {
+    {% assign tree_data = site.data.decision-trees[include.topic] %}
+    var treeData = {{ tree_data | jsonify }};
+    if (treeData && typeof DecisionTree !== 'undefined') {
+      window.decisionTree_{{ include.topic | replace: '-', '_' }} = new DecisionTree(
+        'decision-tree-{{ include.topic }}',
+        treeData,
+        { width: 900, height: 450 }
+      );
+      document.getElementById('tree-controls-{{ include.topic }}').style.display = 'block';
+    }
+  }
+
+  // Load when visible (Intersection Observer) or fallback to DOMContentLoaded
+  if ('IntersectionObserver' in window) {
+    var container = document.getElementById('decision-tree-{{ include.topic }}');
+    var observer = new IntersectionObserver(function(entries) {
+      if (entries[0].isIntersecting) {
+        loadDecisionTree();
+        observer.disconnect();
+      }
+    }, { rootMargin: '200px' });
+    observer.observe(container);
+  } else {
+    document.addEventListener('DOMContentLoaded', loadDecisionTree);
+  }
+})();
 </script>

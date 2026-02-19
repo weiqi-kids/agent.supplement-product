@@ -1,0 +1,49 @@
+# CoQ10 主題追蹤定義
+# CoQ10（輔酶Q10）是細胞能量代謝的關鍵輔酶，常用於心臟保健
+
+topic_id: coq10
+
+name:
+  zh: 輔酶Q10
+  en: CoQ10
+  ja: コエンザイムQ10
+  ko: 코엔자임Q10
+
+keywords:
+  # 精確匹配（成分名稱）
+  exact:
+    - coq10
+    - coenzyme q10
+    - coenzyme q-10
+    - ubiquinone
+    - ubiquinol
+    - コエンザイムQ10
+    - 코엔자임Q10
+    - 輔酶Q10
+    - 辅酶Q10
+    - ユビキノール
+    - ユビキノン
+  # 模糊匹配（產品名稱、描述）
+  fuzzy:
+    - q10
+    - q-10
+    - ubidecarenone
+
+category_filter:
+  - vitamins_minerals
+  - specialty
+  - other
+
+output:
+  index: docs/reports/coq10/index.md
+  guide: docs/reports/coq10/guide.md
+  reports: docs/reports/coq10/reports/
+
+# PubMed 查詢設定
+pubmed:
+  query: '(coenzyme Q10[Title/Abstract] OR CoQ10[Title/Abstract] OR ubiquinone[Title/Abstract] OR ubiquinol[Title/Abstract] OR "coenzyme Q-10"[Title/Abstract])'
+  filters:
+    - humans[MH]
+    - English[Language]
+  date_range: 5
+  max_results: 50000

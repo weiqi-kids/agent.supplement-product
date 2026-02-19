@@ -135,6 +135,28 @@
   }
 }
 
+/* noscript fallback */
+.decision-tree-fallback {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.decision-tree-fallback p {
+  margin: 0.5rem 0;
+}
+
+.decision-tree-fallback ul {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.decision-tree-fallback li {
+  margin: 0.5rem 0;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .decision-tree-legend {

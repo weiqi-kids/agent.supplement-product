@@ -46,6 +46,20 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- 輔酶Q10 -->
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/coq10/</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/coq10/guide</loc>
+    <lastmod>2026-02-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- 膠原蛋白 -->
   <url>
     <loc>https://supplement.weiqi.kids/reports/collagen/</loc>

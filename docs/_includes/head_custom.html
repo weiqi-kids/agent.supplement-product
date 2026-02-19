@@ -120,55 +120,50 @@
 
 <script>
 // Parse navigation titles and separate dates to right-align them
-function formatNavDates() {
-  const datePattern = /^(.+?)\s+(\d{4}-\d{2}-\d{2})$/;
+// Optimized for performance: uses requestIdleCallback and debounced observer
+(function() {
+  var datePattern = /^(.+?)\s+(\d{4}-\d{2}-\d{2})$/;
+  var processed = new WeakSet();
 
-  document.querySelectorAll('.nav-list-link').forEach(function(link) {
-    // Skip if already processed
-    if (link.querySelector('.nav-date')) return;
+  function formatNavDates() {
+    var links = document.querySelectorAll('.nav-list-link');
+    for (var i = 0; i < links.length; i++) {
+      var link = links[i];
+      if (processed.has(link)) continue;
 
-    const text = link.textContent.trim();
-    const match = text.match(datePattern);
+      var text = link.textContent.trim();
+      var match = text.match(datePattern);
 
-    if (match) {
-      const title = match[1];
-      const date = match[2];
+      if (match) {
+        processed.add(link);
+        link.textContent = '';
 
-      // Clear existing content
-      link.textContent = '';
+        var titleSpan = document.createElement('span');
+        titleSpan.className = 'nav-title';
+        titleSpan.textContent = match[1];
+        link.appendChild(titleSpan);
 
-      // Add title span
-      const titleSpan = document.createElement('span');
-      titleSpan.className = 'nav-title';
-      titleSpan.textContent = title;
-      link.appendChild(titleSpan);
-
-      // Add date span
-      const dateSpan = document.createElement('span');
-      dateSpan.className = 'nav-date';
-      dateSpan.textContent = date;
-      link.appendChild(dateSpan);
+        var dateSpan = document.createElement('span');
+        dateSpan.className = 'nav-date';
+        dateSpan.textContent = match[2];
+        link.appendChild(dateSpan);
+      }
     }
-  });
-}
+  }
 
-// Run on DOMContentLoaded
-document.addEventListener('DOMContentLoaded', formatNavDates);
-
-// Also run after a short delay in case nav is loaded dynamically
-setTimeout(formatNavDates, 100);
-setTimeout(formatNavDates, 500);
-
-// Use MutationObserver to catch dynamic nav changes
-if (typeof MutationObserver !== 'undefined') {
-  const observer = new MutationObserver(function(mutations) {
-    formatNavDates();
-  });
-  document.addEventListener('DOMContentLoaded', function() {
-    const nav = document.querySelector('.site-nav');
-    if (nav) {
-      observer.observe(nav, { childList: true, subtree: true });
+  // Use requestIdleCallback for non-blocking execution
+  function scheduleFormat() {
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(formatNavDates, { timeout: 200 });
+    } else {
+      setTimeout(formatNavDates, 50);
     }
-  });
-}
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', scheduleFormat);
+  } else {
+    scheduleFormat();
+  }
+})();
 </script>
