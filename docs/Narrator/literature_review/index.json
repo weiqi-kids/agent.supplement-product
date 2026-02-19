@@ -1,5 +1,29 @@
 [
   {
+    "id": "zinc-2026-02-md",
+    "title": "鋅文獻薈萃報告 — 2026 年 2 月",
+    "date": "",
+    "file": "zinc/2026-02.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
+    "id": "vitamin-c-2026-02-md",
+    "title": "維生素C文獻薈萃報告 — 2026 年 2 月",
+    "date": "",
+    "file": "vitamin-c/2026-02.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
+    "id": "vitamin-b6-2026-02-md",
+    "title": "維生素B6文獻薈萃報告 — 2026 年 2 月",
+    "date": "",
+    "file": "vitamin-b6/2026-02.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
     "id": "red-yeast-rice-2026-02-md",
     "title": "紅麴文獻薈萃報告 — 2026 年 2 月",
     "date": "",
@@ -20,6 +44,14 @@
     "title": "納豆激酶文獻薈萃報告 — 2026 年 2 月",
     "date": "",
     "file": "nattokinase/2026-02.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
+    "id": "magnesium-2026-02-md",
+    "title": "鎂文獻薈萃報告 — 2026 年 2 月",
+    "date": "",
+    "file": "magnesium/2026-02.md",
     "item_count": "",
     "source_mode": "literature_review"
   },
@@ -68,6 +100,14 @@
     "title": "膠原蛋白文獻薈萃報告 — 2026 年 2 月",
     "date": "",
     "file": "collagen/2026-02.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
+    "id": "calcium-2026-02-md",
+    "title": "鈣文獻薈萃報告 — 2026 年 2 月",
+    "date": "",
+    "file": "calcium/2026-02.md",
     "item_count": "",
     "source_mode": "literature_review"
   }
