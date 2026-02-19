@@ -1,7 +1,7 @@
 ---
 mode: "ingredient_radar"
 period: "2026-02"
-generated_at: "2026-02-19T10:22:23.174448"
+generated_at: "2026-02-19T10:38:50.840360"
 source_layers:
   - us_dsld
   - ca_lnhpd
@@ -14,66 +14,80 @@ source_layers:
 # 成分雷達月報 — 2026 年 02 月
 
 > 報告期間：2026-02-01 ~ 2026-02-19
-> 產出時間：2026-02-19T10:22:23.174448
+> 產出時間：2026-02-19T10:38:50.840360
 
 ## 摘要
 
-本月成分雷達報告分析五大市場共 352,977 筆保健食品產品資料。全球熱門成分前三名為 Calories（Calories）（45,829 產品）、Total Carbohydrates（Carbohydrate）（35,236 產品）、Vitamin C（Vitamin C）（28,546 產品）。基礎營養素如維生素C、鈣質、維生素D持續穩居主流，反映全球市場對基礎健康補充的剛性需求。跨國分析顯示美國、加拿大市場成分種類最為豐富，日本市場則聚焦於機能性成分如GABA、難消化性デキストリン等。值得關注的成分包括在多國同步成長的益生菌株、以及日韓市場獨特的機能性原料。
+本月成分雷達報告分析五大市場共 342,024 筆保健食品產品資料。全球熱門成分前三名為 Vitamin C（58,237 產品）、Calcium（48,016 產品）、Vitamin B6（44,129 產品）。基礎營養素如維生素C、鈣質、維生素D持續穩居主流，反映全球市場對基礎健康補充的剛性需求。跨國分析顯示美國、加拿大市場成分種類最為豐富，日本市場則聚焦於機能性成分如GABA、難消化性デキストリン等。值得關注的成分包括在多國同步成長的益生菌株、以及日韓市場獨特的機能性原料。
 
 ## 全球熱門成分 Top 20
 
 | 排名 | 成分名稱 | 出現產品數 | 涵蓋市場 | 主要品類 |
 |------|----------|-----------|----------|----------|
-| 1 | Calories（Calories） | 45,829 | 🇺🇸 US | specialty |
-| 2 | Total Carbohydrates（Carbohydrate） | 35,236 | 🇺🇸 US | specialty |
-| 3 | Vitamin C（Vitamin C） | 28,546 | 🇺🇸 US | specialty |
-| 4 | 成分資料需額外擷取 | 26,365 | 🇨🇦 CA | other |
-| 5 | Total Fat（Fat ） | 25,095 | 🇺🇸 US | specialty |
-| 6 | Sodium（Sodium） | 22,416 | 🇺🇸 US | specialty |
-| 7 | Calcium（Calcium） | 19,771 | 🇺🇸 US | specialty |
-| 8 | Vitamin D | 19,006 | 🇨🇦 CA | vitamins_minerals |
-| 9 | Fish Oil | 17,287 | 🇨🇦 CA | omega_fatty_acids |
-| 10 | Vitamin C | 16,979 | 🇨🇦 CA, 🇺🇸 US | other |
-| 11 | Biotin（Biotin） | 15,742 | 🇺🇸 US | specialty |
-| 12 | Calcium（Calcium） — Calcium (Form | 14,751 | 🇺🇸 US | specialty |
-| 13 | Magnesium（Magnesium） — Magnesium (Form | 14,736 | 🇺🇸 US | specialty |
-| 14 | Zinc（Zinc） — Zinc (Form | 14,391 | 🇺🇸 US | specialty |
-| 15 | Dietary Fiber（Fiber ） | 14,092 | 🇺🇸 US | specialty |
-| 16 | Riboflavin（Riboflavin） | 14,031 | 🇺🇸 US | specialty |
-| 17 | Potassium（Potassium） | 14,023 | 🇺🇸 US | specialty |
-| 18 | Calories From Fat（Calories） | 13,879 | 🇺🇸 US | specialty |
-| 19 | Sugar（Sugar） | 13,701 | 🇺🇸 US | specialty |
-| 20 | Saturated Fat（Saturated Fat） | 13,694 | 🇺🇸 US | specialty |
+| 1 | Vitamin C | 58,237 | 🇨🇦 CA, 🇰🇷 KR, 🇺🇸 US | specialty |
+| 2 | Calcium | 48,016 | 🇨🇦 CA, 🇰🇷 KR, 🇺🇸 US | specialty |
+| 3 | Vitamin B6 | 44,129 | 🇨🇦 CA, 🇰🇷 KR, 🇺🇸 US | specialty |
+| 4 | Magnesium | 43,470 | 🇨🇦 CA, 🇰🇷 KR, 🇺🇸 US | specialty |
+| 5 | Zinc | 43,048 | 🇨🇦 CA, 🇰🇷 KR, 🇺🇸 US | specialty |
+| 6 | Vitamin B12 | 41,028 | 🇨🇦 CA, 🇰🇷 KR, 🇺🇸 US | specialty |
+| 7 | Vitamin E | 38,972 | 🇨🇦 CA, 🇰🇷 KR, 🇺🇸 US | specialty |
+| 8 | Vitamin D | 38,026 | 🇨🇦 CA, 🇰🇷 KR, 🇺🇸 US | vitamins_minerals |
+| 9 | Folate | 37,959 | 🇨🇦 CA, 🇺🇸 US | specialty |
+| 10 | Vitamin A | 32,249 | 🇨🇦 CA, 🇰🇷 KR, 🇺🇸 US | specialty |
+| 11 | Vitamin B2 | 31,610 | 🇨🇦 CA, 🇰🇷 KR, 🇺🇸 US | specialty |
+| 12 | Niacin | 29,328 | 🇨🇦 CA, 🇰🇷 KR, 🇺🇸 US | specialty |
+| 13 | Biotin | 27,012 | 🇨🇦 CA, 🇺🇸 US | specialty |
+| 14 | Pantothenic Acid | 26,761 | 🇨🇦 CA, 🇰🇷 KR, 🇺🇸 US | specialty |
+| 15 | Potassium | 26,277 | 🇨🇦 CA, 🇺🇸 US | specialty |
+| 16 | Thiamine | 23,811 | 🇨🇦 CA, 🇺🇸 US | specialty |
+| 17 | Selenium | 22,842 | 🇨🇦 CA, 🇺🇸 US | specialty |
+| 18 | Chromium | 21,986 | 🇨🇦 CA, 🇺🇸 US | specialty |
+| 19 | Manganese | 20,430 | 🇨🇦 CA, 🇺🇸 US | specialty |
+| 20 | Iron | 19,984 | 🇨🇦 CA, 🇰🇷 KR, 🇺🇸 US | specialty |
 
 ## 各市場成分偏好
 
 ### 🇺🇸 US Top 10 成分
 | 排名 | 成分 | 產品數 |
 |------|------|--------|
-| 1 | Calories（Calories） | 45,829 |
-| 2 | Total Carbohydrates（Carbohydrate） | 35,236 |
-| 3 | Vitamin C（Vitamin C） | 28,546 |
-| 4 | Total Fat（Fat ） | 25,095 |
-| 5 | Sodium（Sodium） | 22,416 |
-| 6 | Calcium（Calcium） | 19,771 |
-| 7 | Biotin（Biotin） | 15,742 |
-| 8 | Calcium（Calcium） — Calcium (Form | 14,751 |
-| 9 | Magnesium（Magnesium） — Magnesium (Form | 14,736 |
-| 10 | Zinc（Zinc） — Zinc (Form | 14,391 |
+| 1 | Vitamin C | 38,150 |
+| 2 | Calcium | 35,912 |
+| 3 | Vitamin B6 | 28,857 |
+| 4 | Magnesium | 28,722 |
+| 5 | Folate | 28,643 |
+| 6 | Vitamin B12 | 27,592 |
+| 7 | Zinc | 26,303 |
+| 8 | Vitamin E | 24,031 |
+| 9 | Niacin | 23,607 |
+| 10 | Vitamin A | 23,123 |
 
 ### 🇨🇦 CA Top 10 成分
 | 排名 | 成分 | 產品數 |
 |------|------|--------|
-| 1 | 成分資料需額外擷取 | 26,365 |
-| 2 | Vitamin D | 19,006 |
-| 3 | Fish Oil | 17,287 |
-| 4 | Vitamin C | 16,975 |
-| 5 | Magnesium | 13,508 |
-| 6 | Vitamin E | 12,170 |
-| 7 | Vitamin B6 | 11,954 |
-| 8 | Vitamin B12 | 11,888 |
-| 9 | Zinc | 11,773 |
-| 10 | Calcium | 10,959 |
+| 1 | Vitamin D | 19,006 |
+| 2 | Fish Oil | 17,287 |
+| 3 | Vitamin C | 16,975 |
+| 4 | Magnesium | 13,508 |
+| 5 | Vitamin E | 12,170 |
+| 6 | Vitamin B6 | 11,954 |
+| 7 | Vitamin B12 | 11,888 |
+| 8 | Zinc | 11,866 |
+| 9 | Calcium | 10,959 |
+| 10 | Folate | 9,316 |
+
+### 🇰🇷 KR Top 10 成分
+| 排名 | 成分 | 產品數 |
+|------|------|--------|
+| 1 | Zinc | 4,879 |
+| 2 | Vitamin D | 3,935 |
+| 3 | Vitamin B6 | 3,318 |
+| 4 | Vitamin B1 | 3,154 |
+| 5 | Vitamin C | 3,112 |
+| 6 | Vitamin B2 | 2,941 |
+| 7 | Vitamin E | 2,771 |
+| 8 | Niacin | 2,236 |
+| 9 | Pantothenic Acid | 2,222 |
+| 10 | 셀렌 | 1,668 |
 
 ### 🇯🇵 JP Top 10 成分
 | 排名 | 成分 | 產品數 |
@@ -107,29 +121,38 @@ source_layers:
 
 | 成分 | 🇺🇸 US | 🇨🇦 CA | 🇰🇷 KR | 🇯🇵 JP | 🇹🇼 TW | 說明 |
 |------|---------|---------|---------|---------|---------|------|
-| Vitamin C | ✅ 4 | ✅ 16,975 | ❌ | ❌ | ❌ | 主要分布於 🇺🇸 US 和 🇨🇦 CA |
+| Vitamin C | ✅ 38,150 | ✅ 16,975 | ✅ 3,112 | ❌ | ❌ | 跨 3 個市場分布 |
+| Calcium | ✅ 35,912 | ✅ 10,959 | ✅ 1,145 | ❌ | ❌ | 跨 3 個市場分布 |
+| Vitamin B6 | ✅ 28,857 | ✅ 11,954 | ✅ 3,318 | ❌ | ❌ | 跨 3 個市場分布 |
+| Magnesium | ✅ 28,722 | ✅ 13,508 | ✅ 1,240 | ❌ | ❌ | 跨 3 個市場分布 |
+| Zinc | ✅ 26,303 | ✅ 11,866 | ✅ 4,879 | ❌ | ❌ | 跨 3 個市場分布 |
+| Vitamin B12 | ✅ 27,592 | ✅ 11,888 | ✅ 1,548 | ❌ | ❌ | 跨 3 個市場分布 |
+| Vitamin E | ✅ 24,031 | ✅ 12,170 | ✅ 2,771 | ❌ | ❌ | 跨 3 個市場分布 |
+| Vitamin D | ✅ 15,085 | ✅ 19,006 | ✅ 3,935 | ❌ | ❌ | 跨 3 個市場分布 |
+| Folate | ✅ 28,643 | ✅ 9,316 | ❌ | ❌ | ❌ | 主要分布於 🇺🇸 US 和 🇨🇦 CA |
+| Vitamin A | ✅ 23,123 | ✅ 7,569 | ✅ 1,557 | ❌ | ❌ | 跨 3 個市場分布 |
 
 ## 品類 × 成分分析
 
 ### 維生素與礦物質
-- 核心成分：Vitamin D, Vitamin C, Magnesium, Calcium, Vitamin E
-- 市場分布：2 個市場涵蓋，以 🇨🇦 CA, 🇺🇸 US 為主
+- 核心成分：Vitamin D, Vitamin C, Magnesium, Calcium, Zinc
+- 市場分布：3 個市場涵蓋，以 🇨🇦 CA, 🇰🇷 KR, 🇺🇸 US 為主
 
 ### 植物萃取
-- 核心成分：Calories（Calories）, Total Carbohydrates（Carbohydrate）, Vitamin C（Vitamin C）, Sodium（Sodium）, Proprietary Blend（Proprietary Blend ）
-- 市場分布：1 個市場涵蓋，以 🇺🇸 US 為主
+- 核心成分：Proprietary Blend, Vitamin C, Calcium, Zinc, Vitamin B6
+- 市場分布：3 個市場涵蓋，以 🇨🇦 CA, 🇰🇷 KR, 🇺🇸 US 為主
 
 ### 益生菌
 - 核心成分：Lactobacillus Acidophilus, Bifidobacterium Animalis Subsp. Lactis, Bifidobacterium Longum Subsp. Longum, Lactiplantibacillus Plantarum, Lactobacillus Rhamnosus
-- 市場分布：2 個市場涵蓋，以 🇨🇦 CA, 🇹🇼 TW 為主
+- 市場分布：3 個市場涵蓋，以 🇨🇦 CA, 🇹🇼 TW, 🇺🇸 US 為主
 
 ### Omega 脂肪酸
-- 核心成分：Fish Oil, Total Fat（Fat ）, Calories（Calories）, Calories From Fat（Calories）, Cholesterol（Cholesterol）
-- 市場分布：2 個市場涵蓋，以 🇨🇦 CA, 🇺🇸 US 為主
+- 核心成分：Fish Oil, Calories From Fat, DHA, EPA, Polyunsaturated Fat
+- 市場分布：5 個市場涵蓋，以 🇨🇦 CA, 🇯🇵 JP, 🇰🇷 KR, 🇹🇼 TW, 🇺🇸 US 為主
 
 ### 蛋白質與胺基酸
-- 核心成分：Calories（Calories）, Sodium（Sodium）, Total Carbohydrates（Carbohydrate）, Collagen, Total Fat（Fat ）
-- 市場分布：2 個市場涵蓋，以 🇨🇦 CA, 🇺🇸 US 為主
+- 核心成分：Collagen, Calcium, Potassium, Iron, Vitamin C
+- 市場分布：3 個市場涵蓋，以 🇨🇦 CA, 🇰🇷 KR, 🇺🇸 US 為主
 
 ## 趨勢觀察
 
