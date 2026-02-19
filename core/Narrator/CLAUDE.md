@@ -99,3 +99,27 @@ python3 scripts/update_guide_interactions.py --dry-run
 3. 執行 `python3 scripts/extract_interactions.py --type dhi`
 4. 在 `update_guide_interactions.py` 的 `TOPIC_INTERACTION_MAP` 新增映射
 5. 執行 `python3 scripts/update_guide_interactions.py --topic {topic_id}`
+
+---
+
+## ⚠️ Context 優化規範
+
+### 子代理精簡回報
+
+**所有 Mode 子代理完成後只輸出一行**：
+```
+DONE|{mode}|{period}|{筆數}|OK
+```
+
+### 禁止行為
+
+- ❌ 輸出報告內容摘要
+- ❌ 列舉統計表格
+- ❌ 描述執行過程步驟
+- ❌ 在回報中包含產品名稱清單
+
+### 資料讀取策略
+
+- 統計產品數：使用 `find docs/Extractor/{layer} -name "*.md" | wc -l`
+- 抽樣分析：只讀取每個 category 前 3 個 .md 檔
+- 歷史比較：使用 Qdrant 查詢，不逐一讀取舊報告

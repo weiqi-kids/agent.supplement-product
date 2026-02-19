@@ -237,3 +237,22 @@ python3 scripts/generate_interaction_report.py --monthly 2026-02
 | 主題交互報告 | `docs/reports/{topic}/interactions/` |
 | 月報總覽 | `docs/Narrator/interaction_report/{YYYY-MM}.md` |
 | Jekyll 轉換後 | `docs/reports/interactions/` |
+
+---
+
+## ⚠️ 子代理精簡回報規範
+
+完成後**只輸出一行**：
+```
+DONE|interaction_report|{topic1}:{dhi+dfi+ddi},{topic2}:{N}|OK
+```
+
+範例：
+```
+DONE|interaction_report|fish-oil:25,exosomes:8|OK
+```
+
+**禁止**：
+- ❌ 輸出交互作用清單
+- ❌ 列舉 severity 分布
+- ❌ 重複文獻摘要

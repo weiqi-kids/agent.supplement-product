@@ -248,3 +248,15 @@ fetched_at: "{ISO8601 timestamp}"
 - [ ] frontmatter 格式正確（YAML 語法）
 - [ ] `[REVIEW_NEEDED]` 僅在觸發條件成立時標記
 - [ ] 檔案寫入正確的 category 子目錄
+
+---
+
+## ⚠️ 子代理精簡回報規範
+
+完成後**只輸出一行**：
+
+```
+DONE|ca_lnhpd|F:{fetch筆數}|E:{extract筆數}|R:{review筆數}|OK
+```
+
+**禁止**：冗長描述、完整 log、category 細項統計

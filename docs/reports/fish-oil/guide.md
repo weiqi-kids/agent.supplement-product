@@ -151,9 +151,9 @@ grand_parent: 報告總覽
 | Extracellular Vesicle-Derived microRNAs: Nove... | 交互待評估 | Level 5 | [PMID:41515889](https://pubmed.ncbi.nlm.nih.gov/41515889/) |
 | Ginkgo biloba for tinnitus. | 交互待評估 | Level 1 | [PMID:36383762](https://pubmed.ncbi.nlm.nih.gov/36383762/) |
 | Bortezomib-releasing silica-collagen xerogels... | 交互待評估 | Level 5 | [PMID:39695697](https://pubmed.ncbi.nlm.nih.gov/39695697/) |
+| Anionic Liposomes as Optimal Membrane Fusion ... | 交互待評估 | Level 5 | [PMID:41360752](https://pubmed.ncbi.nlm.nih.gov/41360752/) |
 | Therapeutic potential of nicotinamide adenine... | 代謝影響 | Level 5 | [PMID:32360833](https://pubmed.ncbi.nlm.nih.gov/32360833/) |
 | Potential of connexin 32 as a predictive mark... | 肝臟影響 | Level 5 | [PMID:40024757](https://pubmed.ncbi.nlm.nih.gov/40024757/) |
-| Recent advances in modern extracellular vesic... | 交互待評估 | Level 5 | [PMID:41365276](https://pubmed.ncbi.nlm.nih.gov/41365276/) |
 
 ### 安全建議
 

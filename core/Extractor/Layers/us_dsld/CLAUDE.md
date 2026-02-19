@@ -241,3 +241,23 @@ update.sh 批次處理時：
 - [ ] frontmatter 格式正確（YAML 語法）
 - [ ] `[REVIEW_NEEDED]` 僅在觸發條件成立時標記
 - [ ] 檔案寫入正確的 category 子目錄
+
+---
+
+## ⚠️ 子代理精簡回報規範
+
+完成後**只輸出一行**：
+
+```
+DONE|us_dsld|F:{fetch筆數}|E:{extract筆數}|R:{review筆數}|OK
+```
+
+錯誤範例：
+```
+DONE|us_dsld|F:0|E:0|R:0|ERR:download failed
+```
+
+**禁止**：
+- ❌ 輸出完整執行 log
+- ❌ 列舉每個 category 的檔案數
+- ❌ 描述執行過程

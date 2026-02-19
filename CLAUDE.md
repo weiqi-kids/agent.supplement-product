@@ -206,7 +206,36 @@ python3 scripts/validate_seo.py --file docs/reports/exosomes/reports/2026-02.md
 
 ---
 
-## 子代理 Prompt 範本
+## 子代理 Prompt 範本（Context 優化版）
+
+> ⚠️ **重要**：子代理回報必須使用**精簡單行格式**，避免 Context 超限。
+
+### 精簡回報格式規範
+
+**Layer 子代理回報格式**：
+```
+DONE|{layer}|F:{fetch筆數}|E:{extract筆數}|R:{review筆數}|{OK/ERR}
+```
+
+範例：
+```
+DONE|us_dsld|F:214780|E:214780|R:9042|OK
+DONE|ca_lnhpd|F:160545|E:160545|R:5164|OK
+DONE|jp_fnfc|F:0|E:0|R:0|ERR:fetch failed - network timeout
+```
+
+**Mode 子代理回報格式**：
+```
+DONE|{mode}|{period}|{筆數}|{OK/ERR}
+```
+
+範例：
+```
+DONE|market_snapshot|2026-W07|421076|OK
+DONE|ingredient_radar|2026-02|346446|OK
+DONE|topic_tracking|exosomes:45,fish-oil:1234|OK
+DONE|literature_review|exosomes:50,fish-oil:500|OK
+```
 
 ### Layer 處理子代理
 
@@ -227,12 +256,14 @@ python3 scripts/validate_seo.py --file docs/reports/exosomes/reports/2026-02.md
 ## 規格
 讀取 core/Extractor/Layers/{layer_name}/CLAUDE.md 了解詳細規格。
 
-## 回報格式
-完成後回報：
-- 擷取筆數
-- 萃取筆數
-- REVIEW_NEEDED 筆數
-- 是否有錯誤
+## ⚠️ 精簡回報（必須遵守）
+完成後**只回報一行**：
+DONE|{layer_name}|F:{fetch筆數}|E:{extract筆數}|R:{review筆數}|OK
+
+錯誤時：
+DONE|{layer_name}|F:{筆數}|E:{筆數}|R:{筆數}|ERR:{簡短錯誤描述}
+
+❌ 禁止冗長描述、禁止輸出完整 log、禁止重複步驟說明
 ```
 
 ### Mode 報告子代理
@@ -253,11 +284,11 @@ python3 scripts/validate_seo.py --file docs/reports/exosomes/reports/2026-02.md
 ## 輸出
 寫入 docs/Narrator/{mode_name}/{period}-{mode_name}.md
 
-## 回報格式
-完成後回報：
-- 報告檔名
-- 涵蓋資料筆數
-- 是否有 REVIEW_NEEDED
+## ⚠️ 精簡回報（必須遵守）
+完成後**只回報一行**：
+DONE|{mode_name}|{period}|{涵蓋筆數}|OK
+
+❌ 禁止輸出報告內容摘要、禁止列舉統計細節
 ```
 
 ### 主題追蹤子代理
@@ -281,11 +312,11 @@ python3 scripts/generate_topic_report.py
 ## 輸出
 - docs/Narrator/topic_tracking/{topic_id}/{period}.md
 
-## 回報格式
-完成後回報：
-- 處理的主題數
-- 各主題匹配產品數
-- 是否有錯誤
+## ⚠️ 精簡回報（必須遵守）
+完成後**只回報一行**：
+DONE|topic_tracking|{topic1}:{數量},{topic2}:{數量}|OK
+
+❌ 禁止列舉匹配產品清單
 ```
 
 ### 文獻薈萃子代理
@@ -309,68 +340,91 @@ python3 scripts/generate_literature_report.py --all
 ## 輸出
 - docs/Narrator/literature_review/{topic_id}/{period}.md
 
-## 回報格式
-完成後回報：
-- 處理的主題數
-- 各主題文獻數
-- 證據等級分布
-- 是否有錯誤
+## ⚠️ 精簡回報（必須遵守）
+完成後**只回報一行**：
+DONE|literature_review|{topic1}:{數量},{topic2}:{數量}|OK
+
+❌ 禁止輸出證據等級分布表、禁止列舉文獻清單
 ```
 
 ---
 
-## 主執行緒職責
+## 主執行緒職責（Context 優化版）
 
 ### 啟動階段
 1. 發現所有有效 Layer 和 Mode
 2. 平行啟動所有 Layer 子代理（`run_in_background: true`）
-3. 告知使用者「已啟動 N 個背景任務，你可以繼續其他工作」
+3. 告知使用者「已啟動 N 個背景任務」（一句話即可）
 
-### 監控階段
-- 定期檢查背景任務狀態（使用 `Read` 讀取 output_file）
-- 回應使用者的其他請求
-- 使用者說「查看進度」時顯示所有任務狀態
+### 監控階段（低 Context 消耗）
+
+**高效監控原則**：
+- ✅ 使用 `tail -1` 只讀取 output_file 最後一行（子代理的精簡回報）
+- ✅ 批次檢查多個任務狀態
+- ❌ 禁止使用 `Read` 讀取完整 output_file
+- ❌ 禁止重複輸出相同的進度資訊
+
+**監控指令範例**：
+```bash
+# 檢查單一任務最後一行
+tail -1 /path/to/output_file
+
+# 批次檢查所有任務（一行指令）
+for f in /tmp/agent_*.txt; do echo "==$f=="; tail -1 "$f" 2>/dev/null || echo "RUNNING"; done
+```
+
+**回應使用者「查看進度」**：
+只輸出精簡狀態表，不要重複子代理的完整輸出：
+```
+Layer: ✅us_dsld ✅ca_lnhpd ⏳kr_hff ⏳jp_fnfc ⏳jp_foshu ⏳tw_hf
+Mode:  ⏸️waiting
+```
 
 ### 彙整階段
-1. 等待所有 Layer 完成
+1. 等待所有 Layer 完成（解析精簡回報格式）
 2. 平行啟動所有 Mode 子代理
 3. 等待所有 Mode 完成
 4. 執行 HTML 建置
-5. 產出最終報告
+5. 產出最終報告（使用下方精簡格式）
 
 ---
 
-## 進度追蹤格式
+## 進度追蹤格式（精簡版）
+
+> ⚠️ **重要**：進度追蹤使用單行格式，避免 Context 膨脹。
+
+### 標準格式（3 行以內）
 
 ```
-📊 執行進度
-═══════════════════════════════════════
-
-Layer 處理（5/7 完成）
-├── ✅ us_dsld    214,780 筆 | 0 REVIEW
-├── ✅ ca_lnhpd   160,545 筆 | 5,164 REVIEW
-├── ✅ kr_hff     44,095 筆 | 30 REVIEW
-├── ⏳ jp_fnfc    執行中...
-├── ⏳ jp_foshu   等待中
-├── ⏳ tw_hf      等待中
-└── ⏳ pubmed     等待中
-
-Mode 報告（等待 Layer 完成）
-├── ⏸️ market_snapshot
-├── ⏸️ ingredient_radar
-├── ⏸️ topic_tracking
-│   ├── exosomes
-│   └── fish-oil
-└── ⏸️ literature_review
-    ├── exosomes
-    └── fish-oil
-
-主題推薦（等待 Mode 完成）
-└── ⏸️ recommend_topics.py
-
-Jekyll 轉換（等待推薦完成）
-└── ⏸️ convert_to_jekyll.py
+Layer(5/10): ✅us ✅ca ✅kr ⏳jp_fnfc ⏳jp_foshu ⏳tw ⏳pub ⏳dhi ⏳dfi ⏳ddi
+Mode(0/4): ⏸️snap ⏸️radar ⏸️topic ⏸️lit
+Post: ⏸️recommend ⏸️jekyll ⏸️seo
 ```
+
+### 圖例
+
+| 符號 | 意義 |
+|------|------|
+| ✅ | 完成 |
+| ⏳ | 執行中 |
+| ⏸️ | 等待中 |
+| ❌ | 失敗 |
+
+### 縮寫對照
+
+| 縮寫 | 完整名稱 |
+|------|----------|
+| us | us_dsld |
+| ca | ca_lnhpd |
+| kr | kr_hff |
+| jp_fnfc | jp_fnfc |
+| jp_foshu | jp_foshu |
+| tw | tw_hf |
+| pub | pubmed |
+| snap | market_snapshot |
+| radar | ingredient_radar |
+| topic | topic_tracking |
+| lit | literature_review |
 
 ---
 
@@ -545,55 +599,44 @@ NCBI_EMAIL=your-email@example.com
 
 ---
 
-## 完成後回報
+## 完成後回報（精簡版）
+
+> ⚠️ **重要**：完成報告必須精簡，避免 Context 超限。
+
+### 標準格式（約 20 行以內）
 
 ```markdown
-## 執行完成報告
+## ✅ 執行完成
 
-### Layer 處理結果
-| Layer | 擷取 | 萃取 | REVIEW | 狀態 |
-|-------|------|------|--------|------|
-| us_dsld | 214,780 | 214,780 | 9,042 | ✅ |
-| ca_lnhpd | 160,545 | 160,545 | 5,164 | ✅ |
-| kr_hff | 44,095 | 44,095 | 30 | ✅ |
-| jp_fnfc | 1,569 | 1,569 | 459 | ✅ |
-| jp_foshu | 1,032 | 1,032 | 1 | ✅ |
-| tw_hf | 555 | 555 | 0 | ✅ |
-| pubmed | 1,000 | 1,000 | 10 | ✅ |
+**Layer** (10/10)
+us_dsld:214K ca_lnhpd:160K kr_hff:44K jp_fnfc:1.5K jp_foshu:1K tw_hf:555 pubmed:1K dhi:50 dfi:30 ddi:40
 
-### Mode 報告結果
-| Mode | 檔案 | 狀態 |
-|------|------|------|
-| market_snapshot | 2026-W06-market-snapshot.md | ✅ |
-| ingredient_radar | 2026-02-ingredient-radar.md | ✅ |
+**Mode** (4/4)
+market_snapshot:2026-W07 ingredient_radar:2026-02 topic_tracking:exo+fish literature_review:exo+fish
 
-### 主題追蹤報告
-| 主題 | 檔案 | 匹配產品 | 狀態 |
-|------|------|----------|------|
-| exosomes | 2026-02.md | 45 | ✅ |
-| fish-oil | 2026-02.md | 1,234 | ✅ |
+**Jekyll** ✅ | **SEO** ✅ | **Git** pushed
 
-### 文獻薈萃報告
-| 主題 | 檔案 | 文獻數 | 狀態 |
-|------|------|--------|------|
-| exosomes | 2026-02.md | 50 | ✅ |
-| fish-oil | 2026-02.md | 500 | ✅ |
-
-### 主題推薦
-| 排名 | 成分 | 推薦原因 | 涵蓋市場 |
-|------|------|----------|----------|
-| 1 | NMN | 成長趨勢 (+12位) | 🇺🇸🇯🇵🇰🇷 |
-| 2 | 葉黃素 | 跨國熱門 | 🇺🇸🇨🇦🇯🇵🇰🇷🇹🇼 |
-
-### Jekyll 轉換
-- 市場快照: docs/reports/market-snapshot/
-- 成分雷達: docs/reports/ingredient-radar/
-- 主題報告: docs/reports/{topic}/reports/
-- 文獻報告: docs/reports/{topic}/literature/
-
-### 需要關注
-- （如有錯誤或異常列於此）
+**異常** 無（若有則列出）
 ```
+
+### 有錯誤時的格式
+
+```markdown
+## ⚠️ 執行完成（有警告）
+
+**Layer** (9/10) ❌kr_hff:API timeout
+us_dsld:214K ca_lnhpd:160K jp_fnfc:1.5K ...
+
+**需要處理**
+- kr_hff: API timeout，需手動重跑 `./fetch.sh`
+```
+
+### 禁止事項
+
+- ❌ 不要輸出完整表格（太佔 Context）
+- ❌ 不要重複列舉每個 Layer 的詳細數字
+- ❌ 不要輸出 Jekyll 轉換的檔案清單
+- ❌ 不要在每個階段結束時輸出中間報告
 
 ---
 
@@ -899,6 +942,66 @@ docs/index.md                      # 網站首頁
 - `/Users/lightman/weiqi.kids/agent.idea/seo/CLAUDE.md` - SEO + AEO 規則庫
 - `/Users/lightman/weiqi.kids/agent.idea/seo/writer/CLAUDE.md` - Writer 執行流程
 - `/Users/lightman/weiqi.kids/agent.idea/seo/review/CLAUDE.md` - Reviewer 檢查清單
+
+---
+
+## Context 優化進階策略
+
+### 1. 背景任務輸出清理
+
+每次執行前清理舊的 output 檔案：
+```bash
+rm -f /tmp/agent_*.txt 2>/dev/null
+```
+
+### 2. 分批執行（Context 緊張時）
+
+若 Context 接近上限，改用分批模式：
+
+**批次 1**：產品 Layer（大資料量）
+```
+us_dsld, ca_lnhpd, kr_hff
+```
+
+**批次 2**：日本 + 台灣 Layer
+```
+jp_fnfc, jp_foshu, tw_hf
+```
+
+**批次 3**：文獻 Layer
+```
+pubmed, dhi, dfi, ddi
+```
+
+**批次 4**：Mode 報告
+```
+market_snapshot, ingredient_radar, topic_tracking, literature_review
+```
+
+每批完成後執行 `/compact` 釋放 Context。
+
+### 3. 增量更新優先
+
+優先使用增量模式減少處理量：
+```bash
+./fetch.sh          # 預設增量
+./fetch.sh --full   # 僅在需要時全量
+```
+
+### 4. 統計替代讀取
+
+| 需求 | 錯誤做法 | 正確做法 |
+|------|----------|----------|
+| 計算產品數 | Read 所有 .md | `find \| wc -l` |
+| 抽樣分析 | Read 100+ 檔案 | `ls \| head -3` 只讀 3 個 |
+| 比對差異 | Read 兩份報告 | 使用 `diff` 指令 |
+
+### 5. 子代理數量控制
+
+若同時啟動過多子代理導致 Context 緊張：
+- 最多同時 5 個背景子代理
+- 優先完成大型 Layer（us_dsld, ca_lnhpd）
+- 小型 Layer 可合併處理（tw_hf + jp_foshu）
 
 ---
 

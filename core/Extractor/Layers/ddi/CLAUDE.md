@@ -170,6 +170,17 @@ NCBI_EMAIL=your@email.com      # 可選
 - [ ] `evidence_level` 與 study_type 對應
 - [ ] `[REVIEW_NEEDED]` 僅在觸發條件成立時標記
 
+---
+
+## ⚠️ 子代理精簡回報規範
+
+完成後**只輸出一行**：
+```
+DONE|ddi|F:{fetch筆數}|E:{extract筆數}|R:{review筆數}|OK
+```
+
+**禁止**：冗長描述、完整 log、摘要內容輸出
+
 ## 免責聲明
 
 所有 DDI 檔案必須包含：

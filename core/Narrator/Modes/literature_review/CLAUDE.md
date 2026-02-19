@@ -153,3 +153,22 @@ docs/Narrator/literature_review/
 - [ ] 重要文獻連結有效
 - [ ] 摘要簡潔且具資訊量
 - [ ] frontmatter 格式正確
+
+---
+
+## ⚠️ 子代理精簡回報規範
+
+完成後**只輸出一行**：
+```
+DONE|literature_review|{topic1}:{數量},{topic2}:{數量}|OK
+```
+
+範例：
+```
+DONE|literature_review|exosomes:50,fish-oil:500|OK
+```
+
+**禁止**：
+- ❌ 輸出證據等級分布表
+- ❌ 列舉文獻清單
+- ❌ 重複功效分類統計

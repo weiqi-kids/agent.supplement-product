@@ -164,3 +164,14 @@ fetched_at: "{ISO8601 timestamp}"
 - [ ] `product_form` 依關鍵字規則推斷
 - [ ] frontmatter 格式正確
 - [ ] `[REVIEW_NEEDED]` 僅在觸發條件成立時標記
+
+---
+
+## ⚠️ 子代理精簡回報規範
+
+完成後**只輸出一行**：
+```
+DONE|kr_hff|F:{fetch筆數}|E:{extract筆數}|R:{review筆數}|OK
+```
+
+**禁止**：冗長描述、完整 log、韓文內容輸出

@@ -177,6 +177,17 @@ fetched_at: "{ISO8601}"
 - [ ] `mechanism` 萃取正確
 - [ ] `[REVIEW_NEEDED]` 僅在觸發條件成立時標記
 
+---
+
+## ⚠️ 子代理精簡回報規範
+
+完成後**只輸出一行**：
+```
+DONE|dfi|F:{fetch筆數}|E:{extract筆數}|R:{review筆數}|OK
+```
+
+**禁止**：冗長描述、完整 log、摘要內容輸出
+
 ## 免責聲明
 
 所有 DFI 檔案必須包含：
