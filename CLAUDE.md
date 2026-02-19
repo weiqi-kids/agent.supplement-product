@@ -131,8 +131,20 @@ Task(
 
 | 主題 ID | 名稱 | 關鍵詞範例 |
 |---------|------|-----------|
+| `calcium` | 鈣 | calcium, calcium citrate |
+| `collagen` | 膠原蛋白 | collagen, hydrolyzed collagen |
+| `curcumin` | 薑黃素 | curcumin, turmeric |
 | `exosomes` | 外泌體 | exosome, stem cell, 幹細胞 |
 | `fish-oil` | 魚油 | omega-3, EPA, DHA, krill oil |
+| `glucosamine` | 葡萄糖胺 | glucosamine, chondroitin |
+| `lutein` | 葉黃素 | lutein, zeaxanthin |
+| `magnesium` | 鎂 | magnesium, magnesium citrate |
+| `nattokinase` | 納豆激酶 | nattokinase, natto |
+| `nmn` | NMN | NMN, nicotinamide mononucleotide |
+| `red-yeast-rice` | 紅麴 | red yeast rice, monacolin K |
+| `vitamin-b6` | 維生素 B6 | vitamin B6, pyridoxine |
+| `vitamin-c` | 維生素 C | vitamin C, ascorbic acid |
+| `zinc` | 鋅 | zinc, zinc gluconate |
 
 > 主題可透過 `python3 scripts/create_topic.py` 新增
 
