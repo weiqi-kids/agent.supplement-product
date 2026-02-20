@@ -140,16 +140,20 @@ grand_parent: 報告總覽
 
 本章節整理魚油相關的藥物交互文獻，供參考。
 
-### 已知藥物交互
+### 相關交互文獻
 
-| 藥物類型 | 交互風險 | 說明 |
-|----------|----------|------|
-| 抗凝血藥物（華法林等） | 出血風險增加 | 高劑量 EPA/DHA（>3g/日）可能增強抗凝血效果 |
-| 降血壓藥物 | 血壓過低 | 魚油有輕微降血壓作用，併用需監測 |
-| 降血脂藥物（Statins） | 加成效果 | 協同降低三酸甘油酯，通常為正面作用 |
-| 免疫抑制劑 | 免疫調節 | 魚油有抗發炎作用，可能影響免疫調節 |
-
-> 📚 **文獻來源**：基於臨床藥理學指引與系統性回顧整理
+| 文獻標題 | 風險類型 | 證據等級 | 來源 |
+|----------|----------|----------|------|
+| Fatal combination of mitragynine and quetiapi... | 交互待評估 | Level 5 | [PMID:30498933](https://pubmed.ncbi.nlm.nih.gov/30498933/) |
+| Exosome-mediated macrophage regulation in abd... | 肝臟影響 | Level 5 | [PMID:41260386](https://pubmed.ncbi.nlm.nih.gov/41260386/) |
+| Structural requirements of Holothuria florida... | 出血風險 | Level 5 | [PMID:37167245](https://pubmed.ncbi.nlm.nih.gov/37167245/) |
+| Synthesis of Fucosylated Chondroitin Sulfate ... | 出血風險 | Level 5 | [PMID:29131431](https://pubmed.ncbi.nlm.nih.gov/29131431/) |
+| Extracellular Vesicle-Derived microRNAs: Nove... | 交互待評估 | Level 5 | [PMID:41515889](https://pubmed.ncbi.nlm.nih.gov/41515889/) |
+| Ginkgo biloba for tinnitus. | 交互待評估 | Level 1 | [PMID:36383762](https://pubmed.ncbi.nlm.nih.gov/36383762/) |
+| Bortezomib-releasing silica-collagen xerogels... | 交互待評估 | Level 5 | [PMID:39695697](https://pubmed.ncbi.nlm.nih.gov/39695697/) |
+| Anionic Liposomes as Optimal Membrane Fusion ... | 交互待評估 | Level 5 | [PMID:41360752](https://pubmed.ncbi.nlm.nih.gov/41360752/) |
+| Therapeutic potential of nicotinamide adenine... | 代謝影響 | Level 5 | [PMID:32360833](https://pubmed.ncbi.nlm.nih.gov/32360833/) |
+| Potential of connexin 32 as a predictive mark... | 肝臟影響 | Level 5 | [PMID:40024757](https://pubmed.ncbi.nlm.nih.gov/40024757/) |
 
 ### 安全建議
 
