@@ -865,9 +865,38 @@ docs/index.md                      # 網站首頁
 
 ## 階段七：任務完成品質關卡（必做！）
 
-⚠️ **重要**：每當要回報「完成」時，必須先執行以下檢查，**全部通過才能回報完成**。
+⚠️ **重要**：Writer 不能自己說「完成」，必須由獨立的 **Reviewer 子代理** 驗證通過後才能回報完成。
 
-### 7.0 技術效能檢查（選配）
+### 7.0 啟動 Reviewer 子代理（必做！）
+
+**禁止自我審核**：Writer 不能自己執行品質關卡檢查，必須啟動獨立的 Reviewer 子代理。
+
+```python
+Task(
+  subagent_type: "general-purpose",
+  model: "sonnet",
+  run_in_background: false,  # 必須同步等待結果
+  prompt: """
+你是品質關卡 Reviewer，負責驗證「執行完整流程」是否完整執行。
+
+請依據 prompt/任務完成品質關卡.md 的規格：
+1. 執行所有驗證指令（不可省略）
+2. 輸出指定的 JSON 格式結果
+3. 判定：PASS（全部通過）或 FAIL（任一失敗）
+
+核心原則：
+- 不信任 Writer 的任何聲明，必須執行指令驗證
+- 任何一項失敗 = 整體 FAIL
+- 禁止跳過檢查項目
+"""
+)
+```
+
+**Reviewer 判定結果處理**：
+- `PASS` → Writer 可以回報完成
+- `FAIL` → Writer 必須修正失敗項目後重新送審
+
+### 7.0.5 技術效能檢查（選配）
 
 > 📌 大規模更新或改版後建議執行，一般例行更新可跳過。
 
@@ -900,6 +929,13 @@ curl -s "https://api.ssllabs.com/api/v3/analyze?host=supplement.weiqi.kids&fromC
 # HTML 驗證
 curl -s "https://validator.w3.org/nu/?doc=https://supplement.weiqi.kids&out=json" | jq '[.messages[] | select(.type=="error")] | length'
 ```
+
+---
+
+> **以下 7.1～7.5 由 Reviewer 子代理執行，Writer 不需重複執行。**
+> 詳細驗證指令請參照 `prompt/任務完成品質關卡.md`。
+
+---
 
 ### 7.1 連結檢查
 
