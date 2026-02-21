@@ -273,13 +273,17 @@ DONE|literature_review|exosomes:50,fish-oil:500|OK
 讀取 core/Extractor/Layers/{layer_name}/CLAUDE.md 了解詳細規格。
 
 ## ⚠️ 精簡回報（必須遵守）
-完成後**只回報一行**：
-DONE|{layer_name}|F:{fetch筆數}|E:{extract筆數}|R:{review筆數}|OK
+完成後**只輸出一行實際數字**，例如：
+DONE|us_dsld|F:214780|E:214780|R:0|OK
 
 錯誤時：
-DONE|{layer_name}|F:{筆數}|E:{筆數}|R:{筆數}|ERR:{簡短錯誤描述}
+DONE|us_dsld|F:100|E:50|R:10|ERR:network timeout
 
-❌ 禁止冗長描述、禁止輸出完整 log、禁止重複步驟說明
+⛔ **嚴禁**：
+- 禁止輸出範本文字如 `{fetch筆數}` `{extract筆數}`
+- 禁止冗長描述、禁止輸出完整 log
+- 禁止重複步驟說明
+- 只輸出一行，不要有其他文字
 ```
 
 ### Mode 報告子代理
@@ -301,10 +305,13 @@ DONE|{layer_name}|F:{筆數}|E:{筆數}|R:{筆數}|ERR:{簡短錯誤描述}
 寫入 docs/Narrator/{mode_name}/{period}-{mode_name}.md
 
 ## ⚠️ 精簡回報（必須遵守）
-完成後**只回報一行**：
-DONE|{mode_name}|{period}|{涵蓋筆數}|OK
+完成後**只輸出一行實際數字**，例如：
+DONE|market_snapshot|2026-W08|411137|OK
 
-❌ 禁止輸出報告內容摘要、禁止列舉統計細節
+⛔ **嚴禁**：
+- 禁止輸出範本文字如 `{period}` `{涵蓋筆數}`
+- 禁止輸出報告內容摘要、禁止列舉統計細節
+- 只輸出一行，不要有其他文字
 ```
 
 ### 主題追蹤子代理
@@ -329,10 +336,13 @@ python3 scripts/generate_topic_report.py
 - docs/Narrator/topic_tracking/{topic_id}/{period}.md
 
 ## ⚠️ 精簡回報（必須遵守）
-完成後**只回報一行**：
-DONE|topic_tracking|{topic1}:{數量},{topic2}:{數量}|OK
+完成後**只輸出一行實際數字**，例如：
+DONE|topic_tracking|fish-oil:19936,exosomes:14856,calcium:63731|OK
 
-❌ 禁止列舉匹配產品清單
+⛔ **嚴禁**：
+- 禁止輸出範本文字如 `{topic1}` `{數量}`
+- 禁止列舉匹配產品清單
+- 只輸出一行，不要有其他文字
 ```
 
 ### 文獻薈萃子代理
@@ -357,10 +367,13 @@ python3 scripts/generate_literature_report.py --all
 - docs/Narrator/literature_review/{topic_id}/{period}.md
 
 ## ⚠️ 精簡回報（必須遵守）
-完成後**只回報一行**：
-DONE|literature_review|{topic1}:{數量},{topic2}:{數量}|OK
+完成後**只輸出一行實際數字**，例如：
+DONE|literature_review|fish-oil:50,exosomes:50,calcium:50|OK
 
-❌ 禁止輸出證據等級分布表、禁止列舉文獻清單
+⛔ **嚴禁**：
+- 禁止輸出範本文字如 `{topic1}` `{數量}`
+- 禁止輸出證據等級分布表、禁止列舉文獻清單
+- 只輸出一行，不要有其他文字
 ```
 
 ---
