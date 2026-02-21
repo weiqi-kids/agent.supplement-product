@@ -1,0 +1,19 @@
+# Vitamin A 主題追蹤定義
+# 建立時間: 2026-02-21T10:08:53.996210
+# 可手動編輯 keywords 和 category_filter 以調整篩選範圍
+
+topic_id: vitamin-a
+name:
+  zh: Vitamin A
+  en: Vitamin A
+  ja: Vitamin A
+  ko: Vitamin A
+keywords:
+  exact:
+  - Vitamin A
+  fuzzy: []
+category_filter: []
+output:
+  index: docs/reports/vitamin-a/index.md
+  guide: docs/reports/vitamin-a/guide.md
+  reports: docs/reports/vitamin-a/reports/

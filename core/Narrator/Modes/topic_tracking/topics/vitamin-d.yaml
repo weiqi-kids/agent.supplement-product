@@ -1,0 +1,19 @@
+# Vitamin D 主題追蹤定義
+# 建立時間: 2026-02-21T10:06:50.954044
+# 可手動編輯 keywords 和 category_filter 以調整篩選範圍
+
+topic_id: vitamin-d
+name:
+  zh: Vitamin D
+  en: Vitamin D
+  ja: Vitamin D
+  ko: Vitamin D
+keywords:
+  exact:
+  - Vitamin D
+  fuzzy: []
+category_filter: []
+output:
+  index: docs/reports/vitamin-d/index.md
+  guide: docs/reports/vitamin-d/guide.md
+  reports: docs/reports/vitamin-d/reports/

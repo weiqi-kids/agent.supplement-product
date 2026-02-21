@@ -1,0 +1,19 @@
+# Vitamin B12 主題追蹤定義
+# 建立時間: 2026-02-21T10:02:42.756789
+# 可手動編輯 keywords 和 category_filter 以調整篩選範圍
+
+topic_id: vitamin-b12
+name:
+  zh: Vitamin B12
+  en: Vitamin B12
+  ja: Vitamin B12
+  ko: Vitamin B12
+keywords:
+  exact:
+  - Vitamin B12
+  fuzzy: []
+category_filter: []
+output:
+  index: docs/reports/vitamin-b12/index.md
+  guide: docs/reports/vitamin-b12/guide.md
+  reports: docs/reports/vitamin-b12/reports/
