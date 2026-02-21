@@ -124,37 +124,31 @@ grand_parent: 報告總覽
 
 ## ⚠️ 藥物交互提醒
 
-本章節整理鋅相關的藥物交互資訊，供參考。
+本章節整理鋅相關的藥物交互文獻，供參考。
 
-### 已知交互作用
+### 相關交互文獻
 
-| 藥物類型 | 交互影響 | 建議 |
-|----------|----------|------|
-| **四環黴素類抗生素** | 鋅降低抗生素吸收 | 間隔至少2小時 |
-| **喹諾酮類抗生素** | 鋅降低抗生素吸收 | 間隔至少2小時 |
-| **青黴胺（風濕藥）** | 鋅降低藥物吸收 | 間隔至少2小時 |
-| **利尿劑（Thiazide）** | 增加鋅流失 | 可能需補充 |
-| **鐵劑** | 高劑量相互干擾吸收 | 錯開服用時間 |
-| **銅補充劑** | 長期高鋅抑制銅吸收 | 維持適當比例 |
-
-### 營養素平衡
-
-| 營養素 | 關係 | 建議 |
-|--------|------|------|
-| **銅** | 長期高鋅會降低銅吸收 | 鋅銅比例建議 10:1 至 15:1 |
-| **鐵** | 高劑量可能互相競爭吸收 | 錯開服用時間 |
-| **鈣** | 一般劑量無明顯交互 | 可同時服用 |
+| 文獻標題 | 風險類型 | 證據等級 | 來源 |
+|----------|----------|----------|------|
+| Exosome-based modulation of ferroptosis in ne... | 交互待評估 | Level 5 | [PMID:41190075](https://pubmed.ncbi.nlm.nih.gov/41190075/) |
+| The Crucial Nexus: Unveiling the Role of Coll... | 交互待評估 | Level 5 | [PMID:40446484](https://pubmed.ncbi.nlm.nih.gov/40446484/) |
+| Exosome-Derived Circular RNAs in Colorectal C... | 交互待評估 | Level 5 | [PMID:41642014](https://pubmed.ncbi.nlm.nih.gov/41642014/) |
+| Prognostic risk model of gastric adenocarcino... | 交互待評估 | Level 5 | [PMID:41054074](https://pubmed.ncbi.nlm.nih.gov/41054074/) |
+| Acetylation-ubiquitination crosstalk of DJ-1 ... | 交互待評估 | Level 5 | [PMID:39786474](https://pubmed.ncbi.nlm.nih.gov/39786474/) |
+| Exosome-based strategies and immunotherapy fo... | 交互待評估 | Level 5 | [PMID:41642505](https://pubmed.ncbi.nlm.nih.gov/41642505/) |
+| The role of collagen cross-linker in dentin m... | 交互待評估 | Level 5 | [PMID:40324578](https://pubmed.ncbi.nlm.nih.gov/40324578/) |
+| NAD/NAMPT and mTOR Pathways in Melanoma: Driv... | 交互待評估 | Level 5 | [PMID:36077374](https://pubmed.ncbi.nlm.nih.gov/36077374/) |
+| Bone marrow mesenchymal stem cell exosome-der... | 交互待評估 | Level 5 | [PMID:41193588](https://pubmed.ncbi.nlm.nih.gov/41193588/) |
+| Daphnetin induces ferroptosis in ovarian canc... | 交互待評估 | Level 5 | [PMID:39032284](https://pubmed.ncbi.nlm.nih.gov/39032284/) |
 
 ### 安全建議
 
-1. **諮詢醫師**：服用抗生素期間，應諮詢醫師補鋅時機
-2. **錯開服藥**：與抗生素間隔至少2小時
-3. **注意銅平衡**：長期補鋅應同時補銅
-4. **避免過量**：勿超過每日上限量40mg
-5. **短期高劑量**：感冒期間短期高劑量（30mg）是安全的
+1. **諮詢醫師**：服用處方藥物者，補充保健食品前應諮詢醫師
+2. **注意劑量**：遵循建議劑量，避免過量補充
+3. **觀察反應**：開始補充時注意身體反應，如有不適應停用並就醫
+4. **術前告知**：手術前應告知醫師所有正在服用的保健食品
 
 > ⚠️ **免責聲明**：本資訊僅供教育和研究目的，不構成醫療建議。任何用藥或補充劑變更應諮詢專業醫療人員。
-
 ---
 
 *本指南基於市場產品分析與一般營養學知識，僅供參考，不構成醫療建議。購買前請評估個人需求並諮詢專業人員。*

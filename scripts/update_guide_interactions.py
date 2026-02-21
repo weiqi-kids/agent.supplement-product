@@ -76,6 +76,72 @@ TOPIC_INTERACTION_MAP = {
         "dfi": [],
         "ddi": [],
     },
+    "vitamin-a": {
+        "name": "維生素 A",
+        "dhi": ["vitamin", "general"],
+        "dfi": [],
+        "ddi": [],
+    },
+    "vitamin-b2": {
+        "name": "維生素 B2",
+        "dhi": ["vitamin", "general"],
+        "dfi": [],
+        "ddi": [],
+    },
+    "vitamin-b12": {
+        "name": "維生素 B12",
+        "dhi": ["vitamin", "general"],
+        "dfi": [],
+        "ddi": [],
+    },
+    "vitamin-d": {
+        "name": "維生素 D",
+        "dhi": ["vitamin", "general"],
+        "dfi": [],
+        "ddi": [],
+    },
+    "vitamin-e": {
+        "name": "維生素 E",
+        "dhi": ["vitamin", "general"],
+        "dfi": [],
+        "ddi": ["anticoagulant"],
+    },
+    "vitamin-b6": {
+        "name": "維生素 B6",
+        "dhi": ["vitamin", "general"],
+        "dfi": [],
+        "ddi": [],
+    },
+    "vitamin-c": {
+        "name": "維生素 C",
+        "dhi": ["vitamin", "general"],
+        "dfi": [],
+        "ddi": [],
+    },
+    "calcium": {
+        "name": "鈣",
+        "dhi": ["mineral", "general"],
+        "dfi": ["dairy"],
+        "ddi": [],
+    },
+    "magnesium": {
+        "name": "鎂",
+        "dhi": ["mineral", "general"],
+        "dfi": [],
+        "ddi": [],
+    },
+    "zinc": {
+        "name": "鋅",
+        "dhi": ["mineral", "general"],
+        "dfi": [],
+        "ddi": [],
+    },
+    "coq10": {
+        "name": "輔酶 Q10",
+        "dhi": ["coq10", "general"],
+        "dfi": [],
+        "ddi": ["anticoagulant", "statin"],
+    },
 }
 
 
