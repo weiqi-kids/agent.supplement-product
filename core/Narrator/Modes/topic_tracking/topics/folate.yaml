@@ -1,0 +1,38 @@
+# 葉酸 主題追蹤定義
+# 建立時間: 2026-02-23T09:10:02.675060
+# 更新時間: 2026-02-23
+# 可手動編輯 keywords 和 category_filter 以調整篩選範圍
+
+topic_id: folate
+name:
+  zh: 葉酸
+  en: Folate
+  ja: 葉酸
+  ko: 엽산
+keywords:
+  exact:
+    - Folate
+    - folate
+    - Folic Acid
+    - folic acid
+    - 葉酸
+    - 叶酸
+    - 5-MTHF
+    - 5-methyltetrahydrofolate
+    - methylfolate
+    - Methylfolate
+    - L-methylfolate
+    - メチル葉酸
+    - 엽산
+    - Vitamin B9
+    - vitamin B9
+  fuzzy:
+    - folacin
+    - pteroylglutamic
+category_filter:
+  - vitamins_minerals
+  - specialty
+output:
+  index: docs/reports/folate/index.md
+  guide: docs/reports/folate/guide.md
+  reports: docs/reports/folate/reports/
