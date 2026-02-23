@@ -1,0 +1,35 @@
+# 生物素 主題追蹤定義
+# 建立時間: 2026-02-23T09:27:46.197178
+# 更新時間: 2026-02-23
+# 可手動編輯 keywords 和 category_filter 以調整篩選範圍
+
+topic_id: biotin
+name:
+  zh: 生物素
+  en: Biotin
+  ja: ビオチン
+  ko: 비오틴
+keywords:
+  exact:
+    - Biotin
+    - biotin
+    - D-Biotin
+    - 生物素
+    - 維生素B7
+    - 維生素H
+    - Vitamin B7
+    - Vitamin H
+    - vitamin B7
+    - vitamin H
+    - ビオチン
+    - 비오틴
+  fuzzy:
+    - hair skin nail
+    - 髮膚甲
+category_filter:
+  - vitamins_minerals
+  - specialty
+output:
+  index: docs/reports/biotin/index.md
+  guide: docs/reports/biotin/guide.md
+  reports: docs/reports/biotin/reports/
