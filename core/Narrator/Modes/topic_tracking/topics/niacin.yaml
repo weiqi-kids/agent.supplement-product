@@ -1,0 +1,41 @@
+# 菸鹼酸 主題追蹤定義
+# 建立時間: 2026-02-23T11:21:05.521661
+# 可手動編輯 keywords 和 category_filter 以調整篩選範圍
+
+topic_id: niacin
+name:
+  zh: 菸鹼酸
+  en: Niacin
+  ja: ナイアシン
+  ko: 니아신
+keywords:
+  exact:
+    - Niacin
+    - niacin
+    - Nicotinic Acid
+    - nicotinic acid
+    - Vitamin B3
+    - vitamin B3
+    - 維生素B3
+    - 菸鹼酸
+    - 煙酸
+    - ナイアシン
+    - 니아신
+    - Nicotinamide
+    - nicotinamide
+    - 菸鹼醯胺
+    - NAD
+    - NADH
+    - Niacinamide
+    - niacinamide
+    - B3
+  fuzzy:
+    - flush free
+    - no flush
+category_filter:
+  - vitamins_minerals
+  - specialty
+output:
+  index: docs/reports/niacin/index.md
+  guide: docs/reports/niacin/guide.md
+  reports: docs/reports/niacin/reports/
