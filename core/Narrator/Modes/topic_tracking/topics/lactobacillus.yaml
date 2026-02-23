@@ -1,0 +1,38 @@
+# 乳酸桿菌 主題追蹤定義
+# 建立時間: 2026-02-23T08:47:48.755021
+# 更新時間: 2026-02-23
+# 可手動編輯 keywords 和 category_filter 以調整篩選範圍
+
+topic_id: lactobacillus
+name:
+  zh: 乳酸桿菌
+  en: Lactobacillus
+  ja: ラクトバチルス
+  ko: 유산균
+keywords:
+  exact:
+    - Lactobacillus
+    - lactobacillus
+    - Bifidobacterium
+    - bifidobacterium
+    - probiotics
+    - Probiotics
+    - 乳酸桿菌
+    - 乳酸菌
+    - 益生菌
+    - ビフィズス菌
+    - 乳酸菌
+    - プロバイオティクス
+    - 유산균
+    - 비피더스균
+  fuzzy:
+    - probiotic
+    - lactobacilli
+    - bifidobacteria
+category_filter:
+  - probiotics
+  - specialty
+output:
+  index: docs/reports/lactobacillus/index.md
+  guide: docs/reports/lactobacillus/guide.md
+  reports: docs/reports/lactobacillus/reports/
