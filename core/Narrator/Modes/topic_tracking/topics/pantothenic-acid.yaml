@@ -1,0 +1,38 @@
+# 泛酸 主題追蹤定義
+# 建立時間: 2026-02-23T12:38:06.474268
+# 可手動編輯 keywords 和 category_filter 以調整篩選範圍
+
+topic_id: pantothenic-acid
+name:
+  zh: 泛酸
+  en: Pantothenic Acid
+  ja: パントテン酸
+  ko: 판토텐산
+keywords:
+  exact:
+    - Pantothenic Acid
+    - pantothenic acid
+    - Vitamin B5
+    - vitamin B5
+    - 維生素B5
+    - 泛酸
+    - パントテン酸
+    - 판토텐산
+    - Calcium Pantothenate
+    - calcium pantothenate
+    - D-Panthenol
+    - Dexpanthenol
+    - 泛醇
+    - Panthenol
+    - panthenol
+    - Pantothenate
+  fuzzy:
+    - anti stress
+    - acne
+category_filter:
+  - vitamins_minerals
+  - specialty
+output:
+  index: docs/reports/pantothenic-acid/index.md
+  guide: docs/reports/pantothenic-acid/guide.md
+  reports: docs/reports/pantothenic-acid/reports/
