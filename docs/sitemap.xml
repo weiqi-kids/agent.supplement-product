@@ -3,7 +3,7 @@
   <!-- 首頁 -->
   <url>
     <loc>https://supplement.weiqi.kids/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -11,7 +11,7 @@
   <!-- 報告總覽 -->
   <url>
     <loc>https://supplement.weiqi.kids/reports/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -19,7 +19,7 @@
   <!-- 市場快照 -->
   <url>
     <loc>https://supplement.weiqi.kids/reports/market-snapshot/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -27,35 +27,35 @@
   <!-- 成分雷達 -->
   <url>
     <loc>https://supplement.weiqi.kids/reports/ingredient-radar/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- 生物素 -->
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/biotin/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/biotin/guide</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- 鈣 -->
   <url>
     <loc>https://supplement.weiqi.kids/reports/calcium/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://supplement.weiqi.kids/reports/calcium/guide</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- 輔酶Q10 -->
-  <url>
-    <loc>https://supplement.weiqi.kids/reports/coq10/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://supplement.weiqi.kids/reports/coq10/guide</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -63,13 +63,27 @@
   <!-- 膠原蛋白 -->
   <url>
     <loc>https://supplement.weiqi.kids/reports/collagen/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://supplement.weiqi.kids/reports/collagen/guide</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 輔酶Q10 -->
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/coq10/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/coq10/guide</loc>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -77,13 +91,13 @@
   <!-- 薑黃素 -->
   <url>
     <loc>https://supplement.weiqi.kids/reports/curcumin/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://supplement.weiqi.kids/reports/curcumin/guide</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -91,13 +105,13 @@
   <!-- 外泌體 -->
   <url>
     <loc>https://supplement.weiqi.kids/reports/exosomes/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://supplement.weiqi.kids/reports/exosomes/guide</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -105,13 +119,27 @@
   <!-- 魚油 -->
   <url>
     <loc>https://supplement.weiqi.kids/reports/fish-oil/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://supplement.weiqi.kids/reports/fish-oil/guide</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 葉酸 -->
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/folate/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/folate/guide</loc>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -119,13 +147,41 @@
   <!-- 葡萄糖胺 -->
   <url>
     <loc>https://supplement.weiqi.kids/reports/glucosamine/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://supplement.weiqi.kids/reports/glucosamine/guide</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 鐵 -->
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/iron/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/iron/guide</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 乳酸桿菌 -->
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/lactobacillus/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/lactobacillus/guide</loc>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -133,13 +189,13 @@
   <!-- 葉黃素 -->
   <url>
     <loc>https://supplement.weiqi.kids/reports/lutein/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://supplement.weiqi.kids/reports/lutein/guide</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -147,13 +203,13 @@
   <!-- 鎂 -->
   <url>
     <loc>https://supplement.weiqi.kids/reports/magnesium/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://supplement.weiqi.kids/reports/magnesium/guide</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -161,13 +217,27 @@
   <!-- 納豆激酶 -->
   <url>
     <loc>https://supplement.weiqi.kids/reports/nattokinase/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://supplement.weiqi.kids/reports/nattokinase/guide</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 菸鹼酸 -->
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/niacin/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/niacin/guide</loc>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -175,13 +245,27 @@
   <!-- NMN -->
   <url>
     <loc>https://supplement.weiqi.kids/reports/nmn/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://supplement.weiqi.kids/reports/nmn/guide</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 泛酸 -->
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/pantothenic-acid/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/pantothenic-acid/guide</loc>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -189,13 +273,41 @@
   <!-- 紅麴 -->
   <url>
     <loc>https://supplement.weiqi.kids/reports/red-yeast-rice/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://supplement.weiqi.kids/reports/red-yeast-rice/guide</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 維生素 A -->
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/vitamin-a/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/vitamin-a/guide</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 維生素 B2 -->
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/vitamin-b2/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/vitamin-b2/guide</loc>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -203,13 +315,27 @@
   <!-- 維生素 B6 -->
   <url>
     <loc>https://supplement.weiqi.kids/reports/vitamin-b6/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://supplement.weiqi.kids/reports/vitamin-b6/guide</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 維生素 B12 -->
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/vitamin-b12/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/vitamin-b12/guide</loc>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -217,13 +343,41 @@
   <!-- 維生素 C -->
   <url>
     <loc>https://supplement.weiqi.kids/reports/vitamin-c/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://supplement.weiqi.kids/reports/vitamin-c/guide</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 維生素 D -->
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/vitamin-d/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/vitamin-d/guide</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 維生素 E -->
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/vitamin-e/</loc>
+    <lastmod>2026-03-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://supplement.weiqi.kids/reports/vitamin-e/guide</loc>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -231,13 +385,13 @@
   <!-- 鋅 -->
   <url>
     <loc>https://supplement.weiqi.kids/reports/zinc/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://supplement.weiqi.kids/reports/zinc/guide</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -245,7 +399,7 @@
   <!-- 資料來源 -->
   <url>
     <loc>https://supplement.weiqi.kids/data-sources/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -253,7 +407,7 @@
   <!-- 關於 -->
   <url>
     <loc>https://supplement.weiqi.kids/about/</loc>
-    <lastmod>2026-02-19</lastmod>
+    <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
