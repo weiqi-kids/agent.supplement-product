@@ -121,7 +121,7 @@ def process(jsonl_file, force=False):
     now = datetime.now(timezone.utc).isoformat()
     stats = {"total": 0, "skipped": 0, "extracted": 0, "review_needed": 0, "errors": 0}
 
-    with open(jsonl_file, "r", encoding="utf-8") as f:
+    with open(jsonl_file, "r", encoding="utf-8", errors="replace") as f:
         for line_num, raw_line in enumerate(f, 1):
             stats["total"] += 1
             raw_line = raw_line.strip()

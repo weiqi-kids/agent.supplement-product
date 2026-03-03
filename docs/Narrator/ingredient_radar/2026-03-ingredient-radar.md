@@ -1,0 +1,202 @@
+---
+mode: "ingredient_radar"
+period: "2026-03"
+generated_at: "2026-03-03T14:00:00+08:00"
+source_layers:
+  - us_dsld
+  - ca_lnhpd
+  - kr_hff
+  - jp_foshu
+  - jp_fnfc
+---
+
+# 成分雷達月報 — 2026 年 03 月
+
+> 報告期間：2026-03-01 ~ 2026-03-03
+> 產出時間：2026-03-03T14:00:00+08:00
+
+## 摘要
+
+本月成分雷達報告分析五大市場共 397,080 筆保健食品產品資料，涵蓋美國 DSLD（205,738 筆）、加拿大 LNHPD（144,664 筆）、韓國 HFF（44,535 筆）、日本 FOSHU（1,033 筆）及日本 FNFC（1,110 筆）。全球熱門成分前三名延續上月格局，Vitamin C（57,938 筆）、Calcium（48,271 筆）、Vitamin B6（44,040 筆）持續穩居主流，反映全球消費者對基礎健康補充的穩定需求。相較 2026-02 月報，Zinc 超越 Magnesium 升至全球第 4 名，Folate 在美國市場的強勁基礎推動其進入全球前 6 名。日本市場 GABA 在 FNFC 中以 112 件持續維持其獨特地位，跨國潛力明顯。Fish Oil 在加拿大以 17,208 筆產品穩居第 2，成為北美市場最突出的非維生素類成分。
+
+## 全球熱門成分 Top 20
+
+| 排名 | 成分名稱 | 出現產品數 | 涵蓋市場 | 主要品類 |
+|------|----------|-----------|----------|----------|
+| 1 | Vitamin C | 57,938 | 🇺🇸 US, 🇨🇦 CA, 🇰🇷 KR | vitamins_minerals, specialty |
+| 2 | Calcium | 48,271 | 🇺🇸 US, 🇨🇦 CA, 🇰🇷 KR, 🇯🇵 JP | vitamins_minerals, specialty |
+| 3 | Vitamin B6 | 44,040 | 🇺🇸 US, 🇨🇦 CA, 🇰🇷 KR | vitamins_minerals, specialty |
+| 4 | Zinc | 43,812 | 🇺🇸 US, 🇨🇦 CA, 🇰🇷 KR | vitamins_minerals, specialty |
+| 5 | Magnesium | 43,757 | 🇺🇸 US, 🇨🇦 CA, 🇰🇷 KR | vitamins_minerals, specialty |
+| 6 | Folate | 42,679 | 🇺🇸 US, 🇨🇦 CA, 🇰🇷 KR | vitamins_minerals, specialty |
+| 7 | Vitamin B12 | 41,091 | 🇺🇸 US, 🇨🇦 CA, 🇰🇷 KR | vitamins_minerals, specialty |
+| 8 | Vitamin E | 39,065 | 🇺🇸 US, 🇨🇦 CA, 🇰🇷 KR | vitamins_minerals, specialty |
+| 9 | Vitamin D | 38,100 | 🇺🇸 US, 🇨🇦 CA, 🇰🇷 KR | vitamins_minerals, specialty |
+| 10 | Vitamin A | 32,270 | 🇺🇸 US, 🇨🇦 CA, 🇰🇷 KR | vitamins_minerals, specialty |
+| 11 | Niacin | 31,737 | 🇺🇸 US, 🇨🇦 CA, 🇰🇷 KR | vitamins_minerals, specialty |
+| 12 | Pantothenic Acid | 29,777 | 🇺🇸 US, 🇨🇦 CA, 🇰🇷 KR | vitamins_minerals, specialty |
+| 13 | Biotin | 29,017 | 🇺🇸 US, 🇨🇦 CA, 🇰🇷 KR | vitamins_minerals, specialty |
+| 14 | Probiotics | 25,850 | 🇺🇸 US, 🇰🇷 KR | probiotics, specialty |
+| 15 | Riboflavin | 28,665 | 🇺🇸 US, 🇨🇦 CA, 🇰🇷 KR | vitamins_minerals, specialty |
+| 16 | Selenium | 24,233 | 🇺🇸 US, 🇨🇦 CA, 🇰🇷 KR | vitamins_minerals, specialty |
+| 17 | Thiamine | 27,024 | 🇺🇸 US, 🇨🇦 CA, 🇰🇷 KR | vitamins_minerals, specialty |
+| 18 | Chromium | 22,928 | 🇺🇸 US, 🇨🇦 CA, 🇰🇷 KR | vitamins_minerals, specialty |
+| 19 | Fish Oil | 22,744 | 🇺🇸 US, 🇨🇦 CA | omega_fatty_acids, specialty |
+| 20 | Potassium | 22,176 | 🇺🇸 US | vitamins_minerals, specialty |
+
+## 各市場成分偏好
+
+### 🇺🇸 美國 Top 10 成分
+| 排名 | 成分 | 產品數 |
+|------|------|--------|
+| 1 | Vitamin C | 37,909 |
+| 2 | Calcium | 35,915 |
+| 3 | Folate | 31,084 |
+| 4 | Magnesium | 28,718 |
+| 5 | Vitamin B6 | 28,698 |
+| 6 | Vitamin B12 | 27,584 |
+| 7 | Zinc | 26,304 |
+| 8 | Probiotics | 24,148 |
+| 9 | Vitamin E | 24,048 |
+| 10 | Vitamin A | 23,084 |
+
+### 🇨🇦 加拿大 Top 10 成分
+| 排名 | 成分 | 產品數 |
+|------|------|--------|
+| 1 | Vitamin D | 19,006 |
+| 2 | Fish Oil | 17,208 |
+| 3 | Vitamin C | 16,918 |
+| 4 | Magnesium | 13,507 |
+| 5 | Vitamin E | 12,170 |
+| 6 | Vitamin B6 | 11,948 |
+| 7 | Vitamin B12 | 11,888 |
+| 8 | Zinc | 11,773 |
+| 9 | Calcium | 10,959 |
+| 10 | Folate | 9,274 |
+
+### 🇰🇷 韓國 Top 10 成分
+| 排名 | 成分 | 產品數 |
+|------|------|--------|
+| 1 | Zinc | 5,735 |
+| 2 | Vitamin D | 4,007 |
+| 3 | Vitamin B6 | 3,394 |
+| 4 | Vitamin B1 | 3,212 |
+| 5 | Vitamin C | 3,111 |
+| 6 | Vitamin B2 | 3,043 |
+| 7 | Vitamin E | 2,847 |
+| 8 | Pantothenic Acid | 2,834 |
+| 9 | Niacin | 2,789 |
+| 10 | Folate | 2,321 |
+
+### 🇯🇵 日本（FOSHU + FNFC）Top 10 成分
+| 排名 | 成分 | 產品數 | 來源 |
+|------|------|--------|------|
+| 1 | Indigestible Dextrin | 518 | FOSHU + FNFC |
+| 2 | GABA | 112 | FNFC |
+| 3 | Lutein | 53 | FNFC |
+| 4 | Sardine Peptide | 52 | FOSHU |
+| 5 | Hyaluronic Acid | 51 | FNFC |
+| 6 | Chitosan | 49 | FOSHU |
+| 7 | Tea Catechins | 48 | FOSHU |
+| 8 | Kudzu Isoflavone | 46 | FNFC |
+| 9 | Coffee Mannooligosaccharide | 46 | FOSHU |
+| 10 | L-Theanine | 32 | FNFC |
+
+## 成分 × 市場交叉分析
+
+| 成分 | 🇺🇸 US | 🇨🇦 CA | 🇰🇷 KR | 🇯🇵 JP | 說明 |
+|------|---------|---------|---------|---------|------|
+| Vitamin C | ✅ 37,909 | ✅ 16,918 | ✅ 3,111 | ❌ | 美加韓三市場共同強勢成分 |
+| Calcium | ✅ 35,915 | ✅ 10,959 | ✅ 1,371 | ✅ 26 | 四市場均有，最廣泛分布 |
+| Vitamin D | ✅ 15,087 | ✅ 19,006 | ✅ 4,007 | ❌ | 加拿大領先美國，強調北美特色 |
+| Zinc | ✅ 26,304 | ✅ 11,773 | ✅ 5,735 | ❌ | 韓國以 Zinc 為最熱門單一成分 |
+| Folate | ✅ 31,084 | ✅ 9,274 | ✅ 2,321 | ❌ | 美國明顯領先（婦女健康需求驅動） |
+| Fish Oil | ✅ 5,536 | ✅ 17,208 | ❌ | ❌ | 加拿大獨大，美國相對低配 |
+| GABA | ❌ | ❌ | ❌ | ✅ 112 | 日本 FNFC 獨有，亞洲市場潛力成分 |
+| Indigestible Dextrin | ❌ | ❌ | ❌ | ✅ 518 | 日本市場主導的機能性纖維成分 |
+| Lutein | ❌ | ❌ | ❌ | ✅ 53 | 日本 FNFC 視力保健代表成分 |
+| Probiotics | ✅ 24,148 | ❌ | ✅ 1,702 | ✅ 64 | 美韓日市場均活躍，加拿大以菌株名登記 |
+
+> 僅列出有顯著跨國差異的成分（某些市場有而其他市場無，或數量差異大於 5 倍）
+
+## 品類 × 成分分析
+
+### vitamins_minerals
+- 核心成分：Vitamin C、Calcium、Magnesium、Zinc、Vitamin D、Vitamin B6、Vitamin B12
+- 市場差異：美加韓三市場均廣泛覆蓋；日本 FOSHU 此品類以 Calcium（26 件）為主；日本 FNFC 此品類產品數極少，反映日本機能性食品法規對維生素礦物質的特別界定
+
+### botanicals
+- 核心成分：Camellia sinensis（加拿大 7,047 件）、Chitosan（日本 FOSHU）、Kudzu Isoflavone、Ginkgo Leaf Extract
+- 市場差異：加拿大植物萃取種類豐富，以綠茶（Camellia sinensis）數量最多；日本 FNFC 中銀杏葉萃取（イチョウ葉）為認知健康主要成分；美國植物萃取品類與 specialty 高度重疊
+
+### probiotics
+- 核心菌株：Lactobacillus acidophilus（2,578 件於加拿大）、Bifidobacterium longum、Bifidobacterium animalis subsp. lactis、Lactiplantibacillus plantarum、Lactobacillus rhamnosus
+- 市場差異：加拿大以菌株名稱精確登記，日本 FNFC 以 Bifidobacterium BB536 最具代表性，韓國以「프로바이오틱스」（Probiotics 通稱）登記（1,702 件），美國以 Lactobacillus 通稱入列廣泛
+
+### omega_fatty_acids
+- 核心成分：Fish Oil（加拿大 17,208 件）、DHA（日本 FNFC 22 件）、EPA、Omega-3
+- 市場差異：加拿大 Fish Oil 數量遠超其他市場（相較美國 5,536 件差距達 3 倍），日本 FNFC 以 DHA 和 EPA 個別成分入列，反映機能性食品的精確成分聲稱慣例
+
+### protein_amino
+- 核心成分：Hydrolyzed Collagen（加拿大 6,085 件）、Collagen、L-Theanine（日本 FNFC 32 件）
+- 市場差異：加拿大胶原蛋白類產品顯著較多；日本 FNFC 以 L-Theanine 主導此品類，用於放鬆與認知功能
+
+## 趨勢觀察
+
+### 跨國共同趨勢
+
+基礎維生素礦物質組合（Vitamin C + Calcium + Vitamin B6/B12 + Zinc + Magnesium）在美、加、韓三大市場持續穩居主流地位，產品數量相較 2026-02 月報變化幅度極小，顯示此類成分市場已達高度飽和狀態。Probiotics 相關成分在美國（24,148 件）和韓國（1,702 件）持續強勢，同時加拿大市場若以菌株名稱統計，實際涉及益生菌的產品亦相當可觀（Lactobacillus acidophilus 單株即達 2,578 件），反映腸道健康議題已成全球保健食品的核心訴求。
+
+### 市場獨特趨勢
+
+加拿大市場有兩項顯著特色：第一，Fish Oil（17,208 件）以絕對優勢壓過美國（5,536 件），反映加拿大消費者對 Omega-3 的高接受度及加拿大漁業資源的在地產業優勢；第二，Vitamin D 在加拿大以 19,006 件高居榜首（超越美國的 15,087 件），這與加拿大高緯度地區日照不足、官方健康政策持續推廣 Vitamin D 補充有直接關聯。韓國市場最顯著的特徵是 Zinc 以 5,735 件高居第一（全球第 4 名），顯示韓國保健食品市場對免疫調節與生殖健康成分的高度重視。日本市場延續高度機能性聚焦的特色，GABA（睡眠/壓力）、Indigestible Dextrin（腸道/血糖/血脂）、Lutein（視力）三大機能性成分分別對應特定健康功效，形成與歐美市場截然不同的成分偏好結構。
+
+### 值得關注的成分
+
+以下成分值得深入追蹤：
+
+1. **GABA（γ-氨基丁酸）** — 跨國潛力成分
+   - 涵蓋市場：🇯🇵 JP（FNFC 112 件）
+   - 所屬品類：specialty
+   - 關注原因：日本 FNFC 中最熱門的非纖維機能性成分，睡眠改善與壓力舒緩訴求在全球市場持續升溫，目前歐美市場已有 GABA 補充品上市但規模遠小於日本官方核准的機能性食品體系
+   - 追蹤建議：監測歐美市場 GABA 產品登記數量變化，評估日本 FNFC 的 GABA 臨床證據能否支持其他市場的機能性宣稱
+
+2. **Fish Oil（魚油）** — 區域強勢成分
+   - 涵蓋市場：🇨🇦 CA（17,208 件）、🇺🇸 US（5,536 件）
+   - 所屬品類：omega_fatty_acids
+   - 關注原因：加拿大 Fish Oil 數量達美國的 3.1 倍，顯示加拿大市場的獨特偏好，且相較 2026-02 月報加拿大產品數有小幅增加，反映 Omega-3 市場的持續成長
+   - 追蹤建議：觀察日韓市場 Fish Oil 整合產品的發展，以及以 DHA/EPA 個別成分登記的產品是否有向 Fish Oil 整合型產品轉換的趨勢
+
+3. **Camellia sinensis（綠茶萃取）** — 區域獨特成分
+   - 涵蓋市場：🇨🇦 CA（7,047 件）
+   - 所屬品類：botanicals
+   - 關注原因：加拿大 LNHPD 中植物萃取排名最高的成分，遠超其他市場，反映加拿大天然健康產品法規對植物成分的接納度及消費者對多酚類抗氧化成分的需求
+   - 追蹤建議：評估 Camellia sinensis 在美國 botanicals 類別的出現率，比較兩國法規對植物萃取宣稱的差異
+
+4. **Hyaluronic Acid（玻尿酸）** — 日本特色成分
+   - 涵蓋市場：🇯🇵 JP（FNFC 51 件）
+   - 所屬品類：specialty
+   - 關注原因：日本 FNFC 中皮膚保健代表成分，隨全球消費者對「由內而外美容（Beauty from Within）」概念的接受度提升，預期有跨國推廣潛力
+   - 追蹤建議：監測美加市場 Hyaluronic Acid 口服補充劑的登記動態，評估機能性宣稱的跨國法規可行性
+
+## 方法論說明
+
+- **成分名稱標準化方法**：採用同義詞合併策略，將不同語言及學名俗名對應至統一標準名稱（如 Vitamin D3 = Cholecalciferol = コレカルシフェロール；難消化性デキストリン（食物繊維として）與難消化性デキストリン（食物繊維）合併計入 Indigestible Dextrin）
+- **日文成分名對照**：本月對照項目包含 GABA（γ-アミノ酪酸）、ルテイン（Lutein）、ヒアルロン酸Na（Hyaluronic Acid）、L-テアニン（L-Theanine）、難消化性デキストリン（Indigestible Dextrin）等主要 FNFC/FOSHU 機能性成分
+- **韓文成分名對照**：아연（Zinc）、비타민D（Vitamin D）、프로바이오틱스（Probiotics）等韓文名稱對照英文標準名
+- **已知限制**：
+  - 美國 DSLD 包含完整的產品成分清單（含營養標示項目），本報告已過濾 Calories、Total Fat、Sodium 等純營養標示項目，僅保留具機能性的活性成分
+  - 韓國 HFF 以 [] 標注機能性成分，統計邏輯與美加不同（美加為所有成分，韓國為申請認定的機能性成分）
+  - 加拿大 LNHPD 部分產品有重複成分登記（如同一成分出現兩次），統計時依原始資料計入，可能略高估部分成分數量
+  - 日本市場（FOSHU + FNFC 合計 2,143 件）資料量遠小於美加韓，跨國排名比較應考慮基數差異
+
+## 資料品質備註
+
+- 分析產品總數：397,080 筆
+- 資料來源 Layer：us_dsld（205,738 筆）、ca_lnhpd（144,664 筆）、kr_hff（44,535 筆）、jp_foshu（1,033 筆）、jp_fnfc（1,110 筆）
+- 資料更新時間：us_dsld（2026-03-03）、ca_lnhpd（2026-03-03）、kr_hff（2026-03-03）、jp_foshu（2026-01-27）、jp_fnfc（2026-02-02）
+- 成分標準化覆蓋率：約 85%（基於預設對照表，未能標準化者保留原文）
+
+## 免責聲明
+
+本報告由 AI 自動生成，基於各國官方公開資料庫的產品登記資訊。成分排名基於資料庫登記產品數量，不代表實際市場銷售份額或消費趨勢。成分名稱標準化為自動處理，可能存在歸併誤差。各國監管制度對成分的定義和分類標準不同，跨國比較應考慮法規差異。本報告不構成任何配方建議或法規諮詢。

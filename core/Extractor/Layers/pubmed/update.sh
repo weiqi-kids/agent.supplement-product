@@ -43,7 +43,7 @@ for line in sys.stdin:
 
 # === 取得要處理的 .md 檔案 ===
 MD_FILES=()
-POSITIONAL_ARGS=("${POSITIONAL_ARGS[@]:-}")
+POSITIONAL_ARGS=("${POSITIONAL_ARGS[@]+"${POSITIONAL_ARGS[@]}"}")
 
 # 決定搜尋目錄
 if [[ -n "$TOPIC_FILTER" ]]; then
