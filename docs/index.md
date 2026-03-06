@@ -33,11 +33,11 @@ description: 整合美、加、日、韓、台 5 國官方資料庫，提供 42 
 | 成分 | 產品數 | 主要功能 |
 |------|--------|----------|
 | [葉酸]({{ site.baseurl }}/folate/) | 29,168 | 細胞分裂、孕期必需 |
-| [維生素 B12]({{ site.baseurl }}/vitamin-b12/) | — | 神經系統、紅血球生成 |
+| [維生素 B12]({{ site.baseurl }}/vitamin-b12/) | 36,542 | 神經系統、紅血球生成 |
 | [菸鹼酸 B3]({{ site.baseurl }}/niacin/) | 42,013 | 能量代謝、血脂調節 |
 | [泛酸 B5]({{ site.baseurl }}/pantothenic-acid/) | 26,274 | 輔酶 A 合成、抗壓 |
 | [生物素 B7]({{ site.baseurl }}/biotin/) | 23,806 | 頭髮、皮膚、指甲 |
-| [維生素 B2]({{ site.baseurl }}/vitamin-b2/) | — | 能量代謝、抗氧化 |
+| [維生素 B2]({{ site.baseurl }}/vitamin-b2/) | 5,857 | 能量代謝、抗氧化 |
 
 ---
 
@@ -48,7 +48,7 @@ description: 整合美、加、日、韓、台 5 國官方資料庫，提供 42 
 | 成分 | 產品數 | 主要功能 |
 |------|--------|----------|
 | [葡萄糖胺]({{ site.baseurl }}/glucosamine/) | 11,530 | 軟骨合成關鍵原料 |
-| [膠原蛋白]({{ site.baseurl }}/collagen/) | 6,093 | 關節軟骨主要成分 |
+| [膠原蛋白]({{ site.baseurl }}/collagen/) | 6,096 | 關節軟骨主要成分 |
 | [薑黃素]({{ site.baseurl }}/curcumin/) | 14,550 | 天然抗發炎成分 |
 
 ---
@@ -59,10 +59,10 @@ description: 整合美、加、日、韓、台 5 國官方資料庫，提供 42 
 
 | 成分 | 產品數 | 主要功能 |
 |------|--------|----------|
-| [魚油]({{ site.baseurl }}/fish-oil/) | 19,954 | Omega-3 脂肪酸 |
+| [魚油]({{ site.baseurl }}/fish-oil/) | 19,961 | Omega-3 脂肪酸 |
 | [紅麴]({{ site.baseurl }}/red-yeast-rice/) | 12,465 | Monacolin K 降膽固醇 |
 | [納豆激酶]({{ site.baseurl }}/nattokinase/) | 1,567 | 促進血液循環 |
-| [輔酶 Q10]({{ site.baseurl }}/coq10/) | — | 心臟能量代謝 |
+| [輔酶 Q10]({{ site.baseurl }}/coq10/) | 10,221 | 心臟能量代謝 |
 
 ---
 
@@ -72,7 +72,7 @@ description: 整合美、加、日、韓、台 5 國官方資料庫，提供 42 
 
 | 成分 | 產品數 | 主要功能 |
 |------|--------|----------|
-| [乳酸桿菌]({{ site.baseurl }}/lactobacillus/) | 15,140 | 腸道益生菌 |
+| [乳酸桿菌]({{ site.baseurl }}/lactobacillus/) | 15,155 | 腸道益生菌 |
 
 ---
 
@@ -92,7 +92,7 @@ description: 整合美、加、日、韓、台 5 國官方資料庫，提供 42 
 
 | 成分 | 產品數 | 主要功能 |
 |------|--------|----------|
-| [膠原蛋白]({{ site.baseurl }}/collagen/) | 6,093 | 皮膚主要結構蛋白 |
+| [膠原蛋白]({{ site.baseurl }}/collagen/) | 6,096 | 皮膚主要結構蛋白 |
 | [生物素 B7]({{ site.baseurl }}/biotin/) | 23,806 | 頭髮、皮膚、指甲健康 |
 | [外泌體]({{ site.baseurl }}/exosomes/) | 14,861 | 細胞修復因子 |
 
@@ -115,9 +115,9 @@ description: 整合美、加、日、韓、台 5 國官方資料庫，提供 42 
 
 | 成分 | 產品數 | 主要功能 |
 |------|--------|----------|
-| [鈣]({{ site.baseurl }}/calcium/) | — | 骨骼、牙齒、神經傳導 |
-| [鎂]({{ site.baseurl }}/magnesium/) | — | 肌肉放鬆、睡眠、能量 |
-| [鋅]({{ site.baseurl }}/zinc/) | — | 免疫、傷口癒合、味覺 |
+| [鈣]({{ site.baseurl }}/calcium/) | 63,793 | 骨骼、牙齒、神經傳導 |
+| [鎂]({{ site.baseurl }}/magnesium/) | 42,108 | 肌肉放鬆、睡眠、能量 |
+| [鋅]({{ site.baseurl }}/zinc/) | 49,514 | 免疫、傷口癒合、味覺 |
 
 ---
 
@@ -128,7 +128,7 @@ description: 整合美、加、日、韓、台 5 國官方資料庫，提供 42 
 | 成分 | 產品數 | 主要功能 |
 |------|--------|----------|
 | [薑黃素]({{ site.baseurl }}/curcumin/) | 14,550 | NF-κB 抑制劑 |
-| [維生素 E]({{ site.baseurl }}/vitamin-e/) | — | 脂溶性抗氧化劑 |
+| [維生素 E]({{ site.baseurl }}/vitamin-e/) | 31,490 | 脂溶性抗氧化劑 |
 
 ---
 
