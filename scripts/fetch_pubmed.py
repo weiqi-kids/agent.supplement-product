@@ -10,7 +10,7 @@ from datetime import datetime, timedelta
 from urllib.request import urlopen, Request
 from urllib.parse import urlencode
 from urllib.error import HTTPError, URLError
-from http.client import IncompleteRead
+from http.client import IncompleteRead, RemoteDisconnected
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TOPICS_DIR = os.path.join(BASE_DIR, "core/Narrator/Modes/topic_tracking/topics")
@@ -109,7 +109,7 @@ def esearch(query: str, max_results: int = 500, date_range_years: int = 5) -> li
         req = Request(url, headers={"User-Agent": "SupplementProductAgent/1.0"})
         with urlopen(req, timeout=30) as response:
             data = json.load(response)
-    except (HTTPError, URLError, json.JSONDecodeError) as e:
+    except (HTTPError, URLError, json.JSONDecodeError, RemoteDisconnected, ConnectionResetError, TimeoutError) as e:
         print(f"ESearch 失敗: {e}", file=sys.stderr)
         return []
 
@@ -154,7 +154,7 @@ def efetch_batch(pmids: list, batch_size: int = 100, max_retries: int = 3) -> li
                 all_articles.extend(articles)
                 break  # 成功，跳出重試迴圈
 
-            except (HTTPError, URLError, ET.ParseError, IncompleteRead) as e:
+            except (HTTPError, URLError, ET.ParseError, IncompleteRead, RemoteDisconnected, ConnectionResetError, TimeoutError) as e:
                 if retry < max_retries - 1:
                     print(f"  批次失敗 (重試 {retry+1}/{max_retries}): {e}", file=sys.stderr)
                     time.sleep(2 * (retry + 1))  # 指數退避
