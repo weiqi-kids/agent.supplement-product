@@ -1,10 +1,10 @@
 ---
-layout: default
-title: 選購指南
-nav_order: 2
-parent: 輔酶Q10
-grand_parent: 報告總覽
 description: CoQ10 選購指南：型態比較、劑量建議、品質指標與常見問題解答
+grand_parent: 報告總覽
+layout: default
+nav_order: 2
+parent: 輔酶Q10 2026-03-01
+title: 選購指南
 ---
 
 # 輔酶Q10 選購指南

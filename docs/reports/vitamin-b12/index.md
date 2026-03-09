@@ -1,9 +1,9 @@
 ---
+has_children: true
 layout: default
-title: Vitamin B12
 nav_order: 10
 parent: 報告總覽
-has_children: true
+title: Vitamin B12 2026-03-01
 ---
 
 # Vitamin B12

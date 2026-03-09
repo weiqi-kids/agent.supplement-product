@@ -1,28 +1,17 @@
 ---
-layout: default
-title: 市場報告
-nav_order: 3
-parent: 輔酶Q10
 grand_parent: 報告總覽
 has_children: true
-description: CoQ10 輔酶Q10 市場報告索引，追蹤各國產品動態與趨勢分析
+layout: default
+nav_order: 3
+parent: 輔酶Q10 2026-03-01
+title: 市場報告
 ---
 
-# 輔酶Q10 市場報告
+# 市場報告
 
-本頁面收錄 CoQ10 產品的定期市場報告，追蹤各國產品數量、品牌動態與市場趨勢。
+歷史市場報告列表。
 
-## 報告週期
-
-- **更新頻率**：每月
-- **資料來源**：美國 DSLD、加拿大 LNHPD、日本 FNFC/FOSHU、韓國健康機能食品
-
-## 報告索引
-
-| 期間 | 報告連結 | 摘要 |
-|------|----------|------|
-| *即將推出* | — | 首份報告製作中 |
-
----
-
-*報告將於下次資料更新時產出。*
+{% assign reports = site.pages | where_exp: "page", "page.path contains 'reports/coq10/reports/2'" | sort: "nav_order" | reverse %}
+{% for report in reports %}
+- [{{ report.title }}]({{ report.url | relative_url }})
+{% endfor %}

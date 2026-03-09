@@ -1,9 +1,9 @@
 ---
-layout: default
-title: 選購指南
-nav_order: 2
-parent: 維生素B6 2026-02-18
 grand_parent: 報告總覽
+layout: default
+nav_order: 2
+parent: 維生素B6 2026-03-01
+title: 選購指南
 ---
 
 # 維生素B6選購指南

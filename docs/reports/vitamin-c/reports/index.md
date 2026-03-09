@@ -1,10 +1,10 @@
 ---
-layout: default
-title: 市場報告
-nav_order: 3
-parent: 維生素C 2026-02-18
 grand_parent: 報告總覽
 has_children: true
+layout: default
+nav_order: 3
+parent: 維生素C 2026-03-01
+title: 市場報告
 ---
 
 # 市場報告

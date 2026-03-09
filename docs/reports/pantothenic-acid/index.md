@@ -1,10 +1,10 @@
 ---
-layout: default
-title: 泛酸
-nav_order: 25
+description: 泛酸（Pantothenic Acid/維生素B5）市場分析、選購指南與最新研究
 has_children: true
+layout: default
+nav_order: 25
 permalink: /pantothenic-acid/
-description: "泛酸（Pantothenic Acid/維生素B5）市場分析、選購指南與最新研究"
+title: 泛酸 2026-03-01
 ---
 
 # 泛酸

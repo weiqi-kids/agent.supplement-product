@@ -1,10 +1,10 @@
 ---
+description: 生物素選購完整指南：劑量選擇、劑型比較、實驗室檢測注意事項
 layout: default
-title: 選購指南
-parent: 生物素
 nav_order: 1
+parent: 生物素 2026-03-01
 permalink: /biotin/guide/
-description: "生物素選購完整指南：劑量選擇、劑型比較、實驗室檢測注意事項"
+title: 選購指南
 ---
 
 # 生物素選購指南

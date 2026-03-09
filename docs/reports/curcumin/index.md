@@ -1,9 +1,9 @@
 ---
+has_children: true
 layout: default
-title: 薑黃素 2026-02-18
 nav_order: 6
 parent: 報告總覽
-has_children: true
+title: 薑黃素 2026-03-01
 ---
 
 # 薑黃素（Curcumin）

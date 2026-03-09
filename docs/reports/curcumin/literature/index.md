@@ -1,9 +1,9 @@
 ---
-layout: default
-title: 文獻報告
-parent: 薑黃素 2026-02-18
-nav_order: 4
 has_children: true
+layout: default
+nav_order: 4
+parent: 薑黃素 2026-03-01
+title: 文獻報告
 ---
 
 # 薑黃素文獻薈萃報告

@@ -1,10 +1,10 @@
 ---
-layout: default
-title: 菸鹼酸
-nav_order: 24
+description: 菸鹼酸（Niacin/維生素B3）市場分析、選購指南與最新研究
 has_children: true
+layout: default
+nav_order: 24
 permalink: /niacin/
-description: "菸鹼酸（Niacin/維生素B3）市場分析、選購指南與最新研究"
+title: 菸鹼酸 2026-03-01
 ---
 
 # 菸鹼酸

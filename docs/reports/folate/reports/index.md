@@ -1,18 +1,17 @@
 ---
-layout: default
-title: 市場報告
-parent: 葉酸
-nav_order: 2
+grand_parent: 報告總覽
 has_children: true
-permalink: /folate/reports/
+layout: default
+nav_order: 2
+parent: 葉酸 2026-03-01
+title: 市場報告
 ---
 
-# 葉酸市場報告
+# 市場報告
 
-每月更新的葉酸產品市場統計與趨勢分析。
+歷史市場報告列表。
 
-## 歷史報告
-
-| 期間 | 產品數 | 重點觀察 |
-|------|--------|----------|
-| [2026-02](2026-02) | — | 首次追蹤報告 |
+{% assign reports = site.pages | where_exp: "page", "page.path contains 'reports/folate/reports/2'" | sort: "nav_order" | reverse %}
+{% for report in reports %}
+- [{{ report.title }}]({{ report.url | relative_url }})
+{% endfor %}

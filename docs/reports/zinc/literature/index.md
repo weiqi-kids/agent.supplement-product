@@ -1,9 +1,9 @@
 ---
-layout: default
-title: 文獻薈萃
-parent: 鋅 2026-02-18
-nav_order: 4
 has_children: true
+layout: default
+nav_order: 4
+parent: 鋅 2026-03-01
+title: 文獻薈萃
 ---
 
 # 鋅文獻薈萃

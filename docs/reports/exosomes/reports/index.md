@@ -1,17 +1,17 @@
 ---
-layout: default
-title: 市場報告
-parent: 外泌體 2026-02-18
-nav_order: 3
+grand_parent: 報告總覽
 has_children: true
+layout: default
+nav_order: 3
+parent: 外泌體 2026-03-01
+title: 市場報告
 ---
 
-# 外泌體市場報告
+# 市場報告
 
-本區收錄外泌體主題的月度市場報告，追蹤跨國保健食品市場的產品動態與趨勢變化。
+歷史市場報告列表。
 
-## 報告列表
-
-| 期間 | 產品數 | 涵蓋市場 |
-|------|--------|----------|
-| [2026-02](2026-02.html) | 9,675 | 🇺🇸🇨🇦🇰🇷 |
+{% assign reports = site.pages | where_exp: "page", "page.path contains 'reports/exosomes/reports/2'" | sort: "nav_order" | reverse %}
+{% for report in reports %}
+- [{{ report.title }}]({{ report.url | relative_url }})
+{% endfor %}

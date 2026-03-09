@@ -1,10 +1,10 @@
 ---
-layout: default
-title: 葉酸
-nav_order: 22
+description: 葉酸（Folate/Folic Acid）市場分析、選購指南與最新研究
 has_children: true
+layout: default
+nav_order: 22
 permalink: /folate/
-description: "葉酸（Folate/Folic Acid）市場分析、選購指南與最新研究"
+title: 葉酸 2026-03-01
 ---
 
 # 葉酸

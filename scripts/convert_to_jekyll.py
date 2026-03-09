@@ -635,9 +635,153 @@ def main():
                 convert_literature_review(f, topic_id, dest_lit_dir)
                 converted += 1
 
+    # 更新報告索引頁和主題日期
+    update_report_indexes()
+    update_topic_dates()
+
     print("=" * 50)
     print(f"✅ 轉換完成：{converted} 份報告")
     print("=" * 50)
+
+
+def update_report_indexes():
+    """更新所有主題的 reports/index.md 為 Liquid 自動列舉格式"""
+    updated = 0
+    for topic_dir in sorted(REPORTS_DIR.iterdir()):
+        if not topic_dir.is_dir():
+            continue
+        reports_dir = topic_dir / "reports"
+        if not reports_dir.is_dir():
+            continue
+        index_file = reports_dir / "index.md"
+        if not index_file.exists():
+            continue
+
+        topic_id = topic_dir.name
+
+        # 讀取現有 frontmatter 保留 parent, nav_order 等
+        content = index_file.read_text(encoding="utf-8")
+        frontmatter, _ = parse_frontmatter(content)
+        if not frontmatter:
+            continue
+
+        topic_name = get_topic_name(topic_id)
+
+        # 取得最新報告日期作為 parent title 日期
+        latest_date = _get_latest_report_date(reports_dir)
+
+        # 重建 index.md 使用 Liquid 自動列舉
+        new_frontmatter = {
+            "layout": "default",
+            "title": "市場報告",
+            "nav_order": frontmatter.get("nav_order", 3),
+            "parent": f"{topic_name} {latest_date}" if latest_date else frontmatter.get("parent", topic_name),
+            "grand_parent": frontmatter.get("grand_parent", "報告總覽"),
+            "has_children": True,
+        }
+
+        liquid_template = (
+            f"# 市場報告\n\n"
+            f"歷史市場報告列表。\n\n"
+            f"{{% assign reports = site.pages | where_exp: \"page\", "
+            f"\"page.path contains 'reports/{topic_id}/reports/2'\" "
+            f"| sort: \"nav_order\" | reverse %}}\n"
+            f"{{% for report in reports %}}\n"
+            f"- [{{{{ report.title }}}}]({{{{ report.url | relative_url }}}})\n"
+            f"{{% endfor %}}\n"
+        )
+
+        output = "---\n"
+        output += yaml.dump(new_frontmatter, allow_unicode=True, default_flow_style=False)
+        output += "---\n\n"
+        output += liquid_template
+
+        index_file.write_text(output, encoding="utf-8")
+        updated += 1
+
+    print(f"✅ 更新 {updated} 個報告索引頁（Liquid 自動列舉）")
+
+
+def update_topic_dates():
+    """更新主題首頁 index.md 的 title 日期為最新報告日期"""
+    updated = 0
+    for topic_dir in sorted(REPORTS_DIR.iterdir()):
+        if not topic_dir.is_dir():
+            continue
+        # 跳過非主題目錄
+        if topic_dir.name in ("market-snapshot", "ingredient-radar"):
+            continue
+
+        index_file = topic_dir / "index.md"
+        if not index_file.exists():
+            continue
+
+        reports_dir = topic_dir / "reports"
+        latest_date = _get_latest_report_date(reports_dir) if reports_dir.is_dir() else None
+        if not latest_date:
+            continue
+
+        content = index_file.read_text(encoding="utf-8")
+        frontmatter, body = parse_frontmatter(content)
+        if not frontmatter:
+            continue
+
+        topic_name = get_topic_name(topic_dir.name)
+        new_title = f"{topic_name} {latest_date}"
+
+        if frontmatter.get("title") == new_title:
+            continue
+
+        old_title = frontmatter["title"]
+        frontmatter["title"] = new_title
+
+        # 重建檔案
+        output = "---\n"
+        output += yaml.dump(frontmatter, allow_unicode=True, default_flow_style=False)
+        output += "---\n\n"
+        output += body
+
+        index_file.write_text(output, encoding="utf-8")
+        updated += 1
+
+        # 同步更新子頁面的 parent 欄位
+        _update_child_parent(topic_dir, old_title, new_title)
+
+    print(f"✅ 更新 {updated} 個主題首頁日期")
+
+
+def _get_latest_report_date(reports_dir: Path) -> str | None:
+    """從報告目錄取得最新的報告日期（從檔名）"""
+    dates = []
+    for f in reports_dir.glob("2*.md"):
+        match = re.match(r"(\d{4}-\d{2})", f.stem)
+        if match:
+            dates.append(match.group(1))
+    if not dates:
+        return None
+    # 取最新日期，轉換為 YYYY-MM-DD 格式的月初
+    latest = sorted(dates)[-1]
+    return f"{latest}-01"
+
+
+def _update_child_parent(topic_dir: Path, old_title: str, new_title: str):
+    """更新主題下所有子頁面的 parent 欄位"""
+    for child in topic_dir.rglob("*.md"):
+        if child.name == "index.md" and child.parent == topic_dir:
+            continue  # 跳過自身
+        content = child.read_text(encoding="utf-8")
+        if f"parent: {old_title}" not in content and f"parent: '{old_title}'" not in content:
+            continue
+        frontmatter, body = parse_frontmatter(content)
+        if not frontmatter:
+            continue
+        if frontmatter.get("parent") == old_title:
+            frontmatter["parent"] = new_title
+            output = "---\n"
+            output += yaml.dump(frontmatter, allow_unicode=True, default_flow_style=False)
+            output += "---\n\n"
+            output += body
+            child.write_text(output, encoding="utf-8")
 
 
 if __name__ == "__main__":

@@ -1,10 +1,10 @@
 ---
+description: 乳酸桿菌與益生菌選購完整指南：菌株選擇、菌數建議、保存方式
 layout: default
-title: 選購指南
-parent: 乳酸桿菌
 nav_order: 1
+parent: 乳酸桿菌 2026-03-01
 permalink: /lactobacillus/guide/
-description: "乳酸桿菌與益生菌選購完整指南：菌株選擇、菌數建議、保存方式"
+title: 選購指南
 ---
 
 # 乳酸桿菌選購指南

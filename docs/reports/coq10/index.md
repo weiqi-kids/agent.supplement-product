@@ -1,10 +1,10 @@
 ---
+description: CoQ10（輔酶Q10）是細胞能量代謝的關鍵輔酶，常用於心臟保健、抗氧化與能量補充。
+has_children: true
 layout: default
-title: 輔酶Q10
 nav_order: 15
 parent: 報告總覽
-has_children: true
-description: CoQ10（輔酶Q10）是細胞能量代謝的關鍵輔酶，常用於心臟保健、抗氧化與能量補充。
+title: 輔酶Q10 2026-03-01
 ---
 
 # 輔酶Q10（CoQ10 / Coenzyme Q10）

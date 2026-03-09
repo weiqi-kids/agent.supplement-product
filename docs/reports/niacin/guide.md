@@ -1,10 +1,10 @@
 ---
+description: 菸鹼酸選購完整指南：劑量選擇、劑型比較、潮紅反應處理
 layout: default
-title: 選購指南
-parent: 菸鹼酸
 nav_order: 1
+parent: 菸鹼酸 2026-03-01
 permalink: /niacin/guide/
-description: "菸鹼酸選購完整指南：劑量選擇、劑型比較、潮紅反應處理"
+title: 選購指南
 ---
 
 # 菸鹼酸選購指南

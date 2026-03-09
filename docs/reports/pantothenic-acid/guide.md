@@ -1,10 +1,10 @@
 ---
+description: 泛酸選購完整指南：劑量選擇、劑型比較、痤瘡治療應用
 layout: default
-title: 選購指南
-parent: 泛酸
 nav_order: 1
+parent: 泛酸 2026-03-01
 permalink: /pantothenic-acid/guide/
-description: "泛酸選購完整指南：劑量選擇、劑型比較、痤瘡治療應用"
+title: 選購指南
 ---
 
 # 泛酸選購指南

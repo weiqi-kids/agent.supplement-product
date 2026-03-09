@@ -1,18 +1,17 @@
 ---
-layout: default
-title: 市場報告
-parent: 泛酸
-nav_order: 2
+grand_parent: 報告總覽
 has_children: true
-permalink: /pantothenic-acid/reports/
+layout: default
+nav_order: 2
+parent: 泛酸 2026-03-01
+title: 市場報告
 ---
 
-# 泛酸市場報告
+# 市場報告
 
-每月更新的泛酸產品市場統計與趨勢分析。
+歷史市場報告列表。
 
-## 歷史報告
-
-| 期間 | 產品數 | 重點觀察 |
-|------|--------|----------|
-| [2026-02](2026-02) | — | 首次追蹤報告 |
+{% assign reports = site.pages | where_exp: "page", "page.path contains 'reports/pantothenic-acid/reports/2'" | sort: "nav_order" | reverse %}
+{% for report in reports %}
+- [{{ report.title }}]({{ report.url | relative_url }})
+{% endfor %}

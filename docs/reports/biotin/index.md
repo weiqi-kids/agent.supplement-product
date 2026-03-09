@@ -1,10 +1,10 @@
 ---
-layout: default
-title: 生物素
-nav_order: 23
+description: 生物素（Biotin/維生素B7）市場分析、選購指南與最新研究
 has_children: true
+layout: default
+nav_order: 23
 permalink: /biotin/
-description: "生物素（Biotin/維生素B7）市場分析、選購指南與最新研究"
+title: 生物素 2026-03-01
 ---
 
 # 生物素

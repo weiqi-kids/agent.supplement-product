@@ -1,10 +1,10 @@
 ---
-layout: default
-title: 乳酸桿菌
-nav_order: 21
+description: 乳酸桿菌（Lactobacillus）與益生菌市場分析、選購指南與最新研究
 has_children: true
+layout: default
+nav_order: 21
 permalink: /lactobacillus/
-description: "乳酸桿菌（Lactobacillus）與益生菌市場分析、選購指南與最新研究"
+title: 乳酸桿菌 2026-03-01
 ---
 
 # 乳酸桿菌
