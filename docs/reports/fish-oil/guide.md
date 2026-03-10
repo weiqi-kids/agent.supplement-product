@@ -149,11 +149,11 @@ title: 選購指南
 | Structural requirements of Holothuria florida... | 出血風險 | Level 5 | [PMID:37167245](https://pubmed.ncbi.nlm.nih.gov/37167245/) |
 | Synthesis of Fucosylated Chondroitin Sulfate ... | 出血風險 | Level 5 | [PMID:29131431](https://pubmed.ncbi.nlm.nih.gov/29131431/) |
 | Extracellular Vesicle-Derived microRNAs: Nove... | 交互待評估 | Level 5 | [PMID:41515889](https://pubmed.ncbi.nlm.nih.gov/41515889/) |
+| Prolonging the anti-tumor effects of cold atm... | 交互待評估 | Level 5 | [PMID:41581343](https://pubmed.ncbi.nlm.nih.gov/41581343/) |
 | Ginkgo biloba for tinnitus. | 交互待評估 | Level 1 | [PMID:36383762](https://pubmed.ncbi.nlm.nih.gov/36383762/) |
 | Bortezomib-releasing silica-collagen xerogels... | 交互待評估 | Level 5 | [PMID:39695697](https://pubmed.ncbi.nlm.nih.gov/39695697/) |
 | Anionic Liposomes as Optimal Membrane Fusion ... | 交互待評估 | Level 5 | [PMID:41360752](https://pubmed.ncbi.nlm.nih.gov/41360752/) |
 | Therapeutic potential of nicotinamide adenine... | 代謝影響 | Level 5 | [PMID:32360833](https://pubmed.ncbi.nlm.nih.gov/32360833/) |
-| Potential of connexin 32 as a predictive mark... | 肝臟影響 | Level 5 | [PMID:40024757](https://pubmed.ncbi.nlm.nih.gov/40024757/) |
 
 ### 安全建議
 

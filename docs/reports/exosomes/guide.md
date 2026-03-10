@@ -125,10 +125,10 @@ title: 選購指南
 | How Laboratory Guidelines Promote the Validit... | 交互待評估 | Level 5 | [PMID:41465539](https://pubmed.ncbi.nlm.nih.gov/41465539/) |
 | Extracellular vesicle-based biosensors for Al... | 交互待評估 | Level 5 | [PMID:41061769](https://pubmed.ncbi.nlm.nih.gov/41061769/) |
 | Standardizing Bacterial Extracellular Vesicle... | 交互待評估 | Level 5 | [PMID:41016819](https://pubmed.ncbi.nlm.nih.gov/41016819/) |
+| Development of a Live-Cell Imaging Assay to E... | 肝臟影響 | Level 5 | [PMID:41764601](https://pubmed.ncbi.nlm.nih.gov/41764601/) |
 | Advanced Technologies in Extracellular Vesicl... | 交互待評估 | Level 5 | [PMID:41599276](https://pubmed.ncbi.nlm.nih.gov/41599276/) |
 | Direct Profiling of Extracellular Vesicle Sur... | 交互待評估 | Level 5 | [PMID:41420477](https://pubmed.ncbi.nlm.nih.gov/41420477/) |
 | Extracellular vesicle bioactivity and potenti... | 交互待評估 | Level 3 | [PMID:41102742](https://pubmed.ncbi.nlm.nih.gov/41102742/) |
-| Human amniotic mesenchymal stem cell-derived ... | 出血風險 | Level 5 | [PMID:40972687](https://pubmed.ncbi.nlm.nih.gov/40972687/) |
 
 ### 安全建議
 
