@@ -128,7 +128,7 @@ title: 選購指南
 | Development of a Live-Cell Imaging Assay to E... | 肝臟影響 | Level 5 | [PMID:41764601](https://pubmed.ncbi.nlm.nih.gov/41764601/) |
 | Advanced Technologies in Extracellular Vesicl... | 交互待評估 | Level 5 | [PMID:41599276](https://pubmed.ncbi.nlm.nih.gov/41599276/) |
 | Direct Profiling of Extracellular Vesicle Sur... | 交互待評估 | Level 5 | [PMID:41420477](https://pubmed.ncbi.nlm.nih.gov/41420477/) |
-| Extracellular vesicle bioactivity and potenti... | 交互待評估 | Level 3 | [PMID:41102742](https://pubmed.ncbi.nlm.nih.gov/41102742/) |
+| Advancing Extracellular Vesicle Research: A R... | 交互待評估 | Level 5 | [PMID:41208408](https://pubmed.ncbi.nlm.nih.gov/41208408/) |
 
 ### 安全建議
 

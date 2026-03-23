@@ -1,7 +1,7 @@
 ---
 mode: "market_snapshot"
 period: "2026-W11"
-generated_at: "2026-03-12T08:00:00Z"
+generated_at: "2026-03-13T08:00:00Z"
 source_layers:
   - us_dsld
   - ca_lnhpd
@@ -14,7 +14,7 @@ source_layers:
 # 市場快照週報 — 2026 年第 11 週
 
 > 報告期間：2026-03-09 ~ 2026-03-15
-> 產出時間：2026-03-12T08:00:00Z
+> 產出時間：2026-03-13T08:00:00Z
 
 ## 摘要
 

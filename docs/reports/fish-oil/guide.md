@@ -153,7 +153,7 @@ title: 選購指南
 | Ginkgo biloba for tinnitus. | 交互待評估 | Level 1 | [PMID:36383762](https://pubmed.ncbi.nlm.nih.gov/36383762/) |
 | Bortezomib-releasing silica-collagen xerogels... | 交互待評估 | Level 5 | [PMID:39695697](https://pubmed.ncbi.nlm.nih.gov/39695697/) |
 | Anionic Liposomes as Optimal Membrane Fusion ... | 交互待評估 | Level 5 | [PMID:41360752](https://pubmed.ncbi.nlm.nih.gov/41360752/) |
-| Therapeutic potential of nicotinamide adenine... | 代謝影響 | Level 5 | [PMID:32360833](https://pubmed.ncbi.nlm.nih.gov/32360833/) |
+| Exosome-Loaded Engineered circBDNF Promotes S... | 肝臟影響 | Level 5 | [PMID:41857479](https://pubmed.ncbi.nlm.nih.gov/41857479/) |
 
 ### 安全建議
 
