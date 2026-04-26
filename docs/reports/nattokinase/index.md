@@ -3,7 +3,7 @@ has_children: true
 layout: default
 nav_order: 9
 parent: 報告總覽
-title: 納豆激酶 2026-03-01
+title: 納豆激酶 2026-04-01
 ---
 
 # 納豆激酶（Nattokinase）

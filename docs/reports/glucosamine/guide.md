@@ -2,7 +2,7 @@
 grand_parent: 報告總覽
 layout: default
 nav_order: 1
-parent: 葡萄糖胺 2026-03-01
+parent: 葡萄糖胺 2026-04-01
 title: 選購指南
 ---
 

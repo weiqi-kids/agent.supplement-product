@@ -4,7 +4,7 @@ has_children: true
 layout: default
 nav_order: 23
 permalink: /biotin/
-title: 生物素 2026-03-01
+title: 生物素 2026-04-01
 ---
 
 # 生物素

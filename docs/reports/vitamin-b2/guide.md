@@ -2,7 +2,7 @@
 grand_parent: 報告總覽
 layout: default
 nav_order: 2
-parent: Vitamin B2 2026-03-01
+parent: Vitamin B2 2026-04-01
 title: 選購指南
 ---
 

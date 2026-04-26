@@ -4,7 +4,7 @@ has_children: true
 layout: default
 nav_order: 24
 permalink: /niacin/
-title: 菸鹼酸 2026-03-01
+title: 菸鹼酸 2026-04-01
 ---
 
 # 菸鹼酸

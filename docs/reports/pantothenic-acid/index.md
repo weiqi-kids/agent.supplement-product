@@ -4,7 +4,7 @@ has_children: true
 layout: default
 nav_order: 25
 permalink: /pantothenic-acid/
-title: 泛酸 2026-03-01
+title: 泛酸 2026-04-01
 ---
 
 # 泛酸

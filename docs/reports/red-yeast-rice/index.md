@@ -3,7 +3,7 @@ has_children: true
 layout: default
 nav_order: 8
 parent: 報告總覽
-title: 紅麴 2026-03-01
+title: 紅麴 2026-04-01
 ---
 
 # 紅麴（Red Yeast Rice）

@@ -2,7 +2,7 @@
 grand_parent: 報告總覽
 layout: default
 nav_order: 2
-parent: NMN 2026-03-01
+parent: NMN 2026-04-01
 title: 選購指南
 ---
 
