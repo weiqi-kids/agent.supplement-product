@@ -5,7 +5,7 @@ on:
     branches: [main]
     paths:
       - 'docs/Narrator/**/*.md'
-      - 'docs/_config.yml'
+      - '_config.yml'
       - 'docs/index.md'
       - 'docs/reports/**/*.md'
       - 'docs/data-sources/**/*.md'
@@ -68,11 +68,9 @@ jobs:
         with:
           ruby-version: '3.2'
           bundler-cache: true
-          working-directory: docs
 
       - name: Build Jekyll site
-        working-directory: docs
-        run: bundle exec jekyll build --destination ../_site
+        run: bundle exec jekyll build --source docs --destination _site --config _config.yml
         env:
           JEKYLL_ENV: production
 

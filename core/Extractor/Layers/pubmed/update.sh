@@ -199,7 +199,7 @@ while [[ $batch_start -lt $total_files ]]; do
   tmp_texts_file="$(mktemp)"
   declare -a process_metadata=()
 
-  jq -n '[]' > "$tmp_texts_file"
+  > "$tmp_texts_file"
 
   for idx in "${indices_to_process[@]}"; do
     file="${batch_files[$idx]}"
@@ -214,8 +214,8 @@ while [[ $batch_start -lt $total_files ]]; do
 
     BODY_TEXT="$(sed -n '/^---$/,/^---$/!p' "$file" | head -500)"
 
-    jq --arg text "$BODY_TEXT" '. += [$text]' "$tmp_texts_file" > "${tmp_texts_file}.tmp"
-    mv "${tmp_texts_file}.tmp" "$tmp_texts_file"
+    # Write each text as a JSON string on its own line (JSONL format for chatgpt_embed_batch)
+    jq -nc --arg text "$BODY_TEXT" '$text' >> "$tmp_texts_file"
 
     METADATA="$(jq -nc \
       --arg source_id "$SOURCE_ID" \
@@ -246,7 +246,7 @@ while [[ $batch_start -lt $total_files ]]; do
   echo "產生 embeddings..."
   tmp_embeddings_file="$(mktemp)"
 
-  if ! chatgpt_embed_batch "$tmp_texts_file" > "$tmp_embeddings_file" 2>/dev/null; then
+  if ! chatgpt_embed_batch "$tmp_texts_file" "$tmp_embeddings_file" 2>/dev/null; then
     echo "❌ 批次 embedding 失敗，本批次計入錯誤" >&2
     ((ERRORS+=${#indices_to_process[@]})) || true
     rm -f "$tmp_texts_file" "$tmp_embeddings_file"
