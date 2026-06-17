@@ -3,7 +3,7 @@ has_children: true
 layout: default
 nav_order: 7
 parent: 報告總覽
-title: 葡萄糖胺 2026-04-01
+title: 葡萄糖胺 2026-06-01
 ---
 
 # 葡萄糖胺（Glucosamine）

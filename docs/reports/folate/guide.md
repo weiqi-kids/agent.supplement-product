@@ -2,7 +2,7 @@
 description: 葉酸選購完整指南：形式選擇、劑量建議、MTHFR 基因變異注意事項
 layout: default
 nav_order: 1
-parent: 葉酸 2026-04-01
+parent: 葉酸 2026-06-01
 permalink: /folate/guide/
 title: 選購指南
 ---

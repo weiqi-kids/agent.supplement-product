@@ -3,7 +3,7 @@ has_children: true
 layout: default
 nav_order: 3
 parent: 報告總覽
-title: NMN 2026-04-01
+title: NMN 2026-06-01
 ---
 
 # NMN（菸鹼醯胺單核苷酸）

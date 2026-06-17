@@ -2,7 +2,7 @@
 grand_parent: 報告總覽
 layout: default
 nav_order: 1
-parent: 紅麴 2026-04-01
+parent: 紅麴 2026-06-01
 title: 選購指南
 ---
 
@@ -131,8 +131,8 @@ title: 選購指南
 | Mechanistic In Vitro Studies Indicate that th... | 代謝影響 | Level 5 | [PMID:30348903](https://pubmed.ncbi.nlm.nih.gov/30348903/) |
 | Preclinical assessment of drug-drug interacti... | 代謝影響 | Level 5 | [PMID:36967488](https://pubmed.ncbi.nlm.nih.gov/36967488/) |
 | Assessment of Drug-Drug Interaction Potential... | 代謝影響 | Level 3 | [PMID:27245340](https://pubmed.ncbi.nlm.nih.gov/27245340/) |
+| Pharmacokinetic Drug-Drug Interaction of Leri... | 代謝影響 | Level 3 | [PMID:42062754](https://pubmed.ncbi.nlm.nih.gov/42062754/) |
 | Results of a Doravirine-Atorvastatin Drug-Dru... | 交互待評估 | Level 3 | [PMID:27872071](https://pubmed.ncbi.nlm.nih.gov/27872071/) |
-| Statin use in transthyretin amyloid cardiomyo... | 交互待評估 | Level 5 | [PMID:40973549](https://pubmed.ncbi.nlm.nih.gov/40973549/) |
 
 ### 安全建議
 

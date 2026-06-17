@@ -2,7 +2,7 @@
 grand_parent: 報告總覽
 layout: default
 nav_order: 2
-parent: 鎂 2026-04-01
+parent: 鎂 2026-06-01
 title: 選購指南
 ---
 
@@ -152,16 +152,16 @@ title: 選購指南
 
 | 文獻標題 | 風險類型 | 證據等級 | 來源 |
 |----------|----------|----------|------|
+| Extracellular Vesicle-Mediated Communication ... | 交互待評估 | Level 5 | [PMID:42278469](https://pubmed.ncbi.nlm.nih.gov/42278469/) |
 | Exosome-based modulation of ferroptosis in ne... | 交互待評估 | Level 5 | [PMID:41190075](https://pubmed.ncbi.nlm.nih.gov/41190075/) |
 | The Crucial Nexus: Unveiling the Role of Coll... | 交互待評估 | Level 5 | [PMID:40446484](https://pubmed.ncbi.nlm.nih.gov/40446484/) |
 | Exosome-Derived Circular RNAs in Colorectal C... | 交互待評估 | Level 5 | [PMID:41642014](https://pubmed.ncbi.nlm.nih.gov/41642014/) |
 | Exosome-mediated crosstalk between immune cel... | 交互待評估 | Level 5 | [PMID:41759799](https://pubmed.ncbi.nlm.nih.gov/41759799/) |
 | Prognostic risk model of gastric adenocarcino... | 交互待評估 | Level 5 | [PMID:41054074](https://pubmed.ncbi.nlm.nih.gov/41054074/) |
+| Exosome-camouflaged chitosan/zinc oxide/carbo... | 肝臟影響 | Level 5 | [PMID:42097777](https://pubmed.ncbi.nlm.nih.gov/42097777/) |
 | Acetylation-ubiquitination crosstalk of DJ-1 ... | 交互待評估 | Level 5 | [PMID:39786474](https://pubmed.ncbi.nlm.nih.gov/39786474/) |
 | Exosome-based strategies and immunotherapy fo... | 交互待評估 | Level 5 | [PMID:41642505](https://pubmed.ncbi.nlm.nih.gov/41642505/) |
 | The role of collagen cross-linker in dentin m... | 交互待評估 | Level 5 | [PMID:40324578](https://pubmed.ncbi.nlm.nih.gov/40324578/) |
-| NAD/NAMPT and mTOR Pathways in Melanoma: Driv... | 交互待評估 | Level 5 | [PMID:36077374](https://pubmed.ncbi.nlm.nih.gov/36077374/) |
-| Bone marrow mesenchymal stem cell exosome-der... | 交互待評估 | Level 5 | [PMID:41193588](https://pubmed.ncbi.nlm.nih.gov/41193588/) |
 
 ### 安全建議
 

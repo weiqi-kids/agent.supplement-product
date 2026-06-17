@@ -4,7 +4,7 @@ has_children: true
 layout: default
 nav_order: 22
 permalink: /folate/
-title: 葉酸 2026-04-01
+title: 葉酸 2026-06-01
 ---
 
 # 葉酸

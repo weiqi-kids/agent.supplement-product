@@ -3,7 +3,7 @@ has_children: true
 layout: default
 nav_order: 5
 parent: 報告總覽
-title: 膠原蛋白 2026-04-01
+title: 膠原蛋白 2026-06-01
 ---
 
 # 膠原蛋白（Collagen）

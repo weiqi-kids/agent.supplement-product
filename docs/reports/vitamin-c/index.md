@@ -3,7 +3,7 @@ has_children: true
 layout: default
 nav_order: 11
 parent: 報告總覽
-title: 維生素C 2026-04-01
+title: 維生素C 2026-06-01
 ---
 
 # 維生素C（Vitamin C / Ascorbic Acid）

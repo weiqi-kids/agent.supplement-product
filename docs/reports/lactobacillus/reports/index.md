@@ -3,7 +3,7 @@ grand_parent: 報告總覽
 has_children: true
 layout: default
 nav_order: 2
-parent: 乳酸桿菌 2026-04-01
+parent: 乳酸桿菌 2026-06-01
 title: 市場報告
 ---
 

@@ -2,7 +2,7 @@
 grand_parent: 報告總覽
 layout: default
 nav_order: 2
-parent: 薑黃素 2026-04-01
+parent: 薑黃素 2026-06-01
 title: 選購指南
 ---
 
@@ -151,15 +151,15 @@ title: 選購指南
 | 文獻標題 | 風險類型 | 證據等級 | 來源 |
 |----------|----------|----------|------|
 | Beneficial herb-drug interaction of rhein in ... | 交互待評估 | Level 5 | [PMID:37023835](https://pubmed.ncbi.nlm.nih.gov/37023835/) |
+| Ginkgo biloba as a Promising Candidate for Tr... | 交互待評估 | Level 1 | [PMID:42081645](https://pubmed.ncbi.nlm.nih.gov/42081645/) |
 | Perspectives, Experiences, and Practices of H... | 交互待評估 | Level 1 | [PMID:39537428](https://pubmed.ncbi.nlm.nih.gov/39537428/) |
 | Cytochrome P450 Enzyme Inhibition and Herb-Dr... | 血糖影響 | Level 5 | [PMID:33844145](https://pubmed.ncbi.nlm.nih.gov/33844145/) |
 | Pharmacokinetic herb-drug interaction between... | 代謝影響 | Level 5 | [PMID:30701569](https://pubmed.ncbi.nlm.nih.gov/30701569/) |
 | Impact of Ginkgo biloba drug interactions on ... | 出血風險 | Level 4 | [PMID:40198642](https://pubmed.ncbi.nlm.nih.gov/40198642/) |
 | Recommended Approaches for Pharmacokinetic Na... | 代謝影響 | Level 5 | [PMID:29735755](https://pubmed.ncbi.nlm.nih.gov/29735755/) |
 | Identification of the perpetrator imperatorin... | 代謝影響 | Level 5 | [PMID:37364866](https://pubmed.ncbi.nlm.nih.gov/37364866/) |
+| Therapeutic potential of garlic-derived exoso... | 肝臟影響 | Level 5 | [PMID:42015789](https://pubmed.ncbi.nlm.nih.gov/42015789/) |
 | Evaluation of herb-drug interaction of ambris... | 代謝影響 | Level 5 | [PMID:34410882](https://pubmed.ncbi.nlm.nih.gov/34410882/) |
-| Enhanced in-vitro bioavailability of curcumin... | 交互待評估 | Level 5 | [PMID:39984059](https://pubmed.ncbi.nlm.nih.gov/39984059/) |
-| A Comprehensive In Vivo and In Vitro Assessme... | 代謝影響 | Level 5 | [PMID:30078466](https://pubmed.ncbi.nlm.nih.gov/30078466/) |
 
 ### 安全建議
 

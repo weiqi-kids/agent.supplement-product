@@ -2,7 +2,7 @@
 grand_parent: 報告總覽
 layout: default
 nav_order: 2
-parent: 外泌體 2026-04-01
+parent: 外泌體 2026-06-01
 title: 選購指南
 ---
 
@@ -120,15 +120,15 @@ title: 選購指南
 | 文獻標題 | 風險類型 | 證據等級 | 來源 |
 |----------|----------|----------|------|
 | Extracellular Vesicle-Based Therapeutic Cargo... | 肝臟影響 | Level 3 | [PMID:41179975](https://pubmed.ncbi.nlm.nih.gov/41179975/) |
+| A study to investigate HLA-G targeted exosome... | 肝臟影響 | Level 3 | [PMID:42083744](https://pubmed.ncbi.nlm.nih.gov/42083744/) |
 | Exosome-camouflaged inhalable (PDSA-HSA) nano... | 肝臟影響 | Level 5 | [PMID:41232243](https://pubmed.ncbi.nlm.nih.gov/41232243/) |
 | Oncolytic virus OH2 induces PD-L1 upregulatio... | 肝臟影響 | Level 5 | [PMID:41629133](https://pubmed.ncbi.nlm.nih.gov/41629133/) |
 | How Laboratory Guidelines Promote the Validit... | 交互待評估 | Level 5 | [PMID:41465539](https://pubmed.ncbi.nlm.nih.gov/41465539/) |
+| Optimization of Microfluidic Geometry for Ext... | 交互待評估 | Level 5 | [PMID:41834358](https://pubmed.ncbi.nlm.nih.gov/41834358/) |
 | Extracellular vesicle-based biosensors for Al... | 交互待評估 | Level 5 | [PMID:41061769](https://pubmed.ncbi.nlm.nih.gov/41061769/) |
 | Standardizing Bacterial Extracellular Vesicle... | 交互待評估 | Level 5 | [PMID:41016819](https://pubmed.ncbi.nlm.nih.gov/41016819/) |
-| Development of a Live-Cell Imaging Assay to E... | 肝臟影響 | Level 5 | [PMID:41764601](https://pubmed.ncbi.nlm.nih.gov/41764601/) |
-| Advanced Technologies in Extracellular Vesicl... | 交互待評估 | Level 5 | [PMID:41599276](https://pubmed.ncbi.nlm.nih.gov/41599276/) |
-| Direct Profiling of Extracellular Vesicle Sur... | 交互待評估 | Level 5 | [PMID:41420477](https://pubmed.ncbi.nlm.nih.gov/41420477/) |
-| Advancing Extracellular Vesicle Research: A R... | 交互待評估 | Level 5 | [PMID:41208408](https://pubmed.ncbi.nlm.nih.gov/41208408/) |
+| Exosome-Coated Boron-Containing Evodiamine De... | 交互待評估 | Level 5 | [PMID:42154999](https://pubmed.ncbi.nlm.nih.gov/42154999/) |
+| Bone Marrow Mesenchymal Stem Cell Extracellul... | 無顯著交互 | Level 5 | [PMID:42113080](https://pubmed.ncbi.nlm.nih.gov/42113080/) |
 
 ### 安全建議
 

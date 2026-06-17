@@ -2,7 +2,7 @@
 grand_parent: 報告總覽
 layout: default
 nav_order: 2
-parent: 魚油 2026-04-01
+parent: 魚油 2026-06-01
 title: 選購指南
 ---
 
@@ -148,12 +148,12 @@ title: 選購指南
 | Exosome-mediated macrophage regulation in abd... | 肝臟影響 | Level 5 | [PMID:41260386](https://pubmed.ncbi.nlm.nih.gov/41260386/) |
 | Structural requirements of Holothuria florida... | 出血風險 | Level 5 | [PMID:37167245](https://pubmed.ncbi.nlm.nih.gov/37167245/) |
 | Synthesis of Fucosylated Chondroitin Sulfate ... | 出血風險 | Level 5 | [PMID:29131431](https://pubmed.ncbi.nlm.nih.gov/29131431/) |
+| The Small Molecule H89 Facilitates Mesenchyma... | 肝臟影響 | Level 5 | [PMID:42106917](https://pubmed.ncbi.nlm.nih.gov/42106917/) |
 | Extracellular Vesicle-Derived microRNAs: Nove... | 交互待評估 | Level 5 | [PMID:41515889](https://pubmed.ncbi.nlm.nih.gov/41515889/) |
 | Prolonging the anti-tumor effects of cold atm... | 交互待評估 | Level 5 | [PMID:41581343](https://pubmed.ncbi.nlm.nih.gov/41581343/) |
+| Lutein Influences Cisplatin Sensitivity Throu... | 交互待評估 | Level 5 | [PMID:42231618](https://pubmed.ncbi.nlm.nih.gov/42231618/) |
 | Ginkgo biloba for tinnitus. | 交互待評估 | Level 1 | [PMID:36383762](https://pubmed.ncbi.nlm.nih.gov/36383762/) |
 | Bortezomib-releasing silica-collagen xerogels... | 交互待評估 | Level 5 | [PMID:39695697](https://pubmed.ncbi.nlm.nih.gov/39695697/) |
-| Anionic Liposomes as Optimal Membrane Fusion ... | 交互待評估 | Level 5 | [PMID:41360752](https://pubmed.ncbi.nlm.nih.gov/41360752/) |
-| Exosome-Loaded Engineered circBDNF Promotes S... | 肝臟影響 | Level 5 | [PMID:41857479](https://pubmed.ncbi.nlm.nih.gov/41857479/) |
 
 ### 安全建議
 

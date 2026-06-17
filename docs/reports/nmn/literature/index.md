@@ -2,7 +2,7 @@
 has_children: true
 layout: default
 nav_order: 4
-parent: NMN 2026-04-01
+parent: NMN 2026-06-01
 title: 文獻報告
 ---
 

@@ -4,7 +4,7 @@ has_children: true
 layout: default
 nav_order: 21
 permalink: /lactobacillus/
-title: 乳酸桿菌 2026-04-01
+title: 乳酸桿菌 2026-06-01
 ---
 
 # 乳酸桿菌

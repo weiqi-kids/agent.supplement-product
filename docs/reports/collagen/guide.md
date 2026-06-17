@@ -2,7 +2,7 @@
 grand_parent: 報告總覽
 layout: default
 nav_order: 2
-parent: 膠原蛋白 2026-04-01
+parent: 膠原蛋白 2026-06-01
 title: 選購指南
 ---
 
@@ -144,16 +144,16 @@ title: 選購指南
 
 | 文獻標題 | 風險類型 | 證據等級 | 來源 |
 |----------|----------|----------|------|
+| Biolayer interferometry-based detection of en... | 肝臟影響 | Level 5 | [PMID:42214777](https://pubmed.ncbi.nlm.nih.gov/42214777/) |
 | Urchin-like magnetic nanoparticles loaded wit... | 肝臟影響 | Level 5 | [PMID:39864683](https://pubmed.ncbi.nlm.nih.gov/39864683/) |
 | A collagen hydrogel-based intestinal model en... | 交互待評估 | Level 5 | [PMID:40476383](https://pubmed.ncbi.nlm.nih.gov/40476383/) |
 | Faster Amylin Aggregation on Fibrillar Collag... | 血糖影響 | Level 5 | [PMID:40300850](https://pubmed.ncbi.nlm.nih.gov/40300850/) |
+| Updates on Corneal Collagen Cross-Linking for... | 無顯著交互 | Level 1 | [PMID:42146952](https://pubmed.ncbi.nlm.nih.gov/42146952/) |
 | Collagen fiber density observed in metastatic... | 交互待評估 | Level 5 | [PMID:40374134](https://pubmed.ncbi.nlm.nih.gov/40374134/) |
 | Multiple intracerebral hematomas during SEEG ... | 出血風險 | Level 5 | [PMID:39579033](https://pubmed.ncbi.nlm.nih.gov/39579033/) |
 | Targeted Collagen Degradation by an MRI Probe... | 肝臟影響 | Level 5 | [PMID:40173291](https://pubmed.ncbi.nlm.nih.gov/40173291/) |
 | Engineering IL-10 and rapamycin to bind colla... | 交互待評估 | Level 5 | [PMID:40246931](https://pubmed.ncbi.nlm.nih.gov/40246931/) |
-| Collagen XVII promotes dormancy of colorectal... | 交互待評估 | Level 5 | [PMID:38795810](https://pubmed.ncbi.nlm.nih.gov/38795810/) |
-| Retention of E-selectin functionalized liposo... | 交互待評估 | Level 5 | [PMID:38843951](https://pubmed.ncbi.nlm.nih.gov/38843951/) |
-| Collagen-disrupting attIL12 TIL therapy boost... | 交互待評估 | Level 5 | [PMID:41052334](https://pubmed.ncbi.nlm.nih.gov/41052334/) |
+| Real-world rebound pattern of serum collagen ... | 交互待評估 | Level 5 | [PMID:41790191](https://pubmed.ncbi.nlm.nih.gov/41790191/) |
 
 ### 安全建議
 
