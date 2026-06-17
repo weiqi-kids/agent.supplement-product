@@ -1,4 +1,5 @@
 ---
+grand_parent: 報告總覽
 has_children: true
 layout: default
 nav_order: 4
@@ -8,16 +9,9 @@ title: 文獻薈萃
 
 # 外泌體文獻薈萃
 
-本區收錄外泌體相關的學術文獻統計分析報告，追蹤 PubMed 資料庫中外泌體（exosomes）與細胞外囊泡（extracellular vesicles）在保健食品領域的最新研究。
+歷史文獻薈萃報告列表。
 
-## 報告列表
-
-| 期間 | 文獻數 | Level 1 證據 | RCT |
-|------|--------|-------------|-----|
-| [2026-02](2026-02.html) | 2,357 篇 | 62 篇 (2.6%) | 10 篇 |
-
-## 資料來源
-
-- PubMed / NCBI E-utilities API
-- 關鍵詞：exosome, extracellular vesicle, stem cell exosome
-- 近 5 年文獻
+{% assign reports = site.pages | where_exp: "page", "page.path contains 'reports/exosomes/literature/2'" | sort: "nav_order" | reverse %}
+{% for report in reports %}
+- [{{ report.title }}]({{ report.url | relative_url }})
+{% endfor %}

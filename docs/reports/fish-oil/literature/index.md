@@ -1,4 +1,5 @@
 ---
+grand_parent: 報告總覽
 has_children: true
 layout: default
 nav_order: 4
@@ -8,16 +9,9 @@ title: 文獻薈萃
 
 # 魚油文獻薈萃
 
-本區收錄魚油相關的學術文獻統計分析報告，追蹤 PubMed 資料庫中 Omega-3、EPA、DHA 相關的最新研究。
+歷史文獻薈萃報告列表。
 
-## 報告列表
-
-| 期間 | 文獻數 | Level 1 證據 | RCT |
-|------|--------|-------------|-----|
-| [2026-02](2026-02.html) | 1,845 篇 | 104 篇 (5.6%) | 37 篇 |
-
-## 資料來源
-
-- PubMed / NCBI E-utilities API
-- 關鍵詞：omega-3, fish oil, EPA, DHA, krill oil
-- 近 5 年文獻
+{% assign reports = site.pages | where_exp: "page", "page.path contains 'reports/fish-oil/literature/2'" | sort: "nav_order" | reverse %}
+{% for report in reports %}
+- [{{ report.title }}]({{ report.url | relative_url }})
+{% endfor %}

@@ -637,6 +637,7 @@ def main():
 
     # 更新報告索引頁和主題日期
     update_report_indexes()
+    update_literature_indexes()
     update_topic_dates()
 
     print("=" * 50)
@@ -700,6 +701,59 @@ def update_report_indexes():
         updated += 1
 
     print(f"✅ 更新 {updated} 個報告索引頁（Liquid 自動列舉）")
+
+
+def update_literature_indexes():
+    """建立/更新所有主題的 literature/index.md 為 Liquid 自動列舉格式。
+
+    與 update_report_indexes() 對稱：凡是有 literature/ 報告的主題，
+    若缺少 index.md 則建立，使其在網站上有可瀏覽的文獻薈萃落地頁，
+    避免 literature/ 目錄無索引導致連結 404。
+    """
+    updated = 0
+    for topic_dir in sorted(REPORTS_DIR.iterdir()):
+        if not topic_dir.is_dir():
+            continue
+        lit_dir = topic_dir / "literature"
+        if not lit_dir.is_dir():
+            continue
+        # 必須有實際文獻報告才建立索引
+        if not list(lit_dir.glob("2*.md")):
+            continue
+
+        topic_id = topic_dir.name
+        topic_name = get_topic_name(topic_id)
+        latest_date = _get_latest_report_date(lit_dir)
+
+        new_frontmatter = {
+            "layout": "default",
+            "title": "文獻薈萃",
+            "nav_order": 4,
+            "parent": f"{topic_name} {latest_date}" if latest_date else topic_name,
+            "grand_parent": "報告總覽",
+            "has_children": True,
+        }
+
+        liquid_template = (
+            f"# {topic_name}文獻薈萃\n\n"
+            f"歷史文獻薈萃報告列表。\n\n"
+            f"{{% assign reports = site.pages | where_exp: \"page\", "
+            f"\"page.path contains 'reports/{topic_id}/literature/2'\" "
+            f"| sort: \"nav_order\" | reverse %}}\n"
+            f"{{% for report in reports %}}\n"
+            f"- [{{{{ report.title }}}}]({{{{ report.url | relative_url }}}})\n"
+            f"{{% endfor %}}\n"
+        )
+
+        output = "---\n"
+        output += yaml.dump(new_frontmatter, allow_unicode=True, default_flow_style=False)
+        output += "---\n\n"
+        output += liquid_template
+
+        (lit_dir / "index.md").write_text(output, encoding="utf-8")
+        updated += 1
+
+    print(f"✅ 更新 {updated} 個文獻索引頁（Liquid 自動列舉）")
 
 
 def update_topic_dates():
