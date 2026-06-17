@@ -1,5 +1,13 @@
 [
   {
+    "id": "zinc-2026-06-md",
+    "title": "鋅文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "zinc/2026-06.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
     "id": "zinc-2026-04-md",
     "title": "鋅文獻薈萃報告 — 2026 年 4 月",
     "date": "",
@@ -20,6 +28,14 @@
     "title": "鋅文獻薈萃報告 — 2026 年 2 月",
     "date": "",
     "file": "zinc/2026-02.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
+    "id": "vitamin-e-2026-06-md",
+    "title": "Vitamin E文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "vitamin-e/2026-06.md",
     "item_count": "",
     "source_mode": "literature_review"
   },
@@ -48,6 +64,14 @@
     "source_mode": "literature_review"
   },
   {
+    "id": "vitamin-d-2026-06-md",
+    "title": "Vitamin D文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "vitamin-d/2026-06.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
     "id": "vitamin-d-2026-04-md",
     "title": "Vitamin D文獻薈萃報告 — 2026 年 4 月",
     "date": "",
@@ -68,6 +92,14 @@
     "title": "Vitamin D文獻薈萃報告 — 2026 年 2 月",
     "date": "",
     "file": "vitamin-d/2026-02.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
+    "id": "vitamin-c-2026-06-md",
+    "title": "維生素C文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "vitamin-c/2026-06.md",
     "item_count": "",
     "source_mode": "literature_review"
   },
@@ -96,6 +128,14 @@
     "source_mode": "literature_review"
   },
   {
+    "id": "vitamin-b6-2026-06-md",
+    "title": "維生素B6文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "vitamin-b6/2026-06.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
     "id": "vitamin-b6-2026-04-md",
     "title": "維生素B6文獻薈萃報告 — 2026 年 4 月",
     "date": "",
@@ -116,6 +156,14 @@
     "title": "維生素B6文獻薈萃報告 — 2026 年 2 月",
     "date": "",
     "file": "vitamin-b6/2026-02.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
+    "id": "vitamin-b2-2026-06-md",
+    "title": "Vitamin B2文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "vitamin-b2/2026-06.md",
     "item_count": "",
     "source_mode": "literature_review"
   },
@@ -144,6 +192,14 @@
     "source_mode": "literature_review"
   },
   {
+    "id": "vitamin-b12-2026-06-md",
+    "title": "Vitamin B12文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "vitamin-b12/2026-06.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
     "id": "vitamin-b12-2026-04-md",
     "title": "Vitamin B12文獻薈萃報告 — 2026 年 4 月",
     "date": "",
@@ -164,6 +220,14 @@
     "title": "Vitamin B12文獻薈萃報告 — 2026 年 2 月",
     "date": "",
     "file": "vitamin-b12/2026-02.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
+    "id": "vitamin-a-2026-06-md",
+    "title": "Vitamin A文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "vitamin-a/2026-06.md",
     "item_count": "",
     "source_mode": "literature_review"
   },
@@ -192,6 +256,14 @@
     "source_mode": "literature_review"
   },
   {
+    "id": "red-yeast-rice-2026-06-md",
+    "title": "紅麴文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "red-yeast-rice/2026-06.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
     "id": "red-yeast-rice-2026-04-md",
     "title": "紅麴文獻薈萃報告 — 2026 年 4 月",
     "date": "",
@@ -212,6 +284,14 @@
     "title": "紅麴文獻薈萃報告 — 2026 年 2 月",
     "date": "",
     "file": "red-yeast-rice/2026-02.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
+    "id": "pantothenic-acid-2026-06-md",
+    "title": "泛酸文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "pantothenic-acid/2026-06.md",
     "item_count": "",
     "source_mode": "literature_review"
   },
@@ -240,6 +320,14 @@
     "source_mode": "literature_review"
   },
   {
+    "id": "nmn-2026-06-md",
+    "title": "NMN文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "nmn/2026-06.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
     "id": "nmn-2026-04-md",
     "title": "NMN文獻薈萃報告 — 2026 年 4 月",
     "date": "",
@@ -260,6 +348,14 @@
     "title": "NMN文獻薈萃報告 — 2026 年 2 月",
     "date": "",
     "file": "nmn/2026-02.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
+    "id": "niacin-2026-06-md",
+    "title": "菸鹼酸文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "niacin/2026-06.md",
     "item_count": "",
     "source_mode": "literature_review"
   },
@@ -288,6 +384,14 @@
     "source_mode": "literature_review"
   },
   {
+    "id": "nattokinase-2026-06-md",
+    "title": "納豆激酶文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "nattokinase/2026-06.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
     "id": "nattokinase-2026-04-md",
     "title": "納豆激酶文獻薈萃報告 — 2026 年 4 月",
     "date": "",
@@ -308,6 +412,14 @@
     "title": "納豆激酶文獻薈萃報告 — 2026 年 2 月",
     "date": "",
     "file": "nattokinase/2026-02.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
+    "id": "magnesium-2026-06-md",
+    "title": "鎂文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "magnesium/2026-06.md",
     "item_count": "",
     "source_mode": "literature_review"
   },
@@ -336,6 +448,14 @@
     "source_mode": "literature_review"
   },
   {
+    "id": "lutein-2026-06-md",
+    "title": "葉黃素文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "lutein/2026-06.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
     "id": "lutein-2026-04-md",
     "title": "葉黃素文獻薈萃報告 — 2026 年 4 月",
     "date": "",
@@ -356,6 +476,14 @@
     "title": "葉黃素文獻薈萃報告 — 2026 年 2 月",
     "date": "",
     "file": "lutein/2026-02.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
+    "id": "lactobacillus-2026-06-md",
+    "title": "乳酸桿菌文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "lactobacillus/2026-06.md",
     "item_count": "",
     "source_mode": "literature_review"
   },
@@ -384,6 +512,14 @@
     "source_mode": "literature_review"
   },
   {
+    "id": "iron-2026-06-md",
+    "title": "Iron文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "iron/2026-06.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
     "id": "iron-2026-04-md",
     "title": "Iron文獻薈萃報告 — 2026 年 4 月",
     "date": "",
@@ -396,6 +532,14 @@
     "title": "Iron文獻薈萃報告 — 2026 年 3 月",
     "date": "",
     "file": "iron/2026-03.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
+    "id": "glucosamine-2026-06-md",
+    "title": "葡萄糖胺文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "glucosamine/2026-06.md",
     "item_count": "",
     "source_mode": "literature_review"
   },
@@ -424,6 +568,14 @@
     "source_mode": "literature_review"
   },
   {
+    "id": "folate-2026-06-md",
+    "title": "葉酸文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "folate/2026-06.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
     "id": "folate-2026-04-md",
     "title": "葉酸文獻薈萃報告 — 2026 年 4 月",
     "date": "",
@@ -444,6 +596,14 @@
     "title": "葉酸文獻薈萃報告 — 2026 年 2 月",
     "date": "",
     "file": "folate/2026-02.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
+    "id": "fish-oil-2026-06-md",
+    "title": "魚油文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "fish-oil/2026-06.md",
     "item_count": "",
     "source_mode": "literature_review"
   },
@@ -472,6 +632,14 @@
     "source_mode": "literature_review"
   },
   {
+    "id": "exosomes-2026-06-md",
+    "title": "外泌體文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "exosomes/2026-06.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
     "id": "exosomes-2026-04-md",
     "title": "外泌體文獻薈萃報告 — 2026 年 4 月",
     "date": "",
@@ -492,6 +660,14 @@
     "title": "外泌體文獻薈萃報告 — 2026 年 2 月",
     "date": "",
     "file": "exosomes/2026-02.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
+    "id": "curcumin-2026-06-md",
+    "title": "薑黃素文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "curcumin/2026-06.md",
     "item_count": "",
     "source_mode": "literature_review"
   },
@@ -520,6 +696,14 @@
     "source_mode": "literature_review"
   },
   {
+    "id": "coq10-2026-06-md",
+    "title": "輔酶Q10文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "coq10/2026-06.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
     "id": "coq10-2026-04-md",
     "title": "輔酶Q10文獻薈萃報告 — 2026 年 4 月",
     "date": "",
@@ -540,6 +724,14 @@
     "title": "輔酶Q10文獻薈萃報告 — 2026 年 2 月",
     "date": "",
     "file": "coq10/2026-02.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
+    "id": "collagen-2026-06-md",
+    "title": "膠原蛋白文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "collagen/2026-06.md",
     "item_count": "",
     "source_mode": "literature_review"
   },
@@ -568,6 +760,14 @@
     "source_mode": "literature_review"
   },
   {
+    "id": "calcium-2026-06-md",
+    "title": "鈣文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "calcium/2026-06.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
     "id": "calcium-2026-04-md",
     "title": "鈣文獻薈萃報告 — 2026 年 4 月",
     "date": "",
@@ -588,6 +788,14 @@
     "title": "鈣文獻薈萃報告 — 2026 年 2 月",
     "date": "",
     "file": "calcium/2026-02.md",
+    "item_count": "",
+    "source_mode": "literature_review"
+  },
+  {
+    "id": "biotin-2026-06-md",
+    "title": "生物素文獻薈萃報告 — 2026 年 6 月",
+    "date": "",
+    "file": "biotin/2026-06.md",
     "item_count": "",
     "source_mode": "literature_review"
   },
