@@ -45,6 +45,24 @@ def s(val):
     """Safely convert to string, handling None."""
     return str(val).strip() if val is not None else ""
 
+
+def normalize_url(url):
+    """正規化來源網址：http→https，收合路徑中重複斜線（保留協定的 ://）。
+
+    來源資料的「網址」欄位常含 http:// 與 //Food 雙斜線，雖經重導仍可達，
+    但會被連結檢查工具誤報。此處統一清成乾淨的 https 單斜線形式。
+    """
+    if not url:
+        return url
+    if url.startswith("http://"):
+        url = "https://" + url[len("http://"):]
+    # 切開協定，僅收合其後路徑的重複斜線
+    if "://" in url:
+        scheme, rest = url.split("://", 1)
+        rest = re.sub(r"/{2,}", "/", rest)
+        return f"{scheme}://{rest}"
+    return url
+
 def infer_category(health_effect):
     """從保健功效推斷 category"""
     if not health_effect:
@@ -166,7 +184,7 @@ def process():
             health_claim = s(rec.get("保健功效宣稱"))
             precautions = s(rec.get("注意事項"))
             warnings = s(rec.get("警語"))
-            product_url = s(rec.get("網址"))
+            product_url = normalize_url(s(rec.get("網址")))
 
             # Date formatting
             date_entered = format_date(approval_date)
