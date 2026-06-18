@@ -55,11 +55,13 @@ if ! _check_url_health "$DOWNLOAD_URL"; then
   echo "║                                                                  ║" >&2
   echo "║  Salesforce Document ID 可能已變更。                             ║" >&2
   echo "║                                                                  ║" >&2
-  echo "║  解決方法：                                                      ║" >&2
-  echo "║  1. 前往 https://www.fld.caa.go.jp/caaks/cssc01/                ║" >&2
-  echo "║  2. 點選「全届出の全項目出力(CSV 出力)」                         ║" >&2
-  echo "║  3. 取得新的下載 URL                                             ║" >&2
-  echo "║  4. 更新 .env 中的 JP_FNFC_DOWNLOAD_URL                         ║" >&2
+  echo "║  解決方法（推薦 A，因 Document ID 每次產生都不同）：             ║" >&2
+  echo "║  A. 瀏覽器自動下載器：                                           ║" >&2
+  echo "║       npm i puppeteer-core                                       ║" >&2
+  echo "║       node core/Extractor/Layers/jp_fnfc/fetch_csv_browser.js    ║" >&2
+  echo "║       再 ./fetch.sh --csv docs/Extractor/jp_fnfc/raw/fnfc-*.csv  ║" >&2
+  echo "║  B. 手動：cssc01 點「全届出の全項目出力(CSV出力)」下載後         ║" >&2
+  echo "║       ./fetch.sh --csv <下載的CSV>                              ║" >&2
   echo "║                                                                  ║" >&2
   echo "║  目前 URL: $DOWNLOAD_URL" >&2
   echo "╚══════════════════════════════════════════════════════════════════╝" >&2
