@@ -92,3 +92,7 @@ docs/
 
 lib/               # 共用 shell 工具
 ```
+
+---
+
+Maintained by Light. I build and maintain websites with AI as a service: [arthurs.tw](https://arthurs.tw/?utm_source=github&utm_medium=readme&utm_campaign=oss)
