@@ -1,9 +1,9 @@
 ---
 description: 生物素選購完整指南：劑量選擇、劑型比較、實驗室檢測注意事項
+grand_parent: 報告總覽
 layout: default
 nav_order: 1
 parent: 生物素 2026-06-01
-permalink: /biotin/guide/
 title: 選購指南
 ---
 

@@ -3,7 +3,7 @@ description: 泛酸（Pantothenic Acid/維生素B5）市場分析、選購指南
 has_children: true
 layout: default
 nav_order: 25
-permalink: /pantothenic-acid/
+parent: 報告總覽
 title: 泛酸 2026-06-01
 ---
 

@@ -3,7 +3,7 @@ description: 乳酸桿菌（Lactobacillus）與益生菌市場分析、選購指
 has_children: true
 layout: default
 nav_order: 21
-permalink: /lactobacillus/
+parent: 報告總覽
 title: 乳酸桿菌 2026-06-01
 ---
 

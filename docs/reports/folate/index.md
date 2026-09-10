@@ -3,7 +3,7 @@ description: 葉酸（Folate/Folic Acid）市場分析、選購指南與最新�
 has_children: true
 layout: default
 nav_order: 22
-permalink: /folate/
+parent: 報告總覽
 title: 葉酸 2026-06-01
 ---
 

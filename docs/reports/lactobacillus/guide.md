@@ -1,9 +1,9 @@
 ---
 description: 乳酸桿菌與益生菌選購完整指南：菌株選擇、菌數建議、保存方式
+grand_parent: 報告總覽
 layout: default
 nav_order: 1
 parent: 乳酸桿菌 2026-06-01
-permalink: /lactobacillus/guide/
 title: 選購指南
 ---
 

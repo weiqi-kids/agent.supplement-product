@@ -3,7 +3,7 @@ description: 菸鹼酸（Niacin/維生素B3）市場分析、選購指南與最�
 has_children: true
 layout: default
 nav_order: 24
-permalink: /niacin/
+parent: 報告總覽
 title: 菸鹼酸 2026-06-01
 ---
 

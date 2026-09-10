@@ -3,7 +3,7 @@ description: 生物素（Biotin/維生素B7）市場分析、選購指南與最�
 has_children: true
 layout: default
 nav_order: 23
-permalink: /biotin/
+parent: 報告總覽
 title: 生物素 2026-06-01
 ---
 
